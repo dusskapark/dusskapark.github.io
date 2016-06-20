@@ -1,0 +1,25 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Jude Park API reference
+email: dusskapark@gmail.com
+description: 박주형을 사용하는 방법에 대한 개발가이드 및 레퍼런스를 제공합니다. .
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://api.metadata.co.kr" # the base hostname & protocol for your site
+twitter_username: dusskapark
+github_username:  dusskapark
+linkedin_username: dusskapark
+
+# Build settings
+markdown: kramdown
+
+# Analytics settings
+analytics_param: bobp_userId
+ga_trackid_web: UA-40374059-3
+# ga_trackid_rollup: UA-71027941-3
+# mixpanel_trackid: 36cc8303f20d992326aa63283098079c

@@ -10,6 +10,20 @@
       );
 
 
+    $('h2').each(function (index, value){
+        var id = $(this).attr('id')
+        var name = $(this).text()
+        var li = "<li><a href='#" +
+          id + "'>" +
+          name + "</a></li>";
+
+          $('#toc').append($(li));
+
+      });
+
+    $('.scrollspy').scrollSpy();
+
+
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

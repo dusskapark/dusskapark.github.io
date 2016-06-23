@@ -9,7 +9,7 @@
 		<meta property="og:title"         	content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
 		<meta property="og:description" 	content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 		<meta property="og:type"          	content="{% if page.url %}article{% else %}website{% endif %}" />
-		<!-- <meta property="og:image" 			content="{% if page.image %}{{site.url}}/content/images/{{ page.image }}{% else %}http://bobplanet.kr/assets/images/step4_facebook.png{% endif %}" /> -->
+		<meta property="og:image" 			content="{% if page.image %}{{site.url}}/content/images/{{ page.image }}{% else %}{{"/assets/images/apple-touch-icon-152x152.png" | prepend: site.baseurl }}{% endif %}" />
 
 
 	<!-- Favicons-->
@@ -21,11 +21,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-	<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
-
-
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-
-
+	<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/prism.css" | prepend: site.baseurl }}">
 </head>

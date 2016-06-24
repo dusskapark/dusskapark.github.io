@@ -9,7 +9,7 @@
 		<meta property="og:title"         	content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
 		<meta property="og:description" 	content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 		<meta property="og:type"          	content="{% if page.url %}article{% else %}website{% endif %}" />
-		<meta property="og:image" 			content="{% if page.image %}{{site.url}}/content/images/{{ page.image }}{% else %}https://media.licdn.com/media/p/5/005/058/07d/0a334f2.jpg{% endif %}" />
+		<meta property="og:image" 			content="{% if page.image %}{% else %}https://media.licdn.com/media/p/5/005/058/07d/0a334f2.jpg{% endif %}" />
 
 
 	<!-- Favicons-->

@@ -9,7 +9,8 @@
         }
       );
 
-
+    $('.post-content').find('img').addClass('responsive-img');
+    
     $('h2').each(function (index, value){
         var id = $(this).attr('id')
         var name = $(this).text()
@@ -22,6 +23,7 @@
       });
 
     $('.scrollspy').scrollSpy();
+    $('.dropdown-button').dropdown();
 
 
 

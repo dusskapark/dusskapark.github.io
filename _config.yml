@@ -14,6 +14,7 @@ url: "http://api.metadata.co.kr" # the base hostname & protocol for your site
 twitter_username: dusskapark
 github_username:  dusskapark
 linkedin_username: dusskapark
+paginate: 10
 
 # Build settings
 markdown: kramdown
@@ -22,3 +23,6 @@ markdown: kramdown
 ga_trackid_web: UA-40374059-3
 # ga_trackid_rollup: UA-71027941-3
 # mixpanel_trackid: 36cc8303f20d992326aa63283098079c
+
+# Gems
+gems: [jekyll-paginate]

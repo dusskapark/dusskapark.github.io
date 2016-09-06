@@ -1,5 +1,5 @@
 header, main, footer {
-  padding-left: 240px;
+  padding-left: 300px;
 }
 
 @media only screen and (max-width : 992px) {
@@ -33,3 +33,11 @@ header, main, footer {
 .sha {
   color: #f0f0f0;
   margin: 0 6px 0 6px; }
+
+.naver_green {
+  background-color: #41C000;
+}
+
+.naver_brand_logo {
+  padding: 14px 0 0 20px;
+}

@@ -1,97 +1,61 @@
-(function(window, document, undefined) {
-  'use strict';
+(function() {
+  function displaySearchResults(results, store) {
+    var searchResults = document.getElementById('search-results');
 
-  // Search page URL without leading slash
-  var SEARCH_PATH = 'search/';
+    if (results.length) { // Are there any results?
+      var appendString = '';
 
-  var ready = function(fn) {
-    if (document.readyState != 'loading'){
-      fn();
+      for (var i = 0; i < results.length; i++) {  // Iterate over the results
+        var item = store[results[i].ref];
+        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
+        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+      }
+
+      searchResults.innerHTML = appendString;
     } else {
-      document.addEventListener('DOMContentLoaded', fn);
+      searchResults.innerHTML = '<li>No results found</li>';
     }
   }
 
-  // Return an object of `key: value` pairs from the GET search string
-  var parseSearchParameters = function(search) {
-    var ret = {},
-        // Each key-value pair is separated with an ampersand
-        params = search.split('&'),
-        i, kv;
-    for (i = 0; i < params.length; i++) {
-      // Keys are separated from values with an equals sign
-      var kv = params[i].split('=');
-      ret[kv[0]] = kv[1];
-    };
-    return ret;
-  };
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
 
-  // Only display posts on the search page that match the query
-  var filterPosts = function(categoriesContainer, tagsContainer, errorsContainer) {
-    var params = parseSearchParameters(window.location.search.slice(1)),
-        hasTag = params.tag !== undefined,
-        hasCategory = params.category !== undefined,
-        children, child, searchTerm, i, hasMatch = false;
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
 
-    // No search terms were specified
-    if (!hasTag && !hasCategory) {
-      tagsContainer.style.display = 'none';
-      categoriesContainer.style.display = 'none';
-      errorsContainer.style.display = 'block';
-      errorsContainer.querySelector('.too-few-parameters').style.display = 'block';
-      return;
-    }
-
-    // More than 1 search term was specified
-    if (hasTag && hasCategory) {
-      tagsContainer.style.display = 'none';
-      categoriesContainer.style.display = 'none';
-      errorsContainer.style.display = 'block';
-      errorsContainer.querySelector('.too-many-parameters').style.display = 'block';
-      return;
-    }
-
-    // If we're here, there's only one search term
-    if (hasCategory) {
-      tagsContainer.style.display = 'none';
-      categoriesContainer.style.display = 'block';
-      children = categoriesContainer.children;
-      searchTerm = decodeURI(params.category);
-    }
-    if (hasTag) {
-      tagsContainer.style.display = 'block';
-      categoriesContainer.style.display = 'none';
-      children = tagsContainer.children;
-      searchTerm = decodeURI(params.tag);
-    }
-
-    for (i = 0; i < children.length; i++) {
-      child = children[i];
-      if (decodeURI(child.dataset.name) === searchTerm) {
-        child.style.display = 'display';
-        hasMatch = true;
-      } else {
-        child.style.display = 'none';
-      }
-    };
-
-    if (!hasMatch) {
-      errorsContainer.style.display = 'block';
-      errorsContainer.querySelector('.no-results').style.display = 'block';
-    }
-  };
-
-  ready(function() {
-    // If we're on the search page, get the index containers and filter them
-    // based on the GET query
-    if (window.location.pathname.slice(-SEARCH_PATH.length) === SEARCH_PATH) {
-      var tagsContainer = document.querySelector('.tag-index'),
-          categoriesContainer = document.querySelector('.category-index'),
-          errorsContainer = document.querySelector('.error');
-      // We need both containers for the method to work
-      if (!!tagsContainer || !!categoriesContainer) {
-        filterPosts(categoriesContainer, tagsContainer, errorsContainer);
+      if (pair[0] === variable) {
+        return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
       }
     }
-  });
-})(window, window.document);
+  }
+
+  var searchTerm = getQueryVariable('query');
+
+  if (searchTerm) {
+    document.getElementById('search-box').setAttribute("value", searchTerm);
+
+    // Initalize lunr with the fields it will be searching on. I've given title
+    // a boost of 10 to indicate matches on this field are more important.
+    var idx = lunr(function () {
+      this.field('id');
+      this.field('title', { boost: 10 });
+      this.field('author');
+      this.field('category');
+      this.field('content');
+    });
+
+    for (var key in window.store) { // Add the data to lunr
+      idx.add({
+        'id': key,
+        'title': window.store[key].title,
+        'author': window.store[key].author,
+        'category': window.store[key].category,
+        'content': window.store[key].content
+      });
+
+      var results = idx.search(searchTerm); // Get lunr to perform a search
+      displaySearchResults(results, window.store); // We'll write this in the next section
+    }
+  }
+})();

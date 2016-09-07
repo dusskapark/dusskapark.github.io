@@ -3,6 +3,7 @@ layout: gdc_post
 title: "GDC 사용자 가이드"
 permalink: /:categories/:title.html
 categories: gdc
+tag: [gdc, developer, devcenter, test]
 ---
 
 # Role 정의

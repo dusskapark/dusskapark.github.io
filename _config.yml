@@ -16,8 +16,14 @@ github_username:  dusskapark
 linkedin_username: dusskapark
 paginate: 10
 
+
 # Build settings
 markdown: kramdown
+
+# markdown options
+kramdown:
+  input: GFM
+  hard_wrap: false
 
 # Analytics settings
 ga_trackid_web: UA-40374059-3

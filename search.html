@@ -1,0 +1,56 @@
+---
+layout: default
+title: Search results
+---
+<div class="row">
+    <!-- <div class="category-index">
+        {% for category in site.categories %} {% assign nposts = category | last | size %}
+        <div class="collection" data-name="{{ category | first | escape }}">
+            <header>
+                <h1>{{ category | first }}</h1>
+                <h2>{{ nposts }} post{% if nposts != 1 %}s{% endif %}</h2>
+            </header>
+            <ul>
+                {% for posts in category %} {% for post in posts %} {% comment %} I'm not sure why I need to check for the title, I think because the category is itself part of the posts list for some reason. {% endcomment %} {% if post.title %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %} {% endfor %} {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div> -->
+
+    {% comment %}This is the same as above, just looping over tags{% endcomment %}
+    <div class="tag-index">
+        {% for tag in site.tags %} {% assign nposts = tag | last | size %}
+        <div class="collection" data-name="{{ tag | first | escape }}">
+          <span class="title">{{ tag | first }}에 {{ nposts }} post{% if nposts != 1 %}s{% endif %}건의 데이터를 검색했습니다.</span>
+            <div class="row">
+                {% for posts in tag %} {% for post in posts %}{% if post.title %}
+                <div class="col s12 m6">
+                  <div class="card">
+                    <div class="card-content">
+                      <span class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+                    </div>
+                    <div class="card-action">
+                      <a href="{{ post.url }}">확인하기</a>
+                    </div>
+                  </div>
+                </div>
+                {% endif %} {% endfor %} {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!--
+    <div class="error">
+        <header>
+            <h1>Error</h1>
+        </header>
+        <p class="too-few-parameters">You didn't specify any search parameters.</p>
+        <p class="too-many-parameters">You specified too many search parameters.</p>
+        <p class="no-results">There were no results found for your query.</p>
+        <p><a href="/blog/">Return to the post index</a> and try again.</p>
+    </div> -->
+
+<script src="{{ " /js/search.js " | prepend: site.baseurl }}"></script>

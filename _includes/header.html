@@ -1,94 +1,69 @@
-<nav class="green">
-  <div class="nav-wrapper">
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <a href="#" class="brand-logo right">{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</a>
-    <ul id="slide-out" class="side-nav fixed">
-      <li><a href="/">About</a></li>
-      <li><a href="/getting_started.html">Getting Started</a></li>
-
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header">프로필 API<i class="mdi-navigation-arrow-drop-down "></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="{{ "/user/profile.html#userme" | prepend: site.baseurl }}">/user/me</a></li>
-                <li><a href="{{ "/user/profile.html#userdetails" | prepend: site.baseurl }}">/user/details</a></li>
-                <li><a href="{{ "/user/profile.html#userupgrade" | prepend: site.baseurl }}">/user/upgrade</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header">서비스 운영 API<i class="mdi-navigation-arrow-drop-down "></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="{{ "/maint_list.html#introduction" | prepend: site.baseurl }}">API 소개</a></li>
-                <li><a href="{{ "/maint_list.html#uml" | prepend: site.baseurl }}">UML diagram</a></li>
-                <li><a href="{{ "/maint_list.html#sample" | prepend: site.baseurl }}">Sample code</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header">데이터 분석 API<i class="mdi-navigation-arrow-drop-down "></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="{{ "/v1/api/list.html#v1apigastutus" | prepend: site.baseurl }}">/v1/api/ga/stutus	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apigaintelligence" | prepend: site.baseurl }}">/v1/api/ga/intelligence	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apigalibrary" | prepend: site.baseurl }}">/v1/api/ga/library </a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apigacreate" | prepend: site.baseurl }}">/v1/api/ga/create </a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apigaupdate" | prepend: site.baseurl }}">/v1/api/ga/update</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apigacode" | prepend: site.baseurl }}">/v1/api/ga/code </a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apirlibrary" | prepend: site.baseurl }}">/v1/api/r/library </a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apircreate" | prepend: site.baseurl }}">/v1/api/r/create</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apirupdate" | prepend: site.baseurl }}">/v1/api/r/update </a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header">서비스 기획 API<i class="mdi-navigation-arrow-drop-down "></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="{{ "/v1/api/list.html#v1apiresearchimport" | prepend: site.baseurl }}">/v1/api/research/import	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apiresearchintelligence" | prepend: site.baseurl }}">/v1/api/research/intelligence	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apiresearchtech" | prepend: site.baseurl }}">/v1/api/research/tech	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apidoclibrary" | prepend: site.baseurl }}">/v1/api/doc/library	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apidoccreate" | prepend: site.baseurl }}">/v1/api/doc/create	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apidocupdate" | prepend: site.baseurl }}">/v1/api/doc/update	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apidoccommit" | prepend: site.baseurl }}">/v1/api/doc/commit	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apiprotorepo" | prepend: site.baseurl }}">/v1/api/proto/repo	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apiprotocreate" | prepend: site.baseurl }}">/v1/api/proto/create	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apiprotoupdate" | prepend: site.baseurl }}">/v1/api/proto/update	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apiprotopush" | prepend: site.baseurl }}">/v1/api/proto/push	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apiqafeedbackrt" | prepend: site.baseurl }}">/v1/api/qa/feedback_rt	</a></li>
-                <li><a href="{{ "/v1/api/list.html#v1apiqafeedback" | prepend: site.baseurl }}">/v1/api/qa/feedback	</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li><a href="{{ "/v1/api/http.html" | prepend: site.baseurl }}">응답코드</a></li>
-      <li class="center-align">
-        <div class="line-it-button" style="display: none;" data-type="share-a" data-lang="en"></div>
-      </li>
-    </ul>
-  </div>
-
-</nav>
-<script type="text/javascript">
-LineIt.loadButton();
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% if page.title %}
+      {{ page.title | escape }}
+      {% else %}
+      {{ site.title | escape }}
+      {% endif %}
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/res/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+    {% for css in layout.css %}
+    {% if css contains "//" %}
+    <link rel="stylesheet" href="{{css}}">
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+    {% endif %}
+    {% endfor %}
+    {% for css in page.css %}
+    {% if css contains "//" %}
+    <link rel="stylesheet" href="{{css}}">
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+    {% endif %}
+    {% endfor %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.baseurl}}/feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{site.baseurl}}/sitemap.xml">
+    {% seo title=false %}
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav teal">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a class="page-title" href="{{site.baseurl}}/">{{site.title}}</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+      <ul id="slide-out" class="side-nav fixed">
+        <li>
+          <div class="userView">
+            <div class="background"></div>
+            <a href="{{site.github_profile}}" target="_blank"><img class="circle z-depth-2" src="{{site.baseurl}}/assets/res/user.png"></a>
+            <span class="white-text name">{{site.user}}</span>
+            <span class="white-text email">{{site.user_email}}</span>
+          </div>
+        </li>
+        <li><a class="waves-effect" href="{{site.baseurl}}/"><i class="material-icons">home</i>Home</a></li>
+        <li><a class="waves-effect" href="{{site.baseurl}}/projects"><i class="material-icons">description</i>Projects</a></li>
+        <li><a class="waves-effect" href="{{site.baseurl}}/categories"><i class="material-icons">sort</i>Categories</a></li>
+        <li><a class="waves-effect" href="{{site.baseurl}}/tags"><i class="material-icons">label</i>Tags</a></li>
+        <li><a class="waves-effect" href="{{site.baseurl}}/feed.xml" target="_blank"><i class="material-icons">rss_feed</i>RSS</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">person</i>About</a></li>
+        <li><a class="waves-effect" href="{{site.baseurl}}/contact"><i class="material-icons">email</i>Contact</a></li>
+      </ul>
+    </header>
+    <main>

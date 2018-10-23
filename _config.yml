@@ -1,34 +1,46 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Jude Park API reference
-email: dusskapark@gmail.com
-description: 박주형을 사용하는 방법에 대한 개발가이드 및 레퍼런스를 제공합니다. .
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://api.metadata.co.kr" # the base hostname & protocol for your site
-twitter_username: dusskapark
-github_username:  dusskapark
-linkedin_username: dusskapark
-paginate: 10
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: MatJek
+description: > # this means to ignore newlines until "baseurl:"
+  Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
+# baseurl: "/resume"
+url: "https://api.metadata.co.kr"
+# permalink: /:category/:title
+repository: dusskapark/dusskapark.github.io
+paginate: 5
 
+# MatJek specific configurations
+github_profile: "https://github.com/dusskapark"
+user: "Joo"
+user_email: "dusskapark@gmail..com"
+contact_url: "https://kr.linkedin.com/in/dusskapark"
+google_tracking_id: "UA-40374059-3"
+google_site_verification: "UA-40374059-3"
+# disqus_shortname: "matjek"
 
 # Build settings
 markdown: kramdown
-
-# markdown options
-kramdown:
-  input: GFM
-  hard_wrap: false
-
-# Analytics settings
-ga_trackid_web: UA-40374059-3
-# ga_trackid_rollup: UA-71027941-3
-# mixpanel_trackid: 36cc8303f20d992326aa63283098079c
-
-# Gems
-gems: [jekyll-paginate]
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+  style: compressed
+future: true

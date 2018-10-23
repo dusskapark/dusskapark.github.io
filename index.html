@@ -1,81 +1,66 @@
 ---
-layout: banner
-title: About
+layout: page
+css: ["index.css"]
 ---
-<div class="section no-pad-bot green white-text" id="index-banner">
-  <div class="container">
-    <h1 class="header center">About my APIs?</h1>
-    <div class='row center'>
-      <h5 class ="header col s12 light center">내가 만약에 '서비스'라면?<br />저라는 사람이 가지고 있는 역량(API)이 어떤 것이 있는지?<br /> 또 어떻게 사용하는지를 정의한 사이트</h4>
-    </div>
-    <div class="row center">
-      <a href="/getting_started.html" id="download-button" class="btn-large waves-effect waves-light">Get Started</a>
-    </div>
-  </div>
-  <div class="github-commit">
-    <div class="container">
-      <div class="commit">
-        일반적인 이력서를 보고싶시면?
-        &nbsp;&nbsp;
-        <a href="" class="sha"></a>
-        &nbsp;&nbsp;
-        <span class="date"></span>
-        <a href="https://kr.linkedin.com/in/dusskapark" class="github-button btn-flat right grey-text text-lighten-5 waves-effect waves-light hide-on-small-only">LinkedIn</a>
+<div class="row">
+  {% for post in paginator.posts %}
+  <div class="col s12">
+    <div class="card hoverable">
+      <div class="card-content">
+        <span id="post-title" class="card-title">{{post.title}}</span>
+        <p id="post-date">
+          <i class="material-icons">date_range</i>
+          {{post.date | date: "%d/%m/%Y %H:%M"}}
+        </p>
+        <p id="post-content">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
+      </div>
+      <div class="card-action">
+        <a href="{{post.url | prepend: site.baseurl}}">
+          Read More
+        </a>
       </div>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class="section">
-    <h3>목적</h3>
-    <p class="flow-text">
-      본 문서는 박주형의 다양한 역량을 그 고용주의 요청(http)으로 활용할 수 있는 API에 대해 설명하며, 박주형이 제공하는 각각의 기능별 상세 설명을 포함합니다.
-    </p>
-  <div class="divider"></div>
-    <!--   Promo Section   -->
-    <h3>API 종류</h3>
-
-    <div class="row">
-      <div class="col s12 m6">
-        <div class="center">
-
-          <p class="flow-text"><i class="material-icons">account_circle</i> 프로필 API</p>
-          <p class="light center">박주형이라는 개인에 대한 간단한 정보를 출력하는 API입니다.</p>
-        </div>
-      </div>
-
-      <div class="col s12 m6">
-        <div class="center">
-
-          <p class="flow-text"><i class="material-icons">assessment</i> 데이터 분석 API</p>
-          <p class="light center">Google Analytics와 R을 활용한 데이터 수집, 설계, 분석 능력을 호출하는 API 입니다. </p>
-        </div>
-      </div>
-
-      <div class="col s12 m6">
-        <div class="center">
-
-          <p class="flow-text"><i class="material-icons">sms</i> 서비스 운영 API</p>
-          <p class="light center">각종 VOC와 장애 상황에 빠르게 대응하고, 문제의 원인을 찾아 다양한 정책들을 수립/검토하는 능력을 호출하는 API 입니다.</p>
-        </div>
-      </div>
-
-      <div class="col s12 m6">
-        <div class="center">
-
-          <p class="flow-text"><i class="material-icons">mms</i> 서비스 기획 API</p>
-          <p class="light center">최신 기술이나 서비스 트랜드, 고객 피드백 그리고 데이터 분석을 기반으로 의사결정을 내리고, 이를 논리적으로 기획서와 서비스에 반영하는 능력을 호출하는 API 입니다.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div class="divider"></div>
-  <div class="section">
-    <div class="row center">
-      <h3 class="light header">Visit my Blog</h3>
-      <p class="col s8 offset-s2 caption">못다한 저의 다양한 이야기는 저의 블로그에서 확인하실 수 있습니다. </p>
-      <a href="http://fordism.net" class="btn-large waves-effect waves-light">Explore my Blog</a>
-    </div>
+  {% endfor %}
+  <div class="col s12 center-align">
+    <ul class="pagination">
+      <li class="{% unless paginator.previous_page %}disabled{% else %}waves-effect{% endunless %}">
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a href="{{site.baseurl}}/">
+        {% else %}
+        <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
+        {% endif %}
+        {% else %}
+        <a href="#!">
+        {% endif %}
+          <i class="material-icons">chevron_left</i>
+        </a>
+      </li>
+      {% if paginator.page == 1 %}
+      <li class="active teal">
+        <a href="#!">1</a>
+      {% else %}
+      <li class="waves-effect">
+        <a href="{{site.baseurl}}/">1</a>
+      {% endif %}
+      </li>
+      {% for count in (2..paginator.total_pages) %}
+      {% if count == paginator.page %}
+      <li class="active teal"><a href="#!">{{count}}</a></li>
+      {% else %}
+      <li class="waves-effect"><a href="{{site.baseurl}}/page{{count}}">{{count}}</a></li>
+      {% endif %}
+      {% endfor %}
+      <li class="{% unless paginator.next_page %}disabled{% else %}waves-effect{% endunless %}">
+        {% if paginator.next_page %}
+        <a href="{{site.baseurl}}/page{{paginator.next_page}}">
+        {% else %}
+        <a href="#!">
+        {% endif %}
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>

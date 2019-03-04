@@ -80,6 +80,9 @@
     // layout Masonry after each image loads
     $masonry.imagesLoaded(function () {
       $masonry.masonry('layout');
+    }).done(function () {
+      console.log('all images successfully loaded');
+      $('img.lazyload').lazyload();
     });
     $('a.filter').click(function (e) {
       e.preventDefault();
@@ -128,28 +131,12 @@
       onShow: onShow,
       fillScreen: true
     });
-
     // Lazy Loaded
-
     $('img.lazyload').lazyload({
-      placeholder: 'http://placehold.it/350x300',
       effect: 'fadeIn',
       load: function () {
         console.log('이미지 호출이 완료되었습니다.');
       }
     });
-
-    $masonry.click(function () {
-      console.log('hello')
-    }).lazyload({
-      event: 'click',
-      effect: 'fadeIn',
-      load: function () {
-        console.log('이미지 클릭 호출이 완료되었습니다.');
-      }
-    })
-
-
-
   }); // end of document ready
 })(jQuery); // end of jQuery name space

@@ -1,5 +1,5 @@
-(function($) {
-  $(function() {
+(function ($) {
+  $(function () {
     M.AutoInit();
 
     // Dropdown
@@ -15,9 +15,9 @@
         top: categories.offset().top
       });
       var $links = categories.find("li");
-      $links.each(function() {
+      $links.each(function () {
         var $link = $(this);
-        $link.on("click", function() {
+        $link.on("click", function () {
           $links.removeClass("active");
           $link.addClass("active");
           var hash = $link
@@ -41,13 +41,13 @@
             transitionDuration: ".3s"
           });
           // only animate on layout
-          $masonry.one("layoutComplete", function(event, items) {
+          $masonry.one("layoutComplete", function (event, items) {
             $masonry.masonry({
               transitionDuration: 0
             });
           });
 
-          setTimeout(function() {
+          setTimeout(function () {
             $masonry.masonry("layout");
           }, 1000);
         });
@@ -62,7 +62,7 @@
     $(".carousel.carousel-slider").carousel({
       fullWidth: true,
       indicators: true,
-      onCycleTo: function(el) {
+      onCycleTo: function (el) {
         $(".nav-background img").removeClass("active");
         $(".nav-background img")
           .eq($(el).index())
@@ -81,22 +81,15 @@
       transitionDuration: 0
     });
     // layout Masonry after each image loads
-    $masonry.imagesLoaded(function() {
-      // // Lazy Loaded
-      // $('img.lazyload').lazyload({
-      //   effect: 'fadeIn',
-      //   load: function () {
-      //     console.log('이미지 호출이 완료되었습니다.');
-      //   }
-      // });
+    $masonry.imagesLoaded(function () {
       $masonry.masonry("layout");
     });
-    $("a.filter").click(function(e) {
+    $("a.filter").click(function (e) {
       e.preventDefault();
     });
 
     // Contact Form Icon
-    $("form .form-control").focus(function() {
+    $("form .form-control").focus(function () {
       $(this)
         .siblings("label")
         .first()
@@ -107,7 +100,7 @@
           left: 0
         });
     });
-    $("form .form-control").blur(function() {
+    $("form .form-control").blur(function () {
       $(this)
         .siblings("label")
         .first()
@@ -119,7 +112,7 @@
         });
     });
 
-    var onShow = function(el) {
+    var onShow = function (el) {
       var carousel = el.find(".carousel");
       carousel.carousel({
         dist: 0,
@@ -147,21 +140,27 @@
       fillScreen: true
     });
 
-    $(".gallery-item").click(function() {});
-
     // Lazy Loaded
     $('img.lazyload').lazyload({
       placeholder: "https://placehold.it/300x200",
       effect: "fadeIn",
-      load: function() {
+      load: function () {
+        $masonry.masonry("layout");
         console.log("이미지 호출이 완료되었습니다.");
       }
     });
 
-    $(".gallery").click(function() {
-      // Rearrange images
-      console.log("hello");
-      $('img.lazyload').lazyload();
-    });
+    // $(".gallery").click(function () {
+    //   // Rearrange images
+
+    //   $('img.lazyload').lazyload({
+    //     effect: "fadeIn",
+    //     load: function () {
+    //       console.log("상세 이미지 호출이 완료되었습니다.");
+    //       $masonry.masonry("layout");
+    //     }
+    //   });
+    // });
+
   }); // end of document ready
 })(jQuery); // end of jQuery name space

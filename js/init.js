@@ -1,5 +1,5 @@
-(function($){
-  $(function(){
+(function ($) {
+  $(function () {
 
     M.AutoInit();
 
@@ -13,11 +13,13 @@
     // Navbar
     var categories = $('nav .categories-container');
     if (categories.length) {
-      categories.pushpin({ top: categories.offset().top });
+      categories.pushpin({
+        top: categories.offset().top
+      });
       var $links = categories.find('li');
-      $links.each(function() {
+      $links.each(function () {
         var $link = $(this);
-        $link.on('click', function() {
+        $link.on('click', function () {
           $links.removeClass('active');
           $link.addClass('active');
           var hash = $link.find('a').first()[0].hash.substr(1);
@@ -35,14 +37,15 @@
             transitionDuration: '.3s'
           });
           // only animate on layout
-          $masonry.one( 'layoutComplete', function( event, items ) {
+          $masonry.one('layoutComplete', function (event, items) {
             $masonry.masonry({
               transitionDuration: 0
             });
           });
-          setTimeout(function() {
 
-          $masonry.masonry('layout');
+          setTimeout(function () {
+
+            $masonry.masonry('layout');
           }, 1000);
         });
       });
@@ -57,7 +60,7 @@
     $('.carousel.carousel-slider').carousel({
       fullWidth: true,
       indicators: true,
-      onCycleTo: function(el) {
+      onCycleTo: function (el) {
         $('.nav-background img').removeClass('active');
         $('.nav-background img').eq($(el).index()).addClass('active');
       }
@@ -75,7 +78,7 @@
       transitionDuration: 0
     });
     // layout Masonry after each image loads
-    $masonry.imagesLoaded(function() {
+    $masonry.imagesLoaded(function () {
       $masonry.masonry('layout');
     });
     $('a.filter').click(function (e) {
@@ -83,17 +86,22 @@
     });
 
 
-
     // Contact Form Icon
-    $("form .form-control").focus(function() {
-      $(this).siblings("label").first().children("i").first().css({"color": "#aaa", "left": 0});
+    $("form .form-control").focus(function () {
+      $(this).siblings("label").first().children("i").first().css({
+        "color": "#aaa",
+        "left": 0
+      });
     });
-    $("form .form-control").blur(function() {
-      $(this).siblings("label").first().children("i").first().css({"color": "transparent", "left": "-20px"});
+    $("form .form-control").blur(function () {
+      $(this).siblings("label").first().children("i").first().css({
+        "color": "transparent",
+        "left": "-20px"
+      });
     });
 
 
-    var onShow = function(el) {
+    var onShow = function (el) {
       var carousel = el.find('.carousel');
       carousel.carousel({
         dist: 0,
@@ -121,13 +129,27 @@
       fillScreen: true
     });
 
-    // geo-pattern
-    $('.geopattern').each(function(){
-      $(this).geopattern($(this).data('pattern-id'));
+    // Lazy Loaded
+
+    $('img.lazyload').lazyload({
+      placeholder: 'http://placehold.it/350x300',
+      effect: 'fadeIn',
+      load: function () {
+        console.log('이미지 호출이 완료되었습니다.');
+      }
     });
 
-    var pattern = GeoPattern.generate('GitHub');
-    $('.geopattern').css('background-image', pattern.toDataUrl());
+    $masonry.click(function () {
+      console.log('hello')
+    }).lazyload({
+      event: 'click',
+      effect: 'fadeIn',
+      load: function () {
+        console.log('이미지 클릭 호출이 완료되었습니다.');
+      }
+    })
+
+
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

@@ -31,8 +31,7 @@
   <!-- Navbar and Header -->
   <nav class="nav-extended">
     <div class="nav-background">
-      <div class="pattern active geopattern" style="background-image: url('assets/geopattern_JooHyungPark.png')"></div>
-      <!-- <div class="pattern active geopattern" style="background-image: ''" width="1400" height="300" data-pattern-id="JooHyungPark"></div> -->
+      <div class="pattern active" style="background-image: url('assets/geopattern_JooHyungPark.png')"></div>
     </div>
     <div class="nav-wrapper container">
       <a href="index.html" class="brand-logo"><i class="material-icons">next_week</i>Hey, Joo</a>
@@ -114,7 +113,7 @@
         <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter fill-screen Design-System Material-Design Product-Management">
           <div class="gallery-curve-wrapper">
             <a class="gallery-cover gray">
-              <img class="responsive-img" src="assets/lookbook2019-001.png" alt="placeholder" />
+              <img class="responsive-img lazyload" src="http://placehold.it/350x300" data-original="assets/lookbook2019-001.png" alt="placeholder" />
             </a>
             <div class="gallery-header">
               <span>Design System Project</span>
@@ -186,12 +185,25 @@
 
               <div class="carousel-wrapper">
                 <div class="carousel">
-                  <a class="carousel-item" href="#one!" style="width: 300px; height: 200px;"><img src="assets/lookbook2019-003.png" /></a>
-                  <a class="carousel-item" href="#two!" style="width: 300px; height: 200px;"><img src="assets/lookbook2019-004.png" /></a>
-                  <a class="carousel-item" href="#three!" style="width: 300px; height: 200px;"><img src="assets/lookbook2019-005.png" /></a>
-                  <a class="carousel-item" href="#four!" style="width: 300px; height: 200px;"><img src="assets/lookbook2019-006.png" /></a>
-                  <a class="carousel-item" href="#five!" style="width: 300px; height: 200px;"><img src="assets/lookbook2019-007.png" /></a>
-                  <a class="carousel-item" href="#six!" style="width: 300px; height: 200px;"><img src="assets/lookbook2019-008.png" /></a>
+                  <a class="carousel-item" href="#one!">
+                    <img class="lazyload" data-original="assets/lookbook2019-003.png"/>
+                  </a>
+                  <a class="carousel-item" href="#one!">
+                    <img class="lazyload" data-original="assets/lookbook2019-004.png"/>
+                  </a>
+                  <a class="carousel-item" href="#one!">
+                    <img class="lazyload" data-original="assets/lookbook2019-005.png"/>
+                  </a>
+                  <a class="carousel-item" href="#one!">
+                    <img class="lazyload" data-original="assets/lookbook2019-006.png"/>
+                  </a>
+                  <a class="carousel-item" href="#one!">
+                    <img class="lazyload" data-original="assets/lookbook2019-007.png"/>
+                  </a>
+                  <a class="carousel-item" href="#one!">
+                    <img class="lazyload" data-original="assets/lookbook2019-008.png"/>
+                  </a>
+                  
                 </div>
               </div>
               <div class="wrapper">
@@ -215,7 +227,7 @@
         <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter Material-Design">
           <div class="gallery-curve-wrapper">
             <a class="gallery-cover gray">
-              <img class="responsive-img" src="assets/console2018-004.png" alt="placeholder" />
+                <img class="responsive-img lazyload" src="http://placehold.it/350x300" data-original="assets/console2018-004.png" alt="placeholder"/>
             </a>
             <div class="gallery-header">
               <span>LINE GAME Platform Console</span>
@@ -887,7 +899,7 @@
 
   <!-- Core Javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="js/geopattern.min.js"></script>
+  <script src="js/jquery.lazyload.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
   <script src="js/masonry.pkgd.min.js"></script>
   <script src="js/materialize.min.js"></script>

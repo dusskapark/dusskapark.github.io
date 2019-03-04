@@ -2494,6 +2494,11 @@ lazy-cache@^1.0.3:
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
   integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
 
+lazyload@^2.0.0-beta.2:
+  version "2.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/lazyload/-/lazyload-2.0.0-beta.2.tgz#1dc729c3739f06fdc825702c33b9dd99f89ebcbd"
+  integrity sha512-UT1/OlsKe/raZGZgZ71DtnBOj3g6x5AZDc/V9INHpJBgRGh8jv61Jm8ZVHF1UmfFcEOIQHlYH/fO5gmZPvVtOA==
+
 lazystream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/lazystream/-/lazystream-0.1.0.tgz#1b25d63c772a4c20f0a5ed0a9d77f484b6e16920"

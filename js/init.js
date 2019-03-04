@@ -79,11 +79,15 @@
     });
     // layout Masonry after each image loads
     $masonry.imagesLoaded(function () {
+      // // Lazy Loaded
+      // $('img.lazyload').lazyload({
+      //   effect: 'fadeIn',
+      //   load: function () {
+      //     console.log('이미지 호출이 완료되었습니다.');
+      //   }
+      // });
       $masonry.masonry('layout');
-    }).done(function () {
-      console.log('all images successfully loaded');
-      $('img.lazyload').lazyload();
-    });
+    })
     $('a.filter').click(function (e) {
       e.preventDefault();
     });
@@ -131,6 +135,7 @@
       onShow: onShow,
       fillScreen: true
     });
+    
     // Lazy Loaded
     $('img.lazyload').lazyload({
       effect: 'fadeIn',

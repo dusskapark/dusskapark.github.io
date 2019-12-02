@@ -1,6 +1,7 @@
 (function ($) {
   $(function () {
     M.AutoInit();
+    $('.materialboxed').materialbox();
 
     // Dropdown
     $(".dropdown-trigger").dropdown({
@@ -149,6 +150,10 @@
         console.log("이미지 호출이 완료되었습니다.");
       }
     });
+
+    // Material Box
+    $('.materialboxed').materialbox();
+
 
     // $(".gallery").click(function () {
     //   // Rearrange images

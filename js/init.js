@@ -7,7 +7,7 @@
     $(".dropdown-trigger").dropdown({
       coverTrigger: false,
       constrainWidth: false
-    });
+    }); 
 
     // Navbar
     var categories = $("nav .categories-container");

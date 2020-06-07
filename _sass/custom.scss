@@ -1,0 +1,13 @@
+.toc {
+  hr {
+    background-color: var(--accent);
+  }
+  position: absolute;
+  right: 0em;
+  top: 0em;
+  max-width: 120px;
+  display: none;
+  @include mq(tabletl) {
+      display: inline;
+  }
+}

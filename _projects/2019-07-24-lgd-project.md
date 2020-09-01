@@ -118,7 +118,7 @@ We used Docz for interactive preview of UI components ans pages
 
 {% include post-components/gallery.html
 	columns = 2
-	full_width = true
+	full_width = false
 	images = "/images/projects/2019-lgd/lgd2019-001.jpg, /images/projects/2019-lgd/lgd2019-002.jpg, /images/projects/2019-lgd/lgd2019-003.jpg, /images/projects/2019-lgd/lgd2019-004.jpg,
 	"
 %}

@@ -14,9 +14,7 @@ role: FE Engineer
 
 SK플래닛 구성원이 매일 이용하는 사내식당! 하지만 식당 밥맛이 들쭉날쭉하다는 평가가 많고 주변에 다른 회삿밥과 비교를 당하는 경우가 많았습니다. 하지만 구성원이 귀로 듣는 불평에 비해서 식당 운영업체인 후니드가 직접 듣는 고객의 소리함(공책!)에는 별다른 이야기가 올라오지 않는다고 합니다. 그래서 구성원의 목소리를 제대로 전할 수 있는 앱을 만들어 보기로 했습니다. 
 
-- T스토어 주소: http://tsto.re/0000694906
-- Google Play 주소: https://play.google.com/store/apps/details?id=kr.bobplanet.android
-
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/i34MRy1UT32DnV" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/dusskapark/ss-56227884" title="밥플래닛" target="_blank">밥플래닛</a> </strong> from <strong><a href="https://www.slideshare.net/dusskapark" target="_blank">JooHyung Park</a></strong> </div>
 
 #### 기능설명 
 

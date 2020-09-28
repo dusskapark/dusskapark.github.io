@@ -20,8 +20,6 @@ Also I have to say that I have developed this experiment in my research time wor
 ![image-20200924120411503](/images/ml4ds/image-20200924120411503.png)
 
 
-이 아이디어는 디자인 시스템을 만드는 것의 어려움에서 출발했습니다. 디자인 시스템의 핵심은 디자인 요소들을 모아서 재사용 가능한 라이브러리를 만드는 것입니다. 하지만 아이러니 하게도 라이브러리(예: Sketch 심볼 라이브러리)에 자료가 쌓일수록 디자이너들이 사용하기는 점점 어려워집니다. 라이브러리가 복잡해서 학습할 것이 많아지고, 작업 환경이 무거워지기 때문입니다.
-
 This idea started with my difficulty of creating a design system. The heart of the design system is to assemble design elements and create reusable libraries. But ironically, increasing resources in libraries (such as the Sketch symbol library), on the contrary, makes it increasingly difficult for designers to use in their design because the more complex the library, the more they have to learn, as well as the heavier the working environment.
 
 As a design system manager, this was a serious challenge. So I thought, **What if Sketch Assistant could automatically detect which UI components are being used on the artboard, and recommend designers to use library symbols through the Assistant?** A simple flow is shown below:

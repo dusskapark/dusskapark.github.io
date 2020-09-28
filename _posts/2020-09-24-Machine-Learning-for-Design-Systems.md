@@ -5,6 +5,8 @@ description: Machine Learning for Design Systems-Training Tensorflow Object Dete
 featured_image: '/images/ml4ds/image-20200924121002344.png'
 ---
 
+> The original of this document is [here](https://medium.com/@judepark_6960/machine-learning-for-design-systems-315cd34b676f) (Korean).
+
 ## Preliminar words
 
 This blog post is a re-work of the amazing tutorial from [**Abdelrahman G. Abubakr**](https://github.com/abdelrahman-gaber) on how to create your own object detector with Object Detection API from Tensorflow 2. I am following the same steps as the tutorial, but I did a little differently to fit my development environment and design system research. I want to thank the author for the original content and everyone who wrote it for reducing my trial errors.
@@ -43,10 +45,6 @@ Firstly, I set up the Python virtual environment and installed Tenserflow accord
 
 
 ### direnv
-
-먼저 direnv로 가상환경을 구축했습니다. Anaconda를 사용해도 괜찮지만 개인적으로 디렉터리 별로 필요한 설정(`.envrc`)을 정의하는 것이 편해서 direnv를 사용합니다. 
-
-macOS를 사용하는 경우 Homebrew를 사용해 쉽게 설치할 수 있습니다.
 
 First, I used a virtual environment with [direnv](https://github.com/direnv/direnv/wiki/Python). It's also okay to use Anaconda or other virtual env tools, but I personally prefer to use direnv because it's comfortable to define the necessary settings for each directory via `.envrc`.
 
@@ -508,13 +506,7 @@ BOOOOM! Of course, it's not perfect, such as finding only 1 icon button... But C
 
 
 
-## Next steps
-
-다음 스텝으로는 새로 생성한 모델을 tfjs로 변환해서 Sketch assistant에 사용할 수 있도록 만들어야 할 것 같습니다. 이 부분은 또 다른 공부가 필요하므로 잠시 쉬었다가 진행할 생각입니다. 
-
-또한 원본 데이터를 넣고, 라벨을 입력하는 등의 과정이 개인이 혼자서 진행하기에는 방대한 양이라는 점을 새삼 깨닳았습니다. 실제로 돌아가는 수준의 모델을 만들려면 정말 많은 사람의 오픈소스 참여가 필요할 것 같습니다. 
-
-그래서 이 블로그 글을 통해서 이런 것이 가능하다.. 라는 것을 알리고, 기회가 된다면 커뮤니티에 경험을 공유해볼 생각입니다. 
+## Next steps 
 
 The next step is to convert the newly created model to tensorflow js and make it available to Sketch assistant based on Node js. But this part requires another study, so I will take a break before proceeding.
 

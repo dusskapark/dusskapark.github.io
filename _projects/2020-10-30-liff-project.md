@@ -17,7 +17,7 @@ But there were lots of product owners and partners who have been wanted to speci
 
 
 
-![Portfolio.005](../images/projects/Portfolio/Portfolio.005.png)
+![Portfolio.005](/images/projects/Portfolio/Portfolio.005.png)
 
 ## Research
 
@@ -27,13 +27,13 @@ So we looked at the UX of almost all of LINE family services and found the follo
 
 LIFF app screens consist of a **❶ native area** and **❷ web area**. Elements in the native area are for web browser features such as back button and close button. Web area is for displaying service content. So, we had to consider not only the UX of the web app, but also the harmony of the features of the web browser.
 
-![4_Native area](../images/projects/2020-liff/4_Native area.png)
+![4_Native area](/images/projects/2020-liff/4_Native area.png)
 
 For example, the header of in-app browser has native buttons by default in the FAB (Floating Action Button) section, located at the top right-hand side corner. So designers got stress not to alter nor block this section when they design the header.
 
 If the designer allocate the close button in the right-hand side, the button and the content overlap when the user scrolls the page. SoEach designer separately found their own ideas such as getting around this by keeping the FAB container on or adding a container with white background in the web area.
 
-![8-1](../images/projects/2020-liff/8-1.png)
+![8-1](/images/projects/2020-liff/8-1.png)
 
 
 

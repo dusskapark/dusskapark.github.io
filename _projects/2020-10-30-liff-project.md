@@ -100,8 +100,10 @@ Finally, we distributed the LIFF Guidelines document, Sketch symbol library, and
 
 In addition, LIFF UI, part of this project, was even introduced to the public as one of LINE's major FE project achievements through LINE's annual developer event.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/63nsHQSD3OQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+{% include post-components/video.html
+	url = "https://www.youtube.com/embed/63nsHQSD3OQ"
+	full_width = true
+%}
 
 
 

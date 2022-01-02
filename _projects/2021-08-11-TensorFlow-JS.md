@@ -78,7 +78,7 @@ So I applied to a sponsorship program hosted by a Korean data labeling company, 
 
 You can download some samples of this open dataset that I created with [Mobbin](https://mobbin.design), and [SelectStar](https://selectstar.ai) through this [link.](https://open.selectstar.ai/data-set/mobbin) Moreover, if you are interested in the whole dataset, please contact me.
 
-![스크린샷 2022-01-02 오후 10.57.13](../images/projects/2021-made-with-tfjs/스크린샷 2022-01-02 오후 10.57.13.png)
+![스크린샷 2022-01-02 오후 10.57.13](../images/projects/2021-made-with-tfjs/2022-01-02 10.57.13.png)
 
 
 
@@ -144,4 +144,4 @@ FINALLY, I was invited to DEVIEW 2021, which is one of the biggest Developer con
 
 https://deview.kr/2021/sessions/460
 
-![스크린샷 2022-01-02 오후 11.54.33](../images/projects/2021-made-with-tfjs/스크린샷 2022-01-02 오후 11.54.33.png)
+![스크린샷 2022-01-02 오후 11.54.33](../images/projects/2021-made-with-tfjs/2022-01-02 11.54.33.png)

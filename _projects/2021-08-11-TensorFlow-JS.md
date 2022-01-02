@@ -36,7 +36,7 @@ In the LINE design system, I worked super hard to prevent those kinda mistakes v
 
 ## Ideate & Prototype
 
-### Ideate? Computer Vision!
+### Idea? Computer Vision!
 
 The basic idea of this project is to detect various UI elements in the browser using a custom trained object detection model via TensorFlow.js live in the plugin.
 

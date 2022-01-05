@@ -138,9 +138,9 @@ I choose some and attach them below!
 
 
 
-## And... Developer converence!
+## And... DEVIEW 2021!
 
-FINALLY, I was invited to DEVIEW 2021, which is one of the biggest Developer conferences in Korea, and shared my experiences with the title "**Using TensorFlow JS to build an AI-powered design system**". This was a truly honorable experience for me. I will take a step further based on this experience.
+FINALLY, I was invited to DEVIEW 2021, which is one of the biggest Developer conference in Korea, and shared my experiences with the title "**Using TensorFlow JS to build an AI-powered design system**". This was a truly honorable experience for me. I will take a step further based on this experience.
 
 https://deview.kr/2021/sessions/460
 

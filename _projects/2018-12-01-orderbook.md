@@ -9,6 +9,7 @@ gallery_images:
     - /2018-orderbook/logostory2018-001.png
 team:  David (Lead), Kevin, Maxx, Sungvin, JooHyung (me)
 role: Product Designer and React Engineer
+visible: true
 ---
 
 Have you ever been annoyed or tired of having to wait in a long line when ordering food at a restaurant? Orderbook(모두의 주문) is a service that customers order directly from the table with a mobile QR code. 

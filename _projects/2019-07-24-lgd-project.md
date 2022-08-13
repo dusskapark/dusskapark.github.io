@@ -12,6 +12,7 @@ gallery_images:
   - /2019-lgd/lgd2019-004.jpg
 team: JooHyung, Jinwoo, SeungHyeon, Li Huishu
 role: Project Lead / Product Designer
+visible: true
 ---
 
 LINE GAME Developers is a ‘Firebase-like’ web application that provides LINE’s APIs and documents for game developers to enrich games with LINE messager. As a Product designer, modernized user experiences of LINE GAME Developers by defining a UI framework that is effortless, refined, and beautiful for all screen sizes.

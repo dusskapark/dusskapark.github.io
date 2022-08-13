@@ -8,7 +8,8 @@ accent_color: '#4C60E6'
 gallery_images:
   - /2020-liff/3_Various view types.png
 team: Shimogori Ai(PM), Hyunju, Dane, JooHyung, Okamoto, Gong Yang
-role: Product Designer of the design system
+role: Product Designer
+visible: true
 ---
 
 LINE’s LIFF (LINE Front-end Framework, `LIFF` as below) is a platform for running web apps and offers a browser, namely, LIFF Browser. LIFF apps, web apps implemented with LIFF, run on LIFF Browser. LIFF also provides the LIFF API for developers to obtain data from LINE, such as LINE user ID, and enables developers to send LINE messages on behalf of the user. Learn more details [here](https://developers.line.biz/en/docs/liff/registering-liff-apps/#before-you-begin).

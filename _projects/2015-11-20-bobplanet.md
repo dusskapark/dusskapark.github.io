@@ -8,6 +8,7 @@ accent_color: '#4C60E6'
 gallery_images: /2015-bobplanet/step4_1mb.png
 team: 진헌규(Lead), 박주형(me), 이진승, 신정섭, 전성호, 장활훈, 김두식, 정호윤, 송진석
 role: FE Engineer
+visible: true
 ---
 
 ### 왜? 밥플래닛을 만들었나?

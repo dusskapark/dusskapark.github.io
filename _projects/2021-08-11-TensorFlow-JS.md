@@ -7,6 +7,7 @@ featured_image: '/2021-made-with-tfjs/file-cover.png'
 gallery_images: '/2021-made-with-tfjs/file-cover.png'
 team: JooHyung(Lead), JongHee
 role: Project Lead 
+visible: true
 ---
 
 ## Project Process

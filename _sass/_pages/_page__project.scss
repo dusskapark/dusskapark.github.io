@@ -24,9 +24,9 @@
     table:not(.rouge-table) {
       border: 2px solid var(--accent);
 
-      thead {
-        background: var(--accent);
-      }
+      // thead {
+      //   background: var(--accent);
+      // }
     }
 
     .gallery--carousel .owl-dot.active::after {

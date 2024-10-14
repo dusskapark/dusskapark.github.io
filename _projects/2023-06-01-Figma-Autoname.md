@@ -10,8 +10,6 @@ role: FE Developer & Open Source Contributor
 visible: true
 ---
 
-![Cover image](../images/projects/2023-figma-autoname/cover.png)
-
 ## Background
 
 The spark for my contribution to the Figma Autoname plugin ignited from a personal challenge: managing design systems efficiently. The allure of using AI to automate layer naming in Figma captivated me, promising to transform the tedious task of organizing design files into a seamless experience. This fascination was further fueled by the innovative potential of TensorFlow.js, which opened doors to integrating machine learning into design workflows.

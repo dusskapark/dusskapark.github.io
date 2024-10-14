@@ -128,11 +128,11 @@ After thoroughly testing the internal version of the plugin and fixing any bugs,
 
 ## Conclusion & Lessons Learned
 
-
 {% include post-components/video.html
-	url = "https://youtu.be/x2Hn0qNXakA?si=O2hE0O8c0uSvpTa9"
+    url = "https://www.youtube.com/embed/2eZeka9gMgA?si=6GmV6B40PQ2zpC9x"
 	full_width = false
 %}
+<br>
 
 <div style="text-align: center;">
   <i style="color: #878787; font-size: 12px;">A presentation deck for explaining my contributions to the Figma Autoname plugin. (Oct 2023)</i>

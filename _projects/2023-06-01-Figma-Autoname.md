@@ -71,7 +71,7 @@ In response to the feedback, I decided to continue iterating on the plugin to ad
 
 The next phase of development focused on enhancing the plugin's usability and functionality to better support design system managers and developers. This involved several key enhancements:
 
-**Figma-dummy-gen**
+**Figma-dummy-gen: Extracting design system building blocks**
 
 Building on the initial enhancements, I decided to remove the Excel download feature from the plugin and instead focused on creating a new standalone project called [Figma-dummy-gen](https://github.com/FigmaAI/figma-dummy-gen). This new Figma plugin is designed to support custom training for the [Figma Autoname](https://autoname.org/) plugin.
 
@@ -84,7 +84,7 @@ Building on the initial enhancements, I decided to remove the Excel download fea
 
 Figma-dummy-gen allows users to generate and extract images directly from their Figma design library, providing the necessary data for machine learning model training. The primary purpose of this plugin is to streamline the process of preparing datasets, making it easier for design system managers and developers to create custom vision models tailored to their specific needs.
 
-**Python Jupyter Notebook for Model Training**
+**Python Jupyter Notebook: One-click training of TFJS model**
 
 <div style="text-align: center;">
   <img src="../images/projects/2023-figma-autoname/jupyter-notebook.png" style="width: 570px;"/>
@@ -102,7 +102,7 @@ To further simplify the model training process, I created a Python Jupyter Noteb
 </div>
 <br>
 
-**Figma DevMode Support**
+**Figma DevMode: Supportting Developer Collaboration**
 
 With the ability to apply custom models now in place, I also tried to utilize those result to enhance the DevMode experience. nodes renamed using AutoName now display an additional link in Figma's DevMode. This link directs engineers to the relevant design system's API guide, ensuring they have quick access to necessary documentation. This feature is designed to streamline the developer workflow and foster better collaboration between designers and engineers.
 

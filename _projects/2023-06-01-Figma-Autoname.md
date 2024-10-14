@@ -113,6 +113,22 @@ With the ability to apply custom models now in place, I also tried to utilize th
 </div>
 <br>
 
+
+
+### Final Output
+
+The culmination of this project is a sophisticated Figma plugin that leverages custom machine learning models to enhance the design workflow. This plugin empowers designers by renaming the layers, tailored to their specific design systems. It also serves as a bridge for engineers, facilitating the seamless integration of design system documentation into their development processes. The plugin's flexibility and adaptability make it a valuable tool for both designers and engineers, streamlining collaboration and improving efficiency. For a detailed overview of the plugin's features and capabilities, please refer to the sections below.
+
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x2Hn0qNXakA?si=MOB5ptl_9mW0R5c1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>
+  <i style="color: #878787; font-size: 12px;">A presentation deck for explaining my contributions to the Figma Autoname plugin. (Oct 2023)</i>
+</div>
+<br>
+
+
+
+
 ## Test & Deploy
 
 After making improvements to the plugin, I decided to share it at our company's monthly design meeting, 'Design ThursDay'. This was a chance to show all Grab designers the changes and get their thoughts on how well the plugin solved the earlier problems. For that, I used the Figma-dummy-gen & Python notebook to train the Tensorflow machine learning model with our design system and released it to our Grab's internal Figma plugin store.
@@ -129,13 +145,6 @@ Even though there were some worries about how accurate and fast the computer vis
 After thoroughly testing the internal version of the plugin and fixing any bugs, I submitted a pull request to Hugo to incorporate our new user experience into the community version of the plugin. This was accompanied by an engaging commercial video that highlighted the plugin's capabilities, sparking further discussions on how to enhance the plugin for all users.
 
 ## Conclusion & Lessons Learned
-
-<div style="text-align: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/x2Hn0qNXakA?si=MOB5ptl_9mW0R5c1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-  <i style="color: #878787; font-size: 12px;">A presentation deck for explaining my contributions to the Figma Autoname plugin. (Oct 2023)</i>
-</div>
-<br>
 
 Throughout this journey, we actively engaged in discussions and development, but unfortunately, our motivation waned when Figma announced that the Rename layers feature would become a native part of their platform. As a result, I've decided to pause my contributions to this open-source project for now ([link](https://www.linkedin.com/posts/dusskapark_figma-ai-rename-your-layers-and-more-figma-activity-7211975137204559872-3Sab)).
 

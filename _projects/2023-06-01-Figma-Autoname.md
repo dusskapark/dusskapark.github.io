@@ -129,7 +129,7 @@ After thoroughly testing the internal version of the plugin and fixing any bugs,
 ## Conclusion & Lessons Learned
 
 {% include post-components/video.html
-    url = "https://youtu.be/x2Hn0qNXakA"
+    url = "https://youtu.be/x2Hn0qNXakA?si=z2Wl3KSNmnenel31"
 	full_width = false
 %}
 <br>

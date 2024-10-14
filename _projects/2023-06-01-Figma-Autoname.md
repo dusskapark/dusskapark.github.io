@@ -51,6 +51,8 @@ Next, I developed a feature to extract UI image "building blocks" during the plu
 
 With these solutions in place, I submitted a pull request to Hugo, the original author. After several rounds of code reviews and video meetings, I was thrilled to see my contributions integrated into the plugin. This collaborative effort not only enhanced the plugin's capabilities but also reinforced the power of open-source development in driving innovation.
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨 Import your own <a href="https://twitter.com/TensorFlow?ref_src=twsrc%5Etfw">@TensorFlow</a> JS model into the Figma Autoname plugin⚡️ Thanks <a href="https://twitter.com/dusskapark?ref_src=twsrc%5Etfw">@dusskapark</a> for the implementation!<br><br>👉 Rename your layers with a model trained on your design components<br>👉 Run locally, no server calls, 0 cost<a href="https://twitter.com/jason_mayes?ref_src=twsrc%5Etfw">@jason_mayes</a> <a href="https://twitter.com/carrycooldude?ref_src=twsrc%5Etfw">@carrycooldude</a> <a href="https://twitter.com/googledevs?ref_src=twsrc%5Etfw">@googledevs</a> <a href="https://t.co/Gc8sy7Q1jp">pic.twitter.com/Gc8sy7Q1jp</a></p>&mdash; Hugo Duprez (@HugoDuprez) <a href="https://twitter.com/HugoDuprez/status/1681681562998304768?ref_src=twsrc%5Etfw">July 19, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ### Feedback & Iteration
 
 During the testing phase, we actively gathered user feedback and engaged in discussions with Hugo, the original author, to identify the limitations of the existing version. This collaborative approach revealed several key insights:

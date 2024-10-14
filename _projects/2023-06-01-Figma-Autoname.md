@@ -24,7 +24,7 @@ Driven by this feedback, I seized the opportunity to enhance the open-source pro
 
 To tackle these challenges, I embarked on a structured process:
 
-![Problem Diagram](../images/projects/2023-figma-autoname/problem-diagram.png)
+![Problem Diagram](../images/projects/2023-figma-autoname/Portfolio.008.png)
 
 ### Identify Problems
 
@@ -113,7 +113,7 @@ With the ability to apply custom models now in place, I also tried to utilize th
 </div>
 <br>
 
-### Test & Deploy
+## Test & Deploy
 
 After making improvements to the plugin, I decided to share it at our company's monthly design meeting, 'Design ThursDay'. This was a chance to show all Grab designers the changes and get their thoughts on how well the plugin solved the earlier problems. For that, I used the Figma-dummy-gen & Python notebook to train the Tensorflow machine learning model with our design system and released it to our Grab's internal Figma plugin store.
 
@@ -146,6 +146,8 @@ Throughout this journey, we actively engaged in discussions and development, but
 While it's a bit disappointing, I'm not disheartened. Participating in the development of this plugin taught me a lot about collaboration within the open-source ecosystem. Creating both internal and community versions of the plugin allowed me to connect with designers and members of the broader design community, providing a platform to hear diverse perspectives and feedback. This experience has been invaluable and is perhaps the most significant asset I've gained from this project.
 
 Through this process, I learned the importance of adaptability and resilience in the face of changing circumstances. I also realized the value of community engagement and the impact of open-source contributions on personal and professional growth. These lessons will undoubtedly guide me in future endeavors, whether in open-source projects or other collaborative efforts.
+
+Thanks Hugo and all the users and contributors for the great journey. I hope to see you again in the future. 🚀
 
 {% include post-components/video.html
 	url = "https://www.youtube.com/embed/2eZeka9gMgA?si=6GmV6B40PQ2zpC9x"

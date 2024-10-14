@@ -3,8 +3,8 @@ title: 'Enhancing Figma Autoname: AI-powered Design System Integration'
 subtitle: 'Design System (2023)'
 date: 2023-06-01 00:00:00
 description: 'Open source Contribution to the Figma Autoname plugin, integrating TensorFlow.js for advanced design system support and developer collaboration'
-featured_image: '/images/projects/2023-figma-autoname/cover.png'
-gallery_images: '/images/projects/2023-figma-autoname/cover.png'
+featured_image: '2023-figma-autoname/cover.png'
+gallery_images: '2023-figma-autoname/cover.png'
 team: Hugo(Original Author), JooHyung(FE Developer & Contributor)
 role: FE Developer & Open Source Contributor
 visible: true

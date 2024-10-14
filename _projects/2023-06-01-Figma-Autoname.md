@@ -130,13 +130,9 @@ After thoroughly testing the internal version of the plugin and fixing any bugs,
 
 ## Conclusion & Lessons Learned
 
-{% include post-components/video.html
-    url = "https://youtu.be/x2Hn0qNXakA?si=z2Wl3KSNmnenel31"
-	full_width = false
-%}
-<br>
-
 <div style="text-align: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x2Hn0qNXakA?si=MOB5ptl_9mW0R5c1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>
   <i style="color: #878787; font-size: 12px;">A presentation deck for explaining my contributions to the Figma Autoname plugin. (Oct 2023)</i>
 </div>
 <br>

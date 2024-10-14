@@ -57,11 +57,11 @@ With these solutions in place, I submitted a pull request to Hugo, the original 
 
 During the testing phase, we actively gathered user feedback and engaged in discussions with Hugo, the original author, to identify the limitations of the existing version. This collaborative approach revealed several key insights:
 
-- **User Engagement with AI Rename**: It became apparent that most users interacted with the plugin simply by pressing the AI rename button, without delving into the underlying functionality of creating models for design systems. This highlighted a gap in user engagement and understanding of the plugin's full potential.
+- **Limited User Engagement with design sysetm feature**: It became apparent that most users interacted with the plugin simply by pressing the AI rename button, without delving into the underlying functionality of creating models for design systems. This highlighted a gap in user engagement and understanding of the plugin's full potential.
 
-- **Design System Managers' Needs**: On the other hand, design system managers expressed a desire for more robust top-down control features, rather than relying on a bottom-up approach. They sought powerful tools that could provide comprehensive oversight and management capabilities.
+- **Design System Managers' Demand for Enhanced Control Features**: On the other hand, design system managers expressed a desire for more robust top-down control features, rather than relying on a bottom-up approach. They sought powerful tools that could provide comprehensive oversight and management capabilities.
 
-- **Simplified Model Training**: Feedback also indicated a need for a more straightforward process to train vision models tailored to specific design systems. Users suggested that a one-to-two-click solution, simpler than Teachable Machine, along with clear guidance, would greatly enhance usability and adoption.
+- **Need for Simplified Vision Model Training Process**: Feedback also indicated a need for a more straightforward process to train vision models tailored to specific design systems. Users suggested that a one-to-two-click solution, simpler than Teachable Machine, along with clear guidance, would greatly enhance usability and adoption.
 
 - **Engineers' Motivation**: Many designers were excited about the plugin's feature that cleaned their left windows, but engineers were less enthusiastic because its current feature was not directly related to their work. They suggested that the plugin could be more useful if it could provide more support for developer collaboration and integration with design systems.
 

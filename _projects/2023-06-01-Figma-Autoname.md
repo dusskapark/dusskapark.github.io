@@ -137,7 +137,7 @@ After thoroughly testing the internal version of the plugin and fixing any bugs,
 <div style="text-align: center;">
   <i style="color: #878787; font-size: 12px;">A presentation deck for explaining my contributions to the Figma Autoname plugin. (Oct 2023)</i>
 </div>
-
+<br>
 
 Throughout this journey, we actively engaged in discussions and development, but unfortunately, our motivation waned when Figma announced that the Rename layers feature would become a native part of their platform. As a result, I've decided to pause my contributions to this open-source project for now ([link](https://www.linkedin.com/posts/dusskapark_figma-ai-rename-your-layers-and-more-figma-activity-7211975137204559872-3Sab)).
 

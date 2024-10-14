@@ -129,7 +129,7 @@ After thoroughly testing the internal version of the plugin and fixing any bugs,
 ## Conclusion & Lessons Learned
 
 {% include post-components/video.html
-    url = "https://www.youtube.com/embed/2eZeka9gMgA?si=6GmV6B40PQ2zpC9x"
+    url = "https://youtu.be/x2Hn0qNXakA"
 	full_width = false
 %}
 <br>

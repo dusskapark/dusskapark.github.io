@@ -1,99 +1,154 @@
-# Original deck of 'Figma Autoname Plugin'
 
 
-![Cover image](https://i.ibb.co/f9zw4j0/showcase.png)
+## Background
 
-Your today’s problem with this “Frame 563” is not really renaming it properly to “Button”, it’s more about the 562 other frames you have
-to rename too. This plugin is an experiment to solve your problem right here, right now. Prototyped in a few nights in Paris by
-[Hugo](https://www.hugoduprez.com/),
-the usage of the plugin is completely free. The code is Open Source, that way all designers and developers can make
-it better and finally, have more pleasure doing their work.
+The spark for my contribution to the Figma Autoname plugin ignited from a personal challenge: managing design systems efficiently. The allure of using AI to automate layer naming in Figma captivated me, promising to transform the tedious task of organizing design files into a seamless experience. This fascination was further fueled by the innovative potential of TensorFlow.js, which opened doors to integrating machine learning into design workflows.
 
-## 🎁 Features
+My journey began with a series of insightful interviews and discussions with fellow designers and developers. These conversations unearthed a common struggle: while the plugin offered a novel solution, it lacked the customization needed to align with diverse design systems. Designers yearned for a tool that could adapt to their unique workflows and terminology, rather than a one-size-fits-all approach.
 
-- Rename selected layers and their child.
-- Optional start in debug mode.
-- Change the model URL.
+Driven by this feedback, I seized the opportunity to enhance the open-source project. My mission was clear: to make the plugin more flexible and powerful, supporting custom computer vision models and integrating seamlessly into real-world design processes. This contribution aimed to bridge the gap between cutting-edge technology and practical application, ultimately making the design process more efficient and collaborative.
+
+## Process
+
+To tackle these challenges, I embarked on a structured process:
+
+![Problem Diagram](../images/projects/2023-figma-autoname/Portfolio.008.png)
+
+### Identify Problems
+
+Discovering the Figma Autoname project through TensorFlow's official YouTube channel was a pivotal moment. Having previously experimented with applying TensorFlow.js to design tools, I quickly grasped the underlying principles and was captivated by this innovative application.
+
+I shared this exciting discovery with my designer and engineer friends, sparking an impromptu user interview session. Through these candid conversations, we identified key limitations of the plugin:
+
+- Lack of customization for specific design systems
+- Limited integration with real-world design workflows
+- No support for design system management and developer collaboration
+
+These insights, drawn from real users eager for improvement, laid the groundwork for the enhancements that followed.
+
+## Design Solutions
+
+### First Development Phase
+
+{% include post-components/video.html
+	url = "https://www.youtube.com/embed/VgOoC5Irh08?si=W1WzLnEv3RJZyhCk"
+	full_width = false
+%}
+
+Forking the project repository was my first step towards innovation. I upgraded the plugin to support multiple computer vision models, leveraging Figma's Plugin API and its clientStorage feature. This enhancement empowered users to switch between the default model and any other Teachable Machine or TensorFlow.js image classification models they desired.
+
+Next, I developed a feature to extract UI image "building blocks" during the plugin's execution, compiling them into a Google Sheet. This functionality served a dual purpose: providing raw materials for creating custom image detection models tailored to specific design systems and offering design system managers a way to automatically gather research data on misused components.
+
+With these solutions in place, I submitted a pull request to Hugo, the original author. After several rounds of code reviews and video meetings, I was thrilled to see my contributions integrated into the plugin. This collaborative effort not only enhanced the plugin's capabilities but also reinforced the power of open-source development in driving innovation.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨 Import your own <a href="https://twitter.com/TensorFlow?ref_src=twsrc%5Etfw">@TensorFlow</a> JS model into the Figma Autoname plugin⚡️ Thanks <a href="https://twitter.com/dusskapark?ref_src=twsrc%5Etfw">@dusskapark</a> for the implementation!<br><br>👉 Rename your layers with a model trained on your design components<br>👉 Run locally, no server calls, 0 cost<a href="https://twitter.com/jason_mayes?ref_src=twsrc%5Etfw">@jason_mayes</a> <a href="https://twitter.com/carrycooldude?ref_src=twsrc%5Etfw">@carrycooldude</a> <a href="https://twitter.com/googledevs?ref_src=twsrc%5Etfw">@googledevs</a> <a href="https://t.co/Gc8sy7Q1jp">pic.twitter.com/Gc8sy7Q1jp</a></p>&mdash; Hugo Duprez (@HugoDuprez) <a href="https://twitter.com/HugoDuprez/status/1681681562998304768?ref_src=twsrc%5Etfw">July 19, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### Feedback & Iteration
+
+During the testing phase, we actively gathered user feedback and engaged in discussions with Hugo, the original author, to identify the limitations of the existing version. This collaborative approach revealed several key insights:
+
+- **Limited User Engagement with design sysetm feature**: It became apparent that most users interacted with the plugin simply by pressing the AI rename button, without delving into the underlying functionality of creating models for design systems. This highlighted a gap in user engagement and understanding of the plugin's full potential.
+
+- **Design System Managers' Demand for Enhanced Control Features**: On the other hand, design system managers expressed a desire for more robust top-down control features, rather than relying on a bottom-up approach. They sought powerful tools that could provide comprehensive oversight and management capabilities.
+
+- **Need for Simplified Vision Model Training Process**: Feedback also indicated a need for a more straightforward process to train vision models tailored to specific design systems. Users suggested that a one-to-two-click solution, simpler than Teachable Machine, along with clear guidance, would greatly enhance usability and adoption.
+
+- **Engineers' Motivation**: Many designers were excited about the plugin's feature that cleaned their left windows, but engineers were less enthusiastic because its current feature was not directly related to their work. They suggested that the plugin could be more useful if it could provide more support for developer collaboration and integration with design systems.
+
+In response to the feedback, I decided to continue iterating on the plugin to address these issues.
+
+### Second Development Phase
+
+The next phase of development focused on enhancing the plugin's usability and functionality to better support design system managers and developers. This involved several key enhancements:
+
+**Figma-dummy-gen: Extracting design system building blocks**
+
+Building on the initial enhancements, I decided to remove the Excel download feature from the plugin and instead focused on creating a new standalone project called [Figma-dummy-gen](https://github.com/FigmaAI/figma-dummy-gen). This new Figma plugin is designed to support custom training for the [Figma Autoname](https://autoname.org/) plugin.
+
+<div style="text-align: center;">
+  <img src="../images/projects/2023-figma-autoname/markdown002.gif" style="width: 570px;"/>
+  <br>
+  <i style="color: #878787; font-size: 12px;">Figma-dummy-gen: a standalone Figma plugin to generate dummy images for design systems. Try it from <a href="https://www.figma.com/community/plugin/1305913695776615924/figma-dummy-generator">here</a>.</i>
+</div>
+<br>
+
+Figma-dummy-gen allows users to generate and extract images directly from their Figma design library, providing the necessary data for machine learning model training. The primary purpose of this plugin is to streamline the process of preparing datasets, making it easier for design system managers and developers to create custom vision models tailored to their specific needs.
+
+**Python Jupyter Notebook: One-click training of TFJS model**
+
+<div style="text-align: center;">
+  <img src="../images/projects/2023-figma-autoname/jupyter-notebook.png" style="width: 570px;"/>
+  <br>
+  <i style="color: #878787; font-size: 12px;">A Python notebook for training TFJS model via using Figma-dummy-gen dataset. Click <a href="https://github.com/FigmaAI/figma-dummy-gen/blob/main/classification.ipynb" target= "_blank">here</a> to access the notebook.</i>
+</div>
+<br>
+
+To further simplify the model training process, I created a Python Jupyter Notebook that guides users through the steps of training a custom vision model using TensorFlow.js. This notebook is designed to be beginner-friendly, providing clear instructions and explanations to help users understand the underlying principles of machine learning.
+
+<div style="text-align: center;">
+  <img src="../images/projects/2023-figma-autoname/markdown003.gif" style="width: 570px;"/>
+  <br>
+  <i style="color: #878787; font-size: 12px;">Example of the Google Material Design 3 based trained model in action on Figma Autoname.</i>
+</div>
+<br>
+
+**Figma DevMode: Supportting Developer Collaboration**
+
+With the ability to apply custom models now in place, I also tried to utilize those result to enhance the DevMode experience. nodes renamed using AutoName now display an additional link in Figma's DevMode. This link directs engineers to the relevant design system's API guide, ensuring they have quick access to necessary documentation. This feature is designed to streamline the developer workflow and foster better collaboration between designers and engineers.
+
+<div style="text-align: center;">
+  <img src="../images/projects/2023-figma-autoname/markdown004.gif" style="width: 570px;"/>
+  <br>
+  <i style="color: #878787; font-size: 12px;"> Example of the DevMode feature.</i>
+</div>
+<br>
 
 
 
-## ⚙️ Technology
+### Final Output
 
-[Svelte](https://svelte.dev/), [Typescript](https://www.typescriptlang.org/),
-[TailwindCSS](https://tailwindcss.com/), [Teachable Machine](https://teachablemachine.withgoogle.com/),
-[Tensorflow](https://www.tensorflow.org/js?hl=fr)
+The culmination of this project is a sophisticated Figma plugin that leverages custom machine learning models to enhance the design workflow. This plugin empowers designers by renaming the layers, tailored to their specific design systems. It also serves as a bridge for engineers, facilitating the seamless integration of design system documentation into their development processes. The plugin's flexibility and adaptability make it a valuable tool for both designers and engineers, streamlining collaboration and improving efficiency. For a detailed overview of the plugin's features and capabilities, please refer to the sections below.
 
-
-
-## ⚙️ Change the model URL
-
-![Change model URL interface](./images/changeModel.png)
-
-To change the TFJS model, please click on the ⚙ button Iand enter the new model URL. The model must have both the model.json and metadata.json file in the root.
-
-```
-https://teachablemachine.withgoogle.com/models/<your-model>/
-├─ model.json
-├─ metadata.json
-└─ ...
-```
-
-To reset the model URL, please click on the ↻ reset button. 
-
-## 🤝 Contributing
-
-Contributions are welcome! You can contribute by many ways :)
-
-- Improve the code or the model.
-- Suggest design & interface changes.
-- Share the plugin in your newsletter.
-- Write articles & papers about the project.
-- Help designers learn coding.
-- Help developers learn designing.
-
-If you want to dive into the code and suggest changes, please refer to
-[this](https://opensource.guide/how-to-contribute/#opening-a-pull-request).
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x2Hn0qNXakA?si=MOB5ptl_9mW0R5c1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>
+  <i style="color: #878787; font-size: 12px;">A presentation deck for explaining my contributions to the Figma Autoname plugin. (Oct 2023)</i>
+</div>
+<br>
 
 
 
-## 📝 Troubleshooting
 
-- npm install fails with error code 1: [link](https://github.com/Hugo-Dz/figma_autoname_client_app/issues/4)
-- ...
+## Test & Deploy
 
+After making improvements to the plugin, I decided to share it at our company's monthly design meeting, 'Design ThursDay'. This was a chance to show all Grab designers the changes and get their thoughts on how well the plugin solved the earlier problems. For that, I used the Figma-dummy-gen & Python notebook to train the Tensorflow machine learning model with our design system and released it to our Grab's internal Figma plugin store.
 
-## 🍕 Community
+<div style="text-align: center;">
+  <img src="../images/projects/2023-figma-autoname/internal-figma-plugin-store.png" style="width: 570px;"/>
+  <br>
+  <i style="color: #878787; font-size: 12px;">The Figma Autoname plugin with Grab's design system model in the internal Figma plugin store.</i>
+</div>
+<br>
 
-You want to share & learn about the intersection between design & code? Stay tuned to our up coming Discord channel!
-## ❤️ Credits
+Even though there were some worries about how accurate and fast the computer vision model was, most people were excited about this design system-friendly feature. The feedback showed that adding custom model support and DevMode integration was a good move. This positive reaction encouraged us to keep improving the plugin.
 
-Special thanks to [Tom Quinonero](https://github.com/tomquinonero) for the Svelte boilerplate!
-## ✉️ Support
+After thoroughly testing the internal version of the plugin and fixing any bugs, I submitted a pull request to Hugo to incorporate our new user experience into the community version of the plugin. This was accompanied by an engaging commercial video that highlighted the plugin's capabilities, sparking further discussions on how to enhance the plugin for all users.
 
-For support, email duprez.hugo@gmail.com.
+## Conclusion & Lessons Learned
 
+Throughout this journey, we actively engaged in discussions and development, but unfortunately, our motivation waned when Figma announced that the Rename layers feature would become a native part of their platform. As a result, I've decided to pause my contributions to this open-source project for now ([link](https://www.linkedin.com/posts/dusskapark_figma-ai-rename-your-layers-and-more-figma-activity-7211975137204559872-3Sab)).
 
-## ⚖️ License
+While it's a bit disappointing, I'm not disheartened. Participating in the development of this plugin taught me a lot about collaboration within the open-source ecosystem. Creating both internal and community versions of the plugin allowed me to connect with designers and members of the broader design community, providing a platform to hear diverse perspectives and feedback. This experience has been invaluable and is perhaps the most significant asset I've gained from this project.
 
-[MIT](https://choosealicense.com/licenses/mit/) Copyright © 2022 Hugo Duprez
+Through this process, I learned the importance of adaptability and resilience in the face of changing circumstances. I also realized the value of community engagement and the impact of open-source contributions on personal and professional growth. These lessons will undoubtedly guide me in future endeavors, whether in open-source projects or other collaborative efforts.
 
+Thanks Hugo and all the users and contributors for the great journey. I hope to see you again in the future. 🚀
 
+{% include post-components/video.html
+	url = "https://www.youtube.com/embed/2eZeka9gMgA?si=6GmV6B40PQ2zpC9x"
+	full_width = false
+%}
 
-# My contribution journey
-
-Since I inspired by the idea of the Figma Autoname plugin, I decided to contribute to this project. I have made some improvements to the plugin, and I am excited to share my journey with you. The below stoies are my contribution explanation text for each iteration. I hope you enjoy it.
-
-## Iteration 1
-
-Hello, everyone. Today, I'd like to introduce you to the Figma Autoname plugin and showcase some exciting updates that I've contributed to. AI and computer vision technologies advancing rapidly though, the design ecosystem is yet to fully integrate these cutting-edge features into our daily designer workflows due to many reasons. This is precisely why the concept behind the Autoname plugin caught my attention. The purpose of this plugin is to automatically rename elements in Figma using TensorFlow's image classification API. This helps prevent confusion for engineers who receive lengthy node names on Figma like Group 1 1 1 or Frame 2 2 2. Isn't it Good, Right? No more dealing with those messy numbers! Here's a quick overview of the pipeline, and I decided to contribute this open source by adding two new features to enhance this simple yet powerful workflow: One is the ability to replace the AI model with a custom-trained model based on each company's design system. And second is the ability to export data to Google Sheets. With these updates, designers can automatically rename layers or groups using familiar names from their design systems. On the other hand, design system teams can automate their user researches. As you all know, managing design systems often involves detaching components for specific use cases, which can be challenging. Unfortunately, Figma's Detach analytics have been limited, leaving designers in the dark about the reasons and methods behind component detachment. That's why I believe this plugin can also serve as a background research tool to alleviate the burden on design system managers. In short, It not only provides AI-powered auto rename functionality but also collects image data. This data can shed light on the reasons behind component detachment and help inform upgrade plans for components that meet specific needs. Now, let me demo my prototype: I'll use the AI to rename layers with these complicated numerical names. In the settings page, we can see the AI model URL and Excel download options, and we can save our preferences. The Google Sheet integration was a bit complex, so in this version, I've initially added a feature to download the Excel file instead. When we run the plugin, the layers get neatly renamed with the terminology from the design system, and the result file is downloaded. Upon opening the file, we can find the image slices used for renaming, the predicted component names, and their corresponding probabilities. Pretty neat, isn't it? I believe this plugin will have two positive impacts on our everyday design tasks: Firstly, the external impact will be an improvement in the developer experience. Well-organized layer or group names often have a more positive impact on the developer's inspector of Figma Dev-mode. I believe this effort can smooth the handover process between developers and designers. Secondly, the internal impact is that we can automate user research within the design system. Instead of conducting manual interviews with designers, the design system team can leverage this automatically generated information to identify frequently detached components and plan upgrades based on specific needs. The features I showcased today will be soon accessible on the Figma plugin site. This project is fully open-source, and we greatly appreciate your involvement and interest. Kindly visit the website below to share your ideas. Your contribution will make a significant impact. Thank you
-
-## Iteration 2
-
-Hello, everyone. Today, I'd like to contribute an exciting upgrade to the Figma Autoname plugin. Figma Autoname is a TensorFlow-based free plugin that liberates both developers and designers from the hassle of dealing with complex names like Frame blah blah or Group blah blah blah. Well... Over the past few months, I've been using this plugin extensively and conducting interviews with, well, many designer and developer users. They all enjoyed this fantastic free plugin, uh, intriguing but highlighted two crucial points that were still, you know, lacking. Firstly, they emphasized the need for customization to make the plugin work specifically for them, rather than simply detecting, you know, general UI elements. For instance, designers using the Material Design system wanted the names to align with the terminology of that system rather than being renamed according to a different design system. The second point was that, while the plugin appeared to be a neat tool for tidying up Figma's left panel, they didn't feel a strong, um, motivation to use it in their real-world workflow. Based on this feedback, I've decided to contribute to address these user needs and take a step further. Firstly, I have been working on implementing a feature that automatically extracts dummy data from component sets using Figma's plugin API and various technologies. Additionally, I've been experimenting with custom ML model training, aiming to make it, umm... you know, it's incredibly easy for anyone to create AI models tailored to their specific design system with just one or two clicks. If the experiments prove successful, I'll contribute this feature to the community, along with guides and code, to enable, well, effortless web AI model creation. After custom model training, the plugin now renames Frames according to the trained design system's terminologies. But....I didn't stop there, though. I've taken it a step further by incorporating, uh, a magical transformation into Figma's right panel. This enhancement aims to, uh, seamlessly enhance the user experience, especially for, you know, developers. Thanks to Figma Dev mode, developers now have access to the data generated during the Autoname process in the right panel. This means that even when designers detached components due to, you know, minor edits or unavoidable reasons, developers can still, um, harness the power of the design system with the assistance of AI power. Now the Figma AutoName plugin not only automatically organizes the designer's left panel based on a customized design system, but also provides very useful information to the right panel of dev mode. Is it cool, huh? Figma AutoName remains committed to a serverless, cost-free approach and continues to focus on bringing AI power into the world of design systems to, uh, boost our productivity. This plugin still relies on the support of the open-source community and, uh, eagerly awaits your involvement. Thank you for your attention, and I look forward to your contributions to this, uh, exciting project.
-
-## Iteration 3
-
-Hello! After some...., well, pretty rapid developments in just one day, I've decided to reshoot this video to, you know, provide a more accurate representation of the latest updates. We were discussing the concept of exposing or concealing the base URL to users, correct? But, um... I've had some fundamental reservations about this aspect, which is why I went back to the drawing board to explore a different method of delivering the same functionality without exposing the input field. Fortunately, I found a solution, and I've successfully, kinda... umm..., upgraded the plugin to support Dev mode with a straightforward modification of the TensorFlow model's URL. Let's consider a role-play scenario from the perspective of a junior designer, so, sort of, you can better understand how this all works. When the juniors first run the plugin, they'll notice that the previously created and distributed Teachable Machine's URL is, you know, pre-set, allowing them to rename all frames with just a single click. Under this default configuration, there's no visible change when they switch to Dev mode as usual. However, suppose their design manager has customized a new URL for the company's design system, intending to offer Dev mode support. In this case, the scenario changes. The junior designer's task remains simple... well, they just update the URL, but the new model provides enhanced naming based on design system classes while offering their frontend engineers the advantages of this AI-powered functionality on the right-side panel of Figma. So, it's kind of a win-win for everyone involved.
-
-
-
+<div style="text-align: center;">
+  <i style="color: #878787; font-size: 12px;">I whipped up this quirky Apple-style ad to hype up the new update. </i> 
+</div>

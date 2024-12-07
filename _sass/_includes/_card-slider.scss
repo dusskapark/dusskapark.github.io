@@ -1,0 +1,131 @@
+.card-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  .card-wrap {
+    $padding: 100px;
+    width: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  // card component
+  $border-radius: 0.6rem;
+  $bg-grad-start: 0.8;
+  $max-width: 300px;
+  $min-height: 300px;
+
+  .flickity-viewport {
+    height: $min-height + 100px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: $max-width;
+    min-width: $max-width;
+    border-radius: $border-radius;
+    box-shadow: 0 20px 40px rgba(black, 0.1), 0 5px 15px rgba(black, 0.04);
+    position: relative;
+    min-height: $min-height;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 1rem;
+    aspect-ratio: 1;
+
+    &__overlay {
+      border-radius: $border-radius;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(black, 0.12);
+      background: linear-gradient(
+        to top,
+        rgba(black, $bg-grad-start),
+        rgba(black, 0),
+        rgba(white, 0.3)
+      );
+      opacity: 0.7;
+      transition: all 350ms ease-out 0s;
+    }
+
+    &__info {
+      padding: 3rem 1.5rem;
+      width: 100%;
+      text-align: center;
+      color: white;
+      position: absolute;
+      bottom: 0;
+      text-shadow: 0px 3px 5px rgba(black, 0.4);
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  a.card {
+    transition: all 350ms ease-out 0s;
+    overflow: hidden;
+
+    &:hover,
+    &:focus {
+      .card__overlay {
+        opacity: 1;
+        top: -150px;
+      }
+      transform: scale(1.1) translateY(8px);
+      transition: all 350ms ease;
+    }
+
+    &:hover {
+      cursor: -webkit-grab;
+    }
+
+    &:focus,
+    &:active {
+      cursor: -webkit-grabbing;
+    }
+  }
+
+  $z-index: 100;
+
+  .overlay {
+    $color: white;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: transparent;
+    background: linear-gradient(
+      to right,
+      rgba($color, 1) 1%,
+      rgba($color, 0) 10%,
+      rgba($color, 0) 90%,
+      rgba($color, 1) 100%
+    );
+    z-index: $z-index;
+  }
+}

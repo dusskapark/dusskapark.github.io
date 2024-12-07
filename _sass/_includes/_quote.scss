@@ -1,0 +1,75 @@
+.quote-component {
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 20px auto;
+  padding: 20px;
+  align-items: center;
+  border-radius: 8px;
+  // opacity: 0;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  // &.animate {
+  //   opacity: 1;
+  //   transform: translateY(0);
+  // }
+
+  @include mq(tabletp) {
+    flex-direction: row;
+  }
+
+  .image-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include mq(tabletp) {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .text-container {
+    width: 100%;
+
+    @include mq(tabletp) {
+      flex: 2;
+      padding: 0 0 0 20px;
+    }
+
+    p {
+      font-size: 18px;
+      font-style: italic;
+      color: inherit;
+
+      @include mq(tabletp) {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 22px;
+        background-color: #333;
+        color: #fff;
+        padding: 2px 4px;
+
+        @include mq(tabletp) {
+          font-size: 24px;
+        }
+      }
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}

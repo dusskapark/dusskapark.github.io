@@ -8,8 +8,16 @@
 
 {% assign images = include.images | split: "," %}
 
-<div class="gallery {% if include.full_width == true %}full-width{% endif %}" data-columns="{{ columns }}">
-	{%- for image in images -%}
-		<img src="{{ image }}">
-	{%- endfor -%}
+<div class="gallery {% if include.full_width == true %}full-width{% endif %}" data-columns="{{ columns }}">
+	{% for image in images %}
+		<div class="gallery__item">
+			<img src="{{ image }}" alt="Gallery Image">
+		</div>
+	{% endfor %}
+	{% if include.caption %}
+		<div class="gallery-caption">
+			<i>{{ include.caption | markdownify }}</i>
+		</div>
+	{% endif %}
 </div>
+

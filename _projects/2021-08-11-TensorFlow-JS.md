@@ -1,6 +1,6 @@
 ---
 title: 'AI-powered design system made with TFJS'
-subtitle: Side project (2021)
+subtitle: Figma + AI project (2021)
 date: 2021-08-11 00:00:00
 description: 'A project using TensorFlow to create an assistant, that helps designers by keep-watching numerous design elements instead of humans.'
 featured_image: '/2021-made-with-tfjs/file-cover.png'
@@ -139,10 +139,22 @@ I choose some and attach them below!
 
 
 
-## And... DEVIEW 2021!
+## From Local Beginnings to Global Recognition
 
-FINALLY, I was invited to DEVIEW 2021, which is one of the biggest Developer conference in Korea, and shared my experiences with the title "**Using TensorFlow JS to build an AI-powered design system**". This was a truly honorable experience for me. I will take a step further based on this experience.
+My journey began with the honor of presenting at Deview 2021, a leading developer conference hosted by Naver in Korea. This initial exposure paved the way for further opportunities, allowing me to present at Google's TensorFlow Show & Tell and culminating in a significant presentation at Figma Config 2022. These experiences enabled me to share my project on an international stage, reaching audiences worldwide and highlighting the innovative use of TensorFlow JS in design systems.
 
-https://deview.kr/2021/sessions/460
+{%  include post-components/gallery.html
+    columns = 2
+    full_width = true
+    images = "
+        https://img.youtube.com/vi/ckN1QIpjkAk/0.jpg,
+    https://img.youtube.com/vi/blL0EQ6wNH8/0.jpg,
+    ../images/projects/2021-made-with-tfjs/2022-01-02 11.54.33.png
+    "
+%}
 
-![스크린샷 2022-01-02 오후 11.54.33](../images/projects/2021-made-with-tfjs/2022-01-02 11.54.33.png)
+- **Deview 2021:** [Watch the presentation](https://tv.naver.com/v/23652352)
+- **Google TensorFlow Show & Tell:** [Watch the presentation](https://youtu.be/blL0EQ6wNH8?si=lA0P7ZkVqdmMUMb3)
+- **Figma Config 2022:** [Watch the presentation](https://youtu.be/ckN1QIpjkAk?si=4iHiqvwpTF44mHkv)
+
+Despite the virtual format of these presentations, they offered unparalleled opportunities to connect with a broader audience and showcase the transformative potential of AI in design.

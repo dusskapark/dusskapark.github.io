@@ -1,3 +1,13 @@
-<div class="video-wrap {% if include.full_width == true %}full-width{% endif %}">
-  <iframe src="{{ include.url }}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
+<div>
+  <div class="video-wrap {% if include.full_width == true %}full-width{% endif %}">
+    <div class="video">
+      <iframe src="{{ include.url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  {% if include.caption %}
+  <div class="video-caption">
+      <i>{{ include.caption | markdownify }}</i>
+  </div>
+  {% endif %}    
+</div>  

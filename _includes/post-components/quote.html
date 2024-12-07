@@ -1,0 +1,19 @@
+<div class="quote-container {% if include.full_width == true %}full-width{% endif %}">
+    <div class="quote-component" 
+         {% if include.background_color %}style="background-color: {{ include.background_color }};"{% endif %}>
+        
+        <div class="image-container">
+            <img src="{{ include.images }}" alt="Project Image">
+        </div>
+        
+        <div class="text-container" {% if include.font_color %}style="color: {{ include.font_color }};"{% endif %}>
+            <p>
+                {{ include.text | markdownify }}
+            </p>
+        </div>
+    </div>
+
+    <div class="quote-caption">
+        <i>{{ include.caption | markdownify }}</i>
+    </div>
+</div>

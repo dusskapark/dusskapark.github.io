@@ -175,8 +175,8 @@ $baseurl: '{{ site.baseurl }}';
 @import "_includes/_component__post-card";
 @import "_includes/_section__about";
 @import "_includes/_section__recent-posts";
-
-
+@import "_includes/_quote";
+@import "_includes/_card-slider";
 
 // // - - - - - - - - - - Section styles
 

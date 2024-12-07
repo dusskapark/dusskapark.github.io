@@ -71,6 +71,9 @@
 	{{ site.data.settings.advanced_settings.header_js }}
 	{% endif %}
 
+	<!-- Flickity CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
+
 </head>
 
 
@@ -122,6 +125,14 @@
 
 	<!-- Javascript Assets -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- TypeIt JS -->
+	<script src="https://unpkg.com/typeit@8.3.3/dist/index.umd.js"></script>
+	
+	<!-- Flickity JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+	
+
 	<script src="{{ '/js/made-min.js' | relative_url }}"></script>
 
 	{% if site.data.settings.advanced_settings.footer_js %}
@@ -129,6 +140,7 @@
 	{{ site.data.settings.advanced_settings.footer_js }}
 	{% endif %}
 
+	
 
 </body>
 

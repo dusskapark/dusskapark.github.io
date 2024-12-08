@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const spans = preElement.querySelectorAll('span'); // pre 태그 안의 모든 span 요소 선택
     spans.forEach((span) => {
       new TypeIt(span, {
+        speed: 50,
+        lifeLike: true,
         cursor: false // 커서를 숨김
       })
       .pause(1000)

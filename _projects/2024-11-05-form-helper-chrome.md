@@ -32,7 +32,7 @@ Form errors have been a persistent challenge in web development for decades. Des
    full_width = true
    background_color = "#E2E0F9"
    font_color = "#3d3d3d"
-   images = "../images/projects/2024-form-helper-chrome/1-reference-1.png"
+   images = "../images/projects/2024-form-helper-chrome/1-Reference-1.png"
    text = "<span style='font-size: 20px; background-color: #333; color: #fff; padding: 2px 4px;'>\"Why is it so hard to get users to fill things in right? Guides go unread, red errors get ignored, and support calls 
    go up. Do we need to hold their hand?\"</span> <br/><br/> If you're a designer, you've probably thought this too, right? 😅"
 %}

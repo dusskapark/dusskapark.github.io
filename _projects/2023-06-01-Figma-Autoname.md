@@ -52,7 +52,11 @@ To address these needs, I began by forking the project repository, which allowed
 
 The impact of these enhancements was recognized by the community, as highlighted by Hugo Duprez, the original project owner and an award-winning French developer recognized at the TensorFlow Awards. He shared his appreciation on Twitter:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨 Import your own <a href="https://twitter.com/TensorFlow?ref_src=twsrc%5Etfw">@TensorFlow</a> JS model into the Figma Autoname plugin⚡️ Thanks <a href="https://twitter.com/dusskapark?ref_src=twsrc%5Etfw">@dusskapark</a> for the implementation!<br><br>👉 Rename your layers with a model trained on your design components<br>👉 Run locally, no server calls, 0 cost<a href="https://twitter.com/jason_mayes?ref_src=twsrc%5Etfw">@jason_mayes</a> <a href="https://twitter.com/carrycooldude?ref_src=twsrc%5Etfw">@carrycooldude</a> <a href="https://twitter.com/googledevs?ref_src=twsrc%5Etfw">@googledevs</a> <a href="https://t.co/Gc8sy7Q1jp">pic.twitter.com/Gc8sy7Q1jp</a></p>— Hugo Duprez (@HugoDuprez) <a href="https://twitter.com/HugoDuprez/status/1681681562998304768?ref_src=twsrc%5Etfw">July 19, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div style="text-align: center; margin-top: 20px;">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨 Import your own <a href="https://twitter.com/TensorFlow?ref_src=twsrc%5Etfw">@TensorFlow</a> JS model into the Figma Autoname plugin⚡️ Thanks <a href="https://twitter.com/dusskapark?ref_src=twsrc%5Etfw">@dusskapark</a> for the implementation!<br><br>👉 Rename your layers with a model trained on your design components<br>👉 Run locally, no server calls, 0 cost<a href="https://twitter.com/jason_mayes?ref_src=twsrc%5Etfw">@jason_mayes</a> <a href="https://twitter.com/carrycooldude?ref_src=twsrc%5Etfw">@carrycooldude</a> <a href="https://twitter.com/googledevs?ref_src=twsrc%5Etfw">@googledevs</a> <a href="https://t.co/Gc8sy7Q1jp">pic.twitter.com/Gc8sy7Q1jp</a></p>&mdash; Hugo Duprez (@HugoDuprez) <a href="https://twitter.com/HugoDuprez/status/1681681562998304768?ref_src=twsrc%5Etfw">July 19, 2023</a></blockquote>
+</div>
+
+
 
 
 ### Development of Supporting Tools

@@ -1,0 +1,250 @@
+{% comment %}
+  Horizontal scrollable carousel for embedded social media posts
+  Supports: Twitter, Facebook, Instagram, etc.
+  Usage:
+    {% include social-posts-carousel.html 
+       embed_html="<blockquote...>|||<blockquote...>"
+       title="My Posts"
+    %}
+  Note: Use ||| as separator between multiple embed codes
+{% endcomment %}
+
+{% assign embeds = include.embed_html | split: "|||" %}
+
+<div class="social-posts-carousel-wrapper full-width">
+  <!-- <h3 class="carousel-title">{{ include.title | default: "Social Posts & Videos" }}</h3> -->
+  <div class="social-posts-carousel">
+    {% for embed in embeds %}
+    <div class="social-post-card">
+      <div class="skeleton-loader"></div>
+      <div class="post-content">
+        {{ embed | strip }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="carousel-hint">← Scroll to explore more posts →</div>
+</div>
+
+<style>
+.social-posts-carousel-wrapper {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.social-posts-carousel-wrapper.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -30vw;
+  margin-right: -30vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border-radius: 24px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.carousel-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  padding-left: 2rem;
+}
+
+.social-posts-carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 2rem 1.5rem 2rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  align-items: flex-start;
+}
+
+/* Full-width 모드에서 추가 좌측 패딩 */
+.social-posts-carousel-wrapper.full-width .carousel-title {
+  padding-left: max(2rem, calc(50vw - 600px));
+}
+
+.social-posts-carousel-wrapper.full-width .social-posts-carousel {
+  padding-left: max(2rem, calc(50vw - 600px));
+  padding-right: max(2rem, calc(50vw - 600px));
+}
+
+.social-posts-carousel-wrapper.full-width .carousel-hint {
+  padding-left: max(2rem, calc(50vw - 600px));
+  padding-right: max(2rem, calc(50vw - 600px));
+}
+
+.social-posts-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.social-posts-carousel::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+.social-posts-carousel::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+
+.social-posts-carousel::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.social-post-card {
+  flex: 0 0 400px;
+  min-width: 400px;
+  background: #f2f2f2;
+  border-radius: 12px;
+  overflow: visible;
+  position: relative;
+  box-shadow: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Skeleton Loader */
+.skeleton-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(90deg, #e8e8e8 25%, #d8d8d8 50%, #e8e8e8 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.post-content {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-post-card.loaded .skeleton-loader {
+  display: none;
+}
+
+.social-post-card.loaded .post-content {
+  opacity: 1;
+}
+
+.post-content iframe,
+.post-content blockquote {
+  display: block;
+  width: 100% !important;
+  max-width: 400px !important;
+  border: none;
+  margin: 0;
+}
+
+.carousel-hint {
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .social-posts-carousel-wrapper.full-width {
+    border-radius: 16px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .carousel-title {
+    padding-left: 1rem;
+  }
+  
+  .social-posts-carousel {
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+  
+  .carousel-hint {
+    padding: 0 1rem;
+  }
+  
+  .social-post-card {
+    flex: 0 0 90vw;
+    min-width: 90vw;
+  }
+  
+  .post-content iframe,
+  .post-content blockquote {
+    max-width: 100% !important;
+  }
+}
+</style>
+
+<script>
+// Hide skeleton when content is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.social-post-card');
+  
+  cards.forEach(card => {
+    const content = card.querySelector('.post-content');
+    const iframe = content.querySelector('iframe');
+    const blockquote = content.querySelector('blockquote');
+    
+    if (iframe) {
+      iframe.addEventListener('load', function() {
+        card.classList.add('loaded');
+      });
+      // Fallback timeout
+      setTimeout(() => {
+        card.classList.add('loaded');
+      }, 3000);
+    } else if (blockquote) {
+      // For Twitter embeds, wait for widgets to load
+      if (window.twttr && window.twttr.widgets) {
+        window.twttr.widgets.load().then(() => {
+          card.classList.add('loaded');
+        });
+      } else {
+        setTimeout(() => {
+          card.classList.add('loaded');
+        }, 2000);
+      }
+    } else {
+      card.classList.add('loaded');
+    }
+  });
+  
+  // Twitter widgets callback
+  if (window.twttr) {
+    window.twttr.ready(function() {
+      window.twttr.events.bind('loaded', function() {
+        cards.forEach(card => card.classList.add('loaded'));
+      });
+    });
+  }
+});
+</script>
+

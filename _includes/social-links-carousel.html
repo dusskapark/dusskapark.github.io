@@ -1,0 +1,175 @@
+{% comment %}
+  Horizontal scrollable carousel for social media post links
+  When embedding doesn't work, use clickable cards instead
+  Usage:
+    {% capture posts %}
+    https://www.linkedin.com/posts/...,Design Content Population,이게 될까? 싶었는데 됩니다
+    |||
+    https://www.linkedin.com/posts/...,Title 2,Quote 2
+    {% endcapture %}
+    {% include social-links-carousel.html posts=posts title="My Posts" %}
+    
+  Format: URL,Title,Quote (separated by |||)
+{% endcomment %}
+
+{% assign post_items = include.posts | strip | split: "|||" %}
+
+<div class="social-links-carousel-wrapper">
+  <h3 class="carousel-title">{{ include.title | default: "Social Posts & Videos" }}</h3>
+  <div class="social-links-carousel">
+    {% for item in post_items %}
+      {% assign parts = item | strip | split: "," %}
+      {% if parts[0] %}
+      <a href="{{ parts[0] | strip }}" target="_blank" class="social-link-card">
+        <div class="card-header">
+          <svg class="linkedin-icon" width="24" height="24" viewBox="0 0 24 24" fill="#0077b5">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span class="platform-name">LinkedIn</span>
+        </div>
+        {% if parts[1] %}
+        <h4 class="post-title">{{ parts[1] | strip }}</h4>
+        {% endif %}
+        {% if parts[2] %}
+        <p class="post-quote">"{{ parts[2] | strip }}"</p>
+        {% endif %}
+        <div class="card-footer">
+          <span class="view-post">View Post & Video →</span>
+        </div>
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="carousel-hint">← Scroll to explore more posts →</div>
+</div>
+
+<style>
+.social-links-carousel-wrapper {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.carousel-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.social-links-carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0 1.5rem 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.social-links-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.social-links-carousel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.social-links-carousel::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.social-links-carousel::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.social-link-card {
+  flex: 0 0 350px;
+  min-width: 350px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+
+.social-link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  border-color: #0077b5;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.linkedin-icon {
+  flex-shrink: 0;
+}
+
+.platform-name {
+  font-weight: 600;
+  color: #0077b5;
+  font-size: 0.9rem;
+}
+
+.post-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.post-quote {
+  font-style: italic;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0.75rem;
+  background: #fff8e1;
+  border-left: 3px solid #ffc107;
+  border-radius: 4px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.view-post {
+  color: #0077b5;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.carousel-hint {
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .social-link-card {
+    flex: 0 0 300px;
+    min-width: 300px;
+  }
+}
+</style>
+

@@ -7,7 +7,7 @@ featured_image: "2025-talk-to-figma-mcp/hero.png"
 gallery_images: "2025-talk-to-figma-mcp/hero.png"
 team: JooHyung (Lead Contributor & Desktop Solution Lead), Sonny Lazuardi (Original Creator), Jin, Yiseo (Desktop App Co-Developers)
 role: Solution Lead, Contributor (2nd Coder)
-visible: false
+visible: true
 ---
 
 ## Introducing TalkToFigma MCP

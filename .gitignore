@@ -4,3 +4,4 @@ _temp/
 .jekyll-cache/
 .direnv/
 .DS_Store
+bin/

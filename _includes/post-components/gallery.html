@@ -11,7 +11,7 @@
 <div class="gallery {% if include.full_width == true %}full-width{% endif %}" data-columns="{{ columns }}">
 	{% for image in images %}
 		<div class="gallery__item">
-			<img src="{{ image }}" alt="Gallery Image">
+			<img src="{{ image }}" alt="Gallery Image" loading="lazy">
 		</div>
 	{% endfor %}
 	{% if include.caption %}

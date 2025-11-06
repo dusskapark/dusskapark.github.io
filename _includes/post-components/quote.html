@@ -3,7 +3,7 @@
          {% if include.background_color %}style="background-color: {{ include.background_color }};"{% endif %}>
         
         <div class="image-container">
-            <img src="{{ include.images }}" alt="Project Image">
+            <img src="{{ include.images }}" alt="Project Image" loading="lazy">
         </div>
         
         <div class="text-container" {% if include.font_color %}style="color: {{ include.font_color }};"{% endif %}>

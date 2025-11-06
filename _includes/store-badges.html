@@ -1,0 +1,162 @@
+{% comment %}
+  Store Badges Component
+
+  Usage:
+    {% include store-badges.html
+       url1="https://apps.apple.com/us/app/..."
+       url2="https://play.google.com/store/apps/details?id=..."
+       url3="xp8brb9spkfrsw"
+       app_name="My App Name"
+       title="Download Now"
+       description="Available on the following stores"
+       full_width=true
+    %}
+
+  Parameters:
+    - url1, url2, url3: Store URLs or Microsoft Store product IDs (max 3)
+    - app_name: (Optional) App name for Apple App Store badge
+    - title: (Optional) Title text above the badges
+    - description: (Optional) Description text below the title
+    - full_width: (Optional) Set to true for full width container
+
+  Supported stores:
+    - Apple App Store (apps.apple.com)
+    - Google Play Store (play.google.com)
+    - Microsoft Store (product ID or microsoft.com URL)
+{% endcomment %}
+
+{%- assign urls = "" | split: "" -%}
+{%- if include.url1 -%}
+  {%- assign urls = urls | push: include.url1 -%}
+{%- endif -%}
+{%- if include.url2 -%}
+  {%- assign urls = urls | push: include.url2 -%}
+{%- endif -%}
+{%- if include.url3 -%}
+  {%- assign urls = urls | push: include.url3 -%}
+{%- endif -%}
+
+{%- assign has_apple = false -%}
+{%- assign has_google = false -%}
+{%- assign has_microsoft = false -%}
+
+{%- for url in urls -%}
+  {%- if url contains "apps.apple.com" -%}
+    {%- assign has_apple = true -%}
+  {%- elsif url contains "play.google.com" -%}
+    {%- assign has_google = true -%}
+  {%- elsif url contains "microsoft.com" or url contains "ms-store" or url.size < 50 -%}
+    {%- assign has_microsoft = true -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<style>
+  .store-badges-container {
+    text-align: center;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .store-badges-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #333;
+  }
+
+  .store-badges-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .store-badges-wrapper {
+    display: inline-flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .store-badge-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    overflow: hidden;
+  }
+
+  .store-badge-item .store-badge,
+  .store-badge-item a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .store-badge-item img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .store-badge-item ms-store-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 109px;
+    width: 200px;
+    transform: scale(0.55);
+    transform-origin: center;
+  }
+</style>
+
+<div class="store-badges-container {% if include.full_width == true %}full-width{% endif %}">
+  {%- if include.title -%}
+    <h3 class="store-badges-title">{{ include.title }}</h3>
+  {%- endif -%}
+
+  {%- if include.description -%}
+    <p class="store-badges-description">{{ include.description }}</p>
+  {%- endif -%}
+
+  <div class="store-badges-wrapper">
+    {%- for url in urls -%}
+      <div class="store-badge-item">
+        {%- if url contains "apps.apple.com" -%}
+          {%- comment %} Apple App Store Badge {%- endcomment -%}
+          <div class="store-badge"
+               {%- if include.app_name %} data-name="{{ include.app_name }}"{% endif %}
+               data-app-store-url="{{ url }}"
+               data-target="_blank"></div>
+        {%- elsif url contains "play.google.com" -%}
+          {%- comment %} Google Play Store Badge {%- endcomment -%}
+          <a href="{{ url }}" target="_blank" rel="noopener noreferrer">
+            <img alt="Get it on Google Play"
+                 src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+          </a>
+        {%- else -%}
+          {%- comment %} Microsoft Store Badge (assumes product ID or MS Store URL) {%- endcomment -%}
+          {%- if url contains "microsoft.com" or url contains "ms-store" -%}
+            {%- assign product_id = url | split: "/" | last -%}
+          {%- else -%}
+            {%- assign product_id = url -%}
+          {%- endif -%}
+          <ms-store-badge productid="{{ product_id }}" theme="auto"></ms-store-badge>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{%- comment %} Load necessary scripts based on detected stores {%- endcomment -%}
+{%- if has_apple -%}
+<script async src="https://cdn.jsdelivr.net/npm/store-badge@1/build/bundle.js"></script>
+{%- endif -%}
+{%- if has_microsoft -%}
+<script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+{%- endif -%}

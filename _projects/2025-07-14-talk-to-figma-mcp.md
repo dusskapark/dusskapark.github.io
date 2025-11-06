@@ -1,5 +1,5 @@
 ---
-title: "TalkToFigma MCP:<br>Pioneer of AI-Powered Design Productivity"
+title: "TalkToFigma MCP & Desktop: Pioneer of AI-Powered Design Productivity"
 subtitle: "Figma + AI project (2025)"
 date: 2025-07-14 00:00:00
 description: "Actively contributed to the CTTF project by developing core automation features, becoming the 2nd major code contributor. Discovered installation and reusability challenges for non-engineer users during internal and community evangelism, and developed a Kotlin Compose desktop app to democratize the project."
@@ -256,7 +256,16 @@ A project that would have been impossible alone grew through collaboration with 
 
 ## References & Links
 
+
 {::options parse_block_html="false" /}
+{% include store-badges.html
+   url1="https://apps.apple.com/kr/app/figma-mcp-magic/id6751596669"
+   url2="xpfg2vd5zd6ph9"
+   app_name="Figma MCP Magic"
+   title="Download Figma MCP Magic Desktop App"
+   description="Experience the power of AI-driven design automation. Download the desktop app and start automating your Figma workflows today!"
+   full_width=false
+%}
 <div class="github-card">
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon">
     <div class="content">

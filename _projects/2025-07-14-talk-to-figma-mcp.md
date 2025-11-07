@@ -49,17 +49,7 @@ I immediately started code contributions, and during the process of migrating da
 *Various Contribution Activities*
 
 {::options parse_block_html="false" /}
-{% capture embed_codes %}
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">✨ Remember Google Sheets sync? Now imagine that with <a href="https://twitter.com/cursor_ai?ref_src=twsrc%5Etfw">@cursor_ai</a> ! Added smart data population to <a href="https://twitter.com/sonnylazuardi?ref_src=twsrc%5Etfw">@sonnylazuardi</a>&#39;s Talk-to-Figma MCP. This is just the beginning of how AI transforms design workflows 🪄 <a href="https://t.co/490fdRWYyt">https://t.co/490fdRWYyt</a> <a href="https://twitter.com/figma?ref_src=twsrc%5Etfw">@figma</a> <a href="https://twitter.com/hashtag/figmaMCP?src=hash&amp;ref_src=twsrc%5Etfw">#figmaMCP</a> <a href="https://twitter.com/adispezio?ref_src=twsrc%5Etfw">@adispezio</a> <a href="https://twitter.com/zoink?ref_src=twsrc%5Etfw">@zoink</a></p>&mdash; Jude_Park (@dusskapark) <a href="https://twitter.com/dusskapark/status/1907306574810693691?ref_src=twsrc%5Etfw">April 2, 2025</a></blockquote>
-|||
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">1/5 &quot;Vibe design&quot;? &quot;Vibe coding&quot;? What about &quot;vibe instance swap&quot;? 🙄 THREAD: 3 productivity hacks using <a href="https://twitter.com/figma?ref_src=twsrc%5Etfw">@figma</a> MCP that will save you HOURS every week ⚡️ Starting with &#39;Instance swap+overrides&#39;: <a href="https://t.co/Lrshzs6k0d">pic.twitter.com/Lrshzs6k0d</a></p>&mdash; Jude_Park (@dusskapark) <a href="https://twitter.com/dusskapark/status/1912179210892059099?ref_src=twsrc%5Etfw">April 15, 2025</a></blockquote>
-|||
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/figma?ref_src=twsrc%5Etfw">@figma</a> &#39;s native annotations are amazing, but what about all those legacy markers you&#39;ve created?<br><br>With <a href="https://twitter.com/cursor_ai?ref_src=twsrc%5Etfw">@cursor_ai</a> and <a href="https://twitter.com/sonnylazuardi?ref_src=twsrc%5Etfw">@sonnylazuardi</a> &#39;s Figma MCP, converting them is just one conversation away! Tell the AI to follow the strategy, and watch the magic happen ✨<a href="https://twitter.com/zoink?ref_src=twsrc%5Etfw">@zoink</a> <a href="https://twitter.com/adispezio?ref_src=twsrc%5Etfw">@adispezio</a> <a href="https://t.co/iOHjQdZhWe">https://t.co/iOHjQdZhWe</a> <a href="https://t.co/swPlYDdXV0">pic.twitter.com/swPlYDdXV0</a></p>&mdash; Jude_Park (@dusskapark) <a href="https://twitter.com/dusskapark/status/1908940072067731503?ref_src=twsrc%5Etfw">April 6, 2025</a></blockquote>
-|||
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Figma MCP Magic(5) is here!<br>In this clip, I combine DevMode MCP with Talk to Figma to get instant, multi-angle UX feedback—automatically annotated right inside Figma.<br>Super fast. Super smart.<br>Watch the magic 🪄<br>👉 <a href="https://t.co/1mIj917LiV">https://t.co/1mIj917LiV</a><a href="https://twitter.com/hashtag/Figma?src=hash&amp;ref_src=twsrc%5Etfw">#Figma</a> <a href="https://twitter.com/zoink?ref_src=twsrc%5Etfw">@zoink</a> <a href="https://twitter.com/sonnylazuardi?ref_src=twsrc%5Etfw">@sonnylazuardi</a></p>&mdash; Jude_Park (@dusskapark) <a href="https://twitter.com/dusskapark/status/1937215717868495178?ref_src=twsrc%5Etfw">June 23, 2025</a></blockquote>
-{% endcapture %}
-{% include social-posts-carousel.html embed_html=embed_codes title="My Contribution Journey" %}
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include youtube-videos-carousel.html video_ids="j05gGT3xfCs,23XejvYe8YI,uvuT8LByroI,9EslHHmNl2g,Zv4GAm9oIzQ,06K2xas_rFU" %}
 {::options parse_block_html="true" /}
 
 Through developing these core features, I became the **[2nd Major Contributor](https://github.com/dusskapark)** of [Sonny Lazuardi](https://github.com/sonnylazuardi)'s project, and directly led the growth and expansion of this **5.5k+ GitHub Stars** project.
@@ -226,9 +216,18 @@ Particularly meaningful was the **increase in events per session**. This was evi
 
 I implemented the idea in my head as a prototype, enhanced its completeness through coding sessions at church, and proved its value with actual user data. As the **2nd Major Contributor of a 5.5k+ Stars project**, I developed core features and created an impact of **4.1x usability improvement** with the desktop app.
 
-This achievement led to bigger opportunities. Sonny's original project moved to the [official Grab repository](https://www.grab.com/sg/inside-grab/stories/a-grab-engineer-built-this-design-tool-for-his-team-now-were-improving-it-for-everyone/) as part of Grab's open-source initiative, and the desktop app I developed also gained collaboration opportunities with Grab.
+Starting from my initial idea and prototype, engineers Jin and her friend Yiseo took the project to completion. Through their dedication and expertise, they successfully launched the app on both the **Mac App Store** and **Microsoft Store**, making the tool accessible to designers across all major platforms. What began as a weekend experiment to solve a real user problem transformed into a production-ready application serving the design community.
 
-Both projects remained MIT license open source while receiving official Grab support. As the **2nd Major Contributor**, I'm leading the continuous growth and innovation of both projects, contributing to help more designers benefit from AI-powered design automation.
+{::options parse_block_html="false" /}
+{% include store-badges.html
+   url1="https://apps.apple.com/kr/app/figma-mcp-magic/id6751596669"
+   url2="xpfg2vd5zd6ph9"
+   app_name="Figma MCP Magic"
+   title="Download Figma MCP Magic Desktop App"
+   description="Experience the power of AI-driven design automation. Download the desktop app and start automating your Figma workflows today!"
+   full_width=false
+%}
+{::options parse_block_html="true" /}
 
 ### What I Learned from This Journey
 
@@ -258,14 +257,6 @@ A project that would have been impossible alone grew through collaboration with 
 
 
 {::options parse_block_html="false" /}
-{% include store-badges.html
-   url1="https://apps.apple.com/kr/app/figma-mcp-magic/id6751596669"
-   url2="xpfg2vd5zd6ph9"
-   app_name="Figma MCP Magic"
-   title="Download Figma MCP Magic Desktop App"
-   description="Experience the power of AI-driven design automation. Download the desktop app and start automating your Figma workflows today!"
-   full_width=false
-%}
 <div class="github-card">
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon">
     <div class="content">

@@ -1,0 +1,139 @@
+---
+title: "Klever — A Community-Driven AI Usability Testing Figma Plugin"
+subtitle: "Figma + AI project (2024)"
+date: "2024-06-01"
+description: "Klever showcases my journey from concept to creation, developing an AI-powered Figma plugin for usability testing. Community engagement was pivotal in its evolution, with its potential recognized by corporate entities 🎉"
+featured_image: "/images/projects/2024-klever/hero.png"
+team: "JooHyung(Lead), DongYeon Lee (Product Designer)"
+role: "Product Lead"
+---
+
+## Introducing Klever
+
+Klever is a Figma plugin that leverages AppAgent's cutting-edge AI technology to provide designers with a seamless and intuitive usability testing experience. With Klever, designers can instantly gain valuable insights and enhance their design process—all within the familiar environment of Figma. Below is a summary of the core features and benefits of Klever.
+
+<Gallery
+  columns={1}
+  fullWidth={true}
+  images="/images/projects/2024-klever/BentoGrid.png"
+  caption="Summary of Klever plugin features"
+/>
+
+This project was born out of a desire to address the evolving challenges faced by designers in an AI-driven world. In the following sections, we'll explore the inspiration behind Klever, the journey of its development, and the impactful results it has achieved. Join us as we delve into the story of how Klever came to be and the innovative solutions it offers.
+
+## 💡 The Ideation Journey
+
+The Mirror of Your Mind (명심보감/明心寶鑑) is a book that encapsulates the wisdom of Eastern philosophy. It teaches that to live a truly human life, one must broaden their learning, maintain a sincere purpose, never lose curiosity, keep questioning, and solve problems step by step. These teachings resonate deeply with us, product designers, living in the 21st-century digital and AI age. After all, it's crucial to maintain a positive mindset even in **moments of change**.
+
+<Quote
+  fullWidth={true}
+  backgroundColor="#FDF0E0"
+  fontColor="#555"
+  images="/images/projects/2024-klever/6_logo_1_2.png"
+  text="It's another morning, and as sunlight spills through my window, I fire up my laptop. Slack is buzzing with AI news. Curiosity piqued, I click on a few. Watching these AI design tool demos, a chill runs down my spine — they're doing what I do. It makes me wonder — <br/><br/><span style='font-size: 24px; background-color: #333; color: #fff; padding: 2px 4px;'>&quot;Is AI really going to replace us designers?&quot;</span> <br/><br/>I'm not entirely sure, but all I know is <strong>I want to keep doing my best, today and tomorrow.</strong>"
+/>
+
+In a cozy nook of a Starbucks in western Singapore, two Grab designers, [DY LEE](https://www.linkedin.com/in/dy-lee/) and [Jude Park](https://www.linkedin.com/in/dusskapark/), kicked off what was just a humble AI side project. It wasn't about achieving something monumental; it was about confronting the genuine anxieties of diving into AI, maintaining a hopeful perspective, and exploring new avenues for growth in an AI-driven landscape.
+
+### Can AI Enhance Design?
+
+As we move through 2024, AI is everywhere, and it's changing how we work in design. Every day, new AI tools and models are emerging, transforming the way we approach our work. We initially thought AI would take over the boring tasks, freeing us to focus on creativity. However, AI is now involved in everything from generating creative content to designing user interfaces, reshaping our processes obviously.
+
+<Quote
+  fullWidth={false}
+  backgroundColor="#000"
+  fontColor="#fff"
+  images="/images/projects/2024-klever/6_design_process_4.png"
+  text="<span style='font-size: 24px; background-color: #333; color: #fff; padding: 2px 4px;'>How can we embrace the power of AI in our design process?</span> <br/><br/>Beyond just automating tasks, what role can AI play in supporting us as designer assistants?"
+/>
+
+We didn't find the perfect answer right away, but our exploration led us to a crucial realization: being a product designer is about more than just creating visual designs. It's about identifying challenges, devising solutions, and deeply understanding user needs and behaviors.
+
+## 🛠️ The Development Journey
+
+Integrating AppAgent with Figma's prototype feature presented several significant technical hurdles. As this started as a small side project by designers, expanding from an Android app to Figma required us to overcome multiple complex challenges.
+
+<Gallery
+  columns={1}
+  fullWidth={false}
+  images="/images/projects/2024-klever/5_demo_vid_0.png"
+  caption="The original AppAgent operates: Observation → Thought → Action"
+/>
+
+AppAgent provides a screenshot with UI annotations and a task to the GPT-4-vision model, which observes, thinks, and suggests the next action. This process repeats, simulating user interaction.
+
+### Generating UI Screenshots & Annotations
+
+Creating screenshot images and annotations in Figma prototypes wasn't too difficult. We used Figma's REST API to fetch node data from Figma design, convert it to images, and generate screenshot images and annotations.
+
+<Gallery
+  columns={1}
+  fullWidth={false}
+  images="/images/projects/2024-klever/5_demo_case study_1_0.png"
+  caption="A sample screenshot vs A screenshot with UI object annotations"
+/>
+
+However, implementing the resulting actions in Figma prototypes proved challenging. This was because Figma prototypes render their designs on `<Canvas>` like PNG images, making it difficult to recognize and interact with just UI components.
+
+### 🎉 Prototyped: AppAgent's Integration with Figma
+
+After several trials and errors, we successfully developed a new option where AppAgent controls Figma prototypes, recognizes UI elements, and interacts with them, as demonstrated in the YouTube video below.
+
+<Video
+  url="https://www.youtube.com/embed/1HuCiL9el3I?si=JX9BM_xb_wfAkYUq"
+  caption="AppAgent controlling Figma prototypes demo"
+/>
+
+## 🧠 Interesting Use Cases
+
+As we applied AppAgent for Figma to several prototypes, we discovered some truly fascinating cases. These cases demonstrated that AppAgent could evolve beyond a simple lab model to become a design productivity tool capable of predicting actual user behavior and identifying potential design issues.
+
+### Discovering Hidden Interactions
+
+<Gallery
+  columns={2}
+  fullWidth={false}
+  images={[
+    "/images/projects/2024-klever/5_demo_case study_1_1.png",
+    "/images/projects/2024-klever/5_demo_case study_1_2.png"
+  ]}
+  caption="AI Agent found a prototype noodle that the designer missed."
+/>
+
+In a travel app prototype, we asked the AI agent to check promotions and find the cheapest hotel in Bali. Contrary to our expectations, the AI agent tried to expand the article by clicking the center instead of pressing the 'Read more' button or the search button. This is a familiar UI pattern used in many apps, but it was mistakenly not connected in this prototype. The AI agent captured this important interaction that the designer had missed.
+
+### Identifying UI Element Ambiguity
+
+<Gallery
+  columns={2}
+  fullWidth={false}
+  images={[
+    "/images/projects/2024-klever/5_demo_case study_2_1.png",
+    "/images/projects/2024-klever/5_demo_case study_2_2.png"
+  ]}
+  caption="AI Agent discovered the confusing visual design of the UI components."
+/>
+
+On the hotel details screen of the same prototype, we instructed the AI agent to find more information. We expected the AI to expand the article for 'Read more', but it repeatedly clicked the 'Detail' tab instead. This shows that the AI agent, like a person, confused tabs and buttons due to their similar visual designs.
+
+## 📈 Impact
+
+Despite being a paid plugin (due to API costs), Klever has achieved large numbers in the Figma Community beyond our expectations, demonstrating strong demand for AI-powered usability testing tools:
+
+<Quote
+  fullWidth={false}
+  backgroundColor="#000"
+  fontColor="#fff"
+  images="/images/projects/2024-klever/hero2.png"
+  text="It still keeps growing every week! <br/><br/>👀 <span style='font-size: 24px; background-color: #333; color: #fff; padding: 2px 4px;'>2,093</span> Views<br>👥 <span style='font-size: 24px; background-color: #333; color: #fff; padding: 2px 4px;'>1,076</span> Users<br>🔖 <span style='font-size: 24px; background-color: #333; color: #fff; padding: 2px 4px;'>248</span> Saves"
+/>
+
+These numbers significantly exceed our expectations for a **paid** plugin, validating our vision of making AI usability testing more accessible to designers.
+
+## Lessons learned
+
+This project started as a small side project for designers to learn AI while having fun. There were many challenges in the experimental process, but we received interest and encouragement from various designers and communities and motivated by all of that, we persistently repeated our experiments and eventually achieved the result of making it into a product.
+
+In the era of AI, new AI tools are pouring out every day. Some may feel pressured to learn new things, Or some may feel a vague fear that AI will replace our design jobs. But what this project has taught us is that AI is fascinating and fun. If we learn while playing and work while learning, just like children playing with interesting toys, and improve the small inconveniences in our product design ecosystem with AI, AI will no longer be a difficult or scary entity.
+
+We hope that these fun experiences we felt are well conveyed to all of you reading this article. So, enjoy a fun design experience with AI! 🤗

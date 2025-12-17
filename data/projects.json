@@ -1,26 +1,11 @@
 [
   {
-    "slug": "klever",
-    "title": "Klever — A Community-Driven AI Usability Testing Figma Plugin",
-    "subtitle": "Figma + AI project (2024)",
-    "date": "2024-06-01",
-    "description": "Klever showcases my journey from concept to creation, developing an AI-powered Figma plugin for usability testing. Community engagement was pivotal in its evolution, with its potential recognized by corporate entities 🎉",
-    "featured_image": "/images/projects/2024-klever/hero.png",
-    "gallery_images": ["/images/projects/2024-klever/hero.png"],
-    "team": "JooHyung(Lead), DongYeon Lee (Product Designer)",
-    "role": "Product Lead",
-    "visible": true
-  },
-  {
-    "slug": "figma-autoname",
-    "title": "Community-Driven AI Advancements: Transforming Figma Autoname for Design Systems",
-    "subtitle": "Figma + AI project (2023)",
-    "date": "2023-06-01",
-    "description": "Open source Contribution to the Figma Autoname plugin, integrating TensorFlow.js for advanced design system support and developer collaboration",
-    "featured_image": "/images/projects/2023-figma-autoname/cover.png",
-    "gallery_images": ["/images/projects/2023-figma-autoname/cover.png"],
-    "team": "Hugo(Original Author), JooHyung(FE Developer & Contributor)",
-    "role": "FE Developer & Open Source Contributor",
+    "slug": "talk-to-figma-mcp",
+    "title": "Talk to Figma MCP",
+    "subtitle": "Figma + AI project (2025)",
+    "date": "2025-07-14",
+    "description": "MCP server for Figma integration",
+    "featured_image": "/images/projects/2025-talk-to-figma-mcp/hero.png",
     "visible": true
   },
   {
@@ -29,8 +14,29 @@
     "subtitle": "Chrome Extension (2024)",
     "date": "2024-11-05",
     "description": "A productivity tool for developers and testers",
-    "featured_image": "/images/projects/form-helper.png",
-    "gallery_images": ["/images/projects/form-helper.png"],
+    "featured_image": "/images/projects/2024-form-helper-chrome/hero.png",
+    "visible": true
+  },
+  {
+    "slug": "klever",
+    "title": "Klever — A Community-Driven AI Usability Testing Figma Plugin",
+    "subtitle": "Figma + AI project (2024)",
+    "date": "2024-06-01",
+    "description": "Klever showcases my journey from concept to creation, developing an AI-powered Figma plugin for usability testing.",
+    "featured_image": "/images/projects/2024-klever/hero.png",
+    "team": "JooHyung(Lead), DongYeon Lee (Product Designer)",
+    "role": "Product Lead",
+    "visible": true
+  },
+  {
+    "slug": "Figma-Autoname",
+    "title": "Community-Driven AI Advancements: Transforming Figma Autoname for Design Systems",
+    "subtitle": "Figma + AI project (2023)",
+    "date": "2023-06-01",
+    "description": "Open source Contribution to the Figma Autoname plugin, integrating TensorFlow.js",
+    "featured_image": "/images/projects/2023-figma-autoname/cover.png",
+    "team": "Hugo(Original Author), JooHyung(FE Developer & Contributor)",
+    "role": "FE Developer & Open Source Contributor",
     "visible": true
   },
   {
@@ -39,18 +45,106 @@
     "subtitle": "Live Streaming Platform (2022)",
     "date": "2022-08-03",
     "description": "Live streaming platform design",
-    "featured_image": "/images/projects/naver-now.png",
-    "gallery_images": ["/images/projects/naver-now.png"],
+    "featured_image": "/images/projects/2022-naver-now/file-cover.png",
     "visible": true
   },
   {
-    "slug": "tensorflow-js",
+    "slug": "TensorFlow-JS",
     "title": "TensorFlow.js Project",
     "subtitle": "ML in Browser (2021)",
     "date": "2021-08-11",
     "description": "Machine learning experiments with TensorFlow.js",
-    "featured_image": "/images/projects/tensorflow.png",
-    "gallery_images": ["/images/projects/tensorflow.png"],
+    "featured_image": "/images/projects/2021-made-with-tfjs/file-cover.png",
+    "visible": true
+  },
+  {
+    "slug": "ldsg",
+    "title": "LG Design System",
+    "subtitle": "Design System (2020)",
+    "date": "2020-11-30",
+    "description": "LG Design System development",
+    "featured_image": "/images/projects/2020-ldsg/background001.png",
+    "visible": true
+  },
+  {
+    "slug": "liff-project",
+    "title": "LIFF Project",
+    "subtitle": "LINE Platform (2020)",
+    "date": "2020-10-30",
+    "description": "LINE Front-end Framework project",
+    "featured_image": "/images/projects/2020-liff/001.png",
+    "visible": true
+  },
+  {
+    "slug": "lgd-project",
+    "title": "LG Display Project",
+    "subtitle": "Enterprise Project (2019)",
+    "date": "2019-07-24",
+    "description": "LG Display design project",
+    "featured_image": "/images/projects/2019-lgd/lgd2019-001.jpg",
+    "visible": true
+  },
+  {
+    "slug": "lookbook",
+    "title": "Lookbook",
+    "subtitle": "E-commerce (2019)",
+    "date": "2019-03-02",
+    "description": "Fashion e-commerce platform",
+    "featured_image": "/images/projects/2019-lookbook/lookbook2019-001.png",
+    "visible": true
+  },
+  {
+    "slug": "orderbook",
+    "title": "Order Book",
+    "subtitle": "Trading Platform (2018)",
+    "date": "2018-12-01",
+    "description": "Trading order book system",
+    "featured_image": "/images/projects/2018-orderbook/logo1-1.png",
+    "visible": true
+  },
+  {
+    "slug": "gdc",
+    "title": "Game Developer Console",
+    "subtitle": "Developer Tools (2017)",
+    "date": "2017-10-02",
+    "description": "Game developer console platform",
+    "featured_image": "/images/projects/2017-gdc/GDC2017-001.png",
+    "visible": true
+  },
+  {
+    "slug": "chatbot",
+    "title": "Chatbot Platform",
+    "subtitle": "AI Platform (2016)",
+    "date": "2016-12-01",
+    "description": "Chatbot development platform",
+    "featured_image": "/images/projects/2016-chatbot/placeit01-2546.jpg",
+    "visible": true
+  },
+  {
+    "slug": "bobplanet",
+    "title": "Bob Planet",
+    "subtitle": "IoT Project (2015)",
+    "date": "2015-11-20",
+    "description": "IoT-based food management system",
+    "featured_image": "/images/projects/2015-bobplanet/step4_1mb.png",
+    "visible": true
+  },
+  {
+    "slug": "onestore",
+    "title": "One Store",
+    "subtitle": "App Market (2015)",
+    "date": "2015-03-02",
+    "description": "Korean app marketplace design",
+    "featured_image": "/images/projects/2015-onestore/2015-onestore-001.png",
+    "visible": true
+  },
+  {
+    "slug": "tstore",
+    "title": "T Store Developer Center",
+    "subtitle": "Developer Platform (2013)",
+    "date": "2013-10-01",
+    "description": "T Store developer center redesign",
+    "featured_image": "/images/projects/2013-tstore/devCenter2013-460x300-001.png",
     "visible": true
   }
 ]

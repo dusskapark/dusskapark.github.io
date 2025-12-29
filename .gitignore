@@ -39,23 +39,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Jekyll backup
-/jekyll-backup
-/_data
-/_includes
-/_layouts
-/_pages
-/_posts
-/_projects
-/_sass
-/css
-/js
-/blog
-*.html
-!404.html
-*.sh
-.envrc
-.ruby-version
-Gemfile*
-*.md
-!README.md
+# Jekyll (migrated to Next.js - legacy entries kept for reference)
+# Gemfile* - removed
+# .ruby-version - removed

@@ -1,7 +1,7 @@
 export interface Project {
   slug: string
   title: string
-  subtitle: string
+  tags: string[]
   date: string
   description: string
   featured_image: string

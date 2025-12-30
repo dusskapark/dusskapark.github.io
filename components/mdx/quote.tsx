@@ -36,6 +36,7 @@ export function Quote({
               src={images}
               alt="Quote image"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className="object-cover"
               loading="lazy"
             />

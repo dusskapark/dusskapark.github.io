@@ -1,5 +1,6 @@
 import type { MDXComponents } from 'mdx/types'
 import { Gallery, Quote, Video } from '@/components/mdx'
+import { GitHubCard } from '@/components/github-card'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -54,6 +55,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Gallery,
     Quote,
     Video,
+    GitHubCard,
 
     ...components,
   }

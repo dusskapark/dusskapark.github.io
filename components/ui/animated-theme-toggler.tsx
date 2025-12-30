@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useRef } from "react"
+import { useCallback, useRef, useState, useEffect } from "react"
 import { Moon, Sun } from "lucide-react"
 import { flushSync } from "react-dom"
 import { useTheme } from "next-themes"
@@ -18,6 +18,11 @@ export const AnimatedThemeToggler = ({
 }: AnimatedThemeTogglerProps) => {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const isDark = resolvedTheme === "dark"
 
@@ -61,6 +66,24 @@ export const AnimatedThemeToggler = ({
       }
     )
   }, [isDark, duration, setTheme])
+
+  // Prevent hydration mismatch by not rendering the icon until mounted
+  if (!mounted) {
+    return (
+      <button
+        ref={buttonRef}
+        className={cn(
+          "inline-flex items-center justify-center rounded-md p-2 hover:bg-accent hover:text-accent-foreground transition-colors",
+          className
+        )}
+        {...props}
+        disabled
+      >
+        <div className="h-5 w-5" />
+        <span className="sr-only">Toggle theme</span>
+      </button>
+    )
+  }
 
   return (
     <button

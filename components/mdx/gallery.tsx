@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { ImageLightbox } from "@/components/image-lightbox"
 import { cn } from "@/lib/utils"
 
 interface GalleryProps {
@@ -32,22 +32,16 @@ export function Gallery({
     )}>
       <div className={cn("grid gap-4", gridCols)}>
         {imageArray.map((image, index) => (
-          <div
+          <ImageLightbox
             key={index}
-            className="relative aspect-video overflow-hidden rounded-lg bg-muted"
-          >
-            <Image
-              src={image}
-              alt={caption || `Gallery image ${index + 1}`}
-              fill
-              className="object-cover"
-              loading="lazy"
-            />
-          </div>
+            src={image}
+            alt={caption || `Gallery image ${index + 1}`}
+            type="gallery"
+          />
         ))}
       </div>
       {caption && (
-        <p className="mt-2 text-center text-sm italic text-muted-foreground">
+        <p className="mt-4 text-center text-sm italic text-muted-foreground">
           {caption}
         </p>
       )}

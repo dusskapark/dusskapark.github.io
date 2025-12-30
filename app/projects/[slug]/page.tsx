@@ -5,9 +5,9 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Gallery, Quote, Video } from '@/components/mdx'
-import { getProjectContent } from '@/lib/mdx'
-import projects from "@/data/projects.json"
-import type { Project } from "@/types/project"
+import { GitHubCard } from '@/components/github-card'
+import { LinkPreviewCard } from '@/components/link-preview-card'
+import { getProjectContent, getAllProjects } from '@/lib/mdx'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 
@@ -15,9 +15,12 @@ const components = {
   Gallery,
   Quote,
   Video,
+  GitHubCard,
+  LinkPreviewCard,
 }
 
 export async function generateStaticParams() {
+  const projects = getAllProjects()
   return projects.map((project) => ({
     slug: project.slug,
   }))
@@ -25,7 +28,8 @@ export async function generateStaticParams() {
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const project = (projects as Project[]).find((p) => p.slug === slug)
+  const projects = getAllProjects()
+  const project = projects.find((p) => p.slug === slug)
 
   if (!project) {
     notFound()
@@ -48,11 +52,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       {/* Hero */}
       <section className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto space-y-6">
-          <div className="flex items-center gap-4">
-            <Badge variant="secondary">
-              {mdxContent?.frontmatter.subtitle || project.subtitle}
-            </Badge>
-            <time className="text-sm text-muted-foreground">
+          <div className="flex items-start gap-4">
+            <div className="flex flex-wrap gap-2">
+              {(mdxContent?.frontmatter.tags || project.tags)?.map((tag) => (
+                <Badge key={tag} variant="secondary">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+            <time className="text-sm text-muted-foreground whitespace-nowrap">
               {new Date(mdxContent?.frontmatter.date || project.date).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
@@ -61,9 +69,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </time>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-            {mdxContent?.frontmatter.title || project.title}
-          </h1>
+          <h1
+            className="text-4xl md:text-5xl font-bold tracking-tight"
+            dangerouslySetInnerHTML={{ __html: mdxContent?.frontmatter.title || project.title }}
+          />
 
           <p className="text-lg text-muted-foreground">
             {mdxContent?.frontmatter.description || project.description}
@@ -71,21 +80,21 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
           {((mdxContent?.frontmatter.role || project.role) ||
             (mdxContent?.frontmatter.team || project.team)) && (
-            <div className="flex flex-col gap-2 pt-4 border-t">
-              {(mdxContent?.frontmatter.role || project.role) && (
-                <p className="text-sm">
-                  <span className="font-semibold">Role:</span>{' '}
-                  {mdxContent?.frontmatter.role || project.role}
-                </p>
-              )}
-              {(mdxContent?.frontmatter.team || project.team) && (
-                <p className="text-sm">
-                  <span className="font-semibold">Team:</span>{' '}
-                  {mdxContent?.frontmatter.team || project.team}
-                </p>
-              )}
-            </div>
-          )}
+              <div className="flex flex-col gap-2 pt-4 border-t">
+                {(mdxContent?.frontmatter.role || project.role) && (
+                  <p className="text-sm">
+                    <span className="font-semibold">Role:</span>{' '}
+                    {mdxContent?.frontmatter.role || project.role}
+                  </p>
+                )}
+                {(mdxContent?.frontmatter.team || project.team) && (
+                  <p className="text-sm">
+                    <span className="font-semibold">Team:</span>{' '}
+                    {mdxContent?.frontmatter.team || project.team}
+                  </p>
+                )}
+              </div>
+            )}
         </div>
       </section>
 
@@ -97,6 +106,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               src={mdxContent?.frontmatter.featured_image || project.featured_image}
               alt={mdxContent?.frontmatter.title || project.title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px"
               className="object-cover"
               priority
             />

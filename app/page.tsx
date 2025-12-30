@@ -1,5 +1,7 @@
 import { ProjectCard } from "@/components/project-card"
 import { Button } from "@/components/ui/button"
+import { HeroCodeBlock } from "@/components/hero-code-block"
+import { Header } from "@/components/header"
 import projects from "@/data/projects.json"
 import type { Project } from "@/types/project"
 
@@ -10,24 +12,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      {/* Header with Theme Toggle */}
+      <Header />
+
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <p className="text-sm uppercase tracking-wide text-muted-foreground">
-            Hello! I'm Joo Hyung Park
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            An Impact-driven Product designer
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground">
-            who enjoys solving complex problems based on variety Experiences from a wide range of enterprise products.
-          </p>
-          <div className="flex gap-4 justify-center pt-4">
-            <Button size="lg">Get In Touch</Button>
-            <Button size="lg" variant="outline">View Resume</Button>
-          </div>
-        </div>
-      </section>
+      <HeroCodeBlock />
 
       {/* Projects Section */}
       <section className="container mx-auto px-4 py-16">

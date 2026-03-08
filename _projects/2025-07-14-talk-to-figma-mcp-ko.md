@@ -10,16 +10,22 @@ role: Solution Lead, Contributor (2nd Coder)
 visible: false
 ---
 
+<!--
+IMAGE INSERT PLAN (KO)
+1) Summary 아래: 최신 Desktop 메인 화면 1장 (히어로)
+2) Core Contribution 아래: 기능 데모 2~4장 (Before/After 권장)
+3) Turning Point 아래: 워크숍 반응 + 설치 장벽 증거 2~3장
+4) Solution(영상) 아래: 초기 vs 최신 앱 비교 2장
+5) Desktop Priorities 아래: 실제 사용 플로우 3~4장
+6) Outcome 아래: GA 국가분포 + DB 지표 + 초기/최근 비교 그래프
+7) Conclusion 근처: 사용자 코멘트 카드 2~3장
+-->
+
 ## 한 줄 요약
 
 저는 `cursor-talk-to-figma-mcp` 오픈소스의 가능성을 보고 핵심 자동화 도구들을 기여했고, 워크숍에서 확인한 설치 장벽 문제를 해결하기 위해 **TalkToFigma Desktop**을 만들었습니다. 결과적으로 MCP는 일부 엔지니어의 실험이 아니라, 더 많은 디자이너가 실제로 쓰는 도구가 되기 시작했습니다.
 
-<!-- IMAGE RECOMMENDATION (Summary 바로 아래):
-- 추천 이미지: "최신 TalkToFigma Desktop 메인 화면" 1장
-- 목적: 글 시작 5초 안에 "무엇을 만들었는지" 직관적으로 전달
-- 포맷: 단일 큰 이미지 (가로형), 캡션은 제품 핵심 가치 한 줄
-- 예시 캡션: "디자이너를 위한 원클릭 MCP 실행 경험"
--->
+<!-- IMG_SLOT_1: 최신 Desktop 메인 화면 (히어로) -->
 
 <br>
 <div style="text-align: center; margin-top: 20px;">
@@ -45,16 +51,7 @@ Sonny Lazuardi가 시작한 `cursor-talk-to-figma-mcp`는 Cursor Agentic AI와 F
 
 핵심은 “정해진 버튼 클릭 자동화”가 아니라, **자연어 기반으로 맥락을 이해해 유연하게 동작하는 디자인 자동화**였습니다.
 
-<!-- IMAGE RECOMMENDATION (기여 영역 섹션 아래):
-- 추천 이미지: 원본 문서에서 사용하던 자동화 데모 이미지/GIF 2~4장 (기능별 1장)
-- 배치 방식: 2x2 그리드 또는 캐러셀
-- 권장 매핑:
-  1) Smart Data Population -> 데이터 채우기 전/후 비교
-  2) Legacy Annotation Converter -> 주석 변환 전/후 비교
-  3) Instance Override Propagation -> 반복 작업 일괄 적용 장면
-  4) DevMode Integration -> 접근성/디자인 리뷰 코멘트 생성 화면
-- 팁: 각 이미지 아래 "Before / After"를 짧게 표기하면 스크롤 중에도 가치가 바로 보임
--->
+<!-- IMG_SLOT_2: 기능별 데모 2~4장 (Before/After) -->
 
 ## 2) 전환점: 문제는 기능이 아니라 설치였다
 
@@ -65,12 +62,7 @@ Sonny Lazuardi가 시작한 `cursor-talk-to-figma-mcp`는 Cursor Agentic AI와 F
 
 즉, 문제는 "사람들이 관심이 없어서"가 아니라 **디자이너 친화적인 온보딩 경로가 없어서**였습니다. 이 문제를 깨지 않으면 아무리 좋은 기능을 추가해도 실제 확산은 제한적일 수밖에 없다고 봤습니다.
 
-<!-- IMAGE RECOMMENDATION (전환점 섹션 아래):
-- 추천 이미지 A: 워크숍 현장/피드백 캡처 이미지 (관심은 높았다는 증거)
-- 추천 이미지 B: 설치 실패/설정 난이도 관련 실제 사용자 피드백 스크린샷
-- 추천 이미지 C: 기존 설치 플로우(복잡) 다이어그램 1장
-- 목적: "가치는 높지만 설치에서 이탈"이라는 문제를 시각적으로 증명
--->
+<!-- IMG_SLOT_3: 워크숍 반응 + 설치 장벽 증거 2~3장 -->
 
 ## 3) 해결: TalkToFigma Desktop을 만들었다
 
@@ -80,12 +72,7 @@ Sonny Lazuardi가 시작한 `cursor-talk-to-figma-mcp`는 Cursor Agentic AI와 F
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DInyZLnEgmA?si=Ls2VFJxgwzmbzMeZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 {::options parse_block_html="true" /}
 
-<!-- IMAGE RECOMMENDATION (해결 섹션, 영상 아래):
-- 추천 이미지: 초기 앱 버전 vs 최신 앱 버전 비교 이미지 (필수)
-- 배치 방식: 좌/우 비교 2장 + 각 버전 핵심 개선점 2~3개 bullet
-- 예시 라벨: "v0 Prototype" / "Latest Production"
-- 목적: 단순 아이디어가 아니라 "진화한 제품"임을 명확히 전달
--->
+<!-- IMG_SLOT_4: 초기(v0) vs 최신(Production) 앱 비교 2장 -->
 
 ### Desktop 앱에서 집중한 것
 
@@ -94,14 +81,7 @@ Sonny Lazuardi가 시작한 `cursor-talk-to-figma-mcp`는 Cursor Agentic AI와 F
 - **시스템 트레이 기반 운영**(켜고 끄기 쉬운 사용성)
 - **튜토리얼 중심 온보딩**(비-엔지니어도 따라올 수 있는 흐름)
 
-<!-- IMAGE RECOMMENDATION (Desktop 우선순위 섹션 아래):
-- 추천 이미지 묶음: 실제 사용 흐름 스크린샷 3~4단계
-  1) 앱 실행
-  2) MCP 설치/연결
-  3) 시스템 트레이 실행 상태
-  4) Figma 작업에서 결과 확인
-- 목적: 기능 리스트를 "실제 사용자 여정"으로 체감시킴
--->
+<!-- IMG_SLOT_5: 실제 사용 플로우 3~4단계 스크린샷 -->
 
 ## 4) 성과: 예상보다 빠르게, 더 넓게 확산됐다
 
@@ -113,13 +93,7 @@ Sonny Lazuardi가 시작한 `cursor-talk-to-figma-mcp`는 Cursor Agentic AI와 F
 - 전 세계적으로 수천 명 규모 사용자가 Desktop 앱을 통해 MCP를 실제 사용 중.
 - "설치가 어려워서 못 쓴다"는 장벽이 "다운로드 후 바로 사용" 경험으로 전환됨.
 
-<!-- IMAGE RECOMMENDATION (성과 섹션 아래):
-- 추천 이미지 A: Google Analytics 국가별 사용자 분포 지도/차트
-- 추천 이미지 B: 앱 DB 기반 핵심 지표 대시보드 캡처
-  (예: 국가 수, 활성 사용자 추이, 재사용률, 주요 이벤트)
-- 추천 이미지 C: 출시 초기 vs 최근 30일 비교 그래프
-- 표기 권장: 민감 수치는 모자이크/범주화 가능, 추후 정확 수치 업데이트 예정 문구 유지
--->
+<!-- IMG_SLOT_6: GA 국가 분포 + DB 지표 + 초기/최근 비교 그래프 -->
 
 ## 5) 지금의 결론
 
@@ -130,10 +104,7 @@ Sonny Lazuardi가 시작한 `cursor-talk-to-figma-mcp`는 Cursor Agentic AI와 F
 
 저는 앞으로도 디자인과 엔지니어링의 경계를 연결해, 실제 사용으로 이어지는 AI 도구를 계속 만들 계획입니다.
 
-<!-- IMAGE RECOMMENDATION (결론 직전/직후):
-- 추천 이미지: 사용자 코멘트 2~3개 카드 형태 캡처(정성 데이터)
-- 목적: 정량 지표 + 정성 반응을 함께 보여 신뢰도 강화
--->
+<!-- IMG_SLOT_7: 사용자 코멘트 카드 2~3장 -->
 
 ---
 

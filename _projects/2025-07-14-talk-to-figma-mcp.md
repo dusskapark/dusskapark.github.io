@@ -10,16 +10,22 @@ role: Solution Lead, Contributor (2nd Coder)
 visible: true
 ---
 
+<!--
+IMAGE INSERT PLAN (EN)
+1) Below Summary: latest Desktop hero screenshot (single wide image)
+2) Below Core Contributions: 2-4 feature demos (Before/After recommended)
+3) Below Turning Point: workshop interest + setup-friction proof images
+4) Below Solution video: v0 vs latest app comparison (2 images)
+5) Below Desktop Priorities: step-by-step usage flow (3-4 screenshots)
+6) Below Outcomes: GA geo chart + DB metrics + launch vs recent trend graph
+7) Near Conclusion: 2-3 user quote cards
+-->
+
 ## One-line Summary
 
 I saw real potential in `cursor-talk-to-figma-mcp`, contributed several core automation tools, and then built **TalkToFigma Desktop** after workshops made one thing clear: most designers were blocked not by value, but by installation complexity.
 
-<!-- IMAGE RECOMMENDATION (right below summary):
-- Suggested asset: 1 hero screenshot of the latest TalkToFigma Desktop main screen
-- Goal: communicate "what was built" within the first few seconds
-- Format: single wide image with a one-line value caption
-- Example caption: "One-click MCP experience for designers"
--->
+<!-- IMG_SLOT_1: latest Desktop main screen hero -->
 
 <br>
 <div style="text-align: center; margin-top: 20px;">
@@ -45,16 +51,7 @@ I believed this was more than a trend demo. It could become a practical producti
 
 The key was not button-based automation—it was **natural-language, context-aware design automation**.
 
-<!-- IMAGE RECOMMENDATION (below contribution section):
-- Suggested assets: 2-4 demo images/GIFs from the original post (one per core feature)
-- Layout: 2x2 grid or carousel
-- Recommended mapping:
-  1) Smart Data Population -> before/after data population
-  2) Legacy Annotation Converter -> before/after annotation quality
-  3) Instance Override Propagation -> bulk repetitive task result
-  4) DevMode Integration -> generated accessibility/design review output
-- Tip: short "Before / After" labels improve scan readability
--->
+<!-- IMG_SLOT_2: feature demo images/GIFs (2-4, Before/After) -->
 
 ## 2) Turning Point: The Bottleneck Was Installation, Not Interest
 
@@ -65,12 +62,7 @@ Workshops made the core problem obvious:
 
 So this was not a motivation problem. It was an onboarding problem. Without solving that, feature contributions alone would not scale real adoption.
 
-<!-- IMAGE RECOMMENDATION (below bottleneck section):
-- Suggested image A: workshop photos or feedback captures (high interest evidence)
-- Suggested image B: real setup-friction feedback screenshots
-- Suggested image C: previous installation flow diagram (complex path)
-- Goal: visually prove "high interest, high install drop-off"
--->
+<!-- IMG_SLOT_3: workshop interest + install friction proof (2-3 images) -->
 
 ## 3) Solution: I Started Building TalkToFigma Desktop
 
@@ -80,12 +72,7 @@ I focused on removing that barrier and started building **TalkToFigma Desktop**.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DInyZLnEgmA?si=Ls2VFJxgwzmbzMeZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 {::options parse_block_html="true" /}
 
-<!-- IMAGE RECOMMENDATION (below solution video):
-- Suggested assets: early prototype screenshot vs latest production screenshot (must-have)
-- Layout: side-by-side comparison with 2-3 bullet improvements per version
-- Example labels: "v0 Prototype" and "Latest Production"
-- Goal: show clear product evolution, not just an idea
--->
+<!-- IMG_SLOT_4: v0 prototype vs latest production app (2 images) -->
 
 ### What We Prioritized in Desktop
 
@@ -94,14 +81,7 @@ I focused on removing that barrier and started building **TalkToFigma Desktop**.
 - **System tray operations** (easy run/stop for daily usage)
 - **Tutorial-based onboarding** (usable by non-engineers)
 
-<!-- IMAGE RECOMMENDATION (below priorities section):
-- Suggested assets: step-by-step real usage flow (3-4 screenshots)
-  1) app launch
-  2) MCP install/connect
-  3) system tray running state
-  4) result in real Figma workflow
-- Goal: convert abstract feature bullets into a concrete user journey
--->
+<!-- IMG_SLOT_5: real usage flow screenshots (3-4 steps) -->
 
 ## 4) Outcome: Faster and Wider Adoption Than Expected
 
@@ -113,13 +93,7 @@ Detailed numeric metrics (installation success, retention, events/session, etc.)
 - Global usage reached the thousands through the desktop app pathway.
 - The experience shifted from “too hard to install” to “download and use right away.”
 
-<!-- IMAGE RECOMMENDATION (below outcomes section):
-- Suggested image A: Google Analytics geographic distribution map/chart
-- Suggested image B: app database dashboard screenshot
-  (e.g., active users trend, country distribution, repeat usage, key events)
-- Suggested image C: launch period vs recent 30-day comparison graph
-- Display note: mask sensitive numbers if needed while keeping "detailed metrics later" message
--->
+<!-- IMG_SLOT_6: GA map + DB dashboard + launch vs recent comparison graph -->
 
 ## 5) Current Conclusion
 
@@ -130,10 +104,7 @@ My biggest takeaway is simple:
 
 I’ll continue building at the intersection of design and engineering—focused on tools that are not only powerful, but truly usable.
 
-<!-- IMAGE RECOMMENDATION (near conclusion):
-- Suggested asset: 2-3 user quote cards (qualitative feedback)
-- Goal: combine quantitative adoption signals with human proof of value
--->
+<!-- IMG_SLOT_7: user quote cards (2-3) -->
 
 ---
 

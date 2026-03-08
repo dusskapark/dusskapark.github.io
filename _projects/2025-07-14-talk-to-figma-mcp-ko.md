@@ -49,7 +49,7 @@ Sonny Lazuardi가 시작한 `cursor-talk-to-figma-mcp`는 Cursor Agentic AI와 F
 
 ## 3) 해결: TalkToFigma Desktop을 만들었다
 
-그래서 저는 설치 장벽을 없애는 데 집중해 **TalkToFigma Desktop** 개발을 시작했습니다. 이후 Jin과 협업하며 앱 완성도를 높였고, 프로젝트를 공개했습니다.
+그래서 저는 설치 장벽을 없애는 데 집중해 **TalkToFigma Desktop**을 처음부터 끝까지 기획하고 개발 리드했습니다. 이후 Jin과 협업하며 앱 완성도를 높였고, 프로젝트를 공개했습니다.
 
 {::options parse_block_html="false" /}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DInyZLnEgmA?si=Ls2VFJxgwzmbzMeZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -98,7 +98,7 @@ Sonny Lazuardi가 시작한 `cursor-talk-to-figma-mcp`는 Cursor Agentic AI와 F
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon">
     <div class="content">
         <p>TalkToFigma Desktop: 모든 디자이너가 쉽게 사용할 수 있는 데스크톱 앱</p>
-        <a href="https://github.com/FigmaAI/TalkToFigmaDesktop">github.com/FigmaAI/TalkToFigmaDesktop</a>
+        <a href="https://github.com/grab/TalkToFigmaDesktop">github.com/grab/TalkToFigmaDesktop</a>
     </div>
 </div>
 

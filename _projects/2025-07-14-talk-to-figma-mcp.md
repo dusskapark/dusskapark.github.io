@@ -49,7 +49,7 @@ So this was not a motivation problem. It was an onboarding problem. Without solv
 
 ## 3) Solution: I Started Building TalkToFigma Desktop
 
-I focused on removing that barrier and started building **TalkToFigma Desktop**. Later, I collaborated with Jin to improve quality and release it publicly.
+I focused on removing that barrier and led **TalkToFigma Desktop** from initial planning to final delivery. Later, I collaborated with Jin to improve quality and release it publicly.
 
 {::options parse_block_html="false" /}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DInyZLnEgmA?si=Ls2VFJxgwzmbzMeZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -98,7 +98,7 @@ I’ll continue building at the intersection of design and engineering—focused
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon">
     <div class="content">
         <p>TalkToFigma Desktop: Desktop app accessible to all designers</p>
-        <a href="https://github.com/FigmaAI/TalkToFigmaDesktop">github.com/FigmaAI/TalkToFigmaDesktop</a>
+        <a href="https://github.com/grab/TalkToFigmaDesktop">github.com/grab/TalkToFigmaDesktop</a>
     </div>
 </div>
 

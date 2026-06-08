@@ -91,7 +91,7 @@ To further simplify the model training process, I created a Python Jupyter Noteb
   
   <div style="text-align: center; margin-top: 20px;">
     <a href="https://github.com/FigmaAI/figma-dummy-gen/blob/main/classification.ipynb" target="_blank" style="display: inline-flex; align-items: center; padding: 10px 20px; background-color: #333333; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Colaboratory_SVG_Logo.svg/512px-Google_Colaboratory_SVG_Logo.svg.png?20221103151432" alt="Google Colab Logo"  style="max-height: 24px; margin-right: 10px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" alt="Google Colab Logo"  style="max-height: 24px; margin-right: 10px;">
       View Google Colab Notebook
     </a>
   </div>
@@ -150,4 +150,3 @@ Thanks Hugo and all the users and contributors for the great journey. I hope to 
    url = "https://www.youtube.com/embed/2eZeka9gMgA?si=6GmV6B40PQ2zpC9x"
    caption="I whipped up this quirky Apple-style ad to hype up the new update."
 %}
-

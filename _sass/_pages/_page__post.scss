@@ -354,6 +354,109 @@
         height: 100%;
       }
     }
+
+    .embed-shell {
+      position: relative;
+      margin: 32px auto;
+      min-height: 220px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: $background-alt-color;
+
+      iframe {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &.is-loaded {
+        background: transparent;
+
+        iframe {
+          opacity: 1;
+        }
+
+        .embed-shell__placeholder {
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+        }
+      }
+
+    }
+
+    .video.embed-shell {
+      margin: 0;
+      min-height: 0;
+    }
+
+    .embed-shell--frame:not(.video) {
+      aspect-ratio: var(--embed-ratio, 16 / 9);
+
+      iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .embed-shell__placeholder {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 28px;
+      color: $text-light-color;
+      text-align: center;
+      background:
+        linear-gradient(
+          100deg,
+          rgba($background-alt-color, 0.2) 0%,
+          rgba($background-color, 0.65) 45%,
+          rgba($background-alt-color, 0.2) 90%
+        ),
+        $background-alt-color;
+      background-size: 220% 100%;
+      animation: embed-placeholder-sheen 1.4s ease-in-out infinite;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .embed-shell__pulse {
+      width: 44px;
+      height: 44px;
+      border-radius: 100%;
+      border: 2px solid rgba($text-dark-color, 0.08);
+      border-top-color: rgba($text-dark-color, 0.28);
+      animation: embed-placeholder-spin 0.9s linear infinite;
+    }
+
+    .embed-shell__label {
+      font-size: $p-small-size;
+      line-height: $p-small-lineheight;
+      letter-spacing: $p-small-spacing;
+    }
+
+    .embed-shell__fallback-link {
+      display: none;
+      font-size: $label-small;
+      letter-spacing: $label-spacing-small;
+      text-transform: uppercase;
+    }
+
+    .embed-shell--frame.is-fallback {
+      iframe {
+        opacity: 0;
+      }
+
+      .embed-shell__fallback-link {
+        display: inline-block;
+      }
+    }
+
     .component-caption {
       text-align: center;
       margin-top: 16px;
@@ -581,5 +684,20 @@
   }
   50% {
     border-color: $accent-color;
+  }
+}
+
+@keyframes embed-placeholder-sheen {
+  0% {
+    background-position: 120% 0;
+  }
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+@keyframes embed-placeholder-spin {
+  to {
+    transform: rotate(360deg);
   }
 }

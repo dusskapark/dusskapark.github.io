@@ -3,6 +3,7 @@
 // Listing posts
 
 // - - - - - - - - - - - - - - - - - -
+@use "../env" as *;
 
 .listing {
   margin-bottom: 120px;

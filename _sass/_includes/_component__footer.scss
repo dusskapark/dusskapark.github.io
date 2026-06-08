@@ -3,6 +3,7 @@
 // Footer
 
 // - - - - - - - - - - - - - - - - - -
+@use "../env" as *;
 
 .footer {
 	@include transition(all 0.4s ease-in-out 0.8s);

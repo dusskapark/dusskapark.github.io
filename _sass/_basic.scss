@@ -3,6 +3,7 @@
 // Basics
 
 // - - - - - - - - - - - - - - - - - -
+@use "env" as *;
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Basics
@@ -172,8 +173,15 @@ textarea {
   display: block;
   border: 0;
   border-bottom: 1px solid $border-color;
-  @extend p;
+  font-weight: $p-weight;
+  font-size: $p-size-small;
+  line-height: $p-lineheight;
+  letter-spacing: $p-spacing;
 	padding: 12px 0 16px;
+
+  @include mq(tabletp) {
+    font-size: $p-size;
+  }
 	
 	&:focus {
 		border-bottom-color: $text-dark-color;

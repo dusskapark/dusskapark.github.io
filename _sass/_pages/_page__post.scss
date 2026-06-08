@@ -3,6 +3,8 @@
 // Single post
 
 // - - - - - - - - - - - - - - - - - -
+@use "../env" as *;
+@use "../typography";
 
 .page-post {
   .post__header {

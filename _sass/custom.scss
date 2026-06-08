@@ -1,3 +1,5 @@
+@use "env" as *;
+
 .toc {
   hr {
     background-color: var(--accent);

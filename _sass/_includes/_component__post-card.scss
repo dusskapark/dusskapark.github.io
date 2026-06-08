@@ -3,6 +3,7 @@
 // Component - Post Card
 
 // - - - - - - - - - - - - - - - - - -
+@use "../env" as *;
 
 .post__card {
   transition: all 120ms;

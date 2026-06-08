@@ -3,6 +3,8 @@
 // Single project
 
 // - - - - - - - - - - - - - - - - - -
+@use "../env" as *;
+@use "page__post";
 
 .page-project {
   @extend .page-post;

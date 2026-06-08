@@ -3,6 +3,8 @@
 // Typography
 
 // - - - - - - - - - - - - - - - - - -
+@use "sass:color";
+@use "env" as *;
 
 h1,
 .h1,
@@ -119,7 +121,7 @@ h6,
   a {
     font-weight: 500;
     text-decoration: underline;
-    text-decoration-color: transparentize($color: $accent-color, $amount: 0.8);
+    text-decoration-color: color.adjust($accent-color, $alpha: -0.8);
   }
 
   @include mq(tabletp) {

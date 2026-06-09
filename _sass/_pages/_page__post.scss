@@ -25,7 +25,7 @@
     margin: auto;
   }
 
-  .post__content.highlight-first p:first-child {
+  .post__content.highlight-first > p:first-child {
     @extend .subtitle--light;
     line-height: 36px;
   }
@@ -460,15 +460,30 @@
     .component-caption {
       text-align: center;
       margin-top: 16px;
+      color: #878787;
+      font-size: 12px;
+      line-height: 1.6;
+      letter-spacing: 0;
 
       i {
-        color: #878787;
-        font-size: 12px;
+        display: block;
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
         font-style: italic;
       }
 
+      p {
+        margin: 0;
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        text-align: inherit;
+      }
+
       a {
-        color: #878787;
+        color: inherit;
         text-decoration: none;
 
         &:hover {
@@ -481,6 +496,12 @@
     .video-caption,
     .gallery-caption {
       @extend .component-caption;
+    }
+
+    .gallery-caption {
+      clear: both;
+      display: block;
+      width: 100%;
     }
 
     .github-card {

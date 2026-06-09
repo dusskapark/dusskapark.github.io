@@ -213,11 +213,16 @@ On the surface, this sounds like moving a bus marker on a map. In reality, it me
 
 The verification problem also became a product problem. I could not wait for a real shuttle ride every time I needed to test the flow, so the Driver app needed a `test-drive mode`. Codex first suggested this as a way to repeatedly simulate a run, and the idea quickly became essential. The first version was unstable, but that instability was useful: it showed exactly where the location upload, Rider map reflection, and stop status logic needed to improve.
 
-{% include post-components/gallery.html
-	columns = 3
-	full_width = true
-	images = "/images/projects/2026-rider-driver-codex/15-driver-test-run.png, /images/projects/2026-rider-driver-codex/19-driver-background-location-demo-thumbnail.jpg, /images/projects/2026-rider-driver-codex/20-driver-app-demo-thumbnail.jpg"
-	caption = "The Driver app work included simulated test runs, background location behavior, and the final Driver app flow so the shuttle itself could publish arrival signals."
+{% include post-components/video.html
+  url = "https://www.youtube.com/embed/62qP1I400eM"
+  full_width = true
+  caption = "An early Driver app test run showed how simulated movement could help verify background location, server sync, and Rider map updates."
+%}
+
+{% include post-components/video.html
+  url = "https://www.youtube.com/embed/T9Ubj9hZ1_M"
+  full_width = true
+  caption = "The final Driver app flow made arrival tracking a dedicated driver-side responsibility instead of depending on rider check-ins."
 %}
 
 This is the part of the project I am most proud of. Not because the UI became more polished, but because **the product became more honest**. I found a structural gap and changed the architecture around it.

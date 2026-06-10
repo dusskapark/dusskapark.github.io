@@ -17,6 +17,8 @@ I have spent much of my career designing **developer experience** products.
 
 My users were often engineers, platform teams, ML practitioners, or people building tools for other technical teams. So code was never far away from my design work. I was not a full-time engineer, but I naturally wrote small prototypes, read APIs, touched front-end code, and learned what changes when a screen becomes a **working product**.
 
+That background made this project feel less like a jump into engineering and more like a chance to turn years of designing for builders into building practice.
+
 I was also not new to coding agents. I had already been using tools like `Cursor` and `Claude Code` actively in my own work. Codex entered my workflow almost casually after I first paid for `ChatGPT Pro` myself through a promotion. I had heard Codex was powerful, but at first I treated it like another capable coding agent.
 
 Then the project kept pulling me further.
@@ -141,11 +143,13 @@ So I moved the Rider experience into native `iOS` and `Android` apps.
 
 This was not just a cosmetic upgrade. The web MVP had already proved the core flow: login, route lookup, stop detail, `QR check-in`, admin updates, API responses, and basic error handling. That made it a practical blueprint for the apps, but not something I wanted to copy screen by screen.
 
-The real work was translation. I wanted the same product model to feel native on each platform: familiar navigation, clear permission timing, map interactions that felt right on the device, and components that belonged to the operating system instead of a web page wearing an app shell.
+This also mattered to me as a designer. I had wanted to test new native design languages more seriously, but it is hard to find a real playground for them. Apple's `Liquid Glass` direction and Android's `Material 3 Expressive` are easy to admire in demos; they are much harder to understand inside an actual product flow with maps, permissions, motion, errors, and repeat use.
+
+The real work was **platform translation**. I wanted those design languages to become product language, not decoration. So the question became: how should the same shuttle model behave if it truly belonged on each platform?
 
 So I went back to `Plan Mode` before building each client. I asked Codex to help break down platform decisions: when to request push permission, how deep links should recover from failure, how route and stop information should sit on top of the map, and which native components should carry lists, cards, bottom sheets, toasts, and empty states.
 
-For `iOS`, I used `SwiftUI`, the `Google Maps SDK`, push notifications, and deep links. I also experimented with Apple's `Liquid Glass` design language where it supported the product rather than decorating it.
+For `iOS`, I used `SwiftUI`, the `Google Maps SDK`, push notifications, and deep links. The experience leaned into a map-first structure, with floating sheets and glass-like surfaces layered over the route context so riders could move between route browsing, stop detail, and check-in without leaving the map.
 
 {% include post-components/gallery.html
 	columns = 1
@@ -154,7 +158,7 @@ For `iOS`, I used `SwiftUI`, the `Google Maps SDK`, push notifications, and deep
 	caption = "The iOS Rider app translated the validated web flow into SwiftUI, Google Maps SDK, push, deep links, and Liquid Glass-inspired native screens."
 %}
 
-For `Android`, I used `Kotlin`, `Jetpack Compose`, `Material 3 Expressive`, `Google Maps Compose`, `Firebase`, and `FCM`. Here too, the focus was platform-native translation: making the same route, map, and check-in flow feel like it belonged on Android, including a small test of Material's more expressive motion and interactions.
+For `Android`, I used `Kotlin`, `Jetpack Compose`, `Material 3 Expressive`, `Google Maps Compose`, `Firebase`, and `FCM`. The Android version kept the same functional model, but reorganized it around Android patterns: top app bars, search, bottom navigation, Compose surfaces, and a small test of Material's more expressive motion and interactions.
 
 {% include post-components/gallery.html
 	columns = 1
@@ -297,7 +301,7 @@ By the end, the project had grown into a real **multi-surface system**: `server`
    url1="https://apps.apple.com/sg/app/nasum-shuttle-check-in/id6765994152"
    url2="https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle"
    app_name="NaSum Shuttle Check-In"
-   title="Download the Rider app"
+   title="Live Rider app"
    description="NaSum Shuttle Check-In is available on iOS and Android for route lookup, QR check-in, and stop updates."
    full_width=false
 %}
@@ -305,8 +309,8 @@ By the end, the project had grown into a real **multi-surface system**: `server`
 {% include store-badges.html
    url1="https://apps.apple.com/sg/app/nasum-shuttle-driver/id6773782572"
    app_name="NaSum Shuttle Driver"
-   title="Download the Driver app"
-   description="The Driver app is available on iOS for authorized shuttle drivers and operators."
+   title="Live Driver app"
+   description="NaSum Shuttle Driver is available on iOS for authorized shuttle drivers and operators."
    full_width=false
 %}
 
@@ -316,11 +320,11 @@ That is the part I want this project to show: I can design the experience, under
 
 This project changed my sense of what a **product designer can practice**.
 
-I still do not think every designer needs to become a traditional full-stack engineer. That is not the point. The point is that AI makes it more realistic for a technically curious designer to **own more of the SDLC without pretending to be a full-time engineer**.
+I still do not think every designer needs to become a traditional full-stack engineer. That is not the point. The point is that AI makes it more realistic for a technically curious designer to **own more of the SDLC without pretending to be a full-time engineer**: from problem framing to system modeling, implementation, release, and launch storytelling.
 
 But owning more of the SDLC requires **more than prompting**.
 
-It requires knowing how a product problem becomes a **system model**. It requires understanding `API contracts`, `data flows`, `platform constraints`, `real-device behavior`, `store requirements`, `analytics signals`, and `crash logs` well enough to ask better questions. It requires the patience to turn a vague failure into a smaller, testable sentence.
+It requires knowing how a product problem becomes a **system model**. It requires understanding `API contracts`, `data flows`, `platform constraints`, `real-device behavior`, `store requirements`, `analytics signals`, and `crash logs` well enough to ask better questions.
 
 Most of all, it requires **product judgment**.
 
@@ -328,9 +332,7 @@ Codex expanded my reach, but it did not decide what mattered. It did not tell me
 
 Those were **product decisions**.
 
-What Codex changed was the **distance between deciding and trying**.
-
-That distance used to feel long. Long enough that many ideas stopped at a screen, a prototype, or a handoff. In this project, the distance became short enough for me to keep moving: from a weekend shuttle problem, to a web flow, to native Rider apps, to a Driver app, to store preparation, to a promotional video.
+What Codex changed was the **distance between deciding and trying**. That distance used to feel long enough that many ideas stopped at a screen, a prototype, or a handoff. In this project, it became short enough for me to keep moving: from a weekend shuttle problem, to a web flow, to native Rider apps, to a Driver app, to store preparation, to a promotional video.
 
 This was a side project, but it felt like a shift in how I want to build.
 

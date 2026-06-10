@@ -15,25 +15,17 @@ highlight_first: true
 
 I have spent much of my career designing **developer experience** products.
 
-My users were often engineers, platform teams, ML practitioners, or people building tools for other technical teams. So code was never something far away from my design work. I was not a full-time engineer, but I naturally wrote small prototypes, read APIs, touched front-end code, and learned what changes when a screen becomes a **working product**.
+My users were often engineers, platform teams, ML practitioners, or people building tools for other technical teams. So code was never far away from my design work. I was not a full-time engineer, but I naturally wrote small prototypes, read APIs, touched front-end code, and learned what changes when a screen becomes a **working product**.
 
-So when AI coding tools started to become part of real product work, the first question I had was not whether they could generate code.
+I was also not new to coding agents. I had already been using tools like `Cursor` and `Claude Code` actively in my own work. Codex entered my workflow almost casually after I first paid for `ChatGPT Pro` myself through a promotion. I had heard Codex was powerful, but at first I treated it like another capable coding agent.
 
-It was much more personal than that.
+Then the project kept pulling me further.
 
-I wanted to know **how far I could go as a product designer** if Codex became part of my actual development loop. Could I build a service that did not stop at a prototype? Could I connect the `server` and `database` myself? Could I move from `web` to `iOS` and `Android`? Could I debug real devices, prepare store releases, and tell the launch story at the end?
-
-This project became my way of finding out.
+What began as a small web service became a test of something more personal: **how much of the product loop could I own myself?** Could I shape a real problem, connect the `server` and `database`, move from `web` to `iOS` and `Android`, debug real devices, prepare store releases, and tell the launch story at the end?
 
 With **Codex as my development partner**, I built a rider-driver shuttle platform for a Korean church community in Singapore.
 
-{% include post-components/video.html
-  url = "https://www.youtube.com/embed/mBSo7rGlFjo"
-  full_width = true
-  caption = "A quick look at the Rider and Driver app experience I built for the shuttle platform."
-%}
-
-## Discover: From A Weekend Ride To A Product
+## The Shuttle Was Small, But The Product Problem Was Real
 
 NaSum Church, also known as Korean Presbyterian Church in Singapore, is a Korean-speaking church community in Singapore. My family often used the free weekend shuttle service the church provides.
 
@@ -66,19 +58,13 @@ For operators, the uncertainty was different:
 - Where is demand increasing or disappearing?
 - How much coordination still depends on chat?
 
-## Define: From Scattered Updates To Shared Signals
-
 The product I decided to build was a small operating service where riders and operators could look at the **same signals**. Riders could check routes and stops, board with `QR check-in`, and receive updates. Operators could manage routes, stops, boarding records, and notifications in one place.
 
 The goal was ~~to make the shuttle feel more high-tech~~ **to make a generous, volunteer-driven service easier to use and easier to operate**.
 
-At the same time, I was also using this project to answer a second question.
+For me, the shuttle also became the right kind of side project: small enough to build alone, but real enough to be honest. It had actual users, operational constraints, cost limits, platform decisions, and enough complexity to test whether I could move beyond design handoff and act more like a product builder.
 
-I wanted to know whether I could become more than the person who defines the problem and hands off the design. `Server logic`, `data modeling`, `native apps`, `store review`, `analytics`, `crash reporting`, and `operational QA` had always felt like the other side of the product process. **Codex made that boundary feel worth testing.**
-
-So the shuttle became both **a real product** and **a learning playground**. It gave me actual users, real constraints, and enough complexity to make the experiment honest.
-
-## Develop 1: Building The Web Rider MVP
+## Web MVP: Build Small, Verify Everything
 
 ### Small Web MVP
 
@@ -137,17 +123,19 @@ This is where Codex started to feel especially useful. I was not asking it to in
 
 That rhythm was slower than a fantasy version of AI coding, but it was much more reliable.
 
-## Deliver & Iterate 1: From Web Validation To Native Access
+### Web Validation
 
 The web version did what I needed it to do. It proved that the **product flow made sense**.
 
 It also gave me something more useful than a static spec. The web app carried the `information architecture`, `API behavior`, `state transitions`, and `edge cases`. It became the first working version of the product system, **not just a clickable idea**.
 
-But the more I showed the web version to people, the more obvious the access problem became. A service trapped inside one messenger was not the most natural form. If this was something people should use on Sunday morning without thinking too much, it needed to be easier to find, open, and return to.
+But it also surfaced the problem I had expected.
 
-The first delivery had validated the product flow, but it also exposed the next problem: **access and platform fit**.
+When I showed it to people, the service felt useful, but the channel questions came up quickly: "Is there a KakaoTalk version?" "Can this work through WhatsApp?" "Is there just an app I can open?" A service trapped inside one messenger was not the most natural form.
 
-## Develop 2: Building Native Rider Apps
+The first delivery had validated the product flow, but it also confirmed the next problem: **access and platform fit**.
+
+## Native Rider Apps: Translate, Don't Copy
 
 So I moved the Rider experience into native `iOS` and `Android` apps.
 
@@ -166,7 +154,7 @@ For `iOS`, I used `SwiftUI`, the `Google Maps SDK`, push notifications, and deep
 	caption = "The iOS Rider app translated the validated web flow into SwiftUI, Google Maps SDK, push, deep links, and Liquid Glass-inspired native screens."
 %}
 
-For `Android`, I used `Kotlin`, `Jetpack Compose`, `Material 3 Expressive`, `Google Maps Compose`, `Firebase`, and `FCM`. Here too, the focus was platform-native translation: making the same route, map, and check-in flow feel like it belonged on Android.
+For `Android`, I used `Kotlin`, `Jetpack Compose`, `Material 3 Expressive`, `Google Maps Compose`, `Firebase`, and `FCM`. Here too, the focus was platform-native translation: making the same route, map, and check-in flow feel like it belonged on Android, including a small test of Material's more expressive motion and interactions.
 
 {% include post-components/gallery.html
 	columns = 1
@@ -175,7 +163,7 @@ For `Android`, I used `Kotlin`, `Jetpack Compose`, `Material 3 Expressive`, `Goo
 	caption = "The Android Rider app kept the same product flow while rebuilding it with Jetpack Compose, Material 3 Expressive, Google Maps Compose, Firebase, and FCM."
 %}
 
-## Deliver & Iterate 2: From Rider App To Arrival Signals
+### Real Device Validation
 
 This step taught me something I now trust more deeply: **a working web product can be more useful than a static spec when building with Codex**.
 
@@ -185,7 +173,15 @@ That changed the quality of the collaboration.
 
 The Rider apps also made the product easier to show and test. The service no longer felt like a web flow hidden inside a messenger. It felt like something riders could install, open, and return to when they needed shuttle information.
 
+{% include post-components/video.html
+  url = "https://www.youtube.com/embed/mBSo7rGlFjo"
+  full_width = true
+  caption = "A quick look at the Rider and Driver app experience I built for the shuttle platform."
+%}
+
 That was exactly why the next gap became easier to see.
+
+## The Product Model Broke
 
 Once route lookup and `QR check-in` worked as an app experience, I started looking at check-in data not only as a boarding record but also as a possible **arrival signal**. If someone scanned a QR code at a stop, the shuttle must have reached that stop. In theory, that event could help other riders understand where the bus was.
 
@@ -201,9 +197,7 @@ That was the moment the **product model changed**.
 
 So the question shifted from `How do we make riders check in?` to `How does the shuttle itself become the trusted signal source?`
 
-## Develop 3: Building The Rider-Driver Platform
-
-### Driver App For Arrival Tracking
+## Driver App From A Hospital Room: The Bus Became The Source Of Truth
 
 The answer was a separate **Driver app**. I did not want Rider apps to carry unnecessary background location responsibility, and I did not want the operation to depend on riders creating every event. The shuttle itself needed to publish the signal.
 
@@ -211,7 +205,50 @@ That changed the product from a Rider app into a **Rider-Driver platform**. The 
 
 On the surface, this sounds like moving a bus marker on a map. In reality, it meant designing one connected platform experience across the Driver app, server, and Rider app. Location upload, route state, stop progression, Rider map updates, and notification timing all had to agree.
 
-The verification problem also became a product problem. I could not wait for a real shuttle ride every time I needed to test the flow, so the Driver app needed a `test-drive mode`. Codex first suggested this as a way to repeatedly simulate a run, and the idea quickly became essential. The first version was unstable, but that instability was useful: it showed exactly where the location upload, Rider map reflection, and stop status logic needed to improve.
+That would have been a complicated enough iteration from my usual desk. But this was also the moment when life made the work stranger.
+
+I was in Korea, spending long hours in a hospital room while helping care for my father. My development environment was still on a `Mac mini` in Singapore, about 4,700 km away. Normally, I would keep the Rider app, Driver app, server logs, simulators, and browser windows open side by side. In the hospital room, I mostly had my phone.
+
+The situation was not planned as a mobile coding experiment. The problem simply arrived at an inconvenient time, and the product did not feel like it should wait.
+
+So `ChatGPT mobile` became my control room. The phone was not the development machine. Codex worked in the remote Mac mini environment, inside the actual repository. I reviewed progress from my phone, spoke tasks into the mobile app, checked summaries and screenshots, and kept the product loop moving from the hospital room.
+
+{% include post-components/video.html
+  url = "https://www.youtube.com/embed/tk9qrk5G4RQ"
+  full_width = true
+  caption = "OpenAI's Codex mobile preview gives context for the mobile workflow I used during this phase."
+%}
+
+{% include post-components/gallery.html
+	columns = 2
+	full_width = true
+	images = "/images/projects/2026-rider-driver-codex/09-codex-mobile-mac-mini.png, /images/projects/2026-rider-driver-codex/10-voice-coding-screen-01.png"
+	caption = "From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository."
+%}
+
+What surprised me was that **typing code was not the hard part**. I barely needed to type. I could speak the task, and Codex could turn that spoken intent into a task list, file reads, code changes, logs, and verification steps because it already had the repository context. It felt less like explaining an idea to a stranger and more like handing work to a teammate who was already looking at the same repo.
+
+{% include post-components/gallery.html
+	columns = 3
+	full_width = true
+	images = "/images/projects/2026-rider-driver-codex/11-voice-coding-screen-02.png, /images/projects/2026-rider-driver-codex/12-voice-coding-moment.png, /images/projects/2026-rider-driver-codex/13-simulator-feedback-loop-01.png"
+	caption = "Voice input worked because Codex already had repository context: a spoken task could become a thread, a work plan, and concrete code changes."
+%}
+
+The harder part was the **feedback loop**.
+
+On desktop, I can build, inspect, compare, and respond quickly. On mobile, I could not comfortably keep multiple apps, simulator windows, logs, and screenshots in front of me. That forced the workflow to change. I had to ask Codex not only to implement, but also to read logs, summarize what failed, propose the next smallest fix, and verify the result before moving forward.
+
+This is where the Driver app and the mobile workflow started shaping each other.
+
+The verification problem became a product problem. I could not wait for a real shuttle ride every time I needed to test the flow, so the Driver app needed a `test-drive mode`. Codex first suggested this as a way to repeatedly simulate a run, and the idea quickly became essential. The first version was unstable, but that instability was useful: it showed exactly where the location upload, Rider map reflection, and stop status logic needed to improve.
+
+{% include post-components/gallery.html
+	columns = 2
+	full_width = true
+	images = "/images/projects/2026-rider-driver-codex/14-simulator-feedback-loop-02.png, /images/projects/2026-rider-driver-codex/15-driver-test-run.png"
+	caption = "The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix."
+%}
 
 {% include post-components/video.html
   url = "https://www.youtube.com/embed/62qP1I400eM"
@@ -227,64 +264,15 @@ The verification problem also became a product problem. I could not wait for a r
 
 This is the part of the project I am most proud of. Not because the UI became more polished, but because **the product became more honest**. I found a structural gap and changed the architecture around it.
 
-### Voice Coding
-
-The strangest part of this third development cycle was that I did not build it from my usual desk.
-
-I was in Korea, spending long hours in a hospital room while helping care for my father. My development environment was still on a `Mac mini` in Singapore, about 4,700 km away. Normally, I would keep the Rider app, Driver app, server logs, simulators, and browser windows open side by side. In the hospital room, I mostly had my phone.
-
-The situation was not planned as a mobile coding experiment. The problem simply arrived at an inconvenient time, and the product did not feel like it should wait.
-
-The closest English pejorative for this kind of behavior is probably **armchair programming**: talking through implementation from the sidelines without actually doing the work. What made this moment strange was that Codex turned that old insult into something unexpectedly practical.
-
-So `ChatGPT mobile` became my control surface. The phone was not the development machine. Codex worked in the remote Mac mini environment, inside the actual repository. I reviewed progress from my phone, spoke tasks into the mobile app, checked summaries and screenshots, and kept the product loop moving from the hospital room.
-
-{% include post-components/video.html
-  url = "https://www.youtube.com/embed/tk9qrk5G4RQ"
-  full_width = true
-  caption = "OpenAI's Codex mobile preview gives context for the mobile workflow I used during this phase."
-%}
-
-{% include post-components/gallery.html
-	columns = 2
-	full_width = true
-	images = "/images/projects/2026-rider-driver-codex/09-codex-mobile-mac-mini.png, /images/projects/2026-rider-driver-codex/10-voice-coding-screen-01.png"
-	caption = "From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository."
-%}
-
-What surprised me was that **typing code was not the hard part**. I barely needed to type. The harder part was the feedback loop.
-
-I could speak the task, and Codex could turn that spoken intent into a task list, file reads, code changes, logs, and verification steps because it already had the repository context. It felt less like explaining an idea to a stranger and more like handing work to a teammate who was already looking at the same repo.
-
-{% include post-components/gallery.html
-	columns = 3
-	full_width = true
-	images = "/images/projects/2026-rider-driver-codex/11-voice-coding-screen-02.png, /images/projects/2026-rider-driver-codex/12-voice-coding-moment.png, /images/projects/2026-rider-driver-codex/13-simulator-feedback-loop-01.png"
-	caption = "Voice input worked because Codex already had repository context: a spoken task could become a thread, a work plan, and concrete code changes."
-%}
-
-On desktop, I can build, inspect, compare, and respond quickly. On mobile, the loop is slower. I could not comfortably keep multiple apps, simulator windows, logs, and screenshots in front of me. That forced me to make the work even smaller and ask Codex to own more of the loop: make the task list, read the logs, summarize what failed, verify the next step, and only then move forward.
-
-That changed how I asked for work. I became more explicit about **success criteria**. I asked Codex to show what it checked, what failed, and what the next smallest fix should be. If I could not hold the whole system in front of me visually, the validation loop had to become clearer in the conversation.
-
-{% include post-components/gallery.html
-	columns = 2
-	full_width = true
-	images = "/images/projects/2026-rider-driver-codex/14-simulator-feedback-loop-02.png, /images/projects/2026-rider-driver-codex/15-driver-test-run.png"
-	caption = "The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix."
-%}
-
 The lesson was not ~~"now I can code from a phone."~~
 
 It was that **a product builder can keep momentum in imperfect conditions** if the work is broken down clearly enough and the validation loop is visible enough. Codex mobile did not replace the desk; it helped me keep the product loop alive when I could not sit at one.
 
-## Collaboration: Building With Codex, Not Handing It Off To Codex
+## What This Says About Me As A Product Builder
 
 This project was never about asking AI to build an app for me.
 
 Codex helped across almost every stage: `planning feature scope`, `defining API contracts`, `implementing server routes`, `connecting clients`, `reading logs`, `debugging builds`, `checking simulator behavior`, `preparing app links`, `setting up push flows`, and sorting through store details.
-
-### Product Judgment
 
 But the **product judgment stayed with me**.
 
@@ -292,19 +280,13 @@ I still had to decide what problem mattered, what could wait, which platform cho
 
 The more surfaces I added, the more important that became. On the `server`, the signals were API responses, database state, health checks, and Swagger. On the `web`, they were UI behavior, console logs, and network requests. On `iOS` and `Android`, they were build success, simulator behavior, real-device behavior, push registration, deep links, app links, and crash logs.
 
-### Smaller Failure
-
 Whenever something failed, I tried to turn the failure into a **smaller sentence**.
 
 Not ~~"the app is broken,"~~ but **"the QR scanner opens but the check-in result screen does not receive the route ID."** Not ~~"push does not work,"~~ but **"FCM token is created but the server registration request fails."** Once the failure became small enough, Codex became much more effective.
 
 That habit may be the most important thing I practiced in this project.
 
-## Deliver 3: Shipping The Full Product Stack
-
 By the end, the project had grown into a real **multi-surface system**: `server`, `database`, `web`, `admin`, `iOS Rider app`, `Android Rider app`, `iOS Driver app`, `Android Driver app`, `maps`, `QR check-in`, `location updates`, `notifications`, `app links`, `analytics`, `crash reporting`, and `store preparation`.
-
-### Store QA
 
 That last part mattered more than I expected.
 
@@ -313,8 +295,6 @@ Store work is not glamorous. `App Store Connect` and `Google Play Console` ask f
 But those steps also work like a **strict QA checklist**. They reveal the things I might otherwise have postponed: whether permissions are explained clearly, whether links open correctly, whether privacy flows make sense, whether real users can install and run the app without me standing next to them.
 
 I also made the promotional video myself, including the English version shown at the top of this case study.
-
-### Launch Story
 
 That felt like part of the product too. A product is **not finished when the code compiles**. People still need to understand what changed, why it matters, and how to use it. Owning the launch story was another way of owning the product.
 
@@ -325,7 +305,7 @@ That felt like part of the product too. A product is **not finished when the cod
 	caption = "The screen got smaller, but the workflow did not: Driver app work, validation, and launch preparation continued through a mobile-controlled Codex loop."
 %}
 
-## Reflect: What Stayed With Me
+## Reflection: What Stayed With Me
 
 This project changed my sense of what a **product designer can practice**.
 

@@ -207,6 +207,13 @@ On the surface, this sounds like moving a bus marker on a map. In reality, it me
 
 That would have been a complicated enough iteration from my usual desk. But this was also the moment when life made the work stranger.
 
+{% include post-components/gallery.html
+	columns = 1
+	full_width = true
+	images = "/images/projects/2026-rider-driver-codex/21-codex-mobile-remote-setup-composite.png"
+	caption = "From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository."
+%}
+
 I was in Korea, spending long hours in a hospital room while helping care for my father. My development environment was still on a `Mac mini` in Singapore, about 4,700 km away. Normally, I would keep the Rider app, Driver app, server logs, simulators, and browser windows open side by side. In the hospital room, I mostly had my phone.
 
 The situation was not planned as a mobile coding experiment. The problem simply arrived at an inconvenient time, and the product did not feel like it should wait.
@@ -219,19 +226,12 @@ So `ChatGPT mobile` became my control room. The phone was not the development ma
   caption = "OpenAI's Codex mobile preview gives context for the mobile workflow I used during this phase."
 %}
 
-{% include post-components/gallery.html
-	columns = 2
-	full_width = true
-	images = "/images/projects/2026-rider-driver-codex/09-codex-mobile-mac-mini.png, /images/projects/2026-rider-driver-codex/10-voice-coding-screen-01.png"
-	caption = "From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository."
-%}
-
 What surprised me was that **typing code was not the hard part**. I barely needed to type. I could speak the task, and Codex could turn that spoken intent into a task list, file reads, code changes, logs, and verification steps because it already had the repository context. It felt less like explaining an idea to a stranger and more like handing work to a teammate who was already looking at the same repo.
 
 {% include post-components/gallery.html
-	columns = 3
+	columns = 1
 	full_width = true
-	images = "/images/projects/2026-rider-driver-codex/11-voice-coding-screen-02.png, /images/projects/2026-rider-driver-codex/12-voice-coding-moment.png, /images/projects/2026-rider-driver-codex/13-simulator-feedback-loop-01.png"
+	images = "/images/projects/2026-rider-driver-codex/22-voice-driven-codex-workflow-composite.png"
 	caption = "Voice input worked because Codex already had repository context: a spoken task could become a thread, a work plan, and concrete code changes."
 %}
 
@@ -239,16 +239,16 @@ The harder part was the **feedback loop**.
 
 On desktop, I can build, inspect, compare, and respond quickly. On mobile, I could not comfortably keep multiple apps, simulator windows, logs, and screenshots in front of me. That forced the workflow to change. I had to ask Codex not only to implement, but also to read logs, summarize what failed, propose the next smallest fix, and verify the result before moving forward.
 
+{% include post-components/gallery.html
+	columns = 1
+	full_width = true
+	images = "/images/projects/2026-rider-driver-codex/23-driver-test-loop-composite.png"
+	caption = "The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix."
+%}
+
 This is where the Driver app and the mobile workflow started shaping each other.
 
 The verification problem became a product problem. I could not wait for a real shuttle ride every time I needed to test the flow, so the Driver app needed a `test-drive mode`. Codex first suggested this as a way to repeatedly simulate a run, and the idea quickly became essential. The first version was unstable, but that instability was useful: it showed exactly where the location upload, Rider map reflection, and stop status logic needed to improve.
-
-{% include post-components/gallery.html
-	columns = 2
-	full_width = true
-	images = "/images/projects/2026-rider-driver-codex/14-simulator-feedback-loop-02.png, /images/projects/2026-rider-driver-codex/15-driver-test-run.png"
-	caption = "The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix."
-%}
 
 {% include post-components/video.html
   url = "https://www.youtube.com/embed/62qP1I400eM"
@@ -276,6 +276,13 @@ Codex helped across almost every stage: `planning feature scope`, `defining API 
 
 But the **product judgment stayed with me**.
 
+{% include post-components/gallery.html
+	columns = 1
+	full_width = true
+	images = "/images/projects/2026-rider-driver-codex/16-driver-app-final.jpeg"
+	caption = "The screen got smaller, but the workflow did not: Driver app work, validation, and launch preparation continued through a mobile-controlled Codex loop."
+%}
+
 I still had to decide what problem mattered, what could wait, which platform choice was practical, whether the current hypothesis was wrong, and what signal would prove the next step. Codex made the scope reachable, but it did not remove the need to think like a product builder.
 
 The more surfaces I added, the more important that became. On the `server`, the signals were API responses, database state, health checks, and Swagger. On the `web`, they were UI behavior, console logs, and network requests. On `iOS` and `Android`, they were build success, simulator behavior, real-device behavior, push registration, deep links, app links, and crash logs.
@@ -297,13 +304,6 @@ But those steps also work like a **strict QA checklist**. They reveal the things
 I also made the promotional video myself, including the English version shown at the top of this case study.
 
 That felt like part of the product too. A product is **not finished when the code compiles**. People still need to understand what changed, why it matters, and how to use it. Owning the launch story was another way of owning the product.
-
-{% include post-components/gallery.html
-	columns = 1
-	full_width = true
-	images = "/images/projects/2026-rider-driver-codex/16-driver-app-final.jpeg"
-	caption = "The screen got smaller, but the workflow did not: Driver app work, validation, and launch preparation continued through a mobile-controlled Codex loop."
-%}
 
 ## Reflection: What Stayed With Me
 

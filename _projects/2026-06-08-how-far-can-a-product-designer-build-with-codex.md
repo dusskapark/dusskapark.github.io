@@ -25,7 +25,7 @@ What began as a small web service became a test of something more personal: **ho
 
 With **Codex as my development partner**, I built a rider-driver shuttle platform for a Korean church community in Singapore.
 
-## The Shuttle Was Small, But The Product Problem Was Real
+## Context: A Small Shuttle, A Real Product Problem
 
 NaSum Church, also known as Korean Presbyterian Church in Singapore, is a Korean-speaking church community in Singapore. My family often used the free weekend shuttle service the church provides.
 
@@ -64,7 +64,7 @@ The goal was ~~to make the shuttle feel more high-tech~~ **to make a generous, v
 
 For me, the shuttle also became the right kind of side project: small enough to build alone, but real enough to be honest. It had actual users, operational constraints, cost limits, platform decisions, and enough complexity to test whether I could move beyond design handoff and act more like a product builder.
 
-## Web MVP: Build Small, Verify Everything
+## Build 1: Start With A Small Web MVP
 
 ### Small Web MVP
 
@@ -123,7 +123,7 @@ This is where Codex started to feel especially useful. I was not asking it to in
 
 That rhythm was slower than a fantasy version of AI coding, but it was much more reliable.
 
-### Web Validation
+## Feedback 1: The Flow Worked, The Channel Did Not
 
 The web version did what I needed it to do. It proved that the **product flow made sense**.
 
@@ -135,7 +135,7 @@ When I showed it to people, the service felt useful, but the channel questions c
 
 The first delivery had validated the product flow, but it also confirmed the next problem: **access and platform fit**.
 
-## Native Rider Apps: Translate, Don't Copy
+## Build 2: Translate The Rider Experience To Native
 
 So I moved the Rider experience into native `iOS` and `Android` apps.
 
@@ -181,7 +181,7 @@ The Rider apps also made the product easier to show and test. The service no lon
 
 That was exactly why the next gap became easier to see.
 
-## The Product Model Broke
+## Feedback 2: The Rider App Could Not Create Every Signal
 
 Once route lookup and `QR check-in` worked as an app experience, I started looking at check-in data not only as a boarding record but also as a possible **arrival signal**. If someone scanned a QR code at a stop, the shuttle must have reached that stop. In theory, that event could help other riders understand where the bus was.
 
@@ -197,13 +197,15 @@ That was the moment the **product model changed**.
 
 So the question shifted from `How do we make riders check in?` to `How does the shuttle itself become the trusted signal source?`
 
-## Driver App From A Hospital Room: The Bus Became The Source Of Truth
+## Build 3: Make The Shuttle The Source Of Truth
 
 The answer was a separate **Driver app**. I did not want Rider apps to carry unnecessary background location responsibility, and I did not want the operation to depend on riders creating every event. The shuttle itself needed to publish the signal.
 
 That changed the product from a Rider app into a **Rider-Driver platform**. The `Driver app` sends location and route status. The `server` updates the active run. The `Rider app` reflects that movement through maps, stop status, and notifications. `QR check-in` still records actual boarding, but it no longer has to pretend to be the only source of truth.
 
 On the surface, this sounds like moving a bus marker on a map. In reality, it meant designing one connected platform experience across the Driver app, server, and Rider app. Location upload, route state, stop progression, Rider map updates, and notification timing all had to agree.
+
+## Work Mode: Keeping The Build Loop Alive From A Hospital Room
 
 That would have been a complicated enough iteration from my usual desk. But this was also the moment when life made the work stranger.
 
@@ -268,11 +270,11 @@ The lesson was not ~~"now I can code from a phone."~~
 
 It was that **a product builder can keep momentum in imperfect conditions** if the work is broken down clearly enough and the validation loop is visible enough. Codex mobile did not replace the desk; it helped me keep the product loop alive when I could not sit at one.
 
-## What This Says About Me As A Product Builder
+## Builder Takeaway: Owning More Of The SDLC
 
 This project was never about asking AI to build an app for me.
 
-Codex helped across almost every stage: `planning feature scope`, `defining API contracts`, `implementing server routes`, `connecting clients`, `reading logs`, `debugging builds`, `checking simulator behavior`, `preparing app links`, `setting up push flows`, and sorting through store details.
+Codex helped across almost every stage: `planning`, `API contracts`, server routes, client implementation, debugging, logs, platform work, and release preparation.
 
 But the **product judgment stayed with me**.
 
@@ -287,25 +289,11 @@ I still had to decide what problem mattered, what could wait, which platform cho
 
 That was the difference between using Codex for code generation and using it to **own more of the SDLC while keeping product judgment in my hands**.
 
-The more surfaces I added, the more important that became. On the `server`, the signals were API responses, database state, health checks, and Swagger. On the `web`, they were UI behavior, console logs, and network requests. On `iOS` and `Android`, they were build success, simulator behavior, real-device behavior, push registration, deep links, app links, and crash logs.
+The most useful habit was turning vague failure into a **smaller sentence**. Not ~~"the app is broken,"~~ but **"the QR scanner opens but the check-in result screen does not receive the route ID."** Once the failure became small enough, Codex became much more effective.
 
-Whenever something failed, I tried to turn the failure into a **smaller sentence**.
+By the end, the project had grown into a real **multi-surface system**: `server`, `database`, `web/admin`, native Rider apps, native Driver apps, `maps`, `QR check-in`, location updates, notifications, analytics, crash reporting, store preparation, and a promotional video.
 
-Not ~~"the app is broken,"~~ but **"the QR scanner opens but the check-in result screen does not receive the route ID."** Not ~~"push does not work,"~~ but **"FCM token is created but the server registration request fails."** Once the failure became small enough, Codex became much more effective.
-
-That habit may be the most important thing I practiced in this project.
-
-By the end, the project had grown into a real **multi-surface system**: `server`, `database`, `web`, `admin`, `iOS Rider app`, `Android Rider app`, `iOS Driver app`, `Android Driver app`, `maps`, `QR check-in`, `location updates`, `notifications`, `app links`, `analytics`, `crash reporting`, and `store preparation`.
-
-That last part mattered more than I expected.
-
-Store work is not glamorous. `App Store Connect` and `Google Play Console` ask for screenshots, privacy details, permission explanations, test accounts, review notes, app link behavior, data safety forms, and enough small confirmations to make you question your life choices for a moment.
-
-But those steps also work like a **strict QA checklist**. They reveal the things I might otherwise have postponed: whether permissions are explained clearly, whether links open correctly, whether privacy flows make sense, whether real users can install and run the app without me standing next to them.
-
-I also made the promotional video myself, including the English version shown at the top of this case study.
-
-That felt like part of the product too. A product is **not finished when the code compiles**. People still need to understand what changed, why it matters, and how to use it. Owning the launch story was another way of owning the product.
+That is the part I want this project to show: I can design the experience, understand the system underneath it, and keep moving until the product is real enough to test, ship, and explain.
 
 ## Reflection: What Stayed With Me
 

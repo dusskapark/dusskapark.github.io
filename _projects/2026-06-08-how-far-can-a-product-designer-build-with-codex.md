@@ -21,7 +21,7 @@ I was also not new to coding agents. I had already been using tools like `Cursor
 
 Then the project kept pulling me further.
 
-What began as a small web service became a test of something more personal: **how much of the product loop could I own myself?** Could I shape a real problem, connect the `server` and `database`, move from `web` to `iOS` and `Android`, debug real devices, prepare store releases, and tell the launch story at the end?
+What began as a small web service became a test of something more personal: **how much of the SDLC could I own myself, beyond the design phase?** Could I shape a real problem, connect the `server` and `database`, move from `web` to `iOS` and `Android`, debug real devices, prepare store releases, and tell the launch story at the end?
 
 With **Codex as my development partner**, I built a rider-driver shuttle platform for a Korean church community in Singapore.
 
@@ -87,7 +87,7 @@ That planning mattered more than any single prompt. I wanted each task to have a
 - Check the screen, console, and network request.
 - Reduce any failure into the next small task.
 
-The fastest way to test that product loop was to start on the web. I used `Next.js` for the web and API routes, `Neon Postgres` for the database, `Prisma` for the data layer, `Vercel` for deployment, and `LINE LIFF` as the first entry point.
+The fastest way to run the first small SDLC cycle was to start on the web. I used `Next.js` for the web and API routes, `Neon Postgres` for the database, `Prisma` for the data layer, `Vercel` for deployment, and `LINE LIFF` as the first entry point.
 
 `LINE` was not the obvious long-term choice for this user group. In Singapore, `WhatsApp` is more common. Among Korean users, `KakaoTalk` is much more familiar. But for the first version, `LINE LIFF` gave me a practical way to connect login, user context, web entry, QR check-in, links, and messaging without asking people to install a full app on day one.
 
@@ -285,6 +285,8 @@ But the **product judgment stayed with me**.
 
 I still had to decide what problem mattered, what could wait, which platform choice was practical, whether the current hypothesis was wrong, and what signal would prove the next step. Codex made the scope reachable, but it did not remove the need to think like a product builder.
 
+That was the difference between using Codex for code generation and using it to **own more of the SDLC while keeping product judgment in my hands**.
+
 The more surfaces I added, the more important that became. On the `server`, the signals were API responses, database state, health checks, and Swagger. On the `web`, they were UI behavior, console logs, and network requests. On `iOS` and `Android`, they were build success, simulator behavior, real-device behavior, push registration, deep links, app links, and crash logs.
 
 Whenever something failed, I tried to turn the failure into a **smaller sentence**.
@@ -309,9 +311,9 @@ That felt like part of the product too. A product is **not finished when the cod
 
 This project changed my sense of what a **product designer can practice**.
 
-I still do not think every designer needs to become a traditional full-stack engineer. That is not the point. The point is that AI makes it more realistic for a technically curious designer to **own more of the product loop**.
+I still do not think every designer needs to become a traditional full-stack engineer. That is not the point. The point is that AI makes it more realistic for a technically curious designer to **own more of the SDLC without pretending to be a full-time engineer**.
 
-But owning more of the loop requires **more than prompting**.
+But owning more of the SDLC requires **more than prompting**.
 
 It requires knowing how a product problem becomes a **system model**. It requires understanding `API contracts`, `data flows`, `platform constraints`, `real-device behavior`, `store requirements`, `analytics signals`, and `crash logs` well enough to ask better questions. It requires the patience to turn a vague failure into a smaller, testable sentence.
 

@@ -293,6 +293,23 @@ The most useful habit was turning vague failure into a **smaller sentence**. Not
 
 By the end, the project had grown into a real **multi-surface system**: `server`, `database`, `web/admin`, native Rider apps, native Driver apps, `maps`, `QR check-in`, location updates, notifications, analytics, crash reporting, store preparation, and a promotional video.
 
+{% include store-badges.html
+   url1="https://apps.apple.com/sg/app/nasum-shuttle-check-in/id6765994152"
+   url2="https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle"
+   app_name="NaSum Shuttle Check-In"
+   title="Download the Rider app"
+   description="NaSum Shuttle Check-In is available on iOS and Android for route lookup, QR check-in, and stop updates."
+   full_width=false
+%}
+
+{% include store-badges.html
+   url1="https://apps.apple.com/sg/app/nasum-shuttle-driver/id6773782572"
+   app_name="NaSum Shuttle Driver"
+   title="Download the Driver app"
+   description="The Driver app is available on iOS for authorized shuttle drivers and operators."
+   full_width=false
+%}
+
 That is the part I want this project to show: I can design the experience, understand the system underneath it, and keep moving until the product is real enough to test, ship, and explain.
 
 ## Reflection: What Stayed With Me

@@ -308,9 +308,10 @@ By the end, the project had grown into a real **multi-surface system**: `server`
 
 {% include store-badges.html
    url1="https://apps.apple.com/sg/app/nasum-shuttle-driver/id6773782572"
+   url2="https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle.driver&pli=1"
    app_name="NaSum Shuttle Driver"
    title="Live Driver app"
-   description="NaSum Shuttle Driver is available on iOS for authorized shuttle drivers and operators."
+   description="NaSum Shuttle Driver is available on iOS and Android for authorized shuttle drivers and operators."
    full_width=false
 %}
 

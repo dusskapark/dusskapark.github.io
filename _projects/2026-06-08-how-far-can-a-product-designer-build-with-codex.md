@@ -9,7 +9,7 @@ featured_image: "2026-rider-driver-codex/05-rider-driver-story-hero-v3.webp"
 gallery_images: "2026-rider-driver-codex/05-rider-driver-story-hero-v3.webp"
 team: Joo Hyung Park (Jude), with Codex as development partner
 role: Product Designer, Solo Product Builder
-visible: false
+visible: true
 highlight_first: true
 ---
 

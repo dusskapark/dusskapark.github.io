@@ -4,7 +4,7 @@
 title: "Singapore Korean Church Shuttle Platform"
 subtitle: "SIDE PROJECT (2026)"
 date: 2026-06-08 00:00:00
-description: "I designed and built a rider-driver shuttle platform for a Korean church community in Singapore, moving from a web Rider MVP to native Rider and Driver apps, store readiness, and launch storytelling with Codex as my development partner."
+description: "I built and shipped a rider-driver shuttle platform for a Korean church community in Singapore, using Codex not just for code generation but to move from problem framing to API contracts, native apps, driver-side arrival signals, store releases, and launch storytelling."
 featured_image: "2026-rider-driver-codex/05-rider-driver-story-hero-v3.webp"
 gallery_images: "2026-rider-driver-codex/05-rider-driver-story-hero-v3.webp"
 team: Joo Hyung Park (Jude), with Codex as development partner
@@ -13,19 +13,17 @@ visible: true
 highlight_first: true
 ---
 
-I have spent much of my career designing **developer experience** products.
+I wanted this project to answer a practical question: **when AI makes implementation more reachable, what should a product designer be responsible for next?**
 
-My users were often engineers, platform teams, ML practitioners, or people building tools for other technical teams. So code was never far away from my design work. I was not a full-time engineer, but I naturally wrote small prototypes, read APIs, touched front-end code, and learned what changes when a screen becomes a **working product**.
+For me, the answer was not simply "write more code." It was to own more of the path between a real problem, a system model, a working product, and a launch story. With **Codex as my development partner**, I built and shipped a rider-driver shuttle platform for a Korean church community in Singapore.
 
-That background made this project feel less like a jump into engineering and more like a chance to turn years of designing for builders into building practice.
+The useful part of the story is how a small service kept forcing product decisions: which channel riders would actually use, which signals operators could trust, where a web MVP stopped being enough, and why a Driver app became necessary when rider check-ins could not represent every shuttle arrival.
 
-I was also not new to coding agents. I had already been using tools like `Cursor` and `Claude Code` actively in my own work. Codex entered my workflow almost casually after I first paid for `ChatGPT Pro` myself through a promotion. I had heard Codex was powerful, but at first I treated it like another capable coding agent.
+I have spent much of my career designing **developer experience** products. My users were often engineers, platform teams, ML practitioners, or people building tools for other technical teams. So code was never far away from my design work. I was not a full-time engineer, but I naturally wrote small prototypes, read APIs, touched front-end code, and learned what changes when a screen becomes a **working product**.
 
-Then the project kept pulling me further.
+That background made this project feel less like a jump into engineering and more like a chance to turn years of designing for builders into building practice. I had already been using tools like `Cursor` and `Claude Code` actively in my own work, and Codex first entered my workflow as another capable coding agent.
 
-What began as a small web service became a test of something more personal: **how much of the SDLC could I own myself, beyond the design phase?** Could I shape a real problem, connect the `server` and `database`, move from `web` to `iOS` and `Android`, debug real devices, prepare store releases, and tell the launch story at the end?
-
-With **Codex as my development partner**, I built a rider-driver shuttle platform for a Korean church community in Singapore.
+Then the project kept pulling me further. What began as a small web service became a test of something more personal: **how much of the SDLC could I own myself, beyond the design phase?** Could I shape a real problem, connect the `server` and `database`, move from `web` to `iOS` and `Android`, debug real devices, prepare store releases, and tell the launch story at the end?
 
 ## Context: A Small Shuttle, A Real Product Problem
 

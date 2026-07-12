@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="658" viewBox="0 0 1100 658" role="img">
+
+<style>
+  .title{font:700 28px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#172026}
+  .subtitle{font:400 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#5d6872}
+  .label{font:650 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#172026}
+  .value{font:500 14px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#25313a}
+  .note{font:400 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#5d6872}
+  .axis{stroke:#d8dee4;stroke-width:1}
+</style>
+
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="42" class="title">Top Successful MCP Tools</text>
+<text x="32" y="68" class="subtitle">Ranked by successful event count, GA4 MCP tool-call detail</text>
+<line x1="260" y1="62" x2="260" y2="554" class="axis"/>
+<g>
+<text x="32" y="104" class="label">create_text</text>
+<rect x="260" y="86" width="610" height="24" rx="5" fill="#1266d6"/>
+<text x="884" y="104" class="value">105,643</text>
+</g>
+<g>
+<text x="32" y="144" class="label">set_fill_color</text>
+<rect x="260" y="126" width="534" height="24" rx="5" fill="#0c8c72"/>
+<text x="808" y="144" class="value">92,561</text>
+</g>
+<g>
+<text x="32" y="184" class="label">create_frame</text>
+<rect x="260" y="166" width="303" height="24" rx="5" fill="#a15c00"/>
+<text x="577" y="184" class="value">52,509</text>
+</g>
+<g>
+<text x="32" y="224" class="label">set_corner_radius</text>
+<rect x="260" y="206" width="220" height="24" rx="5" fill="#0c8c72"/>
+<text x="494" y="224" class="value">38,053</text>
+</g>
+<g>
+<text x="32" y="264" class="label">set_text_content</text>
+<rect x="260" y="246" width="219" height="24" rx="5" fill="#1266d6"/>
+<text x="493" y="264" class="value">37,845</text>
+</g>
+<g>
+<text x="32" y="304" class="label">create_rectangle</text>
+<rect x="260" y="286" width="201" height="24" rx="5" fill="#a15c00"/>
+<text x="475" y="304" class="value">34,779</text>
+</g>
+<g>
+<text x="32" y="344" class="label">get_node_info</text>
+<rect x="260" y="326" width="189" height="24" rx="5" fill="#6463c8"/>
+<text x="463" y="344" class="value">32,736</text>
+</g>
+<g>
+<text x="32" y="384" class="label">move_node</text>
+<rect x="260" y="366" width="80" height="24" rx="5" fill="#a15c00"/>
+<text x="354" y="384" class="value">13,859</text>
+</g>
+<g>
+<text x="32" y="424" class="label">export_node_as_image</text>
+<rect x="260" y="406" width="78" height="24" rx="5" fill="#718300"/>
+<text x="352" y="424" class="value">13,536</text>
+</g>
+<g>
+<text x="32" y="464" class="label">set_stroke_color</text>
+<rect x="260" y="446" width="63" height="24" rx="5" fill="#0c8c72"/>
+<text x="337" y="464" class="value">10,910</text>
+</g>
+<g>
+<text x="32" y="504" class="label">resize_node</text>
+<rect x="260" y="486" width="59" height="24" rx="5" fill="#a15c00"/>
+<text x="333" y="504" class="value">10,133</text>
+</g>
+<g>
+<text x="32" y="544" class="label">set_layout_sizing</text>
+<rect x="260" y="526" width="52" height="24" rx="5" fill="#a15c00"/>
+<text x="326" y="544" class="value">9,018</text>
+</g>
+<text x="32" y="630" class="note">Takeaway: the largest tools were concrete editing actions, not only connection or diagnostic events.</text>
+</svg>

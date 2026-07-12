@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TalkToFigma Desktop MCP Tool Usage Deep Dive</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231266d6'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172026;
+      --muted: #5d6872;
+      --line: #d8dee4;
+      --panel: #f7f9fb;
+      --accent: #1266d6;
+      --accent-2: #0c8c72;
+      --accent-3: #a15c00;
+      --danger: #b3261e;
+      --surface: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(1180px, calc(100vw - 48px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 900px;
+      font-size: 42px;
+      font-weight: 760;
+    }
+
+    h2 {
+      margin-top: 44px;
+      font-size: 26px;
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 12px 0 0;
+      max-width: 840px;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .meta {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--surface);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 25px;
+      line-height: 1.15;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .note {
+      margin-top: 16px;
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      background: var(--panel);
+      color: #25313a;
+    }
+
+    .chart-panel {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--surface);
+    }
+
+    .chart-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .chart-title h3 {
+      margin: 0;
+    }
+
+    .chart-title span {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .axis-label,
+    .bar-label,
+    .bar-value,
+    .legend {
+      font-size: 12px;
+      fill: var(--muted);
+    }
+
+    .bar-label {
+      fill: var(--ink);
+      font-weight: 600;
+    }
+
+    .bar-value {
+      fill: #25313a;
+      font-variant-numeric: tabular-nums;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 16px;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--panel);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: #3b4650;
+    }
+
+    td.num,
+    th.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .purpose {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 2px 8px;
+      background: #edf4ff;
+      color: #114f9f;
+      font-size: 12px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .purpose.style {
+      background: #ebf8f4;
+      color: #0b6b58;
+    }
+
+    .purpose.layout {
+      background: #fff4df;
+      color: #7a4900;
+    }
+
+    .purpose.context {
+      background: #f1f1ff;
+      color: #4b4ca8;
+    }
+
+    .purpose.export {
+      background: #f3f7e8;
+      color: #566d00;
+    }
+
+    .purpose.cleanup {
+      background: #fff0ef;
+      color: #9f221b;
+    }
+
+    .source-box {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--panel);
+      font-size: 14px;
+    }
+
+    .source-box dl {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 8px 14px;
+      margin: 0;
+    }
+
+    .source-box dt {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .source-box dd {
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .92em;
+      background: #f0f3f6;
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 860px) {
+      main {
+        width: min(100vw - 28px, 760px);
+        padding-top: 32px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .source-box dl {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      main {
+        width: 100%;
+        padding: 24px;
+      }
+
+      .chart-panel,
+      .metric,
+      .source-box {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Static Export · Data Analytics Report</div>
+    <h1>TalkToFigma Desktop MCP Tool Usage Deep Dive</h1>
+    <p class="meta">Generated at 2026-07-01T00:00:00+09:00 · Exported as a static, portable HTML artifact with no interactive app top bar or app-only controls.</p>
+
+    <section>
+      <p>
+        This report focuses on successful <code>mcp_tool_call</code> usage in TalkToFigma Desktop. The goal is to explain what people actually used the MCP tools for: not just whether they connected, but which design tasks they repeatedly automated.
+      </p>
+      <p>
+        The strongest pattern is that users repeatedly used MCP for real Figma editing work: creating text, applying colors, creating frames, rounding corners, editing text content, creating rectangles, inspecting nodes, moving layers, and exporting nodes as images.
+      </p>
+
+      <div class="summary-grid" aria-label="Key metrics">
+        <div class="metric">
+          <strong>536,267</strong>
+          <span>Successful MCP tool calls</span>
+        </div>
+        <div class="metric">
+          <strong>526,813</strong>
+          <span>Successful calls covered by the top 32 tools</span>
+        </div>
+        <div class="metric">
+          <strong>98.2%</strong>
+          <span>Coverage of successful MCP calls in this deep dive</span>
+        </div>
+        <div class="metric">
+          <strong>442,564</strong>
+          <span>Broad and repeat-heavy successful events</span>
+        </div>
+      </div>
+
+      <p class="note">
+        Retrospective takeaway: users did not merely try the connection. They repeatedly used MCP to produce and refine design objects.
+      </p>
+    </section>
+
+    <section>
+      <h2>What People Automated</h2>
+      <p>
+        The top successful tools group into six design purposes. The largest three are content/text editing, structure/layout building, and visual styling. Together they describe a practical design-production loop: create content, build layout structure, and style the result.
+      </p>
+
+      <div class="chart-panel">
+        <div class="chart-title">
+          <h3>Successful MCP Calls By Design Purpose</h3>
+          <span>Event count, grouped by inferred purpose</span>
+        </div>
+        <svg viewBox="0 0 940 300" role="img" aria-labelledby="purpose-title purpose-desc">
+          <title id="purpose-title">Successful MCP Calls By Design Purpose</title>
+          <desc id="purpose-desc">Horizontal bar chart showing content creation and text editing at 155,623 events, structure and layout at 151,443, visual styling at 141,524, inspection and context at 57,930, asset export at 13,536, and maintenance cleanup at 6,757.</desc>
+          <line x1="245" y1="20" x2="245" y2="270" stroke="#d8dee4"/>
+          <g>
+            <text x="0" y="42" class="bar-label">Content creation / text editing</text>
+            <rect x="245" y="24" width="560" height="24" rx="4" fill="#1266d6"/>
+            <text x="816" y="42" class="bar-value">155,623 · 29.0%</text>
+          </g>
+          <g>
+            <text x="0" y="82" class="bar-label">Structure and layout building</text>
+            <rect x="245" y="64" width="545" height="24" rx="4" fill="#a15c00"/>
+            <text x="801" y="82" class="bar-value">151,443 · 28.2%</text>
+          </g>
+          <g>
+            <text x="0" y="122" class="bar-label">Visual styling</text>
+            <rect x="245" y="104" width="509" height="24" rx="4" fill="#0c8c72"/>
+            <text x="765" y="122" class="bar-value">141,524 · 26.4%</text>
+          </g>
+          <g>
+            <text x="0" y="162" class="bar-label">Inspection and context gathering</text>
+            <rect x="245" y="144" width="208" height="24" rx="4" fill="#6463c8"/>
+            <text x="464" y="162" class="bar-value">57,930 · 10.8%</text>
+          </g>
+          <g>
+            <text x="0" y="202" class="bar-label">Asset export</text>
+            <rect x="245" y="184" width="49" height="24" rx="4" fill="#718300"/>
+            <text x="305" y="202" class="bar-value">13,536 · 2.5%</text>
+          </g>
+          <g>
+            <text x="0" y="242" class="bar-label">Maintenance and cleanup</text>
+            <rect x="245" y="224" width="24" height="24" rx="4" fill="#b3261e"/>
+            <text x="280" y="242" class="bar-value">6,757 · 1.3%</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section>
+      <h2>Most Repeated Tools</h2>
+      <p>
+        The highest-volume successful tools are the everyday design actions: create text, set fill color, create frames, round corners, edit text, and create rectangles. These are not incidental diagnostics; they are concrete editing operations.
+      </p>
+
+      <div class="chart-panel">
+        <div class="chart-title">
+          <h3>Top Successful MCP Tools</h3>
+          <span>Ranked by successful event count</span>
+        </div>
+        <svg viewBox="0 0 980 500" role="img" aria-labelledby="tools-title tools-desc">
+          <title id="tools-title">Top Successful MCP Tools</title>
+          <desc id="tools-desc">Horizontal bar chart of top successful MCP tools. create_text has 105,643 events, set_fill_color has 92,561, and create_frame has 52,509.</desc>
+          <line x1="190" y1="18" x2="190" y2="470" stroke="#d8dee4"/>
+          <g><text x="0" y="39" class="bar-label">create_text</text><rect x="190" y="20" width="660" height="22" rx="4" fill="#1266d6"/><text x="861" y="38" class="bar-value">105,643</text></g>
+          <g><text x="0" y="75" class="bar-label">set_fill_color</text><rect x="190" y="56" width="578" height="22" rx="4" fill="#0c8c72"/><text x="779" y="74" class="bar-value">92,561</text></g>
+          <g><text x="0" y="111" class="bar-label">create_frame</text><rect x="190" y="92" width="328" height="22" rx="4" fill="#a15c00"/><text x="529" y="110" class="bar-value">52,509</text></g>
+          <g><text x="0" y="147" class="bar-label">set_corner_radius</text><rect x="190" y="128" width="238" height="22" rx="4" fill="#0c8c72"/><text x="439" y="146" class="bar-value">38,053</text></g>
+          <g><text x="0" y="183" class="bar-label">set_text_content</text><rect x="190" y="164" width="236" height="22" rx="4" fill="#1266d6"/><text x="437" y="182" class="bar-value">37,845</text></g>
+          <g><text x="0" y="219" class="bar-label">create_rectangle</text><rect x="190" y="200" width="217" height="22" rx="4" fill="#a15c00"/><text x="418" y="218" class="bar-value">34,779</text></g>
+          <g><text x="0" y="255" class="bar-label">get_node_info</text><rect x="190" y="236" width="204" height="22" rx="4" fill="#6463c8"/><text x="405" y="254" class="bar-value">32,736</text></g>
+          <g><text x="0" y="291" class="bar-label">move_node</text><rect x="190" y="272" width="87" height="22" rx="4" fill="#a15c00"/><text x="288" y="290" class="bar-value">13,859</text></g>
+          <g><text x="0" y="327" class="bar-label">export_node_as_image</text><rect x="190" y="308" width="85" height="22" rx="4" fill="#718300"/><text x="286" y="326" class="bar-value">13,536</text></g>
+          <g><text x="0" y="363" class="bar-label">set_stroke_color</text><rect x="190" y="344" width="68" height="22" rx="4" fill="#0c8c72"/><text x="269" y="362" class="bar-value">10,910</text></g>
+          <g><text x="0" y="399" class="bar-label">resize_node</text><rect x="190" y="380" width="63" height="22" rx="4" fill="#a15c00"/><text x="264" y="398" class="bar-value">10,133</text></g>
+          <g><text x="0" y="435" class="bar-label">set_layout_sizing</text><rect x="190" y="416" width="56" height="22" rx="4" fill="#a15c00"/><text x="257" y="434" class="bar-value">9,018</text></g>
+        </svg>
+      </div>
+    </section>
+
+    <section>
+      <h2>Breadth And Repeat Intensity</h2>
+      <p>
+        A quadrant view is clearer than a scatterplot for this report. It separates tools that were broadly adopted from tools that were niche, and tools that were repeated heavily from tools that were used more lightly.
+      </p>
+      <p>
+        Thresholds: <strong>Broad</strong> means at least 300 active users. <strong>Repeat-heavy</strong> means at least 25 successful calls per active user.
+      </p>
+
+      <div class="chart-panel">
+        <div class="chart-title">
+          <h3>MCP Tool Usage Quadrants</h3>
+          <span>Successful events by usage quadrant</span>
+        </div>
+        <svg viewBox="0 0 940 250" role="img" aria-labelledby="quad-title quad-desc">
+          <title id="quad-title">MCP Tool Usage Quadrants</title>
+          <desc id="quad-desc">Horizontal bar chart. Broad plus repeat-heavy has 442,564 successful events, much larger than the other three quadrants.</desc>
+          <line x1="230" y1="18" x2="230" y2="210" stroke="#d8dee4"/>
+          <g>
+            <text x="0" y="44" class="bar-label">Broad + repeat-heavy</text>
+            <rect x="230" y="26" width="610" height="24" rx="4" fill="#1266d6"/>
+            <text x="851" y="44" class="bar-value">442,564</text>
+          </g>
+          <g>
+            <text x="0" y="88" class="bar-label">Broad + context/light repeat</text>
+            <rect x="230" y="70" width="55" height="24" rx="4" fill="#6463c8"/>
+            <text x="296" y="88" class="bar-value">39,670</text>
+          </g>
+          <g>
+            <text x="0" y="132" class="bar-label">Niche + repeat-heavy</text>
+            <rect x="230" y="114" width="49" height="24" rx="4" fill="#a15c00"/>
+            <text x="290" y="132" class="bar-value">35,548</text>
+          </g>
+          <g>
+            <text x="0" y="176" class="bar-label">Niche + light repeat</text>
+            <rect x="230" y="158" width="13" height="24" rx="4" fill="#b3261e"/>
+            <text x="254" y="176" class="bar-value">9,031</text>
+          </g>
+        </svg>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Quadrant</th>
+            <th class="num">Successful events</th>
+            <th class="num">Tools</th>
+            <th>Representative tools</th>
+            <th>Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Broad + repeat-heavy</td>
+            <td class="num">442,564</td>
+            <td class="num">11</td>
+            <td><code>create_text</code>, <code>set_fill_color</code>, <code>create_frame</code>, <code>set_corner_radius</code>, <code>set_text_content</code></td>
+            <td>Core workflow: many users repeatedly created content, styled layers, built frames/shapes, and inspected nodes.</td>
+          </tr>
+          <tr>
+            <td>Broad + context/light repeat</td>
+            <td class="num">39,670</td>
+            <td class="num">10</td>
+            <td><code>get_document_info</code>, <code>get_selection</code>, <code>get_active_channels</code>, <code>connection_diagnostics</code></td>
+            <td>Widely used context and diagnostic actions; important for grounding, but less repetitive per user.</td>
+          </tr>
+          <tr>
+            <td>Niche + repeat-heavy</td>
+            <td class="num">35,548</td>
+            <td class="num">7</td>
+            <td><code>set_layout_sizing</code>, <code>clone_node</code>, <code>set_item_spacing</code>, <code>set_axis_align</code>, <code>set_auto_layout</code></td>
+            <td>Advanced automation: fewer users, but repeated heavily once adopted.</td>
+          </tr>
+          <tr>
+            <td>Niche + light repeat</td>
+            <td class="num">9,031</td>
+            <td class="num">4</td>
+            <td><code>set_layout_mode</code>, <code>set_padding</code>, <code>get_nodes_info</code>, <code>delete_multiple_nodes</code></td>
+            <td>Secondary workflows with narrower reach and lower repeat intensity.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Tool Usage Interpretation</h2>
+      <p>
+        The table below keeps the strongest individual rows from the report. It includes inferred purpose, successful events, active users, and calls per user.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Purpose group</th>
+            <th>Likely purpose</th>
+            <th class="num">Successful events</th>
+            <th class="num">Active users</th>
+            <th class="num">Calls / user</th>
+            <th>Retrospective interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>create_text</code></td>
+            <td><span class="purpose">Content</span></td>
+            <td>Create new text layers</td>
+            <td class="num">105,643</td>
+            <td class="num">613</td>
+            <td class="num">172.3</td>
+            <td>The strongest signal: users repeatedly generated text objects, likely for AI-assisted layout drafts and content-heavy UI screens.</td>
+          </tr>
+          <tr>
+            <td><code>set_fill_color</code></td>
+            <td><span class="purpose style">Visual styling</span></td>
+            <td>Apply fill colors</td>
+            <td class="num">92,561</td>
+            <td class="num">604</td>
+            <td class="num">153.2</td>
+            <td>Color application was one of the most repeated edits, suggesting users used MCP to style generated or selected layers.</td>
+          </tr>
+          <tr>
+            <td><code>create_frame</code></td>
+            <td><span class="purpose layout">Structure/layout</span></td>
+            <td>Create frames and containers</td>
+            <td class="num">52,509</td>
+            <td class="num">613</td>
+            <td class="num">85.7</td>
+            <td>Users were not only editing existing nodes; they were constructing screen and layout structure.</td>
+          </tr>
+          <tr>
+            <td><code>set_corner_radius</code></td>
+            <td><span class="purpose style">Visual styling</span></td>
+            <td>Round corners</td>
+            <td class="num">38,053</td>
+            <td class="num">504</td>
+            <td class="num">75.5</td>
+            <td>High repeat usage points to systematic styling of buttons, cards, rectangles, and UI components.</td>
+          </tr>
+          <tr>
+            <td><code>set_text_content</code></td>
+            <td><span class="purpose">Content</span></td>
+            <td>Edit text content</td>
+            <td class="num">37,845</td>
+            <td class="num">455</td>
+            <td class="num">83.2</td>
+            <td>Users iterated on copy after text layers existed, which fits real UI and content production.</td>
+          </tr>
+          <tr>
+            <td><code>create_rectangle</code></td>
+            <td><span class="purpose layout">Structure/layout</span></td>
+            <td>Create shape primitives</td>
+            <td class="num">34,779</td>
+            <td class="num">473</td>
+            <td class="num">73.5</td>
+            <td>Basic shape creation was heavily used, likely for UI blocks, backgrounds, controls, and placeholders.</td>
+          </tr>
+          <tr>
+            <td><code>get_node_info</code></td>
+            <td><span class="purpose context">Context</span></td>
+            <td>Inspect selected or referenced nodes</td>
+            <td class="num">32,736</td>
+            <td class="num">842</td>
+            <td class="num">38.9</td>
+            <td>The largest active-user base among editing-adjacent tools; agents needed context before editing.</td>
+          </tr>
+          <tr>
+            <td><code>move_node</code></td>
+            <td><span class="purpose layout">Structure/layout</span></td>
+            <td>Reposition nodes</td>
+            <td class="num">13,859</td>
+            <td class="num">324</td>
+            <td class="num">42.8</td>
+            <td>Layout adjustment was a real repeated workflow, not just object creation.</td>
+          </tr>
+          <tr>
+            <td><code>export_node_as_image</code></td>
+            <td><span class="purpose export">Asset export</span></td>
+            <td>Export selected nodes as images</td>
+            <td class="num">13,536</td>
+            <td class="num">455</td>
+            <td class="num">29.7</td>
+            <td>Users also used MCP to inspect, share, or render design output, not only modify Figma files.</td>
+          </tr>
+          <tr>
+            <td><code>set_layout_sizing</code></td>
+            <td><span class="purpose layout">Structure/layout</span></td>
+            <td>Set auto-layout sizing behavior</td>
+            <td class="num">9,018</td>
+            <td class="num">167</td>
+            <td class="num">54.0</td>
+            <td>Lower adoption but high repeat intensity, suggesting more advanced layout automation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Small-Sample Caveat</h2>
+      <p>
+        Some tools have very high repeat intensity but a tiny active-user base. They are interesting, but should not be presented as broad user behavior.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Purpose group</th>
+            <th class="num">Successful events</th>
+            <th class="num">Active users</th>
+            <th class="num">Calls / user</th>
+            <th>Caveat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>set_auto_layout</code></td>
+            <td><span class="purpose layout">Structure/layout</span></td>
+            <td class="num">3,208</td>
+            <td class="num">5</td>
+            <td class="num">641.6</td>
+            <td>Very high repeat intensity, but too few users for a broad behavioral claim.</td>
+          </tr>
+          <tr>
+            <td><code>rename_node</code></td>
+            <td><span class="purpose cleanup">Cleanup</span></td>
+            <td class="num">1,329</td>
+            <td class="num">5</td>
+            <td class="num">265.8</td>
+            <td>Likely heavy-user automation or testing; mention only with sample-size caveat.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Source Details</h2>
+      <div class="source-box">
+        <dl>
+          <dt>Original artifact URL</dt>
+          <dd><a href="https://mcp-server-dataanalyticswidgets-d90d6b74b2c37858.web-sandbox.oaiusercontent.com/?app=skybridge">https://mcp-server-dataanalyticswidgets-d90d6b74b2c37858.web-sandbox.oaiusercontent.com/?app=skybridge</a></dd>
+          <dt>Generated at</dt>
+          <dd>2026-07-01T00:00:00+09:00</dd>
+          <dt>Local raw sources</dt>
+          <dd><code>/Users/jude.park/Sites/Retro/talk-to-figma-desktop-ga4-raw-data.json</code><br><code>/Users/jude.park/Sites/Retro/talk-to-figma-desktop-ga4-raw-data.md</code></dd>
+          <dt>GA4 property</dt>
+          <dd><code>properties/499789310</code> · Figma MCP Agent</dd>
+          <dt>Date range</dt>
+          <dd>2025-07-01 to 2026-06-30 · observed effective range starts 2025-08</dd>
+          <dt>Metric definitions</dt>
+          <dd><code>eventCount</code> and <code>activeUsers</code> are GA4 metrics. <code>callsPerUser</code> is calculated as successful tool events divided by active users for that tool.</dd>
+          <dt>Quadrant thresholds</dt>
+          <dd>Broad: <code>activeUsers &gt;= 300</code>. Repeat-heavy: <code>callsPerUser &gt;= 25</code>.</dd>
+          <dt>Export notes</dt>
+          <dd>This is a static portable HTML export. It intentionally omits the Data Analytics interactive top bar, refresh controls, export controls, and app-only controls.</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>TalkToFigma Desktop GA4 Analysis</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5c6674;
+      --line: #d9dee7;
+      --soft: #f4f7fb;
+      --blue: #2563eb;
+      --teal: #0f766e;
+      --amber: #c2410c;
+      --rose: #be123c;
+      --violet: #6d28d9;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+      background: var(--bg);
+    }
+    main {
+      width: min(1120px, calc(100vw - 36px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+    header.report-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 28px;
+      margin-bottom: 34px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+      max-width: 920px;
+    }
+    .lede {
+      max-width: 850px;
+      margin: 20px 0 0;
+      color: #2c3542;
+      font-size: clamp(1.06rem, 2vw, 1.32rem);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    section {
+      margin-top: 42px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+      line-height: 1.16;
+    }
+    h3 {
+      margin: 24px 0 12px;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+    p {
+      margin: 0 0 14px;
+      max-width: 860px;
+    }
+    .section-intro {
+      color: #344050;
+      font-size: 1.02rem;
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .metric-tile {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 150px;
+      background: #fff;
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      margin-top: 8px;
+      color: var(--ink);
+      font-size: clamp(1.55rem, 3.5vw, 2.55rem);
+      font-weight: 750;
+      line-height: 1;
+    }
+    .metric-tile p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+    .callout {
+      margin: 18px 0 0;
+      padding: 18px 20px;
+      border-left: 5px solid var(--teal);
+      background: #eef8f6;
+      border-radius: 0 8px 8px 0;
+      max-width: 920px;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .chart {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .chart svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+    figcaption {
+      margin: 0;
+    }
+    figcaption strong {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+    figcaption span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 3px;
+    }
+    .svg-label {
+      fill: var(--ink);
+      font-size: 15px;
+      dominant-baseline: middle;
+    }
+    .svg-value {
+      fill: var(--muted);
+      font-size: 14px;
+      dominant-baseline: middle;
+    }
+    .svg-axis {
+      fill: var(--muted);
+      font-size: 12px;
+    }
+    .svg-track {
+      fill: #edf1f7;
+    }
+    .svg-grid {
+      stroke: #e6eaf1;
+      stroke-width: 1;
+    }
+    .compact-chart {
+      min-height: 180px;
+    }
+    .stacked {
+      display: flex;
+      height: 34px;
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #edf1f7;
+    }
+    .stacked span.success { background: var(--teal); }
+    .stacked span.fail { background: var(--rose); }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .swatch {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .swatch.success { background: var(--teal); }
+    .swatch.fail { background: var(--rose); }
+    .funnel {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .funnel-row {
+      display: grid;
+      grid-template-columns: 170px minmax(120px, 1fr) 78px;
+      gap: 12px;
+      align-items: center;
+    }
+    .funnel-label {
+      color: var(--ink);
+      font-size: 0.9rem;
+    }
+    .funnel-track {
+      height: 22px;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #edf1f7;
+    }
+    .funnel-track span {
+      display: block;
+      height: 100%;
+      background: var(--blue);
+    }
+    .funnel-value {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: right;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      margin-top: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 650px;
+      font-size: 0.92rem;
+    }
+    th, td {
+      padding: 11px 13px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: #2b3440;
+      background: var(--soft);
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 22px;
+      align-items: start;
+    }
+    .source-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    .source-list code {
+      color: var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .notes {
+      margin-top: 18px;
+      padding-left: 20px;
+      color: #394554;
+    }
+    .notes li {
+      margin: 7px 0;
+    }
+    @media (max-width: 900px) {
+      main { width: min(100vw - 28px, 680px); padding-top: 30px; }
+      .metric-grid, .chart-grid, .two-col { grid-template-columns: 1fr; }
+      .metric-tile { min-height: 0; }
+      .funnel-row { grid-template-columns: 1fr; gap: 5px; }
+      .funnel-value { text-align: left; }
+      table { min-width: 560px; }
+    }
+    @media print {
+      main { width: 100%; padding: 0; }
+      section { break-inside: avoid; }
+      .chart, .metric-tile, .table-wrap { break-inside: avoid; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="report-header">
+      <p class="eyebrow">Static HTML Export</p>
+      <h1>TalkToFigma Desktop GA4 Analysis</h1>
+      <p class="lede">The data shows a desktop product that did more than launch. Users connected it, ran real Figma MCP tool calls, and exposed a clear product lesson: the core value was reducing anxiety between first launch and first connection.</p>
+      <div class="meta">
+        <span>Created: 2026-07-01</span>
+        <span>Analysis period: 2025-07-01 to 2026-06-30</span>
+        <span>Effective data start: 2025-08</span>
+        <span>Source: GA4 Figma MCP Agent / properties/499789310</span>
+      </div>
+    </header>
+
+    <section aria-labelledby="top-metrics">
+      <h2 id="top-metrics">Presentation-Ready Metrics</h2>
+      <p class="section-intro">These are the safest top-line numbers to use in a retrospective. Total events are included for telemetry scale, but the interpretation should stay cautious because exception volume is large.</p>
+      <div class="metric-grid">
+        <article class="metric-tile">
+    <div class="metric-label">Active users</div>
+    <div class="metric-value">31,360</div>
+    <p>Meaningful scale for a desktop utility over one year.</p>
+  </article>
+        <article class="metric-tile">
+    <div class="metric-label">MCP tool calls</div>
+    <div class="metric-value">570,373</div>
+    <p>Strongest evidence of actual workflow usage.</p>
+  </article>
+        <article class="metric-tile">
+    <div class="metric-label">Success rate</div>
+    <div class="metric-value">94.1%</div>
+    <p>Among MCP calls with explicit success or failure values.</p>
+  </article>
+        <article class="metric-tile">
+    <div class="metric-label">Country values</div>
+    <div class="metric-value">165</div>
+    <p>Includes &#39;(not set)&#39;, so use as spread evidence carefully.</p>
+  </article>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Value</th><th>Interpretation</th></tr></thead><tbody><tr><td>Active users</td><td>31,360</td><td>Meaningful one-year scale for a desktop utility.</td></tr>
+<tr><td>Sessions</td><td>24,429</td><td>Evidence of repeated use, while desktop telemetry may understate web-style sessions.</td></tr>
+<tr><td>Total events</td><td>1,826,813</td><td>Telemetry scale, not a pure success metric because exceptions inflate the count.</td></tr>
+<tr><td>MCP tool calls</td><td>570,373</td><td>Best evidence of workflow usage beyond simply launching the app.</td></tr>
+<tr><td>Successful MCP calls</td><td>536,267</td><td>About 94.1% success among explicit success or failure outcomes.</td></tr>
+<tr><td>Country values</td><td>165</td><td>Includes &#39;(not set)&#39;, so treat as global spread evidence rather than exact countries.</td></tr>
+<tr><td>Top country</td><td>South Korea, 4,263 active users</td><td>Largest active-user country in the snapshot.</td></tr>
+<tr><td>Desktop share</td><td>100% desktop</td><td>This dataset describes desktop-app telemetry, not a web funnel.</td></tr></tbody></table></div>
+    </section>
+
+    <section aria-labelledby="narrative">
+      <h2 id="narrative">Narrative</h2>
+      <div class="callout">
+        <p><strong>One-line takeaway:</strong> In the end, the core value was not adding more features. It was reducing the anxiety between first launch and first connection.</p>
+      </div>
+      <p>This project was less about adding one more feature to Figma and more about creating an installable desktop path into the Figma MCP workflow. The app reached 31,360 active users and recorded 570,373 MCP tool-call events. Among calls with explicit success or failure values, 536,267 succeeded and 33,777 failed.</p>
+      <p>The top MCP actions look like real design-editing work: creating text, setting fill colors, creating frames, adjusting corner radius, editing text content, creating rectangles, inspecting nodes, and exporting images. That supports the claim that users did not merely open the app. They used it to perform actual work through MCP.</p>
+      <p>The retrospective should not frame the project as a failure. A better frame is that the project proved a need, then the need moved toward larger platform surfaces such as official Figma MCP and Canvas-style agents. The hard part is accepting that a working independent tool can become lower-priority precisely because the core direction was validated.</p>
+    </section>
+
+    <section aria-labelledby="growth-depth">
+      <h2 id="growth-depth">Growth And Usage Depth</h2>
+      <div class="chart-grid">
+        <figure class="chart" id="monthly-active-users">
+    <figcaption>
+      <strong>Monthly Active Users</strong>
+      <span>Active users rose quickly after launch and peaked in January 2026.</span>
+    </figcaption>
+    <svg viewBox="0 0 920 320" role="img" aria-labelledby="monthly-active-users-title monthly-active-users-desc">
+      <title id="monthly-active-users-title">Monthly Active Users</title>
+      <desc id="monthly-active-users-desc">Active users rose quickly after launch and peaked in January 2026.</desc>
+      <g><line x1="56" x2="886" y1="266" y2="266" class="svg-grid"></line><text x="0" y="270" class="svg-axis">0</text></g>
+<g><line x1="56" x2="886" y1="212" y2="212" class="svg-grid"></line><text x="0" y="216" class="svg-axis">1,973</text></g>
+<g><line x1="56" x2="886" y1="158" y2="158" class="svg-grid"></line><text x="0" y="162" class="svg-axis">3,945</text></g>
+<g><line x1="56" x2="886" y1="104" y2="104" class="svg-grid"></line><text x="0" y="108" class="svg-axis">5,918</text></g>
+<g><line x1="56" x2="886" y1="50" y2="50" class="svg-grid"></line><text x="0" y="54" class="svg-axis">7,890</text></g>
+      <path d="M 56.00 259.35 L 139.00 257.49 L 222.00 253.02 L 305.00 234.52 L 388.00 175.03 L 471.00 50.00 L 554.00 117.89 L 637.00 99.44 L 720.00 179.68 L 803.00 194.77 L 886.00 197.42" fill="none" stroke="#0f766e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="56.00" cy="259.35" r="4" fill="#0f766e"><title>2025-08: 243</title></circle>
+<circle cx="139.00" cy="257.49" r="4" fill="#0f766e"><title>2025-09: 311</title></circle>
+<circle cx="222.00" cy="253.02" r="4" fill="#0f766e"><title>2025-10: 474</title></circle>
+<circle cx="305.00" cy="234.52" r="4" fill="#0f766e"><title>2025-11: 1,150</title></circle>
+<circle cx="388.00" cy="175.03" r="4" fill="#0f766e"><title>2025-12: 3,323</title></circle>
+<circle cx="471.00" cy="50.00" r="4" fill="#0f766e"><title>2026-01: 7,890</title></circle>
+<circle cx="554.00" cy="117.89" r="4" fill="#0f766e"><title>2026-02: 5,410</title></circle>
+<circle cx="637.00" cy="99.44" r="4" fill="#0f766e"><title>2026-03: 6,084</title></circle>
+<circle cx="720.00" cy="179.68" r="4" fill="#0f766e"><title>2026-04: 3,153</title></circle>
+<circle cx="803.00" cy="194.77" r="4" fill="#0f766e"><title>2026-05: 2,602</title></circle>
+<circle cx="886.00" cy="197.42" r="4" fill="#0f766e"><title>2026-06: 2,505</title></circle>
+      <text x="56" y="302" text-anchor="middle" class="svg-axis">2025-08</text>
+
+<text x="222" y="302" text-anchor="middle" class="svg-axis">2025-10</text>
+
+<text x="388" y="302" text-anchor="middle" class="svg-axis">2025-12</text>
+
+<text x="554" y="302" text-anchor="middle" class="svg-axis">2026-02</text>
+
+<text x="720" y="302" text-anchor="middle" class="svg-axis">2026-04</text>
+
+<text x="886" y="302" text-anchor="middle" class="svg-axis">2026-06</text>
+    </svg>
+  </figure>
+        <figure class="chart" id="monthly-events">
+    <figcaption>
+      <strong>Monthly Event Volume</strong>
+      <span>March 2026 has the event-count peak, but the spike includes heavy exception volume.</span>
+    </figcaption>
+    <svg viewBox="0 0 920 320" role="img" aria-labelledby="monthly-events-title monthly-events-desc">
+      <title id="monthly-events-title">Monthly Event Volume</title>
+      <desc id="monthly-events-desc">March 2026 has the event-count peak, but the spike includes heavy exception volume.</desc>
+      <g><line x1="56" x2="886" y1="262" y2="262" class="svg-grid"></line><text x="0" y="266" class="svg-axis">0</text></g>
+<g><line x1="56" x2="886" y1="155" y2="155" class="svg-grid"></line><text x="0" y="159" class="svg-axis">413,426</text></g>
+<g><line x1="56" x2="886" y1="48" y2="48" class="svg-grid"></line><text x="0" y="52" class="svg-axis">826,851</text></g>
+      <g>
+        <rect x="69.58" y="259.00" width="48.29" height="3.00" rx="5" fill="#c2410c"><title>2025-08: 1,502</title></rect>
+        <text x="93.73" y="298" text-anchor="middle" class="svg-axis">08</text>
+      </g>
+<g>
+        <rect x="145.04" y="259.00" width="48.29" height="3.00" rx="5" fill="#c2410c"><title>2025-09: 2,037</title></rect>
+        <text x="169.18" y="298" text-anchor="middle" class="svg-axis">09</text>
+      </g>
+<g>
+        <rect x="220.49" y="259.00" width="48.29" height="3.00" rx="5" fill="#c2410c"><title>2025-10: 4,366</title></rect>
+        <text x="244.64" y="298" text-anchor="middle" class="svg-axis">10</text>
+      </g>
+<g>
+        <rect x="295.95" y="259.00" width="48.29" height="3.00" rx="5" fill="#c2410c"><title>2025-11: 8,351</title></rect>
+        <text x="320.09" y="298" text-anchor="middle" class="svg-axis">11</text>
+      </g>
+<g>
+        <rect x="371.40" y="258.27" width="48.29" height="3.73" rx="5" fill="#c2410c"><title>2025-12: 14,398</title></rect>
+        <text x="395.55" y="298" text-anchor="middle" class="svg-axis">12</text>
+      </g>
+<g>
+        <rect x="446.85" y="250.36" width="48.29" height="11.64" rx="5" fill="#c2410c"><title>2026-01: 44,976</title></rect>
+        <text x="471.00" y="298" text-anchor="middle" class="svg-axis">01</text>
+      </g>
+<g>
+        <rect x="522.31" y="234.25" width="48.29" height="27.75" rx="5" fill="#c2410c"><title>2026-02: 107,221</title></rect>
+        <text x="546.45" y="298" text-anchor="middle" class="svg-axis">02</text>
+      </g>
+<g>
+        <rect x="597.76" y="48.00" width="48.29" height="214.00" rx="5" fill="#c2410c"><title>2026-03: 826,851</title></rect>
+        <text x="621.91" y="298" text-anchor="middle" class="svg-axis">03</text>
+      </g>
+<g>
+        <rect x="673.22" y="181.46" width="48.29" height="80.54" rx="5" fill="#c2410c"><title>2026-04: 311,206</title></rect>
+        <text x="697.36" y="298" text-anchor="middle" class="svg-axis">04</text>
+      </g>
+<g>
+        <rect x="748.67" y="207.31" width="48.29" height="54.69" rx="5" fill="#c2410c"><title>2026-05: 211,318</title></rect>
+        <text x="772.82" y="298" text-anchor="middle" class="svg-axis">05</text>
+      </g>
+<g>
+        <rect x="824.13" y="185.76" width="48.29" height="76.24" rx="5" fill="#c2410c"><title>2026-06: 294,587</title></rect>
+        <text x="848.27" y="298" text-anchor="middle" class="svg-axis">06</text>
+      </g>
+    </svg>
+  </figure>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Month</th><th class="num">Active users</th><th class="num">Sessions</th><th class="num">Events</th></tr></thead><tbody><tr><td>2025-08</td><td class="num">243</td><td class="num">185</td><td class="num">1,502</td></tr>
+<tr><td>2025-09</td><td class="num">311</td><td class="num">195</td><td class="num">2,037</td></tr>
+<tr><td>2025-10</td><td class="num">474</td><td class="num">292</td><td class="num">4,366</td></tr>
+<tr><td>2025-11</td><td class="num">1,150</td><td class="num">660</td><td class="num">8,351</td></tr>
+<tr><td>2025-12</td><td class="num">3,323</td><td class="num">1,981</td><td class="num">14,398</td></tr>
+<tr><td>2026-01</td><td class="num">7,890</td><td class="num">4,697</td><td class="num">44,976</td></tr>
+<tr><td>2026-02</td><td class="num">5,410</td><td class="num">3,429</td><td class="num">107,221</td></tr>
+<tr><td>2026-03</td><td class="num">6,084</td><td class="num">4,738</td><td class="num">826,851</td></tr>
+<tr><td>2026-04</td><td class="num">3,153</td><td class="num">3,261</td><td class="num">311,206</td></tr>
+<tr><td>2026-05</td><td class="num">2,602</td><td class="num">2,636</td><td class="num">211,318</td></tr>
+<tr><td>2026-06</td><td class="num">2,505</td><td class="num">2,576</td><td class="num">294,587</td></tr></tbody></table></div>
+    </section>
+
+    <section aria-labelledby="mcp-work">
+      <h2 id="mcp-work">MCP Work Happened</h2>
+      <p class="section-intro">The tool-call distribution is the strongest evidence that the app enabled real Figma workflows rather than only app starts or page views.</p>
+      <div class="chart-grid">
+        <figure class="chart" id="top-mcp-tools">
+    <figcaption>
+      <strong>Top Successful MCP Tool Calls</strong>
+      <span>Successful events by tool name.</span>
+    </figcaption>
+    <svg viewBox="0 0 920 390" role="img" aria-labelledby="top-mcp-tools-title top-mcp-tools-desc">
+      <title id="top-mcp-tools-title">Top Successful MCP Tool Calls</title>
+      <desc id="top-mcp-tools-desc">Successful events by tool name.</desc>
+      <g>
+        <text x="0" y="76" class="svg-label">create_text</text>
+        <rect x="240" y="58" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="58" width="562.00" height="22" rx="5" fill="#2563eb"></rect>
+        <text x="810" y="75" class="svg-value">105,643</text>
+      </g>
+<g>
+        <text x="0" y="114" class="svg-label">set_fill_color</text>
+        <rect x="240" y="96" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="96" width="492.41" height="22" rx="5" fill="#2563eb"></rect>
+        <text x="742.4063307554688" y="113" class="svg-value">92,561</text>
+      </g>
+<g>
+        <text x="0" y="152" class="svg-label">create_frame</text>
+        <rect x="240" y="134" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="134" width="279.34" height="22" rx="5" fill="#2563eb"></rect>
+        <text x="529.3375614096533" y="151" class="svg-value">52,509</text>
+      </g>
+<g>
+        <text x="0" y="190" class="svg-label">set_corner_radius</text>
+        <rect x="240" y="172" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="172" width="202.43" height="22" rx="5" fill="#2563eb"></rect>
+        <text x="452.4344821710856" y="189" class="svg-value">38,053</text>
+      </g>
+<g>
+        <text x="0" y="228" class="svg-label">set_text_content</text>
+        <rect x="240" y="210" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="210" width="201.33" height="22" rx="5" fill="#2563eb"></rect>
+        <text x="451.3279630453509" y="227" class="svg-value">37,845</text>
+      </g>
+<g>
+        <text x="0" y="266" class="svg-label">create_rectangle</text>
+        <rect x="240" y="248" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="248" width="185.02" height="22" rx="5" fill="#2563eb"></rect>
+        <text x="435.017445547741" y="265" class="svg-value">34,779</text>
+      </g>
+<g>
+        <text x="0" y="304" class="svg-label">get_node_info</text>
+        <rect x="240" y="286" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="286" width="174.15" height="22" rx="5" fill="#2563eb"></rect>
+        <text x="424.14908701949014" y="303" class="svg-value">32,736</text>
+      </g>
+<g>
+        <text x="0" y="342" class="svg-label">move_node</text>
+        <rect x="240" y="324" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="324" width="73.73" height="22" rx="5" fill="#2563eb"></rect>
+        <text x="323.7271565555692" y="341" class="svg-value">13,859</text>
+      </g>
+    </svg>
+  </figure>
+        <figure class="chart compact-chart" id="mcp-success-rate">
+    <figcaption>
+      <strong>MCP Call Outcome</strong>
+      <span>536,267 successful calls and 33,777 failed calls among explicit outcomes.</span>
+    </figcaption>
+    <div class="stacked" role="img" aria-label="MCP calls were 94.1% successful and 5.9% failed.">
+      <span class="success" style="width:94.07%"></span>
+      <span class="fail" style="width:5.93%"></span>
+    </div>
+    <div class="legend">
+      <span><i class="swatch success"></i>Success 94.1%</span>
+      <span><i class="swatch fail"></i>Failure 5.9%</span>
+    </div>
+  </figure>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>MCP tool</th><th class="num">Successful events</th><th class="num">Active users</th></tr></thead><tbody><tr><td>create_text</td><td class="num">105,643</td><td class="num">613</td></tr>
+<tr><td>set_fill_color</td><td class="num">92,561</td><td class="num">604</td></tr>
+<tr><td>create_frame</td><td class="num">52,509</td><td class="num">613</td></tr>
+<tr><td>set_corner_radius</td><td class="num">38,053</td><td class="num">504</td></tr>
+<tr><td>set_text_content</td><td class="num">37,845</td><td class="num">455</td></tr>
+<tr><td>create_rectangle</td><td class="num">34,779</td><td class="num">473</td></tr>
+<tr><td>get_node_info</td><td class="num">32,736</td><td class="num">842</td></tr>
+<tr><td>move_node</td><td class="num">13,859</td><td class="num">324</td></tr>
+<tr><td>export_node_as_image</td><td class="num">13,536</td><td class="num">455</td></tr>
+<tr><td>set_stroke_color</td><td class="num">10,910</td><td class="num">361</td></tr></tbody></table></div>
+    </section>
+
+    <section aria-labelledby="reach-platform">
+      <h2 id="reach-platform">Global Reach And Platform Shape</h2>
+      <p class="section-intro">GA4 recorded 165 country values and 37 language values. Because country includes '(not set)', the safer claim is broad global spread rather than an exact country count.</p>
+      <div class="chart-grid">
+        <figure class="chart" id="top-countries">
+    <figcaption>
+      <strong>Top Countries By Active Users</strong>
+      <span>Excludes &#39;(not set)&#39; for presentation clarity.</span>
+    </figcaption>
+    <svg viewBox="0 0 920 428" role="img" aria-labelledby="top-countries-title top-countries-desc">
+      <title id="top-countries-title">Top Countries By Active Users</title>
+      <desc id="top-countries-desc">Excludes &#39;(not set)&#39; for presentation clarity.</desc>
+      <g>
+        <text x="0" y="76" class="svg-label">South Korea</text>
+        <rect x="240" y="58" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="58" width="562.00" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="810" y="75" class="svg-value">4,263</text>
+      </g>
+<g>
+        <text x="0" y="114" class="svg-label">Russia</text>
+        <rect x="240" y="96" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="96" width="413.03" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="663.0297912268356" y="113" class="svg-value">3,133</text>
+      </g>
+<g>
+        <text x="0" y="152" class="svg-label">India</text>
+        <rect x="240" y="134" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="134" width="365.70" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="615.7020877316444" y="151" class="svg-value">2,774</text>
+      </g>
+<g>
+        <text x="0" y="190" class="svg-label">United States</text>
+        <rect x="240" y="172" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="172" width="269.86" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="519.8601923528032" y="189" class="svg-value">2,047</text>
+      </g>
+<g>
+        <text x="0" y="228" class="svg-label">Nigeria</text>
+        <rect x="240" y="210" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="210" width="240.46" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="490.46164672765656" y="227" class="svg-value">1,824</text>
+      </g>
+<g>
+        <text x="0" y="266" class="svg-label">Japan</text>
+        <rect x="240" y="248" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="248" width="105.60" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="355.597466572836" y="265" class="svg-value">801</text>
+      </g>
+<g>
+        <text x="0" y="304" class="svg-label">Indonesia</text>
+        <rect x="240" y="286" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="286" width="77.91" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="327.9127375087966" y="303" class="svg-value">591</text>
+      </g>
+<g>
+        <text x="0" y="342" class="svg-label">Brazil</text>
+        <rect x="240" y="324" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="324" width="74.49" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="324.48510438658224" y="341" class="svg-value">565</text>
+      </g>
+<g>
+        <text x="0" y="380" class="svg-label">Singapore</text>
+        <rect x="240" y="362" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="362" width="74.35" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="324.35327234342014" y="379" class="svg-value">564</text>
+      </g>
+    </svg>
+  </figure>
+        <figure class="chart" id="os-active-users">
+    <figcaption>
+      <strong>Operating System Active Users</strong>
+      <span>Windows drove breadth; MacOS generated deeper MCP call volume.</span>
+    </figcaption>
+    <svg viewBox="0 0 920 162" role="img" aria-labelledby="os-active-users-title os-active-users-desc">
+      <title id="os-active-users-title">Operating System Active Users</title>
+      <desc id="os-active-users-desc">Windows drove breadth; MacOS generated deeper MCP call volume.</desc>
+      <g>
+        <text x="0" y="76" class="svg-label">Windows</text>
+        <rect x="240" y="58" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="58" width="562.00" height="22" rx="5" fill="#0f766e"></rect>
+        <text x="810" y="75" class="svg-value">21,090</text>
+      </g>
+<g>
+        <text x="0" y="114" class="svg-label">MacOS</text>
+        <rect x="240" y="96" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="96" width="278.31" height="22" rx="5" fill="#0f766e"></rect>
+        <text x="528.3085822664771" y="113" class="svg-value">10,444</text>
+      </g>
+    </svg>
+  </figure>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3>Country Table</h3>
+          <div class="table-wrap"><table><thead><tr><th>Country</th><th class="num">Active users</th><th class="num">Sessions</th><th class="num">Events</th></tr></thead><tbody><tr><td>South Korea</td><td class="num">4,263</td><td class="num">5,599</td><td class="num">1,143,307</td></tr>
+<tr><td>Russia</td><td class="num">3,133</td><td class="num">1,969</td><td class="num">132,773</td></tr>
+<tr><td>India</td><td class="num">2,774</td><td class="num">1,839</td><td class="num">25,859</td></tr>
+<tr><td>United States</td><td class="num">2,047</td><td class="num">1,580</td><td class="num">132,057</td></tr>
+<tr><td>Nigeria</td><td class="num">1,824</td><td class="num">1,095</td><td class="num">9,811</td></tr>
+<tr><td>Japan</td><td class="num">801</td><td class="num">565</td><td class="num">5,070</td></tr>
+<tr><td>Indonesia</td><td class="num">591</td><td class="num">369</td><td class="num">3,678</td></tr>
+<tr><td>Brazil</td><td class="num">565</td><td class="num">405</td><td class="num">12,648</td></tr>
+<tr><td>Singapore</td><td class="num">564</td><td class="num">461</td><td class="num">77,761</td></tr></tbody></table></div>
+        </div>
+        <div>
+          <h3>Language Table</h3>
+          <div class="table-wrap"><table><thead><tr><th>Language</th><th class="num">Active users</th><th class="num">Sessions</th><th class="num">Events</th></tr></thead><tbody><tr><td>English</td><td class="num">18,875</td><td class="num">15,497</td><td class="num">1,485,167</td></tr>
+<tr><td>Russian</td><td class="num">4,094</td><td class="num">2,489</td><td class="num">21,686</td></tr>
+<tr><td>Korean</td><td class="num">2,766</td><td class="num">2,759</td><td class="num">264,062</td></tr>
+<tr><td>French</td><td class="num">1,209</td><td class="num">744</td><td class="num">5,224</td></tr>
+<tr><td>Chinese</td><td class="num">990</td><td class="num">620</td><td class="num">31,502</td></tr></tbody></table></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="first-launch">
+      <h2 id="first-launch">First Launch And First Connection</h2>
+      <p class="section-intro">This should be the center of the retrospective. The app's value was not only 'let AI control Figma'. It made the connection server visible, recoverable, and understandable.</p>
+      <div class="chart-grid">
+        <figure class="chart compact-chart" id="first-connection-funnel">
+    <figcaption>
+      <strong>First-Connection Journey</strong>
+      <span>The strongest product surface was launch, server state, tutorial, OAuth, and configuration.</span>
+    </figcaption>
+    <div class="funnel" role="img" aria-label="First connection journey from app start through configuration.">
+      <div class="funnel-row">
+            <div class="funnel-label">App start</div>
+            <div class="funnel-track"><span style="width:100.00%"></span></div>
+            <div class="funnel-value">30,912</div>
+          </div>
+<div class="funnel-row">
+            <div class="funnel-label">Start WebSocket server</div>
+            <div class="funnel-track"><span style="width:68.31%"></span></div>
+            <div class="funnel-value">21,115</div>
+          </div>
+<div class="funnel-row">
+            <div class="funnel-label">Tutorial shown</div>
+            <div class="funnel-track"><span style="width:22.24%"></span></div>
+            <div class="funnel-value">6,875</div>
+          </div>
+<div class="funnel-row">
+            <div class="funnel-label">Tutorial completed</div>
+            <div class="funnel-track"><span style="width:13.35%"></span></div>
+            <div class="funnel-value">4,126</div>
+          </div>
+<div class="funnel-row">
+            <div class="funnel-label">Direct OAuth completed</div>
+            <div class="funnel-track"><span style="width:5.24%"></span></div>
+            <div class="funnel-value">1,620</div>
+          </div>
+<div class="funnel-row">
+            <div class="funnel-label">Copy MCP config</div>
+            <div class="funnel-track"><span style="width:4.84%"></span></div>
+            <div class="funnel-value">1,495</div>
+          </div>
+    </div>
+  </figure>
+        <figure class="chart" id="page-title-flow">
+    <figcaption>
+      <strong>Connection Flow Screens</strong>
+      <span>Page titles confirm an explicit setup journey and diagnosis surface.</span>
+    </figcaption>
+    <svg viewBox="0 0 920 390" role="img" aria-labelledby="page-title-flow-title page-title-flow-desc">
+      <title id="page-title-flow-title">Connection Flow Screens</title>
+      <desc id="page-title-flow-desc">Page titles confirm an explicit setup journey and diagnosis surface.</desc>
+      <g>
+        <text x="0" y="76" class="svg-label">Step 1: Open MCP Configuration (windows)</text>
+        <rect x="240" y="58" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="58" width="562.00" height="22" rx="5" fill="#c2410c"></rect>
+        <text x="810" y="75" class="svg-value">6,772</text>
+      </g>
+<g>
+        <text x="0" y="114" class="svg-label">Step 2: Run Figma Plugin (windows)</text>
+        <rect x="240" y="96" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="96" width="294.20" height="22" rx="5" fill="#c2410c"></rect>
+        <text x="544.1952155936208" y="113" class="svg-value">3,545</text>
+      </g>
+<g>
+        <text x="0" y="152" class="svg-label">Step 3: Do MCP Magic (windows)</text>
+        <rect x="240" y="134" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="134" width="252.45" height="22" rx="5" fill="#c2410c"></rect>
+        <text x="502.4518606024808" y="151" class="svg-value">3,042</text>
+      </g>
+<g>
+        <text x="0" y="190" class="svg-label">Step 4: Figma OAuth (Optional) (windows)</text>
+        <rect x="240" y="172" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="172" width="237.85" height="22" rx="5" fill="#c2410c"></rect>
+        <text x="487.84583579444774" y="189" class="svg-value">2,866</text>
+      </g>
+<g>
+        <text x="0" y="228" class="svg-label">Step 1: Open MCP Configuration (mac)</text>
+        <rect x="240" y="210" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="210" width="205.31" height="22" rx="5" fill="#c2410c"></rect>
+        <text x="455.3142350856468" y="227" class="svg-value">2,474</text>
+      </g>
+<g>
+        <text x="0" y="266" class="svg-label">MCP Configuration Dialog</text>
+        <rect x="240" y="248" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="248" width="180.42" height="22" rx="5" fill="#c2410c"></rect>
+        <text x="430.41760189013587" y="265" class="svg-value">2,174</text>
+      </g>
+<g>
+        <text x="0" y="304" class="svg-label">Step 2: Run Figma Plugin (mac)</text>
+        <rect x="240" y="286" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="286" width="158.84" height="22" rx="5" fill="#c2410c"></rect>
+        <text x="408.84051978735977" y="303" class="svg-value">1,914</text>
+      </g>
+<g>
+        <text x="0" y="342" class="svg-label">Server Error Dialog</text>
+        <rect x="240" y="324" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="324" width="85.73" height="22" rx="5" fill="#c2410c"></rect>
+        <text x="335.727406969876" y="341" class="svg-value">1,033</text>
+      </g>
+    </svg>
+  </figure>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Event or action</th><th class="num">Active users</th><th class="num">Events</th></tr></thead><tbody><tr><td>app_start</td><td class="num">30,912</td><td class="num">40,514</td></tr>
+<tr><td>start_websocket_server</td><td class="num">21,115</td><td class="num">23,898</td></tr>
+<tr><td>direct_oauth_start</td><td class="num">3,016</td><td class="num">4,382</td></tr>
+<tr><td>copy_mcp_config</td><td class="num">1,495</td><td class="num">2,448</td></tr>
+<tr><td>report_issue</td><td class="num">99</td><td class="num">133</td></tr>
+<tr><td>Direct OAuth completed</td><td class="num">1,620</td><td class="num">2,124</td></tr>
+<tr><td>kill_all_servers</td><td class="num">540</td><td class="num">1,017</td></tr></tbody></table></div>
+    </section>
+
+    <section aria-labelledby="operations">
+      <h2 id="operations">Operational Burden</h2>
+      <p class="section-intro">The app worked, but it also behaved like a real desktop product with a broad failure surface: port conflicts, server restarts, OAuth, WebSocket state, logs, and network issues.</p>
+      <div class="chart-grid">
+        <figure class="chart" id="exception-affected-users">
+    <figcaption>
+      <strong>Exception Messages By Affected Users</strong>
+      <span>Affected user count is safer than raw repeated event volume for operational prioritization.</span>
+    </figcaption>
+    <svg viewBox="0 0 920 352" role="img" aria-labelledby="exception-affected-users-title exception-affected-users-desc">
+      <title id="exception-affected-users-title">Exception Messages By Affected Users</title>
+      <desc id="exception-affected-users-desc">Affected user count is safer than raw repeated event volume for operational prioritization.</desc>
+      <g>
+        <text x="0" y="76" class="svg-label">Address already in use: bind</text>
+        <rect x="240" y="58" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="58" width="562.00" height="22" rx="5" fill="#be123c"></rect>
+        <text x="810" y="75" class="svg-value">1,539</text>
+      </g>
+<g>
+        <text x="0" y="114" class="svg-label">Attempted to register a second handler for &#39;server:start&#39;</text>
+        <rect x="240" y="96" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="96" width="449.53" height="22" rx="5" fill="#be123c"></rect>
+        <text x="699.5269655620533" y="113" class="svg-value">1,231</text>
+      </g>
+<g>
+        <text x="0" y="152" class="svg-label">Address already in use</text>
+        <rect x="240" y="134" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="134" width="201.58" height="22" rx="5" fill="#be123c"></rect>
+        <text x="451.57504873294346" y="151" class="svg-value">552</text>
+      </g>
+<g>
+        <text x="0" y="190" class="svg-label">Must join a channel before sending commands</text>
+        <rect x="240" y="172" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="172" width="54.05" height="22" rx="5" fill="#be123c"></rect>
+        <text x="304.0454840805718" y="189" class="svg-value">148</text>
+      </g>
+<g>
+        <text x="0" y="228" class="svg-label">Timed out waiting for 30000 ms</text>
+        <rect x="240" y="210" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="210" width="37.25" height="22" rx="5" fill="#be123c"></rect>
+        <text x="287.2475633528265" y="227" class="svg-value">102</text>
+      </g>
+<g>
+        <text x="0" y="266" class="svg-label">Not connected to Figma</text>
+        <rect x="240" y="248" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="248" width="11.69" height="22" rx="5" fill="#be123c"></rect>
+        <text x="261.685510071475" y="265" class="svg-value">32</text>
+      </g>
+<g>
+        <text x="0" y="304" class="svg-label">write EPIPE</text>
+        <rect x="240" y="286" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="286" width="4.38" height="22" rx="5" fill="#be123c"></rect>
+        <text x="254.38206627680313" y="303" class="svg-value">12</text>
+      </g>
+    </svg>
+  </figure>
+        <figure class="chart" id="custom-error-affected-users">
+    <figcaption>
+      <strong>Custom Error Messages By Affected Users</strong>
+      <span>Timeout and port availability issues reached many users.</span>
+    </figcaption>
+    <svg viewBox="0 0 920 352" role="img" aria-labelledby="custom-error-affected-users-title custom-error-affected-users-desc">
+      <title id="custom-error-affected-users-title">Custom Error Messages By Affected Users</title>
+      <desc id="custom-error-affected-users-desc">Timeout and port availability issues reached many users.</desc>
+      <g>
+        <text x="0" y="76" class="svg-label">Request timed out</text>
+        <rect x="240" y="58" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="58" width="562.00" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="810" y="75" class="svg-value">1,056</text>
+      </g>
+<g>
+        <text x="0" y="114" class="svg-label">Failed to make WebSocket port 3055 available</text>
+        <rect x="240" y="96" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="96" width="130.92" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="380.9204545454545" y="113" class="svg-value">246</text>
+      </g>
+<g>
+        <text x="0" y="152" class="svg-label">Timed out waiting for 30000 ms</text>
+        <rect x="240" y="134" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="134" width="48.96" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="298.96212121212125" y="151" class="svg-value">92</text>
+      </g>
+<g>
+        <text x="0" y="190" class="svg-label">Error executing command</text>
+        <rect x="240" y="172" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="172" width="47.37" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="297.3655303030303" y="189" class="svg-value">89</text>
+      </g>
+<g>
+        <text x="0" y="228" class="svg-label">Not connected to Figma</text>
+        <rect x="240" y="210" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="210" width="15.43" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="265.4337121212121" y="227" class="svg-value">29</text>
+      </g>
+<g>
+        <text x="0" y="266" class="svg-label">cannot convert to object</text>
+        <rect x="240" y="248" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="248" width="10.64" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="260.6439393939394" y="265" class="svg-value">20</text>
+      </g>
+<g>
+        <text x="0" y="304" class="svg-label">Unknown command: set_auto_layout</text>
+        <rect x="240" y="286" width="562" height="22" rx="5" class="svg-track"></rect>
+        <rect x="240" y="286" width="3.00" height="22" rx="5" fill="#6d28d9"></rect>
+        <text x="253" y="303" class="svg-value">5</text>
+      </g>
+    </svg>
+  </figure>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Error message</th><th class="num">Events</th><th class="num">Active users</th></tr></thead><tbody><tr><td>write EPIPE</td><td class="num">897,378</td><td class="num">12</td></tr>
+<tr><td>net::ERR_TUNNEL_CONNECTION_FAILED</td><td class="num">99,996</td><td class="num">1</td></tr>
+<tr><td>write EIO</td><td class="num">56,708</td><td class="num">1</td></tr>
+<tr><td>EPIPE: broken pipe, write</td><td class="num">20,036</td><td class="num">1</td></tr>
+<tr><td>Attempted to register a second handler for &#39;server:start&#39;</td><td class="num">2,605</td><td class="num">1,231</td></tr>
+<tr><td>Address already in use: bind</td><td class="num">1,539</td><td class="num">1,539</td></tr>
+<tr><td>Address already in use</td><td class="num">756</td><td class="num">552</td></tr>
+<tr><td>Timed out waiting for 30000 ms</td><td class="num">650</td><td class="num">102</td></tr>
+<tr><td>Not connected to Figma</td><td class="num">334</td><td class="num">32</td></tr>
+<tr><td>Must join a channel before sending commands</td><td class="num">268</td><td class="num">148</td></tr></tbody></table></div>
+      <p class="section-intro">A key caveat: <code>write EPIPE</code> produced 897,378 events from only 12 active users. The operational story should therefore combine raw volume with affected user count.</p>
+    </section>
+
+    <section aria-labelledby="kpt">
+      <h2 id="kpt">KPT Candidates</h2>
+      <div class="two-col">
+        <div>
+          <h3>Keep</h3>
+          <ul class="notes">
+            <li>Focused on reducing anxiety from first launch to first connection.</li>
+            <li>Turned the Figma MCP workflow into an installable desktop experience.</li>
+            <li>Instrumented enough analytics to verify usage scale, geography, OS distribution, MCP success, onboarding behavior, and operational burden.</li>
+            <li>Built a product, not just a test environment.</li>
+          </ul>
+          <h3>Problem</h3>
+          <ul class="notes">
+            <li>Once the core capability is absorbed by official platform features, maintaining the same update intensity becomes hard to justify.</li>
+            <li>Exception events accumulated heavily and made some event-count metrics hard to interpret.</li>
+            <li>Connection, port, server state, OAuth, and logs became a larger product surface than expected.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Try / Learning</h3>
+          <ul class="notes">
+            <li>Define the user context that platforms are less likely to absorb, not only the feature.</li>
+            <li>Separate first successful connection, reconnection, config copy, success, failure, and diagnostic actions more rigorously.</li>
+            <li>Track affected active users alongside raw error-event counts.</li>
+            <li>Decide future major updates by combining usage, platform absorption risk, operational burden, and personal sustainability.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="source-details">
+      <h2 id="source-details">Source Details And Caveats</h2>
+      <p class="section-intro">This export is a standalone static HTML artifact. It does not include the MCP app shell, interactive top bar, refresh controls, export controls, or app-only navigation.</p>
+      <div class="table-wrap"><table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Original artifact URL</td><td><a href="https://mcp-server-dataanalyticswidgets-d90d6b74b2c37858.web-sandbox.oaiusercontent.com/?app=skybridge">https://mcp-server-dataanalyticswidgets-d90d6b74b2c37858.web-sandbox.oaiusercontent.com/?app=skybridge</a></td></tr>
+<tr><td>Artifact generated at</td><td>2026-07-01T00:00:00+09:00</td></tr>
+<tr><td>Static export file</td><td><code>talk-to-figma-desktop-ga4-static-report.html</code></td></tr>
+<tr><td>GA4 source</td><td>GA4 Analytics MCP</td></tr>
+<tr><td>Property</td><td>Figma MCP Agent / <code>properties/499789310</code></td></tr>
+<tr><td>Requested range</td><td>2025-07-01 to 2026-06-30</td></tr>
+<tr><td>Observed effective range</td><td>2025-08 to 2026-06</td></tr>
+<tr><td>Timezone</td><td>Asia/Seoul</td></tr>
+<tr><td>Local source snapshots</td><td><code>docs/analytics/ga4/talk-to-figma-desktop-ga4-analysis.en.md</code>, <code>data/ga4/talk-to-figma-desktop-ga4-raw-data.json</code>, <code>data/ga4/talk-to-figma-desktop-ga4-raw-data.csv</code>, <code>data/ga4/talk-to-figma-desktop-ga4-raw-data.md</code></td></tr></tbody></table></div>
+      <ul class="notes">
+        <li>Country row_count is 165, but this JSON stores the top rows used in the analysis snapshot. See the Markdown file for more displayed country rows.</li>
+<li>Region and city reports were dominated by &#39;(not set)&#39; values and are not reliable for fine-grained location claims.</li>
+<li>Browser, customEvent:platform, and customEvent:os_info are mostly &#39;(not set)&#39; and should not be used as strong segmentation evidence.</li>
+<li>Exception event counts are inflated by repeated messages from very small numbers of users, especially write EPIPE.</li>
+<li>GA4 funnel report semantics are directional and ordered; funnel counts do not equal broad event totals.</li>
+        <li>Total event count includes 1,081,199 <code>app_exception</code> events, so it should not be used as a pure usage metric.</li>
+        <li>GA4 funnel numbers are ordered funnel results and should not be directly compared with broad event totals.</li>
+        <li><code>averageSessionDuration</code> looks unusually high in this desktop telemetry context and is intentionally not used as a primary claim.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

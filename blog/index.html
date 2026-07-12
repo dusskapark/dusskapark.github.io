@@ -16,7 +16,8 @@ featured_image: /images/social.jpeg
 	<section class="all-posts">
 		<div class="wrap">
 			<div class="posts__list grid">
-				{% for post in paginator.posts %}
+				{% assign visible_posts = paginator.posts | where_exp: "post", "post.visible != false" %}
+				{% for post in visible_posts %}
 				{% if forloop.first == true %}
 				<article class="post post-new">
 					<div class="grid">

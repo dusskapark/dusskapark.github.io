@@ -1,0 +1,109 @@
+dataset,dimension_1,dimension_2,dimension_3,metric_1_name,metric_1_value,metric_2_name,metric_2_value,metric_3_name,metric_3_value,metric_4_name,metric_4_value
+overall,total,,,activeUsers,31360,totalUsers,31560,sessions,24429,eventCount,1826813
+overall,total,,,screenPageViews,52463,averageSessionDuration,9531.267138194606,keyEvents,0,
+event,eventName,app_exception,,eventCount,1081199,activeUsers,3684,totalUsers,3684,
+event,eventName,mcp_tool_call,,eventCount,570373,activeUsers,1633,totalUsers,1633,
+event,eventName,page_view,,eventCount,52463,activeUsers,15616,totalUsers,15616,
+event,eventName,app_start,,eventCount,40514,activeUsers,30912,totalUsers,31001,
+event,eventName,user_action,,eventCount,37558,activeUsers,21621,totalUsers,21713,
+event,eventName,server_action,,eventCount,21247,activeUsers,4500,totalUsers,4500,
+event,eventName,tutorial_shown,,eventCount,8863,activeUsers,6875,totalUsers,6875,
+event,eventName,tutorial_completed,,eventCount,4316,activeUsers,4126,totalUsers,4126,
+country,country,South Korea,,activeUsers,4263,totalUsers,4263,sessions,5599,eventCount,1143307
+country,country,(not set),,activeUsers,4064,totalUsers,4278,sessions,2786,eventCount,153177
+country,country,Russia,,activeUsers,3133,totalUsers,3133,sessions,1969,eventCount,132773
+country,country,India,,activeUsers,2774,totalUsers,2774,sessions,1839,eventCount,25859
+country,country,United States,,activeUsers,2047,totalUsers,2047,sessions,1580,eventCount,132057
+country,country,Nigeria,,activeUsers,1824,totalUsers,1824,sessions,1095,eventCount,9811
+country,country,Japan,,activeUsers,801,totalUsers,801,sessions,565,eventCount,5070
+country,country,Indonesia,,activeUsers,591,totalUsers,591,sessions,369,eventCount,3678
+country,country,Brazil,,activeUsers,565,totalUsers,565,sessions,405,eventCount,12648
+country,country,Singapore,,activeUsers,564,totalUsers,564,sessions,461,eventCount,77761
+operating_system,operatingSystem,Windows,,activeUsers,21090,totalUsers,21090,sessions,14337,eventCount,312554
+operating_system,operatingSystem,MacOS,,activeUsers,10444,totalUsers,10444,sessions,10049,eventCount,1513895
+device_category,deviceCategory,desktop,,activeUsers,31360,sessions,24429,eventCount,1826813,
+monthly,yearMonth,202508,,activeUsers,243,totalUsers,445,sessions,185,eventCount,1502
+monthly,yearMonth,202509,,activeUsers,311,totalUsers,318,sessions,195,eventCount,2037
+monthly,yearMonth,202510,,activeUsers,474,totalUsers,474,sessions,292,eventCount,4366
+monthly,yearMonth,202511,,activeUsers,1150,totalUsers,1150,sessions,660,eventCount,8351
+monthly,yearMonth,202512,,activeUsers,3323,totalUsers,3324,sessions,1981,eventCount,14398
+monthly,yearMonth,202601,,activeUsers,7890,totalUsers,7894,sessions,4697,eventCount,44976
+monthly,yearMonth,202602,,activeUsers,5410,totalUsers,5410,sessions,3429,eventCount,107221
+monthly,yearMonth,202603,,activeUsers,6084,totalUsers,6084,sessions,4738,eventCount,826851
+monthly,yearMonth,202604,,activeUsers,3153,totalUsers,3153,sessions,3261,eventCount,311206
+monthly,yearMonth,202605,,activeUsers,2602,totalUsers,2602,sessions,2636,eventCount,211318
+monthly,yearMonth,202606,,activeUsers,2505,totalUsers,2505,sessions,2576,eventCount,294587
+mcp_success,success,1,,eventCount,536267,activeUsers,1513,,,
+mcp_success,success,0,,eventCount,33777,activeUsers,1357,,,
+mcp_tool,tool_name,create_text,success=1,eventCount,105643,activeUsers,613,,,
+mcp_tool,tool_name,set_fill_color,success=1,eventCount,92561,activeUsers,604,,,
+mcp_tool,tool_name,create_frame,success=1,eventCount,52509,activeUsers,613,,,
+mcp_tool,tool_name,set_corner_radius,success=1,eventCount,38053,activeUsers,504,,,
+mcp_tool,tool_name,set_text_content,success=1,eventCount,37845,activeUsers,455,,,
+mcp_tool,tool_name,create_rectangle,success=1,eventCount,34779,activeUsers,473,,,
+mcp_tool,tool_name,get_node_info,success=1,eventCount,32736,activeUsers,842,,,
+app_version,app_version,1.0.9,,activeUsers,14384,eventCount,51954,,,
+app_version,app_version,1.1.0,,activeUsers,4176,eventCount,14523,,,
+app_version,app_version,1.0.8,,activeUsers,3986,eventCount,28634,,,
+app_version,app_version,2.0.16,,activeUsers,3281,eventCount,753616,,,
+app_version,app_version,3.0.5,,activeUsers,3185,eventCount,464772,,,
+language,language,English,,activeUsers,18875,sessions,15497,eventCount,1485167,
+language,language,Russian,,activeUsers,4094,sessions,2489,eventCount,21686,
+language,language,Korean,,activeUsers,2766,sessions,2759,eventCount,264062,
+tutorial,eventName,tutorial_shown,,activeUsers,6875,eventCount,8863,,,
+tutorial,eventName,tutorial_completed,,activeUsers,4126,eventCount,4316,,,
+tutorial,eventName,tutorial_skipped,,activeUsers,1392,eventCount,1419,,,
+exception_type,exception_type,Error,,eventCount,1076870,activeUsers,1319,,,
+exception_type,exception_type,BindException,,eventCount,2296,activeUsers,2092,,,
+exception_message,exception_message,write EPIPE,,eventCount,897378,activeUsers,12,,,
+exception_message,exception_message,net::ERR_TUNNEL_CONNECTION_FAILED,,eventCount,99996,activeUsers,1,,,
+exception_message,exception_message,write EIO,,eventCount,56708,activeUsers,1,,,
+exception_message,exception_message,Address already in use: bind,,eventCount,1539,activeUsers,1539,,,
+mcp_country,country,South Korea,,activeUsers,913,eventCount,391543,,,
+mcp_country,country,United States,,activeUsers,87,eventCount,18916,,,
+mcp_country,country,India,,activeUsers,50,eventCount,14100,,,
+mcp_country,country,Singapore,,activeUsers,65,eventCount,4565,,,
+mcp_os_success,operatingSystem,MacOS,success=1,eventCount,339816,activeUsers,1157,,,
+mcp_os_success,operatingSystem,MacOS,success=0,eventCount,26702,activeUsers,1048,,,
+mcp_os_success,operatingSystem,Windows,success=1,eventCount,196451,activeUsers,356,,,
+mcp_os_success,operatingSystem,Windows,success=0,eventCount,7075,activeUsers,309,,,
+weekly,yearWeek,202532,,activeUsers,18,sessions,51,eventCount,240,
+weekly,yearWeek,202552,,activeUsers,1210,sessions,715,eventCount,4869,
+weekly,yearWeek,202603,,activeUsers,2022,sessions,1219,eventCount,8425,
+weekly,yearWeek,202613,,activeUsers,1304,sessions,1148,eventCount,322864,
+weekly,yearWeek,202625,,activeUsers,701,sessions,667,eventCount,224812,
+action,customEvent:action,start_websocket_server,,eventCount,23898,activeUsers,21115,,,
+action,customEvent:action,start,,eventCount,16870,activeUsers,4719,,,
+action,customEvent:action,copy_mcp_config,,eventCount,2448,activeUsers,1495,,,
+action,customEvent:action,report_issue,,eventCount,133,activeUsers,99,,,
+error_message,customEvent:error_message,Request timed out,,eventCount,18105,activeUsers,1056,,,
+error_message,customEvent:error_message,Failed to make WebSocket port 3055 available,,eventCount,1610,activeUsers,246,,,
+error_message,customEvent:error_message,Not connected to Figma,,eventCount,285,activeUsers,29,,,
+acquisition,firstUserSourceMedium,(direct) / (none),,activeUsers,31360,sessions,24429,eventCount,1826813,
+acquisition,sessionSourceMedium,(not set),,activeUsers,31360,sessions,24429,eventCount,1826813,
+category_label,customEvent:category,server_management,WebSocket server started,activeUsers,21115,eventCount,23898,,,
+category_label,customEvent:category,figma,Direct OAuth from Menu,activeUsers,3016,eventCount,4382,,,
+category_label,customEvent:category,ui_interaction,config_dialog_copy_button,activeUsers,1495,eventCount,2448,,,
+category_label,customEvent:category,direct_oauth_success,Direct OAuth completed,activeUsers,1620,eventCount,2124,,,
+category_label,customEvent:category,emergency_action,All servers killed,activeUsers,540,eventCount,1017,,,
+category_label,customEvent:category,ui_interaction,Report an Issue,activeUsers,99,eventCount,133,,,
+page_title,pageTitle,Step 1: Open MCP Configuration (windows),,activeUsers,6772,screenPageViews,7775,eventCount,7775,
+page_title,pageTitle,Step 2: Run Figma Plugin (windows),,activeUsers,3545,screenPageViews,4261,eventCount,4261,
+page_title,pageTitle,Step 3: Do MCP Magic (windows),,activeUsers,3042,screenPageViews,3439,eventCount,3439,
+page_title,pageTitle,Step 4: Figma OAuth (Optional) (windows),,activeUsers,2866,screenPageViews,3016,eventCount,3016,
+page_title,pageTitle,Step 1: Open MCP Configuration (mac),,activeUsers,2474,screenPageViews,3232,eventCount,3232,
+page_title,pageTitle,MCP Configuration Dialog,,activeUsers,2174,screenPageViews,3675,eventCount,3675,
+page_title,pageTitle,Server Error Dialog,,activeUsers,1033,screenPageViews,1925,eventCount,1925,
+page_path,pagePath,/tutorial/windows/step1,,activeUsers,6772,screenPageViews,7775,eventCount,7775,
+page_path,pagePath,/tutorial/windows/step2,,activeUsers,3543,screenPageViews,4259,eventCount,4259,
+page_path,pagePath,/tutorial/windows/step3,,activeUsers,3043,screenPageViews,3443,eventCount,3443,
+page_path,pagePath,/tutorial/windows/step4,,activeUsers,2869,screenPageViews,3023,eventCount,3023,
+page_path,pagePath,/tutorial/mac/step1,,activeUsers,2474,screenPageViews,3232,eventCount,3232,
+page_path,pagePath,/mcp/config,,activeUsers,2174,screenPageViews,3675,eventCount,3675,
+page_path,pagePath,/error/server-connection,,activeUsers,1033,screenPageViews,1925,eventCount,1925,
+audit_no_new_insight,browser,(not set),,activeUsers,31352,sessions,24429,eventCount,1826807,
+audit_no_new_insight,newVsReturning,new,,activeUsers,30864,sessions,24065,eventCount,1823621,
+audit_no_new_insight,customEvent:value,(not set),,activeUsers,30915,eventCount,1823862,,,
+audit_no_new_insight,pageReferrer,empty,,activeUsers,31360,screenPageViews,52463,eventCount,1826813,
+audit_no_new_insight,firstUserDefaultChannelGroup,Direct,,activeUsers,31360,sessions,24429,eventCount,1826813,
+audit_no_new_insight,streamName,TalkToFigma Desktop,,activeUsers,31360,sessions,24429,eventCount,1826813,

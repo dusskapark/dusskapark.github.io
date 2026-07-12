@@ -1,0 +1,10 @@
+{
+  "repository": "grab/TalkToFigmaDesktop",
+  "included_assets": [
+    ".dmg",
+    ".Setup.exe"
+  ],
+  "macos_dmg_downloads": 382,
+  "windows_setup_exe_downloads": 385,
+  "source": "Public GitHub Release assets only; counts are asset downloads, not unique users."
+}

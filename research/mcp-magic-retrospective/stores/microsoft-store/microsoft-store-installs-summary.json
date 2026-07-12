@@ -1,0 +1,34 @@
+{
+  "metric": "Apps and Games Installs",
+  "period_granularity": "weekly",
+  "date_range": {
+    "start": "2025-07-07",
+    "end": "2026-07-06"
+  },
+  "weeks": 53,
+  "exports": {
+    "export_1": {
+      "file": "apps-and-games-installs-export-1.csv",
+      "sha256": "8c15b42add5f7a51f5a875797ccef1e694b1a6c58a705d6753d77c26433dda15",
+      "total_installs": 1106,
+      "nonzero_weeks": 18,
+      "first_nonzero_week": "2026-03-09T00:00:00",
+      "peak_week": "2026-03-16T00:00:00",
+      "peak_week_installs": 233
+    },
+    "export_2": {
+      "file": "apps-and-games-installs-export-2.csv",
+      "sha256": "66c239343fd37b15adec18444425aea7d742452f1a11c514d3aa67de59de0d65",
+      "total_installs": 7870,
+      "nonzero_weeks": 37,
+      "first_nonzero_week": "2025-10-27T00:00:00",
+      "peak_week": "2026-01-12T00:00:00",
+      "peak_week_installs": 701
+    }
+  },
+  "combined_total_installs": 8976,
+  "combined_nonzero_weeks": 37,
+  "combined_peak_week": "2026-01-12",
+  "combined_peak_week_installs": 701,
+  "source_note": "The source CSV files do not include an app or segment identifier. They are preserved as export_1 and export_2 and combined only because the owner confirmed that they are two parts of the Windows Store count."
+}

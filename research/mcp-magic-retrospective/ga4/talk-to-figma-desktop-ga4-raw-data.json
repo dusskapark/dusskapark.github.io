@@ -1,0 +1,248 @@
+{
+  "status": "raw data snapshot",
+  "property": "properties/499789310",
+  "property_display_name": "Figma MCP Agent",
+  "requested_date_range": {
+    "start_date": "2025-07-01",
+    "end_date": "2026-06-30"
+  },
+  "observed_effective_range": {
+    "first_month_with_data": "2025-08",
+    "last_month_with_data": "2026-06"
+  },
+  "metadata": {
+    "source": "GA4 Analytics MCP",
+    "time_zone": "Asia/Seoul",
+    "currency_code": "KRW"
+  },
+  "reports": {
+    "overall_totals": {
+      "dimensions": [],
+      "metrics": {
+        "activeUsers": 31360,
+        "totalUsers": 31560,
+        "sessions": 24429,
+        "eventCount": 1826813,
+        "screenPageViews": 52463,
+        "averageSessionDuration": 9531.267138194606,
+        "keyEvents": 0
+      }
+    },
+    "top_events": [
+      {"eventName": "app_exception", "eventCount": 1081199, "activeUsers": 3684, "totalUsers": 3684},
+      {"eventName": "mcp_tool_call", "eventCount": 570373, "activeUsers": 1633, "totalUsers": 1633},
+      {"eventName": "page_view", "eventCount": 52463, "activeUsers": 15616, "totalUsers": 15616},
+      {"eventName": "app_start", "eventCount": 40514, "activeUsers": 30912, "totalUsers": 31001},
+      {"eventName": "user_action", "eventCount": 37558, "activeUsers": 21621, "totalUsers": 21713},
+      {"eventName": "server_action", "eventCount": 21247, "activeUsers": 4500, "totalUsers": 4500},
+      {"eventName": "tutorial_shown", "eventCount": 8863, "activeUsers": 6875, "totalUsers": 6875},
+      {"eventName": "oauth_action", "eventCount": 6860, "activeUsers": 2372, "totalUsers": 2372},
+      {"eventName": "tutorial_completed", "eventCount": 4316, "activeUsers": 4126, "totalUsers": 4126},
+      {"eventName": "tutorial_skipped", "eventCount": 1419, "activeUsers": 1392, "totalUsers": 1392}
+    ],
+    "country_top_by_active_users": {
+      "row_count": 165,
+      "rows": [
+        {"country": "South Korea", "activeUsers": 4263, "totalUsers": 4263, "sessions": 5599, "eventCount": 1143307},
+        {"country": "(not set)", "activeUsers": 4064, "totalUsers": 4278, "sessions": 2786, "eventCount": 153177},
+        {"country": "Russia", "activeUsers": 3133, "totalUsers": 3133, "sessions": 1969, "eventCount": 132773},
+        {"country": "India", "activeUsers": 2774, "totalUsers": 2774, "sessions": 1839, "eventCount": 25859},
+        {"country": "United States", "activeUsers": 2047, "totalUsers": 2047, "sessions": 1580, "eventCount": 132057},
+        {"country": "Nigeria", "activeUsers": 1824, "totalUsers": 1824, "sessions": 1095, "eventCount": 9811},
+        {"country": "Japan", "activeUsers": 801, "totalUsers": 801, "sessions": 565, "eventCount": 5070},
+        {"country": "Indonesia", "activeUsers": 591, "totalUsers": 591, "sessions": 369, "eventCount": 3678},
+        {"country": "Brazil", "activeUsers": 565, "totalUsers": 565, "sessions": 405, "eventCount": 12648},
+        {"country": "Singapore", "activeUsers": 564, "totalUsers": 564, "sessions": 461, "eventCount": 77761}
+      ]
+    },
+    "operating_system": [
+      {"operatingSystem": "Windows", "activeUsers": 21090, "totalUsers": 21090, "sessions": 14337, "eventCount": 312554},
+      {"operatingSystem": "MacOS", "activeUsers": 10444, "totalUsers": 10444, "sessions": 10049, "eventCount": 1513895},
+      {"operatingSystem": "(not set)", "activeUsers": 36, "totalUsers": 249, "sessions": 62, "eventCount": 358},
+      {"operatingSystem": "Mac OS X", "activeUsers": 2, "totalUsers": 2, "sessions": 2, "eventCount": 5},
+      {"operatingSystem": "macOS", "activeUsers": 0, "totalUsers": 1, "sessions": 0, "eventCount": 1}
+    ],
+    "device_category": [
+      {"deviceCategory": "desktop", "activeUsers": 31360, "sessions": 24429, "eventCount": 1826813}
+    ],
+    "monthly_trend": [
+      {"yearMonth": "202508", "activeUsers": 243, "totalUsers": 445, "sessions": 185, "eventCount": 1502},
+      {"yearMonth": "202509", "activeUsers": 311, "totalUsers": 318, "sessions": 195, "eventCount": 2037},
+      {"yearMonth": "202510", "activeUsers": 474, "totalUsers": 474, "sessions": 292, "eventCount": 4366},
+      {"yearMonth": "202511", "activeUsers": 1150, "totalUsers": 1150, "sessions": 660, "eventCount": 8351},
+      {"yearMonth": "202512", "activeUsers": 3323, "totalUsers": 3324, "sessions": 1981, "eventCount": 14398},
+      {"yearMonth": "202601", "activeUsers": 7890, "totalUsers": 7894, "sessions": 4697, "eventCount": 44976},
+      {"yearMonth": "202602", "activeUsers": 5410, "totalUsers": 5410, "sessions": 3429, "eventCount": 107221},
+      {"yearMonth": "202603", "activeUsers": 6084, "totalUsers": 6084, "sessions": 4738, "eventCount": 826851},
+      {"yearMonth": "202604", "activeUsers": 3153, "totalUsers": 3153, "sessions": 3261, "eventCount": 311206},
+      {"yearMonth": "202605", "activeUsers": 2602, "totalUsers": 2602, "sessions": 2636, "eventCount": 211318},
+      {"yearMonth": "202606", "activeUsers": 2505, "totalUsers": 2505, "sessions": 2576, "eventCount": 294587}
+    ],
+    "mcp_success": {
+      "filter": "eventName = mcp_tool_call",
+      "rows": [
+        {"success": "1", "eventCount": 536267, "activeUsers": 1513},
+        {"success": "0", "eventCount": 33777, "activeUsers": 1357},
+        {"success": "(not set)", "eventCount": 4, "activeUsers": 1}
+      ],
+      "derived": {
+        "success_rate_by_event_count": 0.9407466785072729
+      }
+    },
+    "top_successful_mcp_tools": [
+      {"tool_name": "create_text", "success": "1", "eventCount": 105643, "activeUsers": 613},
+      {"tool_name": "set_fill_color", "success": "1", "eventCount": 92561, "activeUsers": 604},
+      {"tool_name": "create_frame", "success": "1", "eventCount": 52509, "activeUsers": 613},
+      {"tool_name": "set_corner_radius", "success": "1", "eventCount": 38053, "activeUsers": 504},
+      {"tool_name": "set_text_content", "success": "1", "eventCount": 37845, "activeUsers": 455},
+      {"tool_name": "create_rectangle", "success": "1", "eventCount": 34779, "activeUsers": 473},
+      {"tool_name": "get_node_info", "success": "1", "eventCount": 32736, "activeUsers": 842},
+      {"tool_name": "move_node", "success": "1", "eventCount": 13859, "activeUsers": 324},
+      {"tool_name": "export_node_as_image", "success": "1", "eventCount": 13536, "activeUsers": 455},
+      {"tool_name": "set_stroke_color", "success": "1", "eventCount": 10910, "activeUsers": 361}
+    ],
+    "app_versions_top": [
+      {"app_version": "1.0.9", "activeUsers": 14384, "eventCount": 51954},
+      {"app_version": "1.1.0", "activeUsers": 4176, "eventCount": 14523},
+      {"app_version": "1.0.8", "activeUsers": 3986, "eventCount": 28634},
+      {"app_version": "2.0.16", "activeUsers": 3281, "eventCount": 753616},
+      {"app_version": "3.0.5", "activeUsers": 3185, "eventCount": 464772},
+      {"app_version": "1.99.0", "activeUsers": 1240, "eventCount": 4855},
+      {"app_version": "2.0.14", "activeUsers": 696, "eventCount": 259155},
+      {"app_version": "2.0.15", "activeUsers": 226, "eventCount": 119088}
+    ],
+    "languages_top": [
+      {"language": "English", "activeUsers": 18875, "sessions": 15497, "eventCount": 1485167},
+      {"language": "Russian", "activeUsers": 4094, "sessions": 2489, "eventCount": 21686},
+      {"language": "Korean", "activeUsers": 2766, "sessions": 2759, "eventCount": 264062},
+      {"language": "French", "activeUsers": 1209, "sessions": 744, "eventCount": 5224},
+      {"language": "Chinese", "activeUsers": 990, "sessions": 620, "eventCount": 31502}
+    ],
+    "tutorial_events": [
+      {"eventName": "tutorial_shown", "activeUsers": 6875, "eventCount": 8863},
+      {"eventName": "tutorial_completed", "activeUsers": 4126, "eventCount": 4316},
+      {"eventName": "tutorial_skipped", "activeUsers": 1392, "eventCount": 1419}
+    ],
+    "app_exception_messages_top": [
+      {"exception_message": "write EPIPE", "eventCount": 897378, "activeUsers": 12},
+      {"exception_message": "net::ERR_TUNNEL_CONNECTION_FAILED", "eventCount": 99996, "activeUsers": 1},
+      {"exception_message": "write EIO", "eventCount": 56708, "activeUsers": 1},
+      {"exception_message": "EPIPE: broken pipe, write", "eventCount": 20036, "activeUsers": 1},
+      {"exception_message": "Attempted to register a second handler for 'server:start'", "eventCount": 2605, "activeUsers": 1231},
+      {"exception_message": "Address already in use: bind", "eventCount": 1539, "activeUsers": 1539},
+      {"exception_message": "Address already in use", "eventCount": 756, "activeUsers": 552},
+      {"exception_message": "Timed out waiting for 30000 ms", "eventCount": 650, "activeUsers": 102},
+      {"exception_message": "Not connected to Figma", "eventCount": 334, "activeUsers": 32},
+      {"exception_message": "Must join a channel before sending commands", "eventCount": 268, "activeUsers": 148}
+    ],
+    "mcp_success_by_os": [
+      {"operatingSystem": "MacOS", "success": "1", "eventCount": 339816, "activeUsers": 1157},
+      {"operatingSystem": "MacOS", "success": "0", "eventCount": 26702, "activeUsers": 1048},
+      {"operatingSystem": "Windows", "success": "1", "eventCount": 196451, "activeUsers": 356},
+      {"operatingSystem": "Windows", "success": "0", "eventCount": 7075, "activeUsers": 309}
+    ],
+    "funnel_app_start_to_mcp": {
+      "tool": "run_funnel_report",
+      "breakdown": "operatingSystem",
+      "steps": ["app_start", "tutorial_shown", "tutorial_completed", "mcp_tool_call"],
+      "rows": [
+        {"step": "App start", "segment": "TOTAL", "activeUsers": 4555, "completionRate": 0.6395170142700329, "abandonments": 1642, "abandonmentRate": 0.36048298572996706},
+        {"step": "Tutorial shown", "segment": "TOTAL", "activeUsers": 2913, "completionRate": 0.5612770339855818, "abandonments": 1278, "abandonmentRate": 0.43872296601441813},
+        {"step": "Tutorial completed", "segment": "TOTAL", "activeUsers": 1635, "completionRate": 0.13516819571865443, "abandonments": 1414, "abandonmentRate": 0.8648318042813455},
+        {"step": "MCP tool call", "segment": "TOTAL", "activeUsers": 221, "completionRate": 1, "abandonments": 0, "abandonmentRate": 0}
+      ]
+    },
+    "weekly_trend_selected": {
+      "row_count": 49,
+      "rows": [
+        {"yearWeek": "202532", "activeUsers": 18, "sessions": 51, "eventCount": 240},
+        {"yearWeek": "202552", "activeUsers": 1210, "sessions": 715, "eventCount": 4869},
+        {"yearWeek": "202603", "activeUsers": 2022, "sessions": 1219, "eventCount": 8425},
+        {"yearWeek": "202613", "activeUsers": 1304, "sessions": 1148, "eventCount": 322864},
+        {"yearWeek": "202625", "activeUsers": 701, "sessions": 667, "eventCount": 224812}
+      ]
+    },
+    "custom_event_actions_top": [
+      {"action": "start_websocket_server", "eventCount": 23898, "activeUsers": 21115},
+      {"action": "start", "eventCount": 16870, "activeUsers": 4719},
+      {"action": "stop", "eventCount": 5700, "activeUsers": 2531},
+      {"action": "direct_oauth_start", "eventCount": 4382, "activeUsers": 3016},
+      {"action": "figma", "eventCount": 3882, "activeUsers": 2709},
+      {"action": "copy_mcp_config", "eventCount": 2448, "activeUsers": 1495},
+      {"action": "success", "eventCount": 2140, "activeUsers": 1950},
+      {"action": "restart", "eventCount": 2070, "activeUsers": 1024},
+      {"action": "report_issue", "eventCount": 133, "activeUsers": 99}
+    ],
+    "custom_event_error_messages_top": {
+      "row_count": 3819,
+      "rows": [
+        {"error_message": "Request timed out", "eventCount": 18105, "activeUsers": 1056},
+        {"error_message": "cannot convert to object", "eventCount": 2595, "activeUsers": 20},
+        {"error_message": "Failed to make WebSocket port 3055 available", "eventCount": 1610, "activeUsers": 246},
+        {"error_message": "Error executing command", "eventCount": 822, "activeUsers": 89},
+        {"error_message": "Unknown command: set_auto_layout", "eventCount": 690, "activeUsers": 5},
+        {"error_message": "Timed out waiting for 30000 ms", "eventCount": 434, "activeUsers": 92},
+        {"error_message": "Not connected to Figma", "eventCount": 285, "activeUsers": 29}
+      ]
+    },
+    "acquisition_source_sanity_check": [
+      {"dimension": "firstUserSourceMedium", "value": "(direct) / (none)", "activeUsers": 31360, "sessions": 24429, "eventCount": 1826813},
+      {"dimension": "sessionSourceMedium", "value": "(not set)", "activeUsers": 31360, "sessions": 24429, "eventCount": 1826813}
+    ],
+    "custom_event_category_label_top": [
+      {"category": "server_management", "label": "WebSocket server started", "activeUsers": 21115, "eventCount": 23898},
+      {"category": "mcp_tool", "label": "(not set)", "activeUsers": 303, "eventCount": 14451},
+      {"category": "figma", "label": "Direct OAuth from Menu", "activeUsers": 3016, "eventCount": 4382},
+      {"category": "ui_interaction", "label": "config_dialog_copy_button", "activeUsers": 1495, "eventCount": 2448},
+      {"category": "direct_oauth_success", "label": "Direct OAuth completed", "activeUsers": 1620, "eventCount": 2124},
+      {"category": "direct_oauth_failed", "label": "OAuth Error: callback_error - Unknown error", "activeUsers": 738, "eventCount": 1020},
+      {"category": "emergency_action", "label": "All servers killed", "activeUsers": 540, "eventCount": 1017},
+      {"category": "direct_oauth_error", "label": "rememberCoroutineScope left the composition", "activeUsers": 587, "eventCount": 655},
+      {"category": "ui_interaction", "label": "Report an Issue", "activeUsers": 99, "eventCount": 133},
+      {"category": "ui_interaction", "label": "Copy logs to clipboard", "activeUsers": 29, "eventCount": 44}
+    ],
+    "page_titles_top": [
+      {"pageTitle": "Step 1: Open MCP Configuration (windows)", "activeUsers": 6772, "screenPageViews": 7775, "eventCount": 7775},
+      {"pageTitle": "Step 2: Run Figma Plugin (windows)", "activeUsers": 3545, "screenPageViews": 4261, "eventCount": 4261},
+      {"pageTitle": "Settings", "activeUsers": 3328, "screenPageViews": 6999, "eventCount": 6999},
+      {"pageTitle": "Step 3: Do MCP Magic (windows)", "activeUsers": 3042, "screenPageViews": 3439, "eventCount": 3439},
+      {"pageTitle": "Step 4: Figma OAuth (Optional) (windows)", "activeUsers": 2866, "screenPageViews": 3016, "eventCount": 3016},
+      {"pageTitle": "Step 1: Open MCP Configuration (mac)", "activeUsers": 2474, "screenPageViews": 3232, "eventCount": 3232},
+      {"pageTitle": "MCP Configuration Dialog", "activeUsers": 2174, "screenPageViews": 3675, "eventCount": 3675},
+      {"pageTitle": "Step 2: Run Figma Plugin (mac)", "activeUsers": 1914, "screenPageViews": 2522, "eventCount": 2522},
+      {"pageTitle": "Server Error Dialog", "activeUsers": 1033, "screenPageViews": 1925, "eventCount": 1925},
+      {"pageTitle": "View Logs", "activeUsers": 860, "screenPageViews": 964, "eventCount": 964}
+    ],
+    "page_paths_top": [
+      {"pagePath": "/tutorial/windows/step1", "activeUsers": 6772, "screenPageViews": 7775, "eventCount": 7775},
+      {"pagePath": "/tutorial/windows/step2", "activeUsers": 3543, "screenPageViews": 4259, "eventCount": 4259},
+      {"pagePath": "/tutorial/windows/step3", "activeUsers": 3043, "screenPageViews": 3443, "eventCount": 3443},
+      {"pagePath": "/tutorial/windows/step4", "activeUsers": 2869, "screenPageViews": 3023, "eventCount": 3023},
+      {"pagePath": "/tutorial/mac/step1", "activeUsers": 2474, "screenPageViews": 3232, "eventCount": 3232},
+      {"pagePath": "/mcp/config", "activeUsers": 2174, "screenPageViews": 3675, "eventCount": 3675},
+      {"pagePath": "/tutorial/mac/step2", "activeUsers": 1921, "screenPageViews": 2532, "eventCount": 2532},
+      {"pagePath": "/tutorial/mac/step3", "activeUsers": 1739, "screenPageViews": 2103, "eventCount": 2103},
+      {"pagePath": "/tutorial/mac/step4", "activeUsers": 1668, "screenPageViews": 1808, "eventCount": 1808},
+      {"pagePath": "/error/server-connection", "activeUsers": 1033, "screenPageViews": 1925, "eventCount": 1925},
+      {"pagePath": "/logs", "activeUsers": 861, "screenPageViews": 965, "eventCount": 965}
+    ],
+    "auxiliary_no_new_insight_audits": [
+      {"dimension": "browser", "topValue": "(not set)", "activeUsers": 31352, "sessions": 24429, "eventCount": 1826807, "interpretation": "Mostly unset; not useful for browser segmentation."},
+      {"dimension": "screenResolution", "row_count": 218, "topValues": ["1536x864", "1366x768", "1280x720", "1920x1080"], "interpretation": "Confirms desktop variety but does not change the retrospective story."},
+      {"dimension": "newVsReturning", "topValue": "new", "activeUsers": 30864, "sessions": 24065, "eventCount": 1823621, "interpretation": "Desktop telemetry identity makes retention interpretation weak."},
+      {"dimension": "customEvent:value", "topValue": "(not set)", "activeUsers": 30915, "eventCount": 1823862, "interpretation": "Not useful."},
+      {"dimension": "customEvent:duration_ms", "row_count": 19943, "interpretation": "Too granular as a dimension; not reliable as a performance metric here."},
+      {"dimension": "pageReferrer", "topValue": "", "activeUsers": 31360, "screenPageViews": 52463, "eventCount": 1826813, "interpretation": "Not useful for app telemetry."},
+      {"dimension": "firstUserDefaultChannelGroup", "topValue": "Direct", "activeUsers": 31360, "sessions": 24429, "eventCount": 1826813, "interpretation": "Confirms acquisition/channel data is not useful."},
+      {"dimension": "defaultChannelGroup", "row_count": 0, "interpretation": "Not useful with compatible metrics."},
+      {"dimension": "streamName", "topValue": "TalkToFigma Desktop", "activeUsers": 31360, "sessions": 24429, "eventCount": 1826813, "interpretation": "Confirms this dataset is the desktop app stream."}
+    ]
+  },
+  "caveats": [
+    "Country row_count is 165, but this JSON stores the top rows used in the analysis snapshot. See the Markdown file for more displayed country rows.",
+    "Region and city reports were dominated by '(not set)' values and are not reliable for fine-grained location claims.",
+    "Browser, customEvent:platform, and customEvent:os_info are mostly '(not set)' and should not be used as strong segmentation evidence.",
+    "Exception event counts are inflated by repeated messages from very small numbers of users, especially write EPIPE.",
+    "GA4 funnel report semantics are directional and ordered; funnel counts do not equal broad event totals."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "status": "mcp tool detail raw snapshot",
+  "property": "properties/499789310",
+  "date_range": {
+    "start_date": "2025-07-01",
+    "end_date": "2026-06-30"
+  },
+  "source": "GA4 Analytics MCP",
+  "filters": {
+    "eventName": "mcp_tool_call"
+  },
+  "notes": [
+    "Purpose groups are heuristic analysis groups, not GA4 native dimensions.",
+    "events_per_active_user is eventCount divided by activeUsers for the row.",
+    "For repeated-use analysis, broad-use tools should be separated from tiny-user outliers."
+  ],
+  "successful_tools_top_by_event_count": [
+    {"tool_name": "create_text", "eventCount": 105643, "activeUsers": 613, "events_per_active_user": 172.34, "inferred_purpose": "Create text layers"},
+    {"tool_name": "set_fill_color", "eventCount": 92561, "activeUsers": 604, "events_per_active_user": 153.25, "inferred_purpose": "Apply visual styling"},
+    {"tool_name": "create_frame", "eventCount": 52509, "activeUsers": 613, "events_per_active_user": 85.66, "inferred_purpose": "Create layout containers"},
+    {"tool_name": "set_corner_radius", "eventCount": 38053, "activeUsers": 504, "events_per_active_user": 75.50, "inferred_purpose": "Polish UI shapes"},
+    {"tool_name": "set_text_content", "eventCount": 37845, "activeUsers": 455, "events_per_active_user": 83.18, "inferred_purpose": "Edit generated copy"},
+    {"tool_name": "create_rectangle", "eventCount": 34779, "activeUsers": 473, "events_per_active_user": 73.53, "inferred_purpose": "Create basic visual blocks"},
+    {"tool_name": "get_node_info", "eventCount": 32736, "activeUsers": 842, "events_per_active_user": 38.88, "inferred_purpose": "Inspect selected/design nodes"},
+    {"tool_name": "move_node", "eventCount": 13859, "activeUsers": 324, "events_per_active_user": 42.77, "inferred_purpose": "Position nodes"},
+    {"tool_name": "export_node_as_image", "eventCount": 13536, "activeUsers": 455, "events_per_active_user": 29.75, "inferred_purpose": "Preview or externalize design result"},
+    {"tool_name": "set_stroke_color", "eventCount": 10910, "activeUsers": 361, "events_per_active_user": 30.22, "inferred_purpose": "Apply border styling"},
+    {"tool_name": "resize_node", "eventCount": 10133, "activeUsers": 304, "events_per_active_user": 33.33, "inferred_purpose": "Resize objects"},
+    {"tool_name": "set_layout_sizing", "eventCount": 9018, "activeUsers": 167, "events_per_active_user": 54.00, "inferred_purpose": "Tune auto-layout sizing"},
+    {"tool_name": "clone_node", "eventCount": 8816, "activeUsers": 293, "events_per_active_user": 30.09, "inferred_purpose": "Duplicate existing nodes"},
+    {"tool_name": "set_multiple_text_contents", "eventCount": 6490, "activeUsers": 318, "events_per_active_user": 20.41, "inferred_purpose": "Batch-edit text"},
+    {"tool_name": "set_item_spacing", "eventCount": 6279, "activeUsers": 225, "events_per_active_user": 27.91, "inferred_purpose": "Tune spacing"}
+  ],
+  "successful_tools_top_by_active_users": [
+    {"tool_name": "get_document_info", "eventCount": 5584, "activeUsers": 1018, "events_per_active_user": 5.49},
+    {"tool_name": "get_active_channels", "eventCount": 3250, "activeUsers": 864, "events_per_active_user": 3.76},
+    {"tool_name": "get_node_info", "eventCount": 32736, "activeUsers": 842, "events_per_active_user": 38.88},
+    {"tool_name": "get_selection", "eventCount": 4595, "activeUsers": 749, "events_per_active_user": 6.13},
+    {"tool_name": "connection_diagnostics", "eventCount": 2533, "activeUsers": 665, "events_per_active_user": 3.81},
+    {"tool_name": "create_text", "eventCount": 105643, "activeUsers": 613, "events_per_active_user": 172.34},
+    {"tool_name": "create_frame", "eventCount": 52509, "activeUsers": 613, "events_per_active_user": 85.66},
+    {"tool_name": "set_fill_color", "eventCount": 92561, "activeUsers": 604, "events_per_active_user": 153.25}
+  ],
+  "failure_tools_top_by_active_users": [
+    {"tool_name": "get_document_info", "eventCount": 2241, "activeUsers": 683},
+    {"tool_name": "get_active_channels", "eventCount": 2403, "activeUsers": 626},
+    {"tool_name": "get_selection", "eventCount": 1946, "activeUsers": 574},
+    {"tool_name": "connection_diagnostics", "eventCount": 1905, "activeUsers": 515},
+    {"tool_name": "get_node_info", "eventCount": 3072, "activeUsers": 463},
+    {"tool_name": "create_frame", "eventCount": 2207, "activeUsers": 312},
+    {"tool_name": "read_my_design", "eventCount": 611, "activeUsers": 306}
+  ],
+  "purpose_groups_success_events": [
+    {"purpose": "Create and duplicate nodes", "eventCount": 204042, "share_of_success_events": 38.05, "included_tools": ["create_text", "create_frame", "create_rectangle", "clone_node", "create_component_instance"]},
+    {"purpose": "Style and content editing", "eventCount": 186600, "share_of_success_events": 34.80, "included_tools": ["set_fill_color", "set_corner_radius", "set_text_content", "set_stroke_color", "set_multiple_text_contents", "set_font_name", "set_font_size"]},
+    {"purpose": "Inspect and read design context", "eventCount": 60467, "share_of_success_events": 11.28, "included_tools": ["get_node_info", "get_document_info", "get_selection", "scan_text_nodes", "scan_nodes_by_types", "get_active_channels", "read_my_design", "get_nodes_info", "get_styles", "get_local_components"]},
+    {"purpose": "Layout and positioning", "eventCount": 53044, "share_of_success_events": 9.89, "included_tools": ["move_node", "resize_node", "set_layout_sizing", "set_item_spacing", "set_axis_align", "set_layout_mode", "set_padding", "set_auto_layout"]},
+    {"purpose": "Export and review", "eventCount": 13536, "share_of_success_events": 2.52, "included_tools": ["export_node_as_image"]},
+    {"purpose": "Delete and selection management", "eventCount": 7766, "share_of_success_events": 1.45, "included_tools": ["delete_node", "delete_multiple_nodes", "set_focus", "set_selections"]},
+    {"purpose": "Connection and diagnostics", "eventCount": 3817, "share_of_success_events": 0.71, "included_tools": ["connection_diagnostics", "join_channel", "figma_get_config", "figma_set_config", "send_notification"]}
+  ],
+  "segment_notes": [
+    "MacOS dominated top MCP event volume for most high-volume tools, but Windows also produced substantial create_text and create_frame usage.",
+    "South Korea dominated MCP tool event volume; non-Korean countries still showed the same create/style/layout pattern at smaller scale.",
+    "Early months were mostly context/connection tools. Heavier create/style/edit usage became visible from 2026-02 and especially 2026-04."
+  ]
+}

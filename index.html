@@ -96,7 +96,8 @@ featured_image: /images/social.jpeg
       </header>
 
       <div class="recent-posts__list grid">
-        {% for post in site.posts limit: 3 %} {% include
+        {% assign visible_posts = site.posts | where_exp: "post", "post.visible != false" %}
+        {% for post in visible_posts limit: 3 %} {% include
         component__post-preview.html %} {% endfor %}
       </div>
 

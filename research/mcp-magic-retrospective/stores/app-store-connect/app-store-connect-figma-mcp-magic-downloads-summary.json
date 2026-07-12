@@ -1,0 +1,22 @@
+{
+  "source": "App Store Connect Analytics",
+  "appId": "6751596669",
+  "appName": "Figma MCP Magic",
+  "metric": "First-Time Downloads",
+  "dateRange": {
+    "start": "2025-10-21",
+    "end": "2026-07-10",
+    "preset": "Lifetime"
+  },
+  "firstTimeDownloads": 10725,
+  "totalDownloads": 11047,
+  "redownloads": 322,
+  "dailyRows": 263,
+  "computedDailySum": 10725,
+  "sourceUrl": "https://appstoreconnect.apple.com/apps/6751596669/analytics/metrics?chartType=singleaxis&dateSpec=ltd&frequency=day&measureKey=units",
+  "capturedAt": "2026-07-11T17:35:47.965Z",
+  "notes": [
+    "First-Time Downloads excludes redownloads, updates, and restores.",
+    "App Store Connect data shown in UTC."
+  ]
+}

@@ -1,0 +1,42 @@
+dataset,dimension,value,secondary_dimension,secondary_value,metric_1,metric_1_value,metric_2,metric_2_value,derived_metric,derived_metric_value,note
+success_top_by_events,customEvent:tool_name,create_text,customEvent:success,1,eventCount,105643,activeUsers,613,events_per_active_user,172.34,
+success_top_by_events,customEvent:tool_name,set_fill_color,customEvent:success,1,eventCount,92561,activeUsers,604,events_per_active_user,153.25,
+success_top_by_events,customEvent:tool_name,create_frame,customEvent:success,1,eventCount,52509,activeUsers,613,events_per_active_user,85.66,
+success_top_by_events,customEvent:tool_name,set_corner_radius,customEvent:success,1,eventCount,38053,activeUsers,504,events_per_active_user,75.50,
+success_top_by_events,customEvent:tool_name,set_text_content,customEvent:success,1,eventCount,37845,activeUsers,455,events_per_active_user,83.18,
+success_top_by_events,customEvent:tool_name,create_rectangle,customEvent:success,1,eventCount,34779,activeUsers,473,events_per_active_user,73.53,
+success_top_by_events,customEvent:tool_name,get_node_info,customEvent:success,1,eventCount,32736,activeUsers,842,events_per_active_user,38.88,
+success_top_by_events,customEvent:tool_name,move_node,customEvent:success,1,eventCount,13859,activeUsers,324,events_per_active_user,42.77,
+success_top_by_events,customEvent:tool_name,export_node_as_image,customEvent:success,1,eventCount,13536,activeUsers,455,events_per_active_user,29.75,
+success_top_by_events,customEvent:tool_name,set_stroke_color,customEvent:success,1,eventCount,10910,activeUsers,361,events_per_active_user,30.22,
+success_top_by_events,customEvent:tool_name,resize_node,customEvent:success,1,eventCount,10133,activeUsers,304,events_per_active_user,33.33,
+success_top_by_events,customEvent:tool_name,set_layout_sizing,customEvent:success,1,eventCount,9018,activeUsers,167,events_per_active_user,54.00,
+success_top_by_events,customEvent:tool_name,clone_node,customEvent:success,1,eventCount,8816,activeUsers,293,events_per_active_user,30.09,
+success_top_by_events,customEvent:tool_name,set_multiple_text_contents,customEvent:success,1,eventCount,6490,activeUsers,318,events_per_active_user,20.41,
+success_top_by_events,customEvent:tool_name,set_item_spacing,customEvent:success,1,eventCount,6279,activeUsers,225,events_per_active_user,27.91,
+success_top_by_events,customEvent:tool_name,scan_text_nodes,customEvent:success,1,eventCount,5645,activeUsers,396,events_per_active_user,14.26,
+success_top_by_active_users,customEvent:tool_name,get_document_info,customEvent:success,1,eventCount,5584,activeUsers,1018,events_per_active_user,5.49,
+success_top_by_active_users,customEvent:tool_name,get_active_channels,customEvent:success,1,eventCount,3250,activeUsers,864,events_per_active_user,3.76,
+success_top_by_active_users,customEvent:tool_name,get_node_info,customEvent:success,1,eventCount,32736,activeUsers,842,events_per_active_user,38.88,
+success_top_by_active_users,customEvent:tool_name,get_selection,customEvent:success,1,eventCount,4595,activeUsers,749,events_per_active_user,6.13,
+success_top_by_active_users,customEvent:tool_name,connection_diagnostics,customEvent:success,1,eventCount,2533,activeUsers,665,events_per_active_user,3.81,
+success_top_by_active_users,customEvent:tool_name,create_text,customEvent:success,1,eventCount,105643,activeUsers,613,events_per_active_user,172.34,
+success_top_by_active_users,customEvent:tool_name,create_frame,customEvent:success,1,eventCount,52509,activeUsers,613,events_per_active_user,85.66,
+success_top_by_active_users,customEvent:tool_name,set_fill_color,customEvent:success,1,eventCount,92561,activeUsers,604,events_per_active_user,153.25,
+all_top_by_active_users,customEvent:tool_name,get_document_info,all,,eventCount,7825,activeUsers,1177,events_per_active_user,6.65,
+all_top_by_active_users,customEvent:tool_name,get_selection,all,,eventCount,6541,activeUsers,930,events_per_active_user,7.03,
+all_top_by_active_users,customEvent:tool_name,get_node_info,all,,eventCount,35808,activeUsers,905,events_per_active_user,39.57,
+all_top_by_active_users,customEvent:tool_name,get_active_channels,all,,eventCount,5653,activeUsers,865,events_per_active_user,6.54,
+all_top_by_active_users,customEvent:tool_name,connection_diagnostics,all,,eventCount,4438,activeUsers,670,events_per_active_user,6.62,
+failure_top_by_active_users,customEvent:tool_name,get_document_info,customEvent:success,0,eventCount,2241,activeUsers,683,events_per_active_user,3.28,
+failure_top_by_active_users,customEvent:tool_name,get_active_channels,customEvent:success,0,eventCount,2403,activeUsers,626,events_per_active_user,3.84,
+failure_top_by_active_users,customEvent:tool_name,get_selection,customEvent:success,0,eventCount,1946,activeUsers,574,events_per_active_user,3.39,
+failure_top_by_active_users,customEvent:tool_name,connection_diagnostics,customEvent:success,0,eventCount,1905,activeUsers,515,events_per_active_user,3.70,
+failure_top_by_active_users,customEvent:tool_name,get_node_info,customEvent:success,0,eventCount,3072,activeUsers,463,events_per_active_user,6.63,
+purpose_group,purpose,Create and duplicate nodes,customEvent:success,1,eventCount,204042,activeUsers,,share_of_success_events,38.05,"Heuristic grouping"
+purpose_group,purpose,Style and content editing,customEvent:success,1,eventCount,186600,activeUsers,,share_of_success_events,34.80,"Heuristic grouping"
+purpose_group,purpose,Layout and positioning,customEvent:success,1,eventCount,53044,activeUsers,,share_of_success_events,9.89,"Heuristic grouping"
+purpose_group,purpose,Inspect and read design context,customEvent:success,1,eventCount,60467,activeUsers,,share_of_success_events,11.28,"Heuristic grouping"
+purpose_group,purpose,Export and review,customEvent:success,1,eventCount,13536,activeUsers,,share_of_success_events,2.52,"Heuristic grouping"
+purpose_group,purpose,Delete and selection management,customEvent:success,1,eventCount,7766,activeUsers,,share_of_success_events,1.45,"Heuristic grouping"
+purpose_group,purpose,Connection and diagnostics,customEvent:success,1,eventCount,3817,activeUsers,,share_of_success_events,0.71,"Heuristic grouping"

@@ -3,7 +3,7 @@ title: "연결을 제품으로 만든 시간: MCP Magic 앱 회고"
 date: 2026-07-12 00:00:00
 description: "Cursor Talk To Figma MCP의 설치 마찰을 '딸깍'으로 줄인 MCP Magic. 실제 사용자에게 닿은 뒤 마주한 운영의 벽과 다음 선택을 돌아본다."
 featured_image: "/images/projects/2026-mcp-magic-retrospective/mcp-magic-desktop.png"
-visible: false
+visible: true
 ---
 
 > Figma와 AI를 연결하는 기술은 이미 있었다. 우리가 풀고 싶었던 문제는 사람들이 첫 성공까지 포기하지 않게 만드는 일이었다.

@@ -7,6 +7,7 @@
 - `ga4/`: 2025-07-01 ~ 2026-06-30 GA4 집계, 분석 문서, 정적 리포트
 - `stores/`: App Store Connect, Microsoft Store, GitHub Release의 다운로드·설치 집계
 - `aptabase/public-session-summary.json`: 2026-02-01 이후 Aptabase 세션 분석의 익명 집계 요약
+- `APPENDIX.ko.md`: 블로그 본문에서 분리한 수치, 계산 기준, 프로젝트 연혁과 참고 자료
 
 ## 공개 범위
 

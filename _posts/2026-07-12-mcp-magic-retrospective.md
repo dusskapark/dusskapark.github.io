@@ -71,27 +71,15 @@ GA4가 도달 범위와 호출 규모를 보여줬다면, Aptabase export는 관
 <figure id="mcp-retro-session-depth" class="mcp-retro-viz mcp-retro-session-viz" aria-labelledby="mcp-retro-session-depth-title" aria-describedby="mcp-retro-session-depth-note">
   <header class="mcp-retro-viz__header">
     <p class="mcp-retro-viz__eyebrow">Aptabase · release build</p>
-    <h4 id="mcp-retro-session-depth-title" class="mcp-retro-viz__title">관측된 release 세션의 MCP 작업 깊이</h4>
+    <h4 id="mcp-retro-session-depth-title" class="mcp-retro-viz__title">관측된 MCP 세션의 작업 깊이</h4>
     <p class="mcp-retro-viz__subtitle">2026.02.01–2026.07.01 UTC · 월중 수집 공백이 있는 관측 자료</p>
+    <p class="mcp-retro-viz__scope"><span>분석 범위</span><strong>9,774</strong><span>release 세션</span></p>
   </header>
 
   <div class="mcp-retro-session-viz__grid">
-    <section class="mcp-retro-viz-panel" aria-labelledby="mcp-retro-session-share-title">
-      <p id="mcp-retro-session-share-title" class="mcp-retro-viz-panel__label">분석 범위</p>
-      <p class="mcp-retro-viz-panel__total"><strong>9,774</strong><span>개 세션</span></p>
-      <div class="mcp-retro-split-bar" role="img" aria-label="전체 release 세션 중 MCP 호출 포함 세션 24.3%, 미포함 세션 75.7%" style="--mcp-retro-share: 24.3%">
-        <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--focus"></span>
-        <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--rest"></span>
-      </div>
-      <div class="mcp-retro-viz-legend" aria-hidden="true">
-        <span><i class="mcp-retro-viz-swatch mcp-retro-viz-swatch--focus"></i>MCP 포함 <strong>2,376 · 24.3%</strong></span>
-        <span><i class="mcp-retro-viz-swatch"></i>미포함 <strong>7,398 · 75.7%</strong></span>
-      </div>
-    </section>
-
     <section class="mcp-retro-viz-panel" aria-labelledby="mcp-retro-session-metrics-title">
       <p id="mcp-retro-session-metrics-title" class="mcp-retro-viz-panel__label">MCP 세션 내부</p>
-      <p class="mcp-retro-viz-panel__context">관측 세션 n=2,376</p>
+      <p class="mcp-retro-viz-panel__context">2,376개 세션 · 전체 분석 범위의 24.3%</p>
       <dl class="mcp-retro-session-metrics">
         <div class="mcp-retro-session-metric mcp-retro-session-metric--span">
           <dt>중앙 관측 span</dt>

@@ -723,112 +723,38 @@
   }
 }
 
-// MCP Magic retrospective: scoped editorial data components.
+// MCP Magic retrospective: portable image figures.
 .page-post .post__title--mcp-magic-retrospective {
   word-break: keep-all;
 }
 
 .page-post .post__content--mcp-magic-retrospective {
-  .mcp-retro-kpis,
-  .mcp-retro-figure,
-  .mcp-retro-viz {
+  .mcp-retro-image-figure {
     box-sizing: border-box;
     width: calc(100vw - 60px);
-    max-width: 1140px;
-  }
-
-  .mcp-retro-kpis {
+    max-width: 1080px;
     margin: 56px 0;
   }
 
-  .mcp-retro-kpis__heading {
-    margin: 0 0 20px;
-  }
-
-  .mcp-retro-kpis__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .mcp-retro-kpi {
-    box-sizing: border-box;
-    min-width: 0;
-    padding: 20px;
-    border: 1px solid $border-color;
-    border-top: 3px solid $accent-color;
-    border-radius: 8px;
-    background: $background-alt-color;
-  }
-
-  .mcp-retro-kpi__label {
-    margin-bottom: 12px;
-    color: $text-medium-color;
-    font-size: 14px;
-    font-weight: $bold-weight;
-    line-height: 1.4;
-  }
-
-  .mcp-retro-kpi__value {
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-    margin: 0;
-    color: $text-dark-color;
-    font-family: $title-font;
-    font-size: clamp(32px, 4.2vw, 44px);
-    font-weight: $bold-weight;
-    font-variant-numeric: tabular-nums;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .mcp-retro-kpi__unit {
-    font-size: 16px;
-  }
-
-  p.mcp-retro-kpis__note {
-    max-width: 656px;
-    margin: 16px 0 0;
-    color: $text-medium-color;
-    font-size: 14px;
-    line-height: 1.65;
-  }
-
-  .mcp-retro-figure {
-    margin: 48px 0;
-  }
-
-  .mcp-retro-figure a {
+  .mcp-retro-image-figure a {
     display: block;
     border-bottom: 0;
   }
 
-  .mcp-retro-figure a:focus-visible,
-  .mcp-retro-figure__scroll:focus-visible {
+  .mcp-retro-image-figure a:focus-visible {
     border-radius: 4px;
     outline: 2px solid $accent-color;
     outline-offset: 4px;
   }
 
-  .mcp-retro-figure__scroll {
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .mcp-retro-figure img {
+  .mcp-retro-image-figure img {
     display: block;
     width: 100%;
-    min-width: 800px;
     height: auto;
     margin: 0;
   }
 
-  .mcp-retro-figure figcaption {
+  .mcp-retro-image-figure figcaption {
     max-width: 656px;
     margin-top: 14px;
     color: $text-medium-color;
@@ -836,297 +762,13 @@
     line-height: 1.65;
   }
 
-  .mcp-retro-viz {
-    margin: 48px 0;
-    padding: 24px;
-    border: 1px solid $border-color;
-    border-top: 3px solid $accent-color;
-    border-radius: 10px;
-    background: $background-color;
-  }
-
-  .mcp-retro-viz__header {
-    position: relative;
-    margin-bottom: 20px;
-  }
-
-  p.mcp-retro-viz__eyebrow,
-  p.mcp-retro-viz__subtitle,
-  p.mcp-retro-viz__scope,
-  p.mcp-retro-viz-panel__label,
-  p.mcp-retro-viz-panel__context,
-  p.mcp-retro-concentration__takeaway {
-    margin: 0;
-  }
-
-  p.mcp-retro-viz__eyebrow {
-    margin-bottom: 8px;
-    color: $accent-color;
-    font-size: 12px;
-    font-weight: $bold-weight;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
-    text-transform: uppercase;
-  }
-
-  .mcp-retro-viz__title {
-    margin: 0 0 8px;
-    color: $text-dark-color;
-    font-family: $title-font;
-    font-size: clamp(23px, 3vw, 32px);
-    line-height: 1.25;
-    word-break: keep-all;
-  }
-
-  p.mcp-retro-viz__subtitle {
-    color: $text-dark-color;
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  p.mcp-retro-viz__scope {
-    display: inline-flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 16px;
-    padding: 8px 11px;
-    border: 1px solid $border-color;
-    border-radius: 999px;
-    background: $background-alt-color;
-    color: $text-dark-color;
-    font-size: 11px;
-    line-height: 1.3;
-  }
-
-  .mcp-retro-viz__scope strong {
-    font-family: $title-font;
-    font-size: 18px;
-    font-variant-numeric: tabular-nums;
-    line-height: 1;
-  }
-
-  .mcp-retro-session-viz__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .mcp-retro-viz-panel {
-    box-sizing: border-box;
-    min-width: 0;
-    padding: 18px;
-    border: 1px solid $border-color;
-    border-radius: 8px;
-    background: $background-alt-color;
-  }
-
-  p.mcp-retro-viz-panel__label {
-    color: $text-dark-color;
-    font-size: 14px;
-    font-weight: $bold-weight;
-    line-height: 1.45;
-  }
-
-  p.mcp-retro-viz-panel__context {
-    margin-top: 4px;
-    color: $text-dark-color;
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  .mcp-retro-split-bar {
-    display: flex;
-    width: 100%;
-    height: 14px;
-    overflow: hidden;
-    border: 1px solid rgba($text-dark-color, 0.08);
-    border-radius: 999px;
-    background: rgba($text-dark-color, 0.08);
-  }
-
-  .mcp-retro-split-bar__segment {
-    display: block;
-    height: 100%;
-  }
-
-  .mcp-retro-split-bar__segment--focus {
-    flex: 0 0 var(--mcp-retro-share);
-    background: $accent-color;
-  }
-
-  .mcp-retro-split-bar__segment--rest {
-    flex: 1 1 auto;
-    background: rgba($text-dark-color, 0.12);
-  }
-
-  .mcp-retro-session-metrics {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-    margin: 16px 0 0;
-  }
-
-  .mcp-retro-session-metric {
-    min-width: 0;
-    padding: 12px;
-    border-radius: 6px;
-    background: $background-color;
-  }
-
-  .mcp-retro-session-metric--span {
-    grid-column: 1 / -1;
-  }
-
-  .mcp-retro-session-metric dt {
-    color: $text-dark-color;
-    font-size: 11px;
-    line-height: 1.4;
-  }
-
-  .mcp-retro-session-metric dd {
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-    margin: 7px 0 0;
-  }
-
-  .mcp-retro-session-metric dd strong {
-    color: $text-dark-color;
-    font-family: $title-font;
-    font-size: 26px;
-    font-variant-numeric: tabular-nums;
-    line-height: 1;
-  }
-
-  .mcp-retro-session-metric dd span {
-    color: $text-dark-color;
-    font-size: 11px;
-  }
-
-  .mcp-retro-concentration__rows {
-    display: grid;
-    gap: 14px;
-    margin-top: 20px;
-  }
-
-  .mcp-retro-concentration__row {
-    display: grid;
-    grid-template-columns: 64px minmax(0, 1fr) 48px;
-    align-items: center;
-    gap: 8px;
-    min-width: 0;
-  }
-
-  .mcp-retro-concentration__row > strong {
-    color: $text-dark-color;
-    font-family: $title-font;
-    font-size: 13px;
-    font-variant-numeric: tabular-nums;
-    text-align: right;
-  }
-
-  .mcp-retro-concentration__label {
-    color: $text-dark-color;
-    font-size: 12px;
-    line-height: 1.35;
-  }
-
-  p.mcp-retro-concentration__takeaway {
-    margin-top: 18px;
-    color: $text-dark-color;
-    font-size: 14px;
-    line-height: 1.55;
-  }
-
-  .mcp-retro-viz figcaption {
-    margin-top: 16px;
-    color: $text-dark-color;
-    font-size: 13px;
-    line-height: 1.65;
-  }
-
-  @media (max-width: 360px) {
-    .mcp-retro-session-metrics {
-      grid-template-columns: 1fr;
-    }
-
-    .mcp-retro-session-metric--span {
-      grid-column: auto;
-    }
-  }
-
   @include mq(tabletp) {
-    .mcp-retro-kpis {
-      margin: 80px 0;
-    }
-
-    .mcp-retro-kpis__heading {
-      margin-bottom: 24px;
-    }
-
-    .mcp-retro-kpis__grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .mcp-retro-kpi {
-      padding: 24px;
-    }
-
-    .mcp-retro-figure,
-    .mcp-retro-viz {
+    .mcp-retro-image-figure {
       margin: 72px 0;
     }
 
-    .mcp-retro-figure figcaption,
-    p.mcp-retro-kpis__note {
+    .mcp-retro-image-figure figcaption {
       font-size: 15px;
-    }
-
-    .mcp-retro-viz {
-      padding: 30px;
-    }
-
-    .mcp-retro-viz__header {
-      min-height: 62px;
-      margin-bottom: 24px;
-      padding-right: 210px;
-    }
-
-    p.mcp-retro-viz__scope {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin-top: 0;
-    }
-
-    .mcp-retro-session-viz__grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .mcp-retro-viz-panel {
-      padding: 22px;
-    }
-
-    .mcp-retro-viz figcaption {
-      font-size: 14px;
-    }
-
-  }
-
-  @include mq(laptop) {
-    .mcp-retro-session-viz__grid {
-      grid-template-columns: 1fr 1.25fr;
-    }
-
-    .mcp-retro-figure__scroll {
-      overflow: visible;
-    }
-
-    .mcp-retro-figure img {
-      min-width: 0;
     }
   }
 }

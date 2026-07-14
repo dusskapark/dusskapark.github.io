@@ -66,13 +66,75 @@ GA4의 실제 기록이 있는 11개월 동안 `mcp_tool_call` 이벤트를 한 
 
 ### 넓게 발견됐고, 일부 작업 세션은 깊었다
 
-GA4가 도달 범위와 호출 규모를 보여줬다면, Aptabase export는 관측된 작업 세션의 깊이를 보여줬다. 개발 빌드를 제외하고 남아 있는 release 빌드의 9,774개 세션 중 2,376개(24.3%)에 MCP 호출이 포함됐다. MCP 세션의 중앙 관측 span은 25분 31초였고, 세션당 batch 반영 추정 호출 수의 중앙값은 11회, P95는 367회였다.
+GA4가 도달 범위와 호출 규모를 보여줬다면, Aptabase export는 관측된 작업 세션의 깊이를 보여줬다. 개발 빌드를 제외한 release 자료에서 MCP 호출이 들어간 세션은 전체 관측 세션의 일부였지만, 그 안에서는 긴 관측 span과 호출량의 긴 꼬리가 함께 나타났다. 아래 수치는 채택률이나 연속 사용 시간이 아니라, 남아 있는 세션 내부의 행동 깊이를 설명한다.
 
-<aside class="mcp-retro-evidence" aria-label="Aptabase에서 확인한 MCP 작업 세션의 깊이">
-  <p class="mcp-retro-evidence__label">관측된 MCP 작업 세션</p>
-  <p class="mcp-retro-evidence__value"><strong>상위 5%의 MCP 세션</strong>이 batch 반영 추정 호출의 <strong>55.1%</strong>를 만들었다.</p>
-  <p class="mcp-retro-evidence__note">release 빌드만 집계했다. Aptabase는 월중 수집 공백이 있어 전체 채택 규모나 월별 성장의 근거로 쓰지 않았다. 세션 시간은 첫 이벤트와 마지막 이벤트 사이의 관측 구간이며, batch를 펼친 호출 수는 추정값이다.</p>
-</aside>
+<figure id="mcp-retro-session-depth" class="mcp-retro-viz mcp-retro-session-viz" aria-labelledby="mcp-retro-session-depth-title" aria-describedby="mcp-retro-session-depth-note">
+  <header class="mcp-retro-viz__header">
+    <p class="mcp-retro-viz__eyebrow">Aptabase · release build</p>
+    <h4 id="mcp-retro-session-depth-title" class="mcp-retro-viz__title">관측된 release 세션의 MCP 작업 깊이</h4>
+    <p class="mcp-retro-viz__subtitle">2026.02.01–2026.07.01 UTC · 월중 수집 공백이 있는 관측 자료</p>
+  </header>
+
+  <div class="mcp-retro-session-viz__grid">
+    <section class="mcp-retro-viz-panel" aria-labelledby="mcp-retro-session-share-title">
+      <p id="mcp-retro-session-share-title" class="mcp-retro-viz-panel__label">분석 범위</p>
+      <p class="mcp-retro-viz-panel__total"><strong>9,774</strong><span>개 세션</span></p>
+      <div class="mcp-retro-split-bar" role="img" aria-label="전체 release 세션 중 MCP 호출 포함 세션 24.3%, 미포함 세션 75.7%" style="--mcp-retro-share: 24.3%">
+        <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--focus"></span>
+        <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--rest"></span>
+      </div>
+      <div class="mcp-retro-viz-legend" aria-hidden="true">
+        <span><i class="mcp-retro-viz-swatch mcp-retro-viz-swatch--focus"></i>MCP 포함 <strong>2,376 · 24.3%</strong></span>
+        <span><i class="mcp-retro-viz-swatch"></i>미포함 <strong>7,398 · 75.7%</strong></span>
+      </div>
+    </section>
+
+    <section class="mcp-retro-viz-panel" aria-labelledby="mcp-retro-session-metrics-title">
+      <p id="mcp-retro-session-metrics-title" class="mcp-retro-viz-panel__label">MCP 세션 내부</p>
+      <p class="mcp-retro-viz-panel__context">관측 세션 n=2,376</p>
+      <dl class="mcp-retro-session-metrics">
+        <div class="mcp-retro-session-metric mcp-retro-session-metric--span">
+          <dt>중앙 관측 span</dt>
+          <dd><strong>25:31</strong><span>분:초</span></dd>
+        </div>
+        <div class="mcp-retro-session-metric">
+          <dt>추정 호출/세션</dt>
+          <dd><strong>11</strong><span>중앙값</span></dd>
+        </div>
+        <div class="mcp-retro-session-metric">
+          <dt>추정 호출/세션</dt>
+          <dd><strong>367</strong><span>P95</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="mcp-retro-viz-panel mcp-retro-concentration" aria-labelledby="mcp-retro-concentration-title">
+      <p id="mcp-retro-concentration-title" class="mcp-retro-viz-panel__label">MCP 세션 내부 집중도</p>
+      <p class="mcp-retro-viz-panel__context">추정 호출량 상위 119개 세션</p>
+      <div class="mcp-retro-concentration__rows">
+        <div class="mcp-retro-concentration__row">
+          <span class="mcp-retro-concentration__label">세션</span>
+          <div class="mcp-retro-split-bar" aria-hidden="true" style="--mcp-retro-share: 5%">
+            <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--focus"></span>
+            <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--rest"></span>
+          </div>
+          <strong>5.0%</strong>
+        </div>
+        <div class="mcp-retro-concentration__row">
+          <span class="mcp-retro-concentration__label">추정 호출</span>
+          <div class="mcp-retro-split-bar" aria-hidden="true" style="--mcp-retro-share: 55.1%">
+            <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--focus"></span>
+            <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--rest"></span>
+          </div>
+          <strong>55.1%</strong>
+        </div>
+      </div>
+      <p class="mcp-retro-concentration__takeaway"><strong>상위 5%</strong>의 MCP 세션이 추정 호출의 <strong>절반 이상</strong>을 남겼다.</p>
+    </section>
+  </div>
+
+  <figcaption id="mcp-retro-session-depth-note">release 빌드만 집계했다. span은 첫 이벤트와 마지막 이벤트 사이의 관측 구간이며 연속 사용 시간이 아니다. 호출 수는 batch size를 펼친 추정값이다. event ID가 없고 같은 행이 반복돼 극단값을 모두 독립 작업으로 단정할 수 없다. 월중 수집 공백이 있어 전체 채택 규모나 월별 추세를 나타내지 않는다.</figcaption>
+</figure>
 
 모든 사용자가 깊게 썼다고 말할 수는 없다. 대신 **발견은 넓었고, MCP가 포함된 관측 세션은 길었으며 일부 상위 세션에 호출이 강하게 집중됐다**고 말할 수 있다.
 

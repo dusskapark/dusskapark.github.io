@@ -50,7 +50,7 @@ GA4 does not store these purpose groups directly. They are analyst-defined group
 | Delete and selection management | 7,766 | 1.45% | Delete, multi-delete, focus, selection |
 | Connection and diagnostics | 3,817 | 0.71% | Connection diagnostics, channel join, config |
 
-This is strong retrospective evidence. About 72.85% of successful MCP calls fall into creation/duplication plus style/content editing. The core demand was closer to “make things in Figma” than “inspect Figma.”
+This is strong retrospective evidence. About 72.8% of successful MCP calls fall into creation/duplication plus style/content editing. The core demand was closer to “make things in Figma” than “inspect Figma.”
 
 ## Broad Foundation Tools
 
@@ -99,7 +99,7 @@ That makes a strong narrative: first, users needed connection and context. As us
 
 - The most repeatedly used MCP tools were not read-only tools. They were production tools.
 - `create_text` and `set_fill_color` alone accounted for 198,204 successful calls. Users were not only reading Figma; they were making and styling design objects.
-- About 72.85% of successful MCP calls were concentrated in creation/duplication and style/content editing.
+- About 72.8% of successful MCP calls were concentrated in creation/duplication and style/content editing.
 - By active users, the broadest tools were `get_document_info`, `get_selection`, and `get_node_info`, because the AI needed to understand the current Figma state before making changes.
 - The failure-heavy tools were also concentrated around document, selection, and connection checks. The real product challenge was not the number of features; it was reducing uncertainty around first connection and current state.
 

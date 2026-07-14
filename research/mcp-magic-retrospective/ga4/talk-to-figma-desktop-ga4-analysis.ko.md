@@ -62,11 +62,11 @@
 | India | 2,774 | 25,859 |
 | United States | 2,047 | 132,057 |
 | Nigeria | 1,824 | 9,811 |
-| Japan | 801 | 6,823 |
-| Indonesia | 591 | 3,734 |
-| Brazil | 565 | 12,673 |
-| Singapore | 564 | 7,779 |
-| United Kingdom | 533 | 8,599 |
+| Japan | 801 | 5,070 |
+| Indonesia | 591 | 3,678 |
+| Brazil | 565 | 12,648 |
+| Singapore | 564 | 77,761 |
+| United Kingdom | 533 | 4,102 |
 
 언어 기준으로도 English가 18,875 활성 사용자로 가장 컸고, Russian 4,094, Korean 2,766, French 1,209, Chinese 990 순서였다. 즉 이 프로젝트는 한국에서 만든 도구였지만 한국어권 내부에만 머물지 않았다.
 

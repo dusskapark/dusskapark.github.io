@@ -62,11 +62,11 @@ The country data is useful for presentation. GA4 recorded 165 country values. Si
 | India | 2,774 | 25,859 |
 | United States | 2,047 | 132,057 |
 | Nigeria | 1,824 | 9,811 |
-| Japan | 801 | 6,823 |
-| Indonesia | 591 | 3,734 |
-| Brazil | 565 | 12,673 |
-| Singapore | 564 | 7,779 |
-| United Kingdom | 533 | 8,599 |
+| Japan | 801 | 5,070 |
+| Indonesia | 591 | 3,678 |
+| Brazil | 565 | 12,648 |
+| Singapore | 564 | 77,761 |
+| United Kingdom | 533 | 4,102 |
 
 Language data tells the same story. English was the top language with 18,875 active users, followed by Russian 4,094, Korean 2,766, French 1,209, and Chinese 990. This was made in Korea, but usage did not stay inside a Korean-speaking audience.
 

@@ -1,33 +1,47 @@
 {
-  "source": "Aptabase release/debug exports; public archive excludes session and user identifiers.",
+  "source": "Aptabase release exports only; public archive excludes session and user identifiers.",
   "analysis_window": {
     "start": "2026-02-01T17:52:10Z",
     "end": "2026-07-01T18:43:20Z"
   },
-  "event_rows": 105829,
-  "anonymous_users": 7232,
-  "sessions": 9852,
-  "mcp_sessions": 2399,
-  "estimated_underlying_mcp_calls": 203850,
+  "event_rows": 105194,
+  "anonymous_users": 7209,
+  "sessions": 9774,
+  "mcp_sessions": 2376,
+  "estimated_underlying_mcp_calls": 202319,
+  "all_session_span_seconds": {
+    "count": 9774,
+    "median": 22.0
+  },
   "mcp_session_span_seconds": {
-    "count": 2399,
-    "mean": 2471.0358482701126,
-    "median": 1526.0,
-    "p75": 3403.0,
-    "p90": 6018.200000000001,
-    "p95": 8002.399999999999,
-    "p99": 13952.219999999994,
+    "count": 2376,
+    "mean": 2468.781565656566,
+    "median": 1530.5,
+    "p75": 3407.25,
+    "p90": 6018.5,
+    "p95": 7974.0,
+    "p99": 13789.0,
     "max": 45401.0
   },
   "estimated_calls_per_mcp_session": {
-    "count": 2399,
-    "mean": 84.97290537724052,
-    "median": 11,
+    "count": 2376,
+    "mean": 85.15109427609427,
+    "median": 11.0,
     "p75": 50.0,
-    "p90": 204.20000000000027,
-    "p95": 366.2999999999997,
-    "p99": 986.9399999999991,
+    "p90": 204.5,
+    "p95": 366.75,
+    "p99": 997.75,
     "max": 9631
   },
-  "note": "Observed session span is the period between the first and last event, not continuous foreground usage."
+  "mcp_sessions_with_any_failure": {
+    "count": 1424,
+    "share": 0.5993
+  },
+  "estimated_call_concentration": {
+    "top_5_percent_session_count": 119,
+    "top_5_percent_share": 0.5507
+  },
+  "note": "Observed session span is the period between the first and last event, not continuous foreground usage.",
+  "coverage_note": "Within-month coverage is discontinuous after 2026-03-16, 2026-04-09, 2026-05-19, and 2026-06-19. Do not use the export for monthly adoption trends.",
+  "row_identity_note": "The export has no event ID and contains fully identical rows, so batch-expanded estimates and extreme sessions cannot all be asserted as independent work."
 }

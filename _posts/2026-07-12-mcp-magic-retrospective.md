@@ -12,24 +12,12 @@ visible: true
 
 GA4에는 **31,360명의 활성 사용자**와 **570,373건의 MCP 도구 호출**이 남았다. 이 프로젝트는 작동했다. 그러나 사용자가 늘수록 연결 이후의 운영이 더 큰 문제가 됐고, 우리가 풀던 경험의 중심은 공식 플랫폼 안으로 이동하기 시작했다.
 
-<section class="mcp-retro-kpis" aria-labelledby="mcp-retro-kpis-title">
-  <h2 id="mcp-retro-kpis-title" class="mcp-retro-kpis__heading">숫자로 먼저 보면</h2>
-  <dl class="mcp-retro-kpis__grid" aria-describedby="mcp-retro-kpis-note">
-    <div class="mcp-retro-kpi">
-      <dt class="mcp-retro-kpi__label">GA4 활성 사용자</dt>
-      <dd class="mcp-retro-kpi__value"><span>31,360</span><span class="mcp-retro-kpi__unit">명</span></dd>
-    </div>
-    <div class="mcp-retro-kpi">
-      <dt class="mcp-retro-kpi__label">MCP 도구 호출</dt>
-      <dd class="mcp-retro-kpi__value"><span>570,373</span><span class="mcp-retro-kpi__unit">건</span></dd>
-    </div>
-    <div class="mcp-retro-kpi">
-      <dt class="mcp-retro-kpi__label">상태 분류 호출 성공률</dt>
-      <dd class="mcp-retro-kpi__value"><span>94.1</span><span class="mcp-retro-kpi__unit">%</span></dd>
-    </div>
-  </dl>
-  <p id="mcp-retro-kpis-note" class="mcp-retro-kpis__note">31,360명은 앱 전체 활성 사용자다. <code>mcp_tool_call</code> 이벤트를 남긴 활성 사용자는 1,633명이며, 두 값은 동일 사용자의 순서를 추적한 퍼널이 아니다. GA4 요청 범위는 2025.07.01–2026.06.30, 실제 유효 기록은 2025년 8월부터다. 성공률은 성공·실패 상태가 명시된 570,044건 기준이다.</p>
-</section>
+<figure id="mcp-retro-key-metrics" class="mcp-retro-image-figure">
+  <a href="/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social.png" aria-label="MCP Magic 핵심 지표 이미지 크게 보기">
+    <img src="/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social.png" width="1080" height="1350" alt="GA4 활성 사용자 31,360명, MCP 도구 호출 570,373건, 상태 분류 호출 성공률 94.1%를 요약한 이미지">
+  </a>
+  <figcaption>31,360명은 앱 전체 활성 사용자다. <code>mcp_tool_call</code> 이벤트를 남긴 활성 사용자는 1,633명이며, 두 값은 동일 사용자의 순서를 추적한 퍼널이 아니다. GA4 요청 범위는 2025.07.01–2026.06.30, 실제 유효 기록은 2025년 8월부터다. 성공률은 성공·실패 상태가 명시된 570,044건 기준이다.</figcaption>
+</figure>
 
 Figma에서 AI가 디자인을 읽고 고치는 장면은 매력적이었다. 하지만 다른 사람에게 도구를 건네면 많은 이가 그 장면에 도달하기 전에 멈췄다. 런타임과 서버, MCP 클라이언트와 Figma 플러그인을 따로 설정하고, 문제가 생기면 터미널과 플러그인을 오가야 했기 때문이다.
 
@@ -53,13 +41,11 @@ GA4의 실제 기록이 있는 11개월 동안 `mcp_tool_call` 이벤트를 한 
 
 호출을 남긴 핵심 사용층은 연결 상태만 확인하고 떠나지 않았다. `create_text`는 105,643회, `set_fill_color`는 92,561회 성공했다. 둘만 합쳐도 198,204회다. 도구 이름을 생성·복제와 스타일·콘텐츠 편집으로 묶으면 390,642건, 전체 성공 호출의 **72.8%**였다.
 
-<figure id="mcp-retro-purpose-chart" class="mcp-retro-figure">
-  <div class="mcp-retro-figure__scroll" role="region" aria-label="디자인 목적별 MCP 성공 호출 차트. 작은 화면에서는 좌우로 스크롤할 수 있습니다." tabindex="0">
-    <a href="/images/projects/2026-mcp-magic-retrospective/mcp-magic-mcp-calls-by-design-purpose.svg" aria-label="디자인 목적별 MCP 성공 호출 차트 크게 보기">
-      <img src="/images/projects/2026-mcp-magic-retrospective/mcp-magic-mcp-calls-by-design-purpose.svg" width="1100" height="442" alt="콘텐츠 생성, 구조와 레이아웃, 시각 스타일링이 MCP 성공 호출의 대부분을 차지하는 가로 막대 차트">
-    </a>
-  </div>
-  <figcaption>성공 호출 상위 도구를 이름에 따라 더 세부적인 여섯 가지 디자인 목적으로 나눈 분석자 분류다. 사용자는 Figma를 읽는 데서 멈추지 않고 만들고, 채우고, 다듬었다. 작은 화면에서는 차트를 좌우로 스크롤할 수 있다.</figcaption>
+<figure id="mcp-retro-purpose-chart" class="mcp-retro-image-figure">
+  <a href="/images/projects/2026-mcp-magic-retrospective/mcp-magic-calls-by-purpose-social.png" aria-label="디자인 목적별 MCP 성공 호출 차트 크게 보기">
+    <img src="/images/projects/2026-mcp-magic-retrospective/mcp-magic-calls-by-purpose-social.png" width="1080" height="1350" alt="콘텐츠 생성과 텍스트 편집 155,623건, 구조와 레이아웃 151,443건, 시각 스타일링 141,524건 등 디자인 목적별 MCP 성공 호출 가로 막대 차트">
+  </a>
+  <figcaption>성공 호출 상위 도구를 이름에 따라 더 세부적인 여섯 가지 디자인 목적으로 나눈 분석자 분류다. 사용자는 Figma를 읽는 데서 멈추지 않고 만들고, 채우고, 다듬었다.</figcaption>
 </figure>
 
 **사용자가 원한 것은 단순한 연결이 아니라 AI가 Figma를 실제로 만지는 순간이었다.** MCP Magic의 역할은 그 순간까지 도달할 수 있는 입구를 만드는 일이었다.
@@ -68,60 +54,11 @@ GA4의 실제 기록이 있는 11개월 동안 `mcp_tool_call` 이벤트를 한 
 
 GA4가 도달 범위와 호출 규모를 보여줬다면, Aptabase export는 관측된 작업 세션의 깊이를 보여줬다. 개발 빌드를 제외한 release 자료에서 MCP 호출이 들어간 세션은 전체 관측 세션의 일부였지만, 그 안에서는 긴 관측 span과 호출량의 긴 꼬리가 함께 나타났다. 아래 수치는 채택률이나 연속 사용 시간이 아니라, 남아 있는 세션 내부의 행동 깊이를 설명한다.
 
-<figure id="mcp-retro-session-depth" class="mcp-retro-viz mcp-retro-session-viz" aria-labelledby="mcp-retro-session-depth-title" aria-describedby="mcp-retro-session-depth-note">
-  <header class="mcp-retro-viz__header">
-    <p class="mcp-retro-viz__eyebrow">Aptabase · release build</p>
-    <h4 id="mcp-retro-session-depth-title" class="mcp-retro-viz__title">관측된 MCP 세션의 작업 깊이</h4>
-    <p class="mcp-retro-viz__subtitle">2026.02.01–2026.07.01 UTC · 월중 수집 공백이 있는 관측 자료</p>
-    <p class="mcp-retro-viz__scope"><span>분석 범위</span><strong>9,774</strong><span>release 세션</span></p>
-  </header>
-
-  <div class="mcp-retro-session-viz__grid">
-    <section class="mcp-retro-viz-panel" aria-labelledby="mcp-retro-session-metrics-title">
-      <p id="mcp-retro-session-metrics-title" class="mcp-retro-viz-panel__label">MCP 세션 내부</p>
-      <p class="mcp-retro-viz-panel__context">2,376개 세션 · 전체 분석 범위의 24.3%</p>
-      <dl class="mcp-retro-session-metrics">
-        <div class="mcp-retro-session-metric mcp-retro-session-metric--span">
-          <dt>중앙 관측 span</dt>
-          <dd><strong>25:31</strong><span>분:초</span></dd>
-        </div>
-        <div class="mcp-retro-session-metric">
-          <dt>추정 호출/세션</dt>
-          <dd><strong>11</strong><span>중앙값</span></dd>
-        </div>
-        <div class="mcp-retro-session-metric">
-          <dt>추정 호출/세션</dt>
-          <dd><strong>367</strong><span>P95</span></dd>
-        </div>
-      </dl>
-    </section>
-
-    <section class="mcp-retro-viz-panel mcp-retro-concentration" aria-labelledby="mcp-retro-concentration-title">
-      <p id="mcp-retro-concentration-title" class="mcp-retro-viz-panel__label">MCP 세션 내부 집중도</p>
-      <p class="mcp-retro-viz-panel__context">추정 호출량 상위 119개 세션</p>
-      <div class="mcp-retro-concentration__rows">
-        <div class="mcp-retro-concentration__row">
-          <span class="mcp-retro-concentration__label">세션</span>
-          <div class="mcp-retro-split-bar" aria-hidden="true" style="--mcp-retro-share: 5%">
-            <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--focus"></span>
-            <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--rest"></span>
-          </div>
-          <strong>5.0%</strong>
-        </div>
-        <div class="mcp-retro-concentration__row">
-          <span class="mcp-retro-concentration__label">추정 호출</span>
-          <div class="mcp-retro-split-bar" aria-hidden="true" style="--mcp-retro-share: 55.1%">
-            <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--focus"></span>
-            <span class="mcp-retro-split-bar__segment mcp-retro-split-bar__segment--rest"></span>
-          </div>
-          <strong>55.1%</strong>
-        </div>
-      </div>
-      <p class="mcp-retro-concentration__takeaway"><strong>상위 5%</strong>의 MCP 세션이 추정 호출의 <strong>절반 이상</strong>을 남겼다.</p>
-    </section>
-  </div>
-
-  <figcaption id="mcp-retro-session-depth-note">release 빌드만 집계했다. span은 첫 이벤트와 마지막 이벤트 사이의 관측 구간이며 연속 사용 시간이 아니다. 호출 수는 batch size를 펼친 추정값이다. event ID가 없고 같은 행이 반복돼 극단값을 모두 독립 작업으로 단정할 수 없다. 월중 수집 공백이 있어 전체 채택 규모나 월별 추세를 나타내지 않는다.</figcaption>
+<figure id="mcp-retro-session-depth" class="mcp-retro-image-figure">
+  <a href="/images/projects/2026-mcp-magic-retrospective/mcp-magic-session-depth-social.png" aria-label="관측된 MCP 세션 작업 깊이 이미지 크게 보기">
+    <img src="/images/projects/2026-mcp-magic-retrospective/mcp-magic-session-depth-social.png" width="1080" height="1350" alt="9,774개 release 세션 중 MCP 호출이 포함된 2,376개 세션의 중앙 관측 span 25분 31초, 세션당 추정 호출 중앙값 11회와 P95 367회, 상위 5% 세션의 호출 집중도 55.1%를 보여주는 이미지">
+  </a>
+  <figcaption>release 빌드만 집계했다. span은 첫 이벤트와 마지막 이벤트 사이의 관측 구간이며 연속 사용 시간이 아니다. 호출 수는 batch size를 펼친 추정값이다. event ID가 없고 같은 행이 반복돼 극단값을 모두 독립 작업으로 단정할 수 없다. 월중 수집 공백이 있어 전체 채택 규모나 월별 추세를 나타내지 않는다.</figcaption>
 </figure>
 
 모든 사용자가 깊게 썼다고 말할 수는 없다. 대신 **발견은 넓었고, MCP가 포함된 관측 세션은 길었으며 일부 상위 세션에 호출이 강하게 집중됐다**고 말할 수 있다.

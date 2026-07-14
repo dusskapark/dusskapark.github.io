@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">Work depth in observed MCP sessions</title>
+  <desc id="desc">The longest observed span was 12 hours and 36 minutes, with a maximum estimated 9,631 MCP calls. The median observed span was 25 minutes and 31 seconds with 11 estimated calls per session. The top 5 percent of sessions generated 55.1 percent of estimated calls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e7d9ff"/>
+      <stop offset="55%" stop-color="#cbb3f5"/>
+      <stop offset="100%" stop-color="#e6dcff"/>
+    </linearGradient>
+    <style>
+      .sans { font-family: Arial, Helvetica, sans-serif; fill: #090909; }
+      .kicker { font-size: 24px; font-weight: 800; letter-spacing: 1.1px; fill: #1032bf; }
+      .title { font-size: 60px; font-weight: 900; letter-spacing: -3px; }
+      .dek { font-size: 25px; font-weight: 600; letter-spacing: -0.7px; }
+      .section { font-size: 24px; font-weight: 900; letter-spacing: -0.7px; }
+      .label { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+      .number { font-size: 76px; font-weight: 900; letter-spacing: -4px; }
+      .number-small { font-size: 57px; font-weight: 900; letter-spacing: -3px; }
+      .metric { font-size: 20px; font-weight: 700; letter-spacing: -0.4px; }
+      .foot { font-size: 15px; font-weight: 600; letter-spacing: -0.2px; }
+      .blue { fill: #1032bf; }
+      .line { stroke: #090909; stroke-width: 3; }
+      .thin { stroke: #090909; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <text x="78" y="68" class="sans kicker">APTABASE · RELEASE BUILDS</text>
+  <text x="78" y="148" class="sans title">A Small Tail Did</text>
+  <text x="78" y="216" class="sans title">Very Deep Work</text>
+  <text x="78" y="262" class="sans dek">A small group of sessions left long spans and high call volume.</text>
+  <line x1="78" y1="294" x2="1002" y2="294" class="line"/>
+
+  <text x="78" y="344" class="sans section">Deepest observed session</text>
+  <rect x="78" y="368" width="924" height="236" rx="8" fill="#fff" fill-opacity="0.27"/>
+  <text x="118" y="416" class="sans label">Longest observed span</text>
+  <text x="118" y="516" class="sans number">12h 36m</text>
+  <text x="118" y="558" class="sans metric">first event to last event</text>
+  <line x1="546" y1="400" x2="546" y2="572" class="thin"/>
+  <text x="590" y="416" class="sans label">Max. estimated MCP calls</text>
+  <text x="590" y="516" class="sans number">9,631</text>
+  <text x="878" y="516" class="sans metric">calls</text>
+  <text x="590" y="552" class="sans metric">batch size expanded</text>
+
+  <line x1="78" y1="638" x2="1002" y2="638" class="line"/>
+  <text x="78" y="686" class="sans section">Typical session vs. the deepest 5%</text>
+  <rect x="78" y="710" width="438" height="274" rx="8" fill="#fff" fill-opacity="0.27"/>
+  <rect x="564" y="710" width="438" height="274" rx="8" fill="#fff" fill-opacity="0.27"/>
+  <text x="112" y="758" class="sans label">MEDIAN · TYPICAL MCP SESSION</text>
+  <text x="112" y="844" class="sans number">25:31</text>
+  <text x="112" y="875" class="sans metric">median observed span</text>
+  <text x="112" y="944" class="sans number-small">11</text>
+  <text x="220" y="944" class="sans metric">estimated calls / session</text>
+  <text x="598" y="758" class="sans label">P95 · THRESHOLD FOR TOP 5%</text>
+  <text x="598" y="844" class="sans number">2:12:54</text>
+  <text x="598" y="875" class="sans metric">P95 observed span</text>
+  <text x="598" y="944" class="sans number-small">367</text>
+  <text x="786" y="944" class="sans metric">estimated calls / session</text>
+
+  <line x1="78" y1="1020" x2="1002" y2="1020" class="line"/>
+  <text x="78" y="1068" class="sans section">The top 5% of sessions drove more than half of estimated calls</text>
+  <text x="78" y="1110" class="sans metric">TOP 119 SESSIONS</text>
+  <rect x="78" y="1130" width="924" height="24" fill="#f6f2ff"/>
+  <rect x="78" y="1130" width="51" height="24" fill="#1032bf"/>
+  <text x="78" y="1188" class="sans metric">ESTIMATED MCP CALLS</text>
+  <rect x="78" y="1208" width="924" height="30" fill="#f6f2ff"/>
+  <rect x="78" y="1208" width="509" height="30" fill="#1032bf"/>
+  <text x="610" y="1234" class="sans number-small blue">55.1%</text>
+
+  <line x1="78" y1="1266" x2="1002" y2="1266" class="line"/>
+  <text x="78" y="1295" class="sans foot">Small context: 2,376 MCP sessions within 9,774 release sessions</text>
+  <text x="78" y="1321" class="sans foot">Span is observed interval, not continuous usage · calls are batch-expanded estimates</text>
+  <text x="78" y="1342" class="sans foot">Repeated identical rows mean extreme calls cannot be asserted as independent tasks</text>
+</svg>

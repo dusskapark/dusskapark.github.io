@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title description">
+  <title id="title">Depth of observed MCP sessions</title>
+  <desc id="description">Observed MCP session depth: a maximum span of 12 hours 36 minutes, 9,631 maximum estimated calls, a median span of 25 minutes 31 seconds and 11 estimated calls, while the top 5 percent of sessions drove 55.1 percent of estimated calls.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eee8ff"/>
+      <stop offset="1" stop-color="#d5c7f7"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#5636bd" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+    <style>
+      .eyebrow { font: 700 22px Arial, Helvetica, sans-serif; letter-spacing: 2.5px; fill: #5136c3; }
+      .title { font: 800 62px Arial, Helvetica, sans-serif; letter-spacing: -3px; fill: #10101b; }
+      .subtitle { font: 600 22px Arial, Helvetica, sans-serif; fill: #343043; }
+      .section { font: 800 28px Arial, Helvetica, sans-serif; letter-spacing: -.7px; fill: #10101b; }
+      .cardlabel { font: 700 20px Arial, Helvetica, sans-serif; fill: #272434; }
+      .number { font: 800 70px Arial, Helvetica, sans-serif; letter-spacing: -4px; fill: #090912; }
+      .detail { font: 600 19px Arial, Helvetica, sans-serif; fill: #373242; }
+      .barlabel { font: 800 25px Arial, Helvetica, sans-serif; fill: #10101b; }
+      .bigpercent { font: 800 62px Arial, Helvetica, sans-serif; letter-spacing: -4px; fill: #1d40c4; }
+      .note { font: 600 17px Arial, Helvetica, sans-serif; fill: #2b2739; }
+    </style>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#background)"/>
+  <rect width="1080" height="1350" fill="url(#grid)"/>
+  <g transform="translate(78 78)">
+    <text class="eyebrow" x="0" y="0">APTABASE · RELEASE BUILDS</text>
+    <text class="title" x="0" y="91">A small tail did</text>
+    <text class="title" x="0" y="159">very deep work</text>
+    <text class="subtitle" x="0" y="208">Some observed sessions left long spans and high call volumes.</text>
+    <line x1="0" y1="251" x2="924" y2="251" stroke="#10101b" stroke-width="4"/>
+
+    <text class="section" x="0" y="309">DEEPEST OBSERVED SESSION</text>
+    <g transform="translate(0 338)">
+      <rect width="924" height="215" rx="18" fill="#fbfaff" fill-opacity=".66"/>
+      <text class="cardlabel" x="40" y="48">LONGEST OBSERVED SPAN</text>
+      <text class="number" x="40" y="142">12h 36m</text>
+      <text class="detail" x="40" y="183">First event to last event</text>
+      <line x1="462" y1="34" x2="462" y2="181" stroke="#17121f" stroke-width="3"/>
+      <text class="cardlabel" x="510" y="48">MAX. ESTIMATED MCP CALLS</text>
+      <text class="number" x="510" y="142">9,631</text>
+      <text class="detail" x="510" y="183">Batch size expanded</text>
+    </g>
+
+    <line x1="0" y1="602" x2="924" y2="602" stroke="#10101b" stroke-width="4"/>
+    <text class="section" x="0" y="653">TYPICAL SESSION VS. THE DEEPEST 5%</text>
+    <g transform="translate(0 681)">
+      <rect width="444" height="270" rx="18" fill="#fbfaff" fill-opacity=".66"/>
+      <text class="cardlabel" x="34" y="47">MEDIAN · TYPICAL MCP SESSION</text>
+      <text class="number" x="34" y="122">25:31</text>
+      <text class="detail" x="34" y="156">Median observed span</text>
+      <text class="number" x="34" y="226">11</text>
+      <text class="detail" x="138" y="226">estimated calls / session</text>
+    </g>
+    <g transform="translate(480 681)">
+      <rect width="444" height="270" rx="18" fill="#fbfaff" fill-opacity=".66"/>
+      <text class="cardlabel" x="34" y="47">P95 · THRESHOLD FOR TOP 5%</text>
+      <text class="number" x="34" y="122">2:12:54</text>
+      <text class="detail" x="34" y="156">P95 observed span</text>
+      <text class="number" x="34" y="226">367</text>
+      <text class="detail" x="181" y="226">estimated calls / session</text>
+    </g>
+
+    <line x1="0" y1="1000" x2="924" y2="1000" stroke="#10101b" stroke-width="4"/>
+    <text class="barlabel" x="0" y="1052">THE TOP 5% OF SESSIONS DROVE 55.1% OF ESTIMATED CALLS</text>
+    <text class="cardlabel" x="0" y="1094">TOP 119 SESSIONS</text>
+    <rect x="0" y="1114" width="924" height="30" fill="#faf9ff"/>
+    <rect x="0" y="1114" width="46" height="30" fill="#1d40c4"/>
+    <text class="cardlabel" x="0" y="1184">ESTIMATED MCP CALLS</text>
+    <rect x="0" y="1204" width="924" height="30" fill="#faf9ff"/>
+    <rect x="0" y="1204" width="509" height="30" fill="#1d40c4"/>
+    <text class="bigpercent" x="536" y="1235">55.1%</text>
+    <text class="note" x="0" y="1285">2,376 MCP sessions within 9,774 release sessions · span is not continuous usage</text>
+    <text class="note" x="0" y="1310">Calls are batch-expanded estimates; repeated rows make extreme calls non-independent</text>
+  </g>
+</svg>

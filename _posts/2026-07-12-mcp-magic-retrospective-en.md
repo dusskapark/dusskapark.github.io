@@ -35,7 +35,7 @@ MCP Magic did not start from scratch. Its starting point was [Cursor Talk To Fig
 
 The problem JooHyung saw first was not a missing capability; it was the complex path to a user's first success. In July 2025, he and Jin released the Talk To Figma desktop app on GitHub. It gathered service startup, configuration, connection state, and logs into the menu-bar tray. That compact app is now Grab's official open-source project and the backbone of MCP Magic.
 
-The prototype drew me into the project more deeply. I helped refine the desktop UI, translate complex setup into language people could act on, and introduce the work through community channels. That October, we expanded the foundation into a family of apps called MCP Magic. We rewrote the architecture more than once as we listened to users, but the question never changed.
+The prototype drew me into the project more deeply. I helped refine the desktop UI, turn complex setup into language people could act on, and introduce the work through community channels. That October, we expanded the foundation into a family of apps called MCP Magic. We rewrote the architecture more than once as we listened to users, but the question never changed.
 
 > How could more people get past the first connection and into real work?
 

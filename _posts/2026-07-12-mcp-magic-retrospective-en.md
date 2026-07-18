@@ -16,8 +16,6 @@ authors:
 
 > What we built was not a new AI feature. It was a doorway people could cross—from installation to their first successful call—without giving up along the way.
 
-_Read the [original Korean post](/blog/mcp-magic-retrospective)._
-
 GA4 recorded **31,360 cumulative users** and **570,373 MCP tool calls**. Those numbers show that the project was used in the real world. But after helping extend and launch the Talk To Figma desktop app that JooHyung and Jin had built into MCP Magic, I found myself thinking about a different set of questions: How could we keep this experience dependable as more people used it? And where would the path we made ultimately belong?
 
 <figure id="mcp-retro-key-metrics" class="mcp-retro-image-figure">

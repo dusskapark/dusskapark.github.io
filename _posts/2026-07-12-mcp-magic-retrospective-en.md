@@ -29,7 +29,7 @@ Watching AI read and edit a design in Figma was compelling from the start. But w
 
 When JooHyung and Jin showed me their prototype for putting that preparation into one desktop app, I knew we had the right starting point. I was not looking for grand automation. Borrowing a Korean expression, I wanted a **“click, and it just works” experience**—the server simply comes up.
 
-## We built an entrance, not a feature
+## We built a doorway, not a feature
 
 MCP Magic did not start from scratch. Its starting point was [Cursor Talk To Figma MCP](https://github.com/grab/cursor-talk-to-figma-mcp), which the Grab Design team used internally before releasing it as open source. The core capability—reading and editing Figma through natural language—already worked.
 
@@ -41,7 +41,7 @@ The prototype drew me into the project more deeply. I helped refine the desktop 
 
 The app did not make MCP itself more powerful. It made the path to an existing capability shorter and clearer. If people give up before getting started, even a powerful feature may as well not exist for them.
 
-## The project led to real work
+## The project became part of real work
 
 Over the 11 months with valid GA4 records, 1,633 active users generated at least one `mcp_tool_call` event. This figure is counted independently by event from the app-wide total of 31,360 users, so it does not mean all 31,360 people made it to MCP work. Still, that core group produced 570,373 MCP tool calls: 536,267 successes and 33,777 failures. Among calls with an explicit success or failure status, the success rate was **94.1%**.
 
@@ -53,14 +53,14 @@ The most encouraging signal was that people did not just verify a connection and
   <a href="/images/projects/2026-mcp-magic-retrospective/mcp-magic-calls-by-purpose-social-en.png" aria-label="View the MCP successful calls by design purpose chart at full size">
     <img src="/images/projects/2026-mcp-magic-retrospective/mcp-magic-calls-by-purpose-social-en.png" width="1080" height="1350" alt="A horizontal bar chart of successful MCP calls by design purpose, including 155,623 for content creation and text editing, 151,443 for structure and layout, and 141,524 for visual styling">
   </a>
-  <figcaption>This is an analyst-defined classification of the most-used successful tools into six more specific design purposes, based on their names. People did not stop at reading Figma; they created, filled, and refined it.</figcaption>
+  <figcaption>This is an analyst-defined classification of the most-used successful tools into six more specific design purposes, based on their names. People did not stop at reading Figma; they created content, applied fills, and refined designs.</figcaption>
 </figure>
 
 **What people wanted was not a connection for its own sake, but the moment when AI actually touched Figma.** MCP Magic extended the possibility JooHyung and Jin had opened with the desktop app so that more people could turn it into real work.
 
 ### Depth was uneven, and some sessions became very deep
 
-GA4 showed reach and call volume; the Aptabase export showed how deeply MCP was used inside observed sessions. The important signal here is not the total number of sessions, but the density of work in the sessions where people began using MCP.
+GA4 showed reach and call volume; the Aptabase export showed how deeply MCP was used inside observed sessions. The important signal here is not the total number of sessions, but the density of work in sessions where people actually used MCP.
 
 <figure id="mcp-retro-session-depth" class="mcp-retro-image-figure">
   <a href="/images/projects/2026-mcp-magic-retrospective/mcp-magic-session-depth-social-en.png" aria-label="View the work depth in observed MCP sessions at full size">
@@ -95,7 +95,7 @@ The causes differed, but they arrived to users as the same message.
 
 High call-level success and session-level friction existed at the same time. GA4 showed a 94.1% success rate among calls with an explicit status, while a separate Aptabase release logbook—with a different period and instrumentation—recorded at least one failure event in 1,424 of 2,376 MCP sessions (59.9%). The two figures cannot be compared directly. But the fact that many observed MCP sessions contained at least one failure event shows why call-level success alone cannot explain the friction of doing the work.
 
-That was the realization: making the first connection easy was not enough. Next came diagnosis and recovery appropriate to each user's level, connection reliability, and support operations. These were not ancillary operational chores; they were part of the product we still needed to build after the first connection.
+That was the realization: making the first connection easy was not enough. Next came diagnosis and recovery, reliable connections, and support that met users where they were. These were not ancillary operational chores; they were part of the product we still needed to build after the first connection.
 
 ## Success did not guarantee survival
 
@@ -105,7 +105,7 @@ In March 2026, Figma announced [a beta in which agents write directly to the can
 
 Independent tools often discover new demand first where a platform's boundary is thin. Once that demand becomes clear enough, a platform that already has the files, permissions, design system, and deployment surface can bring the flow into its own product through a shorter path. This is natural and welcome for users, but for a third party it means that **the success of a feature and the sustainability of an independent product are entirely different problems.**
 
-This is not a story about Figma seeing us and copying us. Nor can the data prove that official features caused user decline. What we did prove was real demand, while the platform occupied the structural position to solve that demand more naturally.
+This is not a story about Figma seeing us and copying us. Nor can the data prove that official features caused user decline. What we did prove was real demand, while the platform was structurally better positioned to meet that demand.
 
 The judgment that this direction made sense was separate from the feelings of those who built it. We found the problem early enough to turn it into a product and proved demand through tens of thousands of people and 570,000 calls. But we did not decide quickly enough what we would own for the long term: diagnosis and recovery, cross-platform connection, or deep workflows for a particular team. We were not pushed out simply because we were late. Even after solving the problem early enough, we chose our next sustainable position too late.
 
@@ -129,6 +129,6 @@ MCP Magic reduced the first step to the point where users could actually work wi
 
 At the same time, the final 20% still meant diagnosis and recovery, operations and support, and the choice of where our responsibility ended. Once the official platform began solving the same problem more naturally, the more important question was not what we could build, but what we could own for the long term.
 
-This is neither a record of failure nor an excuse for slowing updates. **A successful feature and a product entering maintenance mode can exist at the same time.** The 570,000 calls are evidence that the work JooHyung and Jin started—and that I helped extend with MCP Magic—solved the right problem. They are also the bill reminding us to choose a sustainable position earlier next time.
+This is neither a record of failure nor an excuse for slowing updates. **A successful feature and a product entering maintenance mode can exist at the same time.** The 570,000 calls are evidence that the work JooHyung and Jin started—and that I helped extend with MCP Magic—solved the right problem. They are also a reminder to choose a sustainable position earlier next time.
 
 For denominators, methodology, data-quality limitations, and project history, see the separate [Appendix Markdown (Korean)](https://github.com/dusskapark/dusskapark.github.io/blob/master/research/mcp-magic-retrospective/APPENDIX.ko.md).

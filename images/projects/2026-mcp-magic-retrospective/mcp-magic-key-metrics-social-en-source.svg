@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title description">
   <title id="title">MCP Magic key metrics</title>
-  <desc id="description">31,360 cumulative users, 570,373 MCP tool calls, and a 94.1 percent success rate among status-classified calls.</desc>
+  <desc id="description">31,360 total users, 570,373 MCP tool calls, and a 94.1 percent success rate among status-classified calls.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#efeaff"/>
@@ -31,7 +31,7 @@
     <g transform="translate(0 238)">
       <rect width="924" height="236" rx="20" fill="#fbfaff" fill-opacity=".68"/>
       <rect width="15" height="236" rx="7" fill="#16bfd0"/>
-      <text class="label" x="44" y="54">CUMULATIVE USERS</text>
+      <text class="label" x="44" y="54">TOTAL USERS</text>
       <text class="number" x="43" y="169">31,360</text>
       <text class="unit" x="687" y="169">users</text>
       <text class="detail" x="44" y="207">Across the app</text>
@@ -55,7 +55,7 @@
     </g>
 
     <line x1="0" y1="1068" x2="924" y2="1068" stroke="#11111a" stroke-width="4"/>
-    <text class="foot" x="0" y="1114">31,360 is the whole-app cumulative user count—not a funnel stage.</text>
+    <text class="foot" x="0" y="1114">31,360 is the whole-app total user count—not a funnel stage.</text>
     <text class="foot" x="0" y="1146">The record begins in Aug 2025; the query range ends Jun 30, 2026.</text>
   </g>
 </svg>

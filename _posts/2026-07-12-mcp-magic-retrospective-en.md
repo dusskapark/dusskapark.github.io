@@ -1,7 +1,7 @@
 ---
-title: "31,360 Cumulative Users and 570,000 Calls: MCP Magic"
+title: "31,360 Users and 570,000 Calls: MCP Magic"
 date: 2026-07-12 00:00:00
-description: "31,360 cumulative users and 570,373 MCP tool calls. A retrospective on turning the first connection into a product—and what happened as the experience moved into the platform."
+description: "31,360 total users and 570,373 MCP tool calls. A retrospective on turning the first connection into a product—and what happened as the experience moved into the platform."
 featured_image: "/images/projects/2026-mcp-magic-retrospective/mcp-magic-desktop-en.png"
 article_class: "post__content--mcp-magic-retrospective"
 title_class: "post__title--mcp-magic-retrospective"
@@ -16,13 +16,13 @@ authors:
 
 > What we built was not a new AI feature. It was a doorway people could cross—from installation to their first successful call—without giving up along the way.
 
-GA4 recorded **31,360 cumulative users** and **570,373 MCP tool calls**. Those numbers show that the project was used in the real world. But after helping extend and launch the Talk To Figma desktop app that JooHyung and Jin had built into MCP Magic, I found myself thinking about a different set of questions: How could we keep this experience dependable as more people used it? And where would the path we made ultimately belong?
+GA4 recorded **31,360 total users** and **570,373 MCP tool calls**. Those numbers show that the project was used in the real world. But after helping extend and launch the Talk To Figma desktop app that JooHyung and Jin had built into MCP Magic, I found myself thinking about a different set of questions: How could we keep this experience dependable as more people used it? And where would the path we made ultimately belong?
 
 <figure id="mcp-retro-key-metrics" class="mcp-retro-image-figure">
   <a href="/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social-en.png" aria-label="View the MCP Magic key metrics image at full size">
-    <img src="/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social-en.png" width="1080" height="1350" alt="An infographic showing 31,360 cumulative users, 570,373 MCP tool calls, and a 94.1 percent success rate among status-classified calls">
+    <img src="/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social-en.png" width="1080" height="1350" alt="An infographic showing 31,360 total users, 570,373 MCP tool calls, and a 94.1 percent success rate among status-classified calls">
   </a>
-  <figcaption>31,360 is the cumulative user count for the whole app. 1,633 active users generated at least one <code>mcp_tool_call</code> event; these are not sequential funnel stages for the same users. The GA4 query covers July 1, 2025–June 30, 2026, with valid records beginning in August 2025. The success rate uses the 570,044 calls with an explicit success or failure status.</figcaption>
+  <figcaption>31,360 is the total user count across the whole app. 1,633 active users generated at least one <code>mcp_tool_call</code> event; these are not sequential funnel stages for the same users. The GA4 query covers July 1, 2025–June 30, 2026, with valid records beginning in August 2025. The success rate uses the 570,044 calls with an explicit success or failure status.</figcaption>
 </figure>
 
 Watching AI read and edit a design in Figma was compelling from the start. But when we handed the tools to other people, many stopped before they ever reached that moment. They had to set up a runtime and server, an MCP client, and a Figma plugin separately—and move back and forth between the terminal and the plugin whenever something went wrong.
@@ -43,7 +43,7 @@ The app did not make MCP itself more powerful. It made the path to an existing c
 
 ## The project led to real work
 
-Over the 11 months with valid GA4 records, 1,633 active users generated at least one `mcp_tool_call` event. This figure is counted independently by event from the app-wide total of 31,360 cumulative users, so it does not mean all 31,360 people made it to MCP work. Still, that core group produced 570,373 MCP tool calls: 536,267 successes and 33,777 failures. Among calls with an explicit success or failure status, the success rate was **94.1%**.
+Over the 11 months with valid GA4 records, 1,633 active users generated at least one `mcp_tool_call` event. This figure is counted independently by event from the app-wide total of 31,360 users, so it does not mean all 31,360 people made it to MCP work. Still, that core group produced 570,373 MCP tool calls: 536,267 successes and 33,777 failures. Among calls with an explicit success or failure status, the success rate was **94.1%**.
 
 **These 1,633 people were professional users already paying to work with AI and Figma.** They were using tools such as Cursor or Claude Code alongside paid Figma plans, then bringing MCP Magic into that stack. So this group represents more than installs or free trials: it is an early-adopter group that pulled a new workflow into real work.
 

@@ -729,6 +729,34 @@
 }
 
 .page-post .post__content--mcp-magic-retrospective {
+  blockquote {
+    width: 100%;
+    max-width: 760px;
+    margin: 36px 0;
+    padding: 20px 24px;
+    border-left: 4px solid $accent-color;
+    border-radius: 0 8px 8px 0;
+    background: rgba($accent-color, 0.08);
+
+    p {
+      font-family: $body-font;
+      font-size: 17px;
+      font-weight: $p-weight;
+      letter-spacing: $p-spacing;
+      line-height: 1.7;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 6px;
+      color: $accent-color;
+      font-family: $title-font;
+      font-size: 14px;
+      font-weight: $bold-weight;
+      letter-spacing: 0.02em;
+    }
+  }
+
   .mcp-retro-image-figure {
     box-sizing: border-box;
     width: calc(100vw - 60px);
@@ -763,6 +791,14 @@
   }
 
   @include mq(tabletp) {
+    blockquote {
+      padding: 24px 28px;
+
+      p {
+        font-size: 19px;
+      }
+    }
+
     .mcp-retro-image-figure {
       margin: 72px 0;
     }

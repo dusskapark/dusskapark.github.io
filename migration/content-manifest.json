@@ -1,0 +1,1673 @@
+{
+  "version": 1,
+  "summary": {
+    "documents": 20,
+    "projects": 17,
+    "listedProjects": 16,
+    "posts": 3,
+    "galleries": 50,
+    "galleriesByColumns": {
+      "1": 22,
+      "2": 24,
+      "3": 4
+    },
+    "galleryImages": 114,
+    "excluded": [
+      {
+        "source": "_posts/2019-06-30-demo.md",
+        "reason": "Theme demonstration, explicitly excluded from migration."
+      },
+      {
+        "source": "_projects/test.md",
+        "reason": "Unpublished include experiment without front matter."
+      }
+    ]
+  },
+  "entries": [
+    {
+      "source": "_projects/2013-10-01-tstore.md",
+      "output": "content/projects/tstore.mdx",
+      "kind": "project",
+      "slug": "tstore",
+      "url": "/project/tstore",
+      "title": "T store Developer Center 3.0",
+      "date": "2013-10-01",
+      "lang": "ko",
+      "listed": true,
+      "hero": "/images/projects/2013-tstore/img_developer_012.png",
+      "legacyPaths": [
+        "/project/tstore.html",
+        "/project/tstore/"
+      ],
+      "sourceSha256": "5bea75cd141f4df9afd2b628228742ab7e7c151a2dc296540066d2b6372613dd",
+      "outputSha256": "2d1529bed4c5dd54bfe9466d11ba9714d1495e74024fe4f17fa6c76f2ac65222",
+      "headings": [
+        {
+          "depth": 3,
+          "text": "Overview",
+          "id": "overview"
+        },
+        {
+          "depth": 3,
+          "text": "Analysis & Ideation",
+          "id": "analysis--ideation"
+        },
+        {
+          "depth": 4,
+          "text": "Analysis",
+          "id": "analysis"
+        },
+        {
+          "depth": 4,
+          "text": "Ideation",
+          "id": "ideation"
+        },
+        {
+          "depth": 3,
+          "text": "Concept & Rules",
+          "id": "concept--rules"
+        },
+        {
+          "depth": 3,
+          "text": "Output",
+          "id": "output"
+        }
+      ],
+      "components": {
+        "galleries": 0,
+        "galleryImages": 0,
+        "quoteCards": 0,
+        "mediaEmbeds": 0,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2015-03-02-onestore.md",
+      "output": "content/projects/onestore.mdx",
+      "kind": "project",
+      "slug": "onestore",
+      "url": "/project/onestore",
+      "title": "App store Integration Project",
+      "date": "2015-03-02",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2015-onestore/2015-onestore-001.png",
+      "legacyPaths": [
+        "/project/onestore.html",
+        "/project/onestore/"
+      ],
+      "sourceSha256": "78bae1b10705edb141d64e81f3137a896395007bbafdedaeb5bf6940e17ba234",
+      "outputSha256": "7bf9b68a3e1b89486465626d7d3b4671e6db41b058eef4ed5615e1a63e0ae0a9",
+      "headings": [
+        {
+          "depth": 3,
+          "text": "What I did",
+          "id": "what-i-did"
+        },
+        {
+          "depth": 3,
+          "text": "The achievements",
+          "id": "the-achievements"
+        },
+        {
+          "depth": 3,
+          "text": "Concept images",
+          "id": "concept-images"
+        }
+      ],
+      "components": {
+        "galleries": 1,
+        "galleryImages": 5,
+        "quoteCards": 0,
+        "mediaEmbeds": 1,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2015-11-20-bobplanet.md",
+      "output": "content/projects/bobplanet.mdx",
+      "kind": "project",
+      "slug": "bobplanet",
+      "url": "/project/bobplanet",
+      "title": "Beacon project",
+      "date": "2015-11-19",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2015-bobplanet/step4_1mb.png",
+      "legacyPaths": [
+        "/project/bobplanet.html",
+        "/project/bobplanet/"
+      ],
+      "sourceSha256": "c75a7b5d850d0d9c0146f36cf8c7c1bebed73d0e53780ed9d6e224ba114e5e24",
+      "outputSha256": "5db61d2f0136229f76bfe2a66fae35bcb629d3bfae4de71a6ef4db5c5c157230",
+      "headings": [
+        {
+          "depth": 3,
+          "text": "왜? 밥플래닛을 만들었나?",
+          "id": "왜-밥플래닛을-만들었나"
+        },
+        {
+          "depth": 4,
+          "text": "기능설명",
+          "id": "기능설명"
+        },
+        {
+          "depth": 4,
+          "text": "세부 프로젝트 소개",
+          "id": "세부-프로젝트-소개"
+        },
+        {
+          "depth": 3,
+          "text": "앱을 만든 이유",
+          "id": "앱을-만든-이유"
+        },
+        {
+          "depth": 3,
+          "text": "주요기능",
+          "id": "주요기능"
+        }
+      ],
+      "components": {
+        "galleries": 3,
+        "galleryImages": 6,
+        "quoteCards": 0,
+        "mediaEmbeds": 1,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2016-12-01-chatbot.md",
+      "output": "content/projects/chatbot.mdx",
+      "kind": "project",
+      "slug": "chatbot",
+      "url": "/project/chatbot",
+      "title": "Chatbot Project",
+      "date": "2016-12-01",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2016-chatbot/placeit01-2546.jpg",
+      "legacyPaths": [
+        "/project/chatbot.html",
+        "/project/chatbot/"
+      ],
+      "sourceSha256": "edcecb696f2511548d4848dffc21bf61677ed7214dd9477f4d896440f3df065e",
+      "outputSha256": "221403a51309268529cb2ab428c8542442310b1684c0b26857e6fa61055f83c7",
+      "headings": [
+        {
+          "depth": 3,
+          "text": "Project background",
+          "id": "project-background"
+        },
+        {
+          "depth": 3,
+          "text": "Key features",
+          "id": "key-features"
+        },
+        {
+          "depth": 3,
+          "text": "Skills",
+          "id": "skills"
+        },
+        {
+          "depth": 3,
+          "text": "Concept video",
+          "id": "concept-video"
+        }
+      ],
+      "components": {
+        "galleries": 0,
+        "galleryImages": 0,
+        "quoteCards": 0,
+        "mediaEmbeds": 2,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2017-10-02-gdc.md",
+      "output": "content/projects/gdc.mdx",
+      "kind": "project",
+      "slug": "gdc",
+      "url": "/project/gdc",
+      "title": "Redesign project",
+      "date": "2017-10-02",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2017-gdc/console2018-004.png",
+      "legacyPaths": [
+        "/project/gdc.html",
+        "/project/gdc/"
+      ],
+      "sourceSha256": "f628f180d6987c220937f2800a3e7eb727bcd973c73e3f00f88bdb15c31d03ca",
+      "outputSha256": "4bda87ca5da21d832c4424f8702731d00a2ee092b78b0adfacdc6baea918ad38",
+      "headings": [
+        {
+          "depth": 3,
+          "text": "Beginning",
+          "id": "beginning"
+        },
+        {
+          "depth": 3,
+          "text": "Brainstorm & Define problems",
+          "id": "brainstorm--define-problems"
+        },
+        {
+          "depth": 3,
+          "text": "Ideate & Sketch",
+          "id": "ideate--sketch"
+        },
+        {
+          "depth": 3,
+          "text": "UI Design",
+          "id": "ui-design"
+        },
+        {
+          "depth": 3,
+          "text": "Implementation and release",
+          "id": "implementation-and-release"
+        }
+      ],
+      "components": {
+        "galleries": 2,
+        "galleryImages": 4,
+        "quoteCards": 0,
+        "mediaEmbeds": 1,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2018-12-01-orderbook.md",
+      "output": "content/projects/orderbook.mdx",
+      "kind": "project",
+      "slug": "orderbook",
+      "url": "/project/orderbook",
+      "title": "Food ordering app",
+      "date": "2018-12-01",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2018-orderbook/logostory2018-002.png",
+      "legacyPaths": [
+        "/project/orderbook.html",
+        "/project/orderbook/"
+      ],
+      "sourceSha256": "e33deb29901dda3e7fb0d8921621ccb53c4aff09e43d32c6911281e889314362",
+      "outputSha256": "ce68b02f0cc1507472f9103e058a61015450b5273084b7e256b20163b3cb237a",
+      "headings": [
+        {
+          "depth": 3,
+          "text": "Brainstorm",
+          "id": "brainstorm"
+        },
+        {
+          "depth": 3,
+          "text": "Ideate & Sketch",
+          "id": "ideate--sketch"
+        },
+        {
+          "depth": 3,
+          "text": "Design & Prototype",
+          "id": "design--prototype"
+        },
+        {
+          "depth": 3,
+          "text": "Web app implementation",
+          "id": "web-app-implementation"
+        }
+      ],
+      "components": {
+        "galleries": 4,
+        "galleryImages": 13,
+        "quoteCards": 0,
+        "mediaEmbeds": 0,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2019-03-02-lookbook.md",
+      "output": "content/projects/lookbook.mdx",
+      "kind": "project",
+      "slug": "lookbook",
+      "url": "/project/lookbook",
+      "title": "LOOKBOOK",
+      "date": "2019-03-02",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2019-lookbook/lookbook2019-001.png",
+      "legacyPaths": [
+        "/project/lookbook.html",
+        "/project/lookbook/"
+      ],
+      "sourceSha256": "339ecb86c1493e2b579b1da5fbd8fbee5ab2a7d9197c39107bb4a33f32717ae2",
+      "outputSha256": "565d4b74b70b4e450d086b1eae3b304b426005801f887e12e3423b49d5d3f417",
+      "headings": [
+        {
+          "depth": 3,
+          "text": "Why, did we need to improve our management tools?",
+          "id": "why-did-we-need-to-improve-our-management-tools"
+        },
+        {
+          "depth": 3,
+          "text": "Why Opensource?",
+          "id": "why-opensource"
+        },
+        {
+          "depth": 4,
+          "text": "You cannot make software by yourself",
+          "id": "you-cannot-make-software-by-yourself"
+        },
+        {
+          "depth": 4,
+          "text": "Opensource itself was not the answer. Let's indirectly expand!",
+          "id": "opensource-itself-was-not-the-answer-lets-indirectly-expand"
+        },
+        {
+          "depth": 3,
+          "text": "Why, is it the expansion library?",
+          "id": "why-is-it-the-expansion-library"
+        },
+        {
+          "depth": 3,
+          "text": "Case: LINE GAME Developers",
+          "id": "case-line-game-developers"
+        },
+        {
+          "depth": 4,
+          "text": "Material Theming",
+          "id": "material-theming"
+        },
+        {
+          "depth": 4,
+          "text": "Ready-to-use components",
+          "id": "ready-to-use-components"
+        },
+        {
+          "depth": 4,
+          "text": "Communication with dev",
+          "id": "communication-with-dev"
+        },
+        {
+          "depth": 3,
+          "text": "Curious? checkout Website",
+          "id": "curious-checkout-website"
+        }
+      ],
+      "components": {
+        "galleries": 0,
+        "galleryImages": 0,
+        "quoteCards": 0,
+        "mediaEmbeds": 0,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2019-07-24-lgd-project.md",
+      "output": "content/projects/lgd-project.mdx",
+      "kind": "project",
+      "slug": "lgd-project",
+      "url": "/project/lgd-project",
+      "title": "LINE GAME Developers",
+      "date": "2019-07-24",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2019-lgd/lgd2019-001.jpg",
+      "legacyPaths": [
+        "/project/lgd-project.html",
+        "/project/lgd-project/"
+      ],
+      "sourceSha256": "72c2fc4f5b4fa2b0043eabefd72f419cfa095d4b0e5f0f3d2efd841ffe402d5e",
+      "outputSha256": "420ecbb86414644f4aff90fcfad90321631391728b906e71c123baa2a9bb58b9",
+      "headings": [
+        {
+          "depth": 4,
+          "text": "Concept Background",
+          "id": "concept-background"
+        },
+        {
+          "depth": 4,
+          "text": "Research",
+          "id": "research"
+        },
+        {
+          "depth": 4,
+          "text": "Insights",
+          "id": "insights"
+        },
+        {
+          "depth": 4,
+          "text": "Ideation and Sketch",
+          "id": "ideation-and-sketch"
+        },
+        {
+          "depth": 4,
+          "text": "Design and Prototype",
+          "id": "design-and-prototype"
+        },
+        {
+          "depth": 4,
+          "text": "Build",
+          "id": "build"
+        }
+      ],
+      "components": {
+        "galleries": 4,
+        "galleryImages": 13,
+        "quoteCards": 0,
+        "mediaEmbeds": 2,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2020-10-30-liff-project.md",
+      "output": "content/projects/liff-project.mdx",
+      "kind": "project",
+      "slug": "liff-project",
+      "url": "/project/liff-project",
+      "title": "LINE Frontend Framework (LIFF)",
+      "date": "2020-10-30",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2020-liff/5_Native%20area%20elements.png",
+      "legacyPaths": [
+        "/project/liff-project.html",
+        "/project/liff-project/"
+      ],
+      "sourceSha256": "a4c8281e55f10f95c0b15a09052e90c68027be7a6f75904cb6d12394f3b5a992",
+      "outputSha256": "fd43d94a7664ea35cd0c208f3a775ce60ed57a8e90816d39ce6b0c117b6a8855",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Research",
+          "id": "research"
+        },
+        {
+          "depth": 2,
+          "text": "Ideate",
+          "id": "ideate"
+        },
+        {
+          "depth": 2,
+          "text": "Design and Iteration",
+          "id": "design-and-iteration"
+        },
+        {
+          "depth": 2,
+          "text": "Build",
+          "id": "build"
+        },
+        {
+          "depth": 2,
+          "text": "Result",
+          "id": "result"
+        }
+      ],
+      "components": {
+        "galleries": 3,
+        "galleryImages": 11,
+        "quoteCards": 0,
+        "mediaEmbeds": 1,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2020-11-30-ldsg.md",
+      "output": "content/projects/ldsg.mdx",
+      "kind": "project",
+      "slug": "ldsg",
+      "url": "/project/ldsg",
+      "title": "LINE Design System Global",
+      "date": "2020-11-30",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2020-ldsg/mt-09AF1C98-4F0A-496C-857F-B244256366C5-19587.png",
+      "legacyPaths": [
+        "/project/ldsg.html",
+        "/project/ldsg/"
+      ],
+      "sourceSha256": "a8637c482e6766160aaa9f0e33570887b555c2b9e5433f4e0c91d463bb93c976",
+      "outputSha256": "fa6fb1baaaf1d704e02c2b254a28a4aa958668ad6c3ce81d31378029fc88a5a4",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Background",
+          "id": "background"
+        },
+        {
+          "depth": 2,
+          "text": "Concept building",
+          "id": "concept-building"
+        },
+        {
+          "depth": 2,
+          "text": "Work Processes",
+          "id": "work-processes"
+        },
+        {
+          "depth": 3,
+          "text": "Overview",
+          "id": "overview"
+        },
+        {
+          "depth": 3,
+          "text": "Design",
+          "id": "design"
+        },
+        {
+          "depth": 3,
+          "text": "Documents",
+          "id": "documents"
+        },
+        {
+          "depth": 3,
+          "text": "Development",
+          "id": "development"
+        }
+      ],
+      "components": {
+        "galleries": 2,
+        "galleryImages": 7,
+        "quoteCards": 0,
+        "mediaEmbeds": 2,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2021-08-11-TensorFlow-JS.md",
+      "output": "content/projects/tensorflow-js.mdx",
+      "kind": "project",
+      "slug": "tensorflow-js",
+      "url": "/project/tensorflow-js",
+      "title": "AI-powered design system made with TFJS",
+      "date": "2021-08-11",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2021-made-with-tfjs/file-cover.png",
+      "legacyPaths": [
+        "/project/tensorflow-js.html",
+        "/project/tensorflow-js/"
+      ],
+      "sourceSha256": "f9bd0554c1f3b8ef5cd2816ed8548d94122e122c9e9b034fa7974df922a0914a",
+      "outputSha256": "714e89224bf9790db1ad8367ee72867978f42fe7cca8ef741f57f377c958f923",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Project Process",
+          "id": "project-process"
+        },
+        {
+          "depth": 2,
+          "text": "Brainstorm & Define problems",
+          "id": "brainstorm--define-problems"
+        },
+        {
+          "depth": 2,
+          "text": "Ideate & Prototype",
+          "id": "ideate--prototype"
+        },
+        {
+          "depth": 3,
+          "text": "Idea? Computer Vision!",
+          "id": "idea-computer-vision"
+        },
+        {
+          "depth": 3,
+          "text": "Prototyping",
+          "id": "prototyping"
+        },
+        {
+          "depth": 2,
+          "text": "Machine Learning",
+          "id": "machine-learning"
+        },
+        {
+          "depth": 3,
+          "text": "Raw data? Partnership!",
+          "id": "raw-data-partnership"
+        },
+        {
+          "depth": 3,
+          "text": "Data Labeling? Sponsored!",
+          "id": "data-labeling-sponsored"
+        },
+        {
+          "depth": 3,
+          "text": "Training with TensorFlow",
+          "id": "training-with-tensorflow"
+        },
+        {
+          "depth": 2,
+          "text": "Make plugins",
+          "id": "make-plugins"
+        },
+        {
+          "depth": 4,
+          "text": "Zeplin Extension",
+          "id": "zeplin-extension"
+        },
+        {
+          "depth": 4,
+          "text": "Figma Plugin",
+          "id": "figma-plugin"
+        },
+        {
+          "depth": 2,
+          "text": "Reactions",
+          "id": "reactions"
+        },
+        {
+          "depth": 2,
+          "text": "From Local Beginnings to Global Recognition",
+          "id": "from-local-beginnings-to-global-recognition"
+        }
+      ],
+      "components": {
+        "galleries": 1,
+        "galleryImages": 3,
+        "quoteCards": 0,
+        "mediaEmbeds": 0,
+        "tweets": 3,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2022-08-03-naver-now.md",
+      "output": "content/projects/naver-now.mdx",
+      "kind": "project",
+      "slug": "naver-now",
+      "url": "/project/naver-now",
+      "title": "Improving NAVER NOW featured list via adding a full-width carousel",
+      "date": "2022-08-03",
+      "lang": "en",
+      "listed": false,
+      "hero": "/images/projects/2022-naver-now/Portfolio.008.png",
+      "legacyPaths": [
+        "/project/naver-now.html",
+        "/project/naver-now/"
+      ],
+      "sourceSha256": "16342c64140ee50d3998f2fdef97c343080575dc598e73e6852ab1eadbf56cf8",
+      "outputSha256": "0003c414177a5113b8ed66e497369681dc6f48c26f6f64fd1a480da63afe917f",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Problems",
+          "id": "problems"
+        },
+        {
+          "depth": 2,
+          "text": "Process",
+          "id": "process"
+        },
+        {
+          "depth": 3,
+          "text": "Discover phase",
+          "id": "discover-phase"
+        },
+        {
+          "depth": 3,
+          "text": "Define phase",
+          "id": "define-phase"
+        },
+        {
+          "depth": 3,
+          "text": "Develop phase",
+          "id": "develop-phase"
+        },
+        {
+          "depth": 3,
+          "text": "Deliver phase",
+          "id": "deliver-phase"
+        },
+        {
+          "depth": 3,
+          "text": "Design system thinking",
+          "id": "design-system-thinking"
+        },
+        {
+          "depth": 2,
+          "text": "Takeaway",
+          "id": "takeaway"
+        }
+      ],
+      "components": {
+        "galleries": 6,
+        "galleryImages": 20,
+        "quoteCards": 0,
+        "mediaEmbeds": 0,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2023-06-01-Figma-Autoname.md",
+      "output": "content/projects/figma-autoname.mdx",
+      "kind": "project",
+      "slug": "figma-autoname",
+      "url": "/project/figma-autoname",
+      "title": "Community-Driven AI Advancements: Transforming Figma Autoname for Design Systems",
+      "date": "2023-06-01",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2023-figma-autoname/cover.png",
+      "legacyPaths": [
+        "/project/figma-autoname.html",
+        "/project/figma-autoname/"
+      ],
+      "sourceSha256": "5bca3568a4b74e0a3749c6b7fde3418ac6b1e0c7ee975295589d5ae7f0f61f31",
+      "outputSha256": "6f91e76fe0adfd93c681ff4c3cef9903985ae1f93eea81509277e5511d44e682",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Origins and Motivation",
+          "id": "origins-and-motivation"
+        },
+        {
+          "depth": 2,
+          "text": "Discovery and Initial Engagement",
+          "id": "discovery-and-initial-engagement"
+        },
+        {
+          "depth": 3,
+          "text": "User Interviews and Insights",
+          "id": "user-interviews-and-insights"
+        },
+        {
+          "depth": 2,
+          "text": "Technical Contributions",
+          "id": "technical-contributions"
+        },
+        {
+          "depth": 3,
+          "text": "Enhancing the Plugin",
+          "id": "enhancing-the-plugin"
+        },
+        {
+          "depth": 3,
+          "text": "Development of Supporting Tools",
+          "id": "development-of-supporting-tools"
+        },
+        {
+          "depth": 3,
+          "text": "And Supportting DevMode as well",
+          "id": "and-supportting-devmode-as-well"
+        },
+        {
+          "depth": 2,
+          "text": "Impact on the Community",
+          "id": "impact-on-the-community"
+        },
+        {
+          "depth": 2,
+          "text": "Lessons Learned",
+          "id": "lessons-learned"
+        }
+      ],
+      "components": {
+        "galleries": 4,
+        "galleryImages": 4,
+        "quoteCards": 0,
+        "mediaEmbeds": 2,
+        "tweets": 1,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2024-06-01-klever.md",
+      "output": "content/projects/klever.mdx",
+      "kind": "project",
+      "slug": "klever",
+      "url": "/project/klever",
+      "title": "Klever — A Community-Driven AI Usability Testing Figma Plugin",
+      "date": "2024-06-01",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2024-klever/hero.png",
+      "legacyPaths": [
+        "/project/klever.html",
+        "/project/klever/"
+      ],
+      "sourceSha256": "fb0e44cc00a01a7c68b02946607450361f849598b2cc34eb6608f741fa20770f",
+      "outputSha256": "fe12e2ab52b68fe78483ce2fbc15ae7472849a0f3674d1b24cc88a9c8c021dd3",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Introducing Klever",
+          "id": "introducing-klever"
+        },
+        {
+          "depth": 2,
+          "text": "💡 The Ideation Journey",
+          "id": "-the-ideation-journey"
+        },
+        {
+          "depth": 3,
+          "text": "Can AI Enhance Design?",
+          "id": "can-ai-enhance-design"
+        },
+        {
+          "depth": 3,
+          "text": "Meeting AppAgent and the Eureka Moment",
+          "id": "meeting-appagent-and-the-eureka-moment"
+        },
+        {
+          "depth": 3,
+          "text": "Designer Interviews",
+          "id": "designer-interviews"
+        },
+        {
+          "depth": 3,
+          "text": "Instant Usability Testing",
+          "id": "instant-usability-testing"
+        },
+        {
+          "depth": 2,
+          "text": "🛠️ The Development Journey",
+          "id": "️-the-development-journey"
+        },
+        {
+          "depth": 3,
+          "text": "How AppAgent Works?",
+          "id": "how-appagent-works"
+        },
+        {
+          "depth": 3,
+          "text": "Generating UI Screenshots & Annotations",
+          "id": "generating-ui-screenshots--annotations"
+        },
+        {
+          "depth": 3,
+          "text": "Implementing AI Actions in Figma",
+          "id": "implementing-ai-actions-in-figma"
+        },
+        {
+          "depth": 3,
+          "text": "🎉  Prototyped: AppAgent's Integration with Figma",
+          "id": "prototyped-appagents-integration-with-figma"
+        },
+        {
+          "depth": 3,
+          "text": "From experiment to product, Klever was born",
+          "id": "from-experiment-to-product-klever-was-born"
+        },
+        {
+          "depth": 2,
+          "text": "🧠 Interesting Use Cases",
+          "id": "-interesting-use-cases"
+        },
+        {
+          "depth": 3,
+          "text": "Discovering Hidden Interactions",
+          "id": "discovering-hidden-interactions"
+        },
+        {
+          "depth": 3,
+          "text": "Identifying UI Element Ambiguity",
+          "id": "identifying-ui-element-ambiguity"
+        },
+        {
+          "depth": 3,
+          "text": "Predicting Hidden Features",
+          "id": "predicting-hidden-features"
+        },
+        {
+          "depth": 2,
+          "text": "📈 Impact",
+          "id": "-impact"
+        },
+        {
+          "depth": 2,
+          "text": "🌱 Growing with Community",
+          "id": "-growing-with-community"
+        },
+        {
+          "depth": 3,
+          "text": "Meetups: Friends of Figma Seoul & Educators event",
+          "id": "meetups-friends-of-figma-seoul--educators-event"
+        },
+        {
+          "depth": 3,
+          "text": "Conference: InfCon 2024 Presentation",
+          "id": "conference-infcon-2024-presentation"
+        },
+        {
+          "depth": 3,
+          "text": "From Side Project to Corporate Innovation",
+          "id": "from-side-project-to-corporate-innovation"
+        },
+        {
+          "depth": 3,
+          "text": "Challenges & Community Growth",
+          "id": "challenges--community-growth"
+        },
+        {
+          "depth": 2,
+          "text": "Lessons learned",
+          "id": "lessons-learned"
+        }
+      ],
+      "components": {
+        "galleries": 9,
+        "galleryImages": 16,
+        "quoteCards": 6,
+        "mediaEmbeds": 4,
+        "tweets": 0,
+        "timelines": 4,
+        "timelineItems": 16,
+        "storeBadges": 1,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2024-11-05-form-helper-chrome.md",
+      "output": "content/projects/form-helper-chrome.mdx",
+      "kind": "project",
+      "slug": "form-helper-chrome",
+      "url": "/project/form-helper-chrome",
+      "title": "FORM HELPER powered by Chrome's built-in AI",
+      "date": "2024-11-05",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2024-form-helper-chrome/hero.png",
+      "legacyPaths": [
+        "/project/form-helper-chrome.html",
+        "/project/form-helper-chrome/"
+      ],
+      "sourceSha256": "845221a6afaa7f4502fc0cbfc463179efb75791d94856395bdf1d8e19034da21",
+      "outputSha256": "efe2fb5127f8c300dd03d37e96fe28b4ad0d9dc38190f2c52fdc2e93c49acd48",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Project Overview",
+          "id": "project-overview"
+        },
+        {
+          "depth": 2,
+          "text": "Situation",
+          "id": "situation"
+        },
+        {
+          "depth": 2,
+          "text": "Task",
+          "id": "task"
+        },
+        {
+          "depth": 2,
+          "text": "Action",
+          "id": "action"
+        },
+        {
+          "depth": 3,
+          "text": "Research on Personalized AI Feedback",
+          "id": "research-on-personalized-ai-feedback"
+        },
+        {
+          "depth": 4,
+          "text": "Form Error Message Analysis",
+          "id": "form-error-message-analysis"
+        },
+        {
+          "depth": 4,
+          "text": "AI as a Potential Solution",
+          "id": "ai-as-a-potential-solution"
+        },
+        {
+          "depth": 3,
+          "text": "Building a Zero-Cost AI Solution",
+          "id": "building-a-zero-cost-ai-solution"
+        },
+        {
+          "depth": 4,
+          "text": "Chrome's Built-in AI Discovery",
+          "id": "chromes-built-in-ai-discovery"
+        },
+        {
+          "depth": 4,
+          "text": "Building with Chrome's Built-in AI",
+          "id": "building-with-chromes-built-in-ai"
+        },
+        {
+          "depth": 4,
+          "text": "Streamlining Developer Experience",
+          "id": "streamlining-developer-experience"
+        },
+        {
+          "depth": 2,
+          "text": "Result",
+          "id": "result"
+        },
+        {
+          "depth": 3,
+          "text": "Published as Open Source",
+          "id": "published-as-open-source"
+        },
+        {
+          "depth": 3,
+          "text": "Chrome Built-in AI Challenge",
+          "id": "chrome-built-in-ai-challenge"
+        },
+        {
+          "depth": 2,
+          "text": "Conclusion",
+          "id": "conclusion"
+        }
+      ],
+      "components": {
+        "galleries": 1,
+        "galleryImages": 1,
+        "quoteCards": 4,
+        "mediaEmbeds": 2,
+        "tweets": 0,
+        "timelines": 2,
+        "timelineItems": 5,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2025-07-14-talk-to-figma-mcp.md",
+      "output": "content/projects/talk-to-figma-mcp.mdx",
+      "kind": "project",
+      "slug": "talk-to-figma-mcp",
+      "url": "/project/talk-to-figma-mcp",
+      "title": "TalkToFigma MCP & Desktop: Pioneer of AI-Powered Design Productivity",
+      "date": "2025-07-14",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2025-talk-to-figma-mcp/hero.png",
+      "legacyPaths": [
+        "/project/talk-to-figma-mcp.html",
+        "/project/talk-to-figma-mcp/"
+      ],
+      "sourceSha256": "c5c2bc3e8e940d51385861e3faec06686ea45077abb08eb90ef63145ee94fda7",
+      "outputSha256": "289fabb5d9f3e7a8032bf6752db83ec96755be1488964083756769fc0bb625bb",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "One-line Summary",
+          "id": "one-line-summary"
+        },
+        {
+          "depth": 2,
+          "text": "1) Start: I Saw the Open-Source MCP Potential",
+          "id": "1-start-i-saw-the-open-source-mcp-potential"
+        },
+        {
+          "depth": 3,
+          "text": "Core Areas I Contributed",
+          "id": "core-areas-i-contributed"
+        },
+        {
+          "depth": 2,
+          "text": "2) Turning Point: The Bottleneck Was Installation, Not Interest",
+          "id": "2-turning-point-the-bottleneck-was-installation-not-interest"
+        },
+        {
+          "depth": 2,
+          "text": "3) Solution: I Started Building TalkToFigma Desktop",
+          "id": "3-solution-i-started-building-talktofigma-desktop"
+        },
+        {
+          "depth": 3,
+          "text": "What We Prioritized in Desktop",
+          "id": "what-we-prioritized-in-desktop"
+        },
+        {
+          "depth": 2,
+          "text": "4) Outcome: Faster and Wider Adoption Than Expected",
+          "id": "4-outcome-faster-and-wider-adoption-than-expected"
+        },
+        {
+          "depth": 2,
+          "text": "5) Current Conclusion",
+          "id": "5-current-conclusion"
+        },
+        {
+          "depth": 2,
+          "text": "References & Links",
+          "id": "references--links"
+        }
+      ],
+      "components": {
+        "galleries": 0,
+        "galleryImages": 0,
+        "quoteCards": 0,
+        "mediaEmbeds": 1,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+      "output": "content/projects/how-far-can-a-product-designer-build-with-codex.mdx",
+      "kind": "project",
+      "slug": "how-far-can-a-product-designer-build-with-codex",
+      "url": "/project/how-far-can-a-product-designer-build-with-codex",
+      "title": "Singapore Korean Church Shuttle Platform",
+      "date": "2026-06-08",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2026-rider-driver-codex/05-rider-driver-story-hero-v3.webp",
+      "legacyPaths": [
+        "/project/how-far-can-a-product-designer-build-with-codex.html",
+        "/project/how-far-can-a-product-designer-build-with-codex/"
+      ],
+      "sourceSha256": "8cb869d049019a3c254d6a8a748ba0a54066d2a24cad57d49e393f05fde7e01b",
+      "outputSha256": "e2cb92c7b283509fe9862a40994664efde406b2e3ab8fe805b1e922e9cffd7b4",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Context: A Small Shuttle, A Real Product Problem",
+          "id": "context-a-small-shuttle-a-real-product-problem"
+        },
+        {
+          "depth": 2,
+          "text": "Build 1: Start With A Small Web MVP",
+          "id": "build-1-start-with-a-small-web-mvp"
+        },
+        {
+          "depth": 3,
+          "text": "Small Web MVP",
+          "id": "small-web-mvp"
+        },
+        {
+          "depth": 3,
+          "text": "Plan Mode",
+          "id": "plan-mode"
+        },
+        {
+          "depth": 3,
+          "text": "Swagger As Blueprint",
+          "id": "swagger-as-blueprint"
+        },
+        {
+          "depth": 2,
+          "text": "Feedback 1: The Flow Worked, The Channel Did Not",
+          "id": "feedback-1-the-flow-worked-the-channel-did-not"
+        },
+        {
+          "depth": 2,
+          "text": "Build 2: Translate The Rider Experience To Native",
+          "id": "build-2-translate-the-rider-experience-to-native"
+        },
+        {
+          "depth": 3,
+          "text": "Real Device Validation",
+          "id": "real-device-validation"
+        },
+        {
+          "depth": 2,
+          "text": "Feedback 2: The Rider App Could Not Create Every Signal",
+          "id": "feedback-2-the-rider-app-could-not-create-every-signal"
+        },
+        {
+          "depth": 2,
+          "text": "Build 3: Make The Shuttle The Source Of Truth",
+          "id": "build-3-make-the-shuttle-the-source-of-truth"
+        },
+        {
+          "depth": 2,
+          "text": "Work Mode: Keeping The Build Loop Alive From A Hospital Room",
+          "id": "work-mode-keeping-the-build-loop-alive-from-a-hospital-room"
+        },
+        {
+          "depth": 2,
+          "text": "Builder Takeaway: Owning More Of The SDLC",
+          "id": "builder-takeaway-owning-more-of-the-sdlc"
+        },
+        {
+          "depth": 2,
+          "text": "Reflection: What Stayed With Me",
+          "id": "reflection-what-stayed-with-me"
+        },
+        {
+          "depth": 2,
+          "text": "References",
+          "id": "references"
+        }
+      ],
+      "components": {
+        "galleries": 9,
+        "galleryImages": 9,
+        "quoteCards": 0,
+        "mediaEmbeds": 4,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 2,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_posts/2020-09-24-Machine-Learning-for-Design-Systems.md",
+      "output": "content/posts/machine-learning-for-design-systems.mdx",
+      "kind": "post",
+      "slug": "machine-learning-for-design-systems",
+      "url": "/blog/machine-learning-for-design-systems",
+      "title": "Machine Learning for Design Systems",
+      "date": "2020-09-24",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/ml4ds/image-20200924121002344.png",
+      "legacyPaths": [
+        "/blog/machine-learning-for-design-systems.html",
+        "/blog/machine-learning-for-design-systems/"
+      ],
+      "sourceSha256": "658358264811e6a06ff66518aebfae48c47330405807b749f727419c268794d7",
+      "outputSha256": "a84b7735b1c84de5f00fe8fcb7e5fab399c89520f9de6cf5fa0c51dc5aaa40ed",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Preliminar words",
+          "id": "preliminar-words"
+        },
+        {
+          "depth": 2,
+          "text": "Background",
+          "id": "background"
+        },
+        {
+          "depth": 2,
+          "text": "Setting-up a working Python environment",
+          "id": "setting-up-a-working-python-environment"
+        },
+        {
+          "depth": 3,
+          "text": "direnv",
+          "id": "direnv"
+        },
+        {
+          "depth": 3,
+          "text": "pyenv",
+          "id": "pyenv"
+        },
+        {
+          "depth": 2,
+          "text": "Installation",
+          "id": "installation"
+        },
+        {
+          "depth": 3,
+          "text": "Tensorflow2 installation",
+          "id": "tensorflow2-installation"
+        },
+        {
+          "depth": 3,
+          "text": "Object Detection API installation",
+          "id": "object-detection-api-installation"
+        },
+        {
+          "depth": 2,
+          "text": "Training UI dataset",
+          "id": "training-ui-dataset"
+        },
+        {
+          "depth": 3,
+          "text": "STEP 1. Preparing the Workspace",
+          "id": "step-1-preparing-the-workspace"
+        },
+        {
+          "depth": 3,
+          "text": "STEP 2. Gathering data",
+          "id": "step-2-gathering-data"
+        },
+        {
+          "depth": 3,
+          "text": "STEP 3. Labeling data",
+          "id": "step-3-labeling-data"
+        },
+        {
+          "depth": 3,
+          "text": "STEP 4. Generate the TF RECORDS",
+          "id": "step-4-generate-the-tf-records"
+        },
+        {
+          "depth": 3,
+          "text": "STEP 5. Training configuration",
+          "id": "step-5-training-configuration"
+        },
+        {
+          "depth": 3,
+          "text": "STEP6. Do Training!",
+          "id": "step6-do-training"
+        },
+        {
+          "depth": 4,
+          "text": "Training model progress",
+          "id": "training-model-progress"
+        },
+        {
+          "depth": 3,
+          "text": "STEP6. Exporting a Trained Model",
+          "id": "step6-exporting-a-trained-model"
+        },
+        {
+          "depth": 2,
+          "text": "Let's Test!",
+          "id": "lets-test"
+        },
+        {
+          "depth": 2,
+          "text": "Next steps",
+          "id": "next-steps"
+        },
+        {
+          "depth": 2,
+          "text": "Reference",
+          "id": "reference"
+        }
+      ],
+      "components": {
+        "galleries": 1,
+        "galleryImages": 2,
+        "quoteCards": 0,
+        "mediaEmbeds": 0,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 0
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_posts/2026-07-12-mcp-magic-retrospective-en.md",
+      "output": "content/posts/mcp-magic-retrospective-en.mdx",
+      "kind": "post",
+      "slug": "mcp-magic-retrospective-en",
+      "url": "/blog/mcp-magic-retrospective-en",
+      "title": "[Interview] MCP Magic and 570,000 Calls: Putting AI to Work in Figma",
+      "date": "2026-07-12",
+      "lang": "en",
+      "listed": true,
+      "hero": "/images/projects/2026-mcp-magic-retrospective/mcp-magic-desktop-en.png",
+      "legacyPaths": [
+        "/blog/mcp-magic-retrospective-en.html",
+        "/blog/mcp-magic-retrospective-en/"
+      ],
+      "sourceSha256": "f02cc86d9a04892b936286976fc95ad872e60f9700fc92e940400e5cf319de19",
+      "outputSha256": "55c122b56929b8a6a3da334ff92929d4e6d40b9621971118a887735d65bff16b",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Q. What problem did MCP Magic start with?",
+          "id": "q-what-problem-did-mcp-magic-start-with"
+        },
+        {
+          "depth": 2,
+          "text": "Q. What showed that people were using it?",
+          "id": "q-what-showed-that-people-were-using-it"
+        },
+        {
+          "depth": 3,
+          "text": "Q. Were people just trying it, or using it deeply?",
+          "id": "q-were-people-just-trying-it-or-using-it-deeply"
+        },
+        {
+          "depth": 2,
+          "text": "Q. What changed as the audience grew?",
+          "id": "q-what-changed-as-the-audience-grew"
+        },
+        {
+          "depth": 2,
+          "text": "Q. What happens to the project now?",
+          "id": "q-what-happens-to-the-project-now"
+        },
+        {
+          "depth": 2,
+          "text": "Q. What would you do differently next time?",
+          "id": "q-what-would-you-do-differently-next-time"
+        },
+        {
+          "depth": 2,
+          "text": "Q. What did 570,000 calls leave behind?",
+          "id": "q-what-did-570000-calls-leave-behind"
+        }
+      ],
+      "components": {
+        "galleries": 0,
+        "galleryImages": 0,
+        "quoteCards": 0,
+        "mediaEmbeds": 0,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 3
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    },
+    {
+      "source": "_posts/2026-07-12-mcp-magic-retrospective.md",
+      "output": "content/posts/mcp-magic-retrospective.mdx",
+      "kind": "post",
+      "slug": "mcp-magic-retrospective",
+      "url": "/blog/mcp-magic-retrospective",
+      "title": "[인터뷰] AI로 Figma를 움직인 MCP Magic, 57만 번의 호출 뒤 이야기",
+      "date": "2026-07-12",
+      "lang": "ko",
+      "listed": true,
+      "hero": "/images/projects/2026-mcp-magic-retrospective/mcp-magic-desktop.png",
+      "legacyPaths": [
+        "/blog/mcp-magic-retrospective.html",
+        "/blog/mcp-magic-retrospective/"
+      ],
+      "sourceSha256": "de318d34ac7352810b3a2524a1d56b99c5100c17a76895fa9aa0705ad190f3eb",
+      "outputSha256": "b0dacf5173aff90f82af0a1288841725ccd0fac32372f0e98fe1fa823f0ba6ac",
+      "headings": [
+        {
+          "depth": 2,
+          "text": "Q. MCP Magic은 어떤 문제에서 시작했나요?",
+          "id": "q-mcp-magic은-어떤-문제에서-시작했나요"
+        },
+        {
+          "depth": 2,
+          "text": "Q. 실제로 사용되었다는 신호가 있었나요?",
+          "id": "q-실제로-사용되었다는-신호가-있었나요"
+        },
+        {
+          "depth": 3,
+          "text": "Q. 한 번 써보고 떠난 걸까요, 아니면 깊게 쓴 걸까요?",
+          "id": "q-한-번-써보고-떠난-걸까요-아니면-깊게-쓴-걸까요"
+        },
+        {
+          "depth": 2,
+          "text": "Q. 사용자가 늘면서 무엇이 달라졌나요?",
+          "id": "q-사용자가-늘면서-무엇이-달라졌나요"
+        },
+        {
+          "depth": 2,
+          "text": "Q. 이 프로젝트는 앞으로 어떻게 되나요?",
+          "id": "q-이-프로젝트는-앞으로-어떻게-되나요"
+        },
+        {
+          "depth": 2,
+          "text": "Q. 다음에는 무엇을 다르게 할까요?",
+          "id": "q-다음에는-무엇을-다르게-할까요"
+        },
+        {
+          "depth": 2,
+          "text": "Q. 57만 번의 호출은 무엇을 남겼나요?",
+          "id": "q-57만-번의-호출은-무엇을-남겼나요"
+        }
+      ],
+      "components": {
+        "galleries": 0,
+        "galleryImages": 0,
+        "quoteCards": 0,
+        "mediaEmbeds": 0,
+        "tweets": 0,
+        "timelines": 0,
+        "timelineItems": 0,
+        "storeBadges": 0,
+        "figures": 3
+      },
+      "verification": {
+        "mdxCompilation": "passed",
+        "sourceTransformation": "deterministic",
+        "visualReview": "pending"
+      }
+    }
+  ],
+  "transformations": [
+    "Liquid includes become typed MDX components.",
+    "Kramdown parser directives removed.",
+    "Original code blocks and prose retained.",
+    "Relative media URLs normalized to existing /images paths.",
+    "HTML attributes/styles converted to JSX.",
+    "Legacy heading ids preserved from the pre-migration static output when available.",
+    "Timeline wrappers converted without altering item order.",
+    "Embedded tweets keep their static quote and original link."
+  ],
+  "warnings": [
+    {
+      "source": "_projects/2024-06-01-klever.md",
+      "change": "Darkened the Inflearn link background from #00C471 to #007b47 so its unchanged white label reaches accessible contrast; wording and URL unchanged."
+    },
+    {
+      "source": "_projects/2024-06-01-klever.md",
+      "change": "Closed the original unclosed community Timeline wrapper before store badges; all text and media preserved."
+    }
+  ]
+}

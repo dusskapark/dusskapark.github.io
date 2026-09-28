@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-09-28T04:09:01Z",
+  "baseUrl": "http://localhost:3001",
+  "tool": "CUA Chrome tab",
+  "independentChecks": {
+    "navigationMenu": "Named dialog; initial close-button focus; Shift+Tab wraps to the final link; Escape restores the menu trigger; selecting Writing closes the menu.",
+    "clientNavigationMetadata": "Home to Projects to TalkToFigma updates title, description, canonical and article language.",
+    "translationNavigation": "Korean to English retrospective updates visible title, article language, OG locale, canonical, and language alternates; Korean bold markers render as emphasis.",
+    "browserHistory": {
+      "motionPreference": "normal",
+      "htmlScrollBehavior": "auto",
+      "archiveInitialScrollY": 0,
+      "detailInitialScrollY": 0,
+      "detailAfterScrollingY": 2388,
+      "archiveAfterBackY": 500,
+      "clickedCardTopAfterBack": 88.46875,
+      "detailAfterForwardY": 2388,
+      "result": "The archive restores the selected card into view and forward restores the exact previous detail position."
+    },
+    "representativeDesktopRendering": "TalkToFigma and Korean retrospective headers/screenshots inspected at 1920px; no horizontal overflow.",
+    "console": "No warnings or errors during the final production navigation walkthrough.",
+    "scopedEmulationsReset": true
+  },
+  "componentChecksReportedByMediaAgent": {
+    "source": "CUA walkthrough by /root/media_components",
+    "gallery": "Next and arrow keys change carousel/enlarged images; lightbox Tab cycles within controls; Escape restores the exact opener; mobile touch swipe changes slides.",
+    "autoplay": "Visible unfocused carousel progresses; pause holds its slide; reduced motion removes autoplay controls.",
+    "noJavaScript": "Four galleries retain 13 images and 13 original links; native original-image navigation returns 200 and Back returns to the article.",
+    "nativeVideo": "Chatbot video plays with native controls and progressed to 00:04 of 00:43.",
+    "mobile": "390px layout has no overflow; two columns reflow to a 350px single column; Klever timeline and quote remain readable."
+  },
+  "limits": [
+    "Independent screenshots cover representative desktop pages; full content visual sweeps are recorded separately by the design/content agents.",
+    "External service availability and a formal screen-reader/WCAG audit were not performed."
+  ]
+}

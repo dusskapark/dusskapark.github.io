@@ -1,0 +1,1278 @@
+[
+  {
+    "id": "project-onestore-gallery-1",
+    "source": "_projects/2015-03-02-onestore.md",
+    "ordinal": 1,
+    "columns": 3,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2015-onestore/2015-onestore-002.png",
+        "width": 3840,
+        "height": 2160,
+        "alt": "App store Integration Project — project image 1"
+      },
+      {
+        "src": "/images/projects/2015-onestore/2015-onestore-003.png",
+        "width": 3840,
+        "height": 2160,
+        "alt": "App store Integration Project — project image 2"
+      },
+      {
+        "src": "/images/projects/2015-onestore/2015-onestore-004.png",
+        "width": 3840,
+        "height": 2160,
+        "alt": "App store Integration Project — project image 3"
+      },
+      {
+        "src": "/images/projects/2015-onestore/2015-onestore-005.png",
+        "width": 2882,
+        "height": 2160,
+        "alt": "App store Integration Project — project image 4"
+      },
+      {
+        "src": "/images/projects/2015-onestore/2015-onestore-006.png",
+        "width": 4096,
+        "height": 2304,
+        "alt": "App store Integration Project — project image 5"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-bobplanet-gallery-1",
+    "source": "_projects/2015-11-20-bobplanet.md",
+    "ordinal": 1,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2015-bobplanet/main_320.png",
+        "width": 320,
+        "height": 568,
+        "alt": "Beacon project — project image 1"
+      },
+      {
+        "src": "/images/projects/2015-bobplanet/menu_320.png",
+        "width": 320,
+        "height": 569,
+        "alt": "Beacon project — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-bobplanet-gallery-2",
+    "source": "_projects/2015-11-20-bobplanet.md",
+    "ordinal": 2,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2015-bobplanet/raspberry.png",
+        "width": 711,
+        "height": 556,
+        "alt": "Beacon project — project image 1"
+      },
+      {
+        "src": "/images/projects/2015-bobplanet/beacon_320.png",
+        "width": 320,
+        "height": 568,
+        "alt": "Beacon project — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-bobplanet-gallery-3",
+    "source": "_projects/2015-11-20-bobplanet.md",
+    "ordinal": 3,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2015-bobplanet/score_320.png",
+        "width": 320,
+        "height": 569,
+        "alt": "Beacon project — project image 1"
+      },
+      {
+        "src": "/images/projects/2015-bobplanet/login_320.png",
+        "width": 320,
+        "height": 569,
+        "alt": "Beacon project — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-gdc-gallery-1",
+    "source": "_projects/2017-10-02-gdc.md",
+    "ordinal": 1,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2017-gdc/GDC2017-001.png",
+        "width": 2850,
+        "height": 2557,
+        "alt": "Redesign project — project image 1"
+      },
+      {
+        "src": "/images/projects/2017-gdc/GDC2017-004.png",
+        "width": 4000,
+        "height": 3520,
+        "alt": "Redesign project — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-gdc-gallery-2",
+    "source": "_projects/2017-10-02-gdc.md",
+    "ordinal": 2,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2017-gdc/GDC2017-007.png",
+        "width": 3584,
+        "height": 2130,
+        "alt": "Redesign project — project image 1"
+      },
+      {
+        "src": "/images/projects/2017-gdc/GDC2017-008.png",
+        "width": 3584,
+        "height": 2130,
+        "alt": "Redesign project — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-orderbook-gallery-1",
+    "source": "_projects/2018-12-01-orderbook.md",
+    "ordinal": 1,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2018-orderbook/benchmarking0.png",
+        "width": 2067,
+        "height": 1299,
+        "alt": "Food ordering app — project image 1"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/benchmarking3.png",
+        "width": 1390,
+        "height": 874,
+        "alt": "Food ordering app — project image 2"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/benchmarking4.png",
+        "width": 1388,
+        "height": 876,
+        "alt": "Food ordering app — project image 3"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/benchmarking7.png",
+        "width": 1390,
+        "height": 874,
+        "alt": "Food ordering app — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-orderbook-gallery-2",
+    "source": "_projects/2018-12-01-orderbook.md",
+    "ordinal": 2,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2018-orderbook/logo1-1.png",
+        "width": 2384,
+        "height": 1344,
+        "alt": "Food ordering app — project image 1"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/logo1-2.png",
+        "width": 1970,
+        "height": 1110,
+        "alt": "Food ordering app — project image 2"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/logo1-3.png",
+        "width": 1970,
+        "height": 1108,
+        "alt": "Food ordering app — project image 3"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/logo1-5.png",
+        "width": 1970,
+        "height": 1108,
+        "alt": "Food ordering app — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-orderbook-gallery-3",
+    "source": "_projects/2018-12-01-orderbook.md",
+    "ordinal": 3,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2018-orderbook/logostory2018-007.png",
+        "width": 1143,
+        "height": 572,
+        "alt": "Food ordering app — project image 1"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/logostory2018-008.png",
+        "width": 7362,
+        "height": 4345,
+        "alt": "Food ordering app — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-orderbook-gallery-4",
+    "source": "_projects/2018-12-01-orderbook.md",
+    "ordinal": 4,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2018-orderbook/zeplin-2.png",
+        "width": 779,
+        "height": 475,
+        "alt": "Food ordering app — project image 1"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/zeplin-3.png",
+        "width": 780,
+        "height": 473,
+        "alt": "Food ordering app — project image 2"
+      },
+      {
+        "src": "/images/projects/2018-orderbook/zeplin-1.png",
+        "width": 781,
+        "height": 475,
+        "alt": "Food ordering app — project image 3"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-lgd-project-gallery-1",
+    "source": "_projects/2019-07-24-lgd-project.md",
+    "ordinal": 1,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-901.png",
+        "width": 1920,
+        "height": 1072,
+        "alt": "LINE GAME Developers — project image 1"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-902.png",
+        "width": 2000,
+        "height": 1125,
+        "alt": "LINE GAME Developers — project image 2"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-903.png",
+        "width": 2598,
+        "height": 1290,
+        "alt": "LINE GAME Developers — project image 3"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-904.png",
+        "width": 2458,
+        "height": 1298,
+        "alt": "LINE GAME Developers — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-lgd-project-gallery-2",
+    "source": "_projects/2019-07-24-lgd-project.md",
+    "ordinal": 2,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-905.png",
+        "width": 1467,
+        "height": 616,
+        "alt": "LINE GAME Developers — project image 1"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-906.png",
+        "width": 640,
+        "height": 279,
+        "alt": "LINE GAME Developers — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-lgd-project-gallery-3",
+    "source": "_projects/2019-07-24-lgd-project.md",
+    "ordinal": 3,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-911.png",
+        "width": 3762,
+        "height": 2352,
+        "alt": "LINE GAME Developers — project image 1"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-909.png",
+        "width": 1909,
+        "height": 1077,
+        "alt": "LINE GAME Developers — project image 2"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-910.gif",
+        "width": 2080,
+        "height": 1160,
+        "alt": "LINE GAME Developers — project image 3"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-lgd-project-gallery-4",
+    "source": "_projects/2019-07-24-lgd-project.md",
+    "ordinal": 4,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-001.jpg",
+        "width": 1920,
+        "height": 1281,
+        "alt": "LINE GAME Developers — project image 1"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-002.jpg",
+        "width": 1920,
+        "height": 1275,
+        "alt": "LINE GAME Developers — project image 2"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-003.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "LINE GAME Developers — project image 3"
+      },
+      {
+        "src": "/images/projects/2019-lgd/lgd2019-004.jpg",
+        "width": 1920,
+        "height": 1280,
+        "alt": "LINE GAME Developers — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-liff-project-gallery-1",
+    "source": "_projects/2020-10-30-liff-project.md",
+    "ordinal": 1,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2020-liff/10_LIFF%20modal%20type.png",
+        "width": 1600,
+        "height": 900,
+        "alt": "LINE Frontend Framework (LIFF) — project image 1"
+      },
+      {
+        "src": "/images/projects/2020-liff/LIFF%20view%20vs%20LIFF%20sheet_1600px.png",
+        "width": 3200,
+        "height": 1626,
+        "alt": "LINE Frontend Framework (LIFF) — project image 2"
+      },
+      {
+        "src": "/images/projects/2020-liff/Modal%20mode%20in%20LIFF_LINE.png",
+        "width": 800,
+        "height": 460,
+        "alt": "LINE Frontend Framework (LIFF) — project image 3"
+      },
+      {
+        "src": "/images/projects/2020-liff/Modal%20mode%20in%20LIFF_LINE_Family_service.png",
+        "width": 800,
+        "height": 460,
+        "alt": "LINE Frontend Framework (LIFF) — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-liff-project-gallery-2",
+    "source": "_projects/2020-10-30-liff-project.md",
+    "ordinal": 2,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2020-liff/add%20mode.png",
+        "width": 3286,
+        "height": 1460,
+        "alt": "LINE Frontend Framework (LIFF) — project image 1"
+      },
+      {
+        "src": "/images/projects/2020-liff/add%26edit%20mode.png",
+        "width": 3286,
+        "height": 1460,
+        "alt": "LINE Frontend Framework (LIFF) — project image 2"
+      },
+      {
+        "src": "/images/projects/2020-liff/search%20mode.png",
+        "width": 2728,
+        "height": 1296,
+        "alt": "LINE Frontend Framework (LIFF) — project image 3"
+      },
+      {
+        "src": "/images/projects/2020-liff/single-step%20modal%20mode.png",
+        "width": 2835,
+        "height": 1685,
+        "alt": "LINE Frontend Framework (LIFF) — project image 4"
+      },
+      {
+        "src": "/images/projects/2020-liff/multi-step%20modal%20mode.png",
+        "width": 2835,
+        "height": 1685,
+        "alt": "LINE Frontend Framework (LIFF) — project image 5"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-liff-project-gallery-3",
+    "source": "_projects/2020-10-30-liff-project.md",
+    "ordinal": 3,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2020-liff/001.png",
+        "width": 3360,
+        "height": 2100,
+        "alt": "LINE Frontend Framework (LIFF) — project image 1"
+      },
+      {
+        "src": "/images/projects/2020-liff/002.png",
+        "width": 3360,
+        "height": 2100,
+        "alt": "LINE Frontend Framework (LIFF) — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-ldsg-gallery-1",
+    "source": "_projects/2020-11-30-ldsg.md",
+    "ordinal": 1,
+    "columns": 3,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2020-ldsg/docs01.png",
+        "width": 1224,
+        "height": 1584,
+        "alt": "LINE Design System Global — project image 1"
+      },
+      {
+        "src": "/images/projects/2020-ldsg/docs02.png",
+        "width": 1224,
+        "height": 1584,
+        "alt": "LINE Design System Global — project image 2"
+      },
+      {
+        "src": "/images/projects/2020-ldsg/docs03.png",
+        "width": 1224,
+        "height": 1584,
+        "alt": "LINE Design System Global — project image 3"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-ldsg-gallery-2",
+    "source": "_projects/2020-11-30-ldsg.md",
+    "ordinal": 2,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2020-ldsg/docs04.png",
+        "width": 3360,
+        "height": 2100,
+        "alt": "LINE Design System Global — project image 1"
+      },
+      {
+        "src": "/images/projects/2020-ldsg/docs05.png",
+        "width": 3360,
+        "height": 2100,
+        "alt": "LINE Design System Global — project image 2"
+      },
+      {
+        "src": "/images/projects/2020-ldsg/docs06.png",
+        "width": 3360,
+        "height": 2100,
+        "alt": "LINE Design System Global — project image 3"
+      },
+      {
+        "src": "/images/projects/2020-ldsg/docs07.png",
+        "width": 3360,
+        "height": 2100,
+        "alt": "LINE Design System Global — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-tensorflow-js-gallery-1",
+    "source": "_projects/2021-08-11-TensorFlow-JS.md",
+    "ordinal": 1,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "https://img.youtube.com/vi/ckN1QIpjkAk/0.jpg",
+        "alt": "AI-powered design system made with TFJS — project image 1"
+      },
+      {
+        "src": "https://img.youtube.com/vi/blL0EQ6wNH8/0.jpg",
+        "alt": "AI-powered design system made with TFJS — project image 2"
+      },
+      {
+        "src": "/images/projects/2021-made-with-tfjs/2022-01-02%2011.54.33.png",
+        "width": 2358,
+        "height": 1314,
+        "alt": "AI-powered design system made with TFJS — project image 3"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-naver-now-gallery-1",
+    "source": "_projects/2022-08-03-naver-now.md",
+    "ordinal": 1,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.009.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 1"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.010.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 2"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.019.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 3"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.020.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-naver-now-gallery-2",
+    "source": "_projects/2022-08-03-naver-now.md",
+    "ordinal": 2,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.015.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 1"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.016.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 2"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.017.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 3"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.018.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-naver-now-gallery-3",
+    "source": "_projects/2022-08-03-naver-now.md",
+    "ordinal": 3,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.021.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 1"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.022.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-naver-now-gallery-4",
+    "source": "_projects/2022-08-03-naver-now.md",
+    "ordinal": 4,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.023.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 1"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.024.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 2"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.025.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 3"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.026.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-naver-now-gallery-5",
+    "source": "_projects/2022-08-03-naver-now.md",
+    "ordinal": 5,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.028.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 1"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.029.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-naver-now-gallery-6",
+    "source": "_projects/2022-08-03-naver-now.md",
+    "ordinal": 6,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.030.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 1"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.031.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 2"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.032.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 3"
+      },
+      {
+        "src": "/images/projects/2022-naver-now/Portfolio.033.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Improving NAVER NOW featured list via adding a full-width carousel — project image 4"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-figma-autoname-gallery-1",
+    "source": "_projects/2023-06-01-Figma-Autoname.md",
+    "ordinal": 1,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2023-figma-autoname/markdown002.gif",
+        "width": 3456,
+        "height": 2234,
+        "alt": "Community-Driven AI Advancements: Transforming Figma Autoname for Design Systems — project image 1"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-figma-autoname-gallery-2",
+    "source": "_projects/2023-06-01-Figma-Autoname.md",
+    "ordinal": 2,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2023-figma-autoname/Portfolio.036.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Community-Driven AI Advancements: Transforming Figma Autoname for Design Systems — project image 1"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-figma-autoname-gallery-3",
+    "source": "_projects/2023-06-01-Figma-Autoname.md",
+    "ordinal": 3,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2023-figma-autoname/markdown004.gif",
+        "width": 3456,
+        "height": 2234,
+        "alt": "Community-Driven AI Advancements: Transforming Figma Autoname for Design Systems — Example of the DevMode feature. 1"
+      }
+    ],
+    "caption": "Example of the DevMode feature.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-figma-autoname-gallery-4",
+    "source": "_projects/2023-06-01-Figma-Autoname.md",
+    "ordinal": 4,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2023-figma-autoname/Portfolio.038.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Community-Driven AI Advancements: Transforming Figma Autoname for Design Systems — A Python notebook for training TensorFlow JS model via using Figma-dummy-gen dataset. 1"
+      }
+    ],
+    "caption": "A Python notebook for training TensorFlow JS model via using Figma-dummy-gen dataset.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-1",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 1,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2024-klever/BentoGrid.png",
+        "width": 1884,
+        "height": 1400,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — Summary of Klever plugin features 1"
+      }
+    ],
+    "caption": "Summary of Klever plugin features",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-2",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 2,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2024-klever/5_demo_vid_0.png",
+        "width": 1970,
+        "height": 681,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — The original AppAgent operates: Observation → Thought → Action 1"
+      }
+    ],
+    "caption": "The original AppAgent operates: Observation → Thought → Action",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-3",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 3,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2024-klever/5_demo_case%20study_1_0.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — A sample screenshot vs A screenshot with UI object annotations 1"
+      }
+    ],
+    "caption": "A sample screenshot vs A screenshot with UI object annotations",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-4",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 4,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2024-klever/5_demo_case%20study_1_1.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — AI Agent found a prototype noodle that the designer missed. 1"
+      },
+      {
+        "src": "/images/projects/2024-klever/5_demo_case%20study_1_2.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — AI Agent found a prototype noodle that the designer missed. 2"
+      }
+    ],
+    "caption": "AI Agent found a prototype noodle that the designer missed.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-5",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 5,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2024-klever/5_demo_case%20study_2_1.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — AI Agent discovered the confusing visual design of the UI components. 1"
+      },
+      {
+        "src": "/images/projects/2024-klever/5_demo_case%20study_2_2.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — AI Agent discovered the confusing visual design of the UI components. 2"
+      }
+    ],
+    "caption": "AI Agent discovered the confusing visual design of the UI components.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-6",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 6,
+    "columns": 2,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2024-klever/5_demo_case%20study_3_1.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — AI Agent predicted the next UI and performed the action. 1"
+      },
+      {
+        "src": "/images/projects/2024-klever/5_demo_case%20study_3_2.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — AI Agent predicted the next UI and performed the action. 2"
+      }
+    ],
+    "caption": "AI Agent predicted the next UI and performed the action.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-7",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 7,
+    "columns": 3,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2024-klever/6_infcon_1.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — InfCon24 recap: We never imagined the room would be packed for our 5 PM session on a Friday… Thank you so much folks! 1"
+      },
+      {
+        "src": "/images/projects/2024-klever/6_infcon_2.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — InfCon24 recap: We never imagined the room would be packed for our 5 PM session on a Friday… Thank you so much folks! 2"
+      },
+      {
+        "src": "/images/projects/2024-klever/6_infcon_3.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — InfCon24 recap: We never imagined the room would be packed for our 5 PM session on a Friday… Thank you so much folks! 3"
+      }
+    ],
+    "caption": "InfCon24 recap: We never imagined the room would be packed for our 5 PM session on a Friday… <br>Thank you so much folks!",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-8",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 8,
+    "columns": 3,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "/images/projects/2024-klever/figma_config_1.jpeg",
+        "width": 4284,
+        "height": 5712,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — My efforts to overcome Figma API limitations: From meeting with Figma AI team to discussing with Dylan Field, Figma CEO 1"
+      },
+      {
+        "src": "/images/projects/2024-klever/figma_config_2.jpeg",
+        "width": 3024,
+        "height": 4032,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — My efforts to overcome Figma API limitations: From meeting with Figma AI team to discussing with Dylan Field, Figma CEO 2"
+      },
+      {
+        "src": "/images/projects/2024-klever/figma_config_3.jpeg",
+        "width": 3024,
+        "height": 4032,
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — My efforts to overcome Figma API limitations: From meeting with Figma AI team to discussing with Dylan Field, Figma CEO 3"
+      }
+    ],
+    "caption": "My efforts to overcome Figma API limitations: <br/>From meeting with Figma AI team to discussing with Dylan Field, Figma CEO",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-klever-gallery-9",
+    "source": "_projects/2024-06-01-klever.md",
+    "ordinal": 9,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "https://github.com/FigmaAI/AppAgent/blob/main/assets/KleverOnServer.gif?raw=true",
+        "alt": "Klever — A Community-Driven AI Usability Testing Figma Plugin — Prototype of the Figma plugin via integrating with Python Flask server approach ([Code](https://github.com/FigmaAI/AppAgent)) 1"
+      }
+    ],
+    "caption": "Prototype of the Figma plugin via integrating with Python Flask server approach ([Code](https://github.com/FigmaAI/AppAgent))",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-form-helper-chrome-gallery-1",
+    "source": "_projects/2024-11-05-form-helper-chrome.md",
+    "ordinal": 1,
+    "columns": 1,
+    "fullWidth": false,
+    "images": [
+      {
+        "src": "https://github.com/dusskapark/form-helper-chrome-playground/raw/master/demo.gif",
+        "alt": "FORM HELPER powered by Chrome's built-in AI — project image 1"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-1",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 1,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/08-pre-product-shuttle-context.png",
+        "width": 2183,
+        "height": 1500,
+        "alt": "Singapore Korean Church Shuttle Platform — Before the product, route details and arrival signals were scattered across manual documents, map links, and KakaoTalk updates. 1"
+      }
+    ],
+    "caption": "Before the product, route details and arrival signals were scattered across manual documents, map links, and KakaoTalk updates.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-2",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 2,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/01-liff-rider-flow.webp",
+        "width": 1400,
+        "height": 746,
+        "alt": "Singapore Korean Church Shuttle Platform — The first web MVP kept the Rider flow intentionally small: route lookup, stop detail, QR check-in, and basic operational updates. 1"
+      }
+    ],
+    "caption": "The first web MVP kept the Rider flow intentionally small: route lookup, stop detail, QR check-in, and basic operational updates.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-3",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 3,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/02-swagger-api-contract.png",
+        "width": 700,
+        "height": 394,
+        "alt": "Singapore Korean Church Shuttle Platform — Swagger became the shared contract for routes, stops, users, check-ins, notifications, and the clients that would later consume them. 1"
+      }
+    ],
+    "caption": "Swagger became the shared contract for routes, stops, users, check-ins, notifications, and the clients that would later consume them.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-4",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 4,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/03-ios-rider-app.png",
+        "width": 700,
+        "height": 495,
+        "alt": "Singapore Korean Church Shuttle Platform — The iOS Rider app translated the validated web flow into SwiftUI, Google Maps SDK, push, deep links, and Liquid Glass-inspired native screens. 1"
+      }
+    ],
+    "caption": "The iOS Rider app translated the validated web flow into SwiftUI, Google Maps SDK, push, deep links, and Liquid Glass-inspired native screens.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-5",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 5,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/04-android-rider-app.png",
+        "width": 700,
+        "height": 483,
+        "alt": "Singapore Korean Church Shuttle Platform — The Android Rider app kept the same product flow while rebuilding it with Jetpack Compose, Material 3 Expressive, Google Maps Compose, Firebase, and FCM. 1"
+      }
+    ],
+    "caption": "The Android Rider app kept the same product flow while rebuilding it with Jetpack Compose, Material 3 Expressive, Google Maps Compose, Firebase, and FCM.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-6",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 6,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/21-codex-mobile-remote-setup-composite.png",
+        "width": 2454,
+        "height": 2556,
+        "alt": "Singapore Korean Church Shuttle Platform — From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository. 1"
+      }
+    ],
+    "caption": "From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-7",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 7,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/22-voice-driven-codex-workflow-composite.png",
+        "width": 3729,
+        "height": 2556,
+        "alt": "Singapore Korean Church Shuttle Platform — Voice input worked because Codex already had repository context: a spoken task could become a thread, a work plan, and concrete code changes. 1"
+      }
+    ],
+    "caption": "Voice input worked because Codex already had repository context: a spoken task could become a thread, a work plan, and concrete code changes.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-8",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 8,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/23-driver-test-loop-composite.png",
+        "width": 2454,
+        "height": 2556,
+        "alt": "Singapore Korean Church Shuttle Platform — The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix. 1"
+      }
+    ],
+    "caption": "The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "project-how-far-can-a-product-designer-build-with-codex-gallery-9",
+    "source": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+    "ordinal": 9,
+    "columns": 1,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/projects/2026-rider-driver-codex/16-driver-app-final.jpeg",
+        "width": 700,
+        "height": 394,
+        "alt": "Singapore Korean Church Shuttle Platform — The screen got smaller, but the workflow did not: Driver app work, validation, and launch preparation continued through a mobile-controlled Codex loop. 1"
+      }
+    ],
+    "caption": "The screen got smaller, but the workflow did not: Driver app work, validation, and launch preparation continued through a mobile-controlled Codex loop.",
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  },
+  {
+    "id": "post-machine-learning-for-design-systems-gallery-1",
+    "source": "_posts/2020-09-24-Machine-Learning-for-Design-Systems.md",
+    "ordinal": 1,
+    "columns": 2,
+    "fullWidth": true,
+    "images": [
+      {
+        "src": "/images/ml4ds/Screen%20Shot%202020-09-24%20at%201.49.42%20PM.png",
+        "width": 1480,
+        "height": 1042,
+        "alt": "Machine Learning for Design Systems — project image 1"
+      },
+      {
+        "src": "/images/ml4ds/Screen%20Shot%202020-09-24%20at%201.51.37%20PM.png",
+        "width": 1766,
+        "height": 1376,
+        "alt": "Machine Learning for Design Systems — project image 2"
+      }
+    ],
+    "caption": null,
+    "verification": "source-order-and-asset-existence-verified",
+    "visualReview": "pending"
+  }
+]

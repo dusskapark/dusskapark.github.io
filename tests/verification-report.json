@@ -1,0 +1,23 @@
+{
+  "baseUrl": "http://localhost:3001",
+  "checkedAt": "2026-09-28T04:16:28.969Z",
+  "counts": {
+    "pages": 24,
+    "contentRoutes": 20,
+    "galleries": 50,
+    "originalMedia": 232,
+    "originalLinks": 126,
+    "captions": 26,
+    "proseExcerpts": 510,
+    "codeBlocks": 25,
+    "redirects": 44,
+    "internalLinks": 231,
+    "assets": 214,
+    "notFound": 6
+  },
+  "failures": [],
+  "warnings": [
+    "External destinations are checked for preservation; their third-party availability is not tested.",
+    "No-JavaScript checks inspect server HTML. Browser motion preference and interactive behavior need the separate CUA walkthrough."
+  ]
+}

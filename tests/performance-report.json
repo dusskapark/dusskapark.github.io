@@ -1,0 +1,38 @@
+[
+  {
+    "page": "http://localhost:3001/",
+    "environment": "local production build, Lighthouse mobile simulation",
+    "lighthouseVersion": "13.5.0",
+    "checkedAt": "2026-09-28T04:16:29.538Z",
+    "performance": 98,
+    "accessibility": 100,
+    "lcpMs": 2467.0819,
+    "cls": 0,
+    "tbtMs": 4.5,
+    "accessibilityIssues": []
+  },
+  {
+    "page": "http://localhost:3001/project/klever",
+    "environment": "local production build, Lighthouse mobile simulation",
+    "lighthouseVersion": "13.5.0",
+    "checkedAt": "2026-09-28T04:16:39.668Z",
+    "performance": 93,
+    "accessibility": 100,
+    "lcpMs": 3160.8761999999997,
+    "cls": 0,
+    "tbtMs": 4.5,
+    "accessibilityIssues": []
+  },
+  {
+    "page": "http://localhost:3001/projects",
+    "environment": "local production build, Lighthouse mobile simulation",
+    "lighthouseVersion": "13.5.0",
+    "checkedAt": "2026-09-28T04:16:50.534Z",
+    "performance": 94,
+    "accessibility": 100,
+    "lcpMs": 3007.97685,
+    "cls": 0,
+    "tbtMs": 4.5,
+    "accessibilityIssues": []
+  }
+]

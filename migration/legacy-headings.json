@@ -1,0 +1,947 @@
+{
+  "project/bobplanet": [
+    {
+      "depth": 3,
+      "id": "왜-밥플래닛을-만들었나",
+      "text": "왜? 밥플래닛을 만들었나?"
+    },
+    {
+      "depth": 4,
+      "id": "기능설명",
+      "text": "기능설명"
+    },
+    {
+      "depth": 4,
+      "id": "세부-프로젝트-소개",
+      "text": "세부 프로젝트 소개"
+    },
+    {
+      "depth": 3,
+      "id": "앱을-만든-이유",
+      "text": "앱을 만든 이유"
+    },
+    {
+      "depth": 3,
+      "id": "주요기능",
+      "text": "주요기능"
+    }
+  ],
+  "project/chatbot": [
+    {
+      "depth": 3,
+      "id": "project-background",
+      "text": "Project background"
+    },
+    {
+      "depth": 3,
+      "id": "key-features",
+      "text": "Key features"
+    },
+    {
+      "depth": 3,
+      "id": "skills",
+      "text": "Skills"
+    },
+    {
+      "depth": 3,
+      "id": "concept-video",
+      "text": "Concept video"
+    }
+  ],
+  "project/figma-autoname": [
+    {
+      "depth": 2,
+      "id": "origins-and-motivation",
+      "text": "Origins and Motivation"
+    },
+    {
+      "depth": 2,
+      "id": "discovery-and-initial-engagement",
+      "text": "Discovery and Initial Engagement"
+    },
+    {
+      "depth": 3,
+      "id": "user-interviews-and-insights",
+      "text": "User Interviews and Insights"
+    },
+    {
+      "depth": 2,
+      "id": "technical-contributions",
+      "text": "Technical Contributions"
+    },
+    {
+      "depth": 3,
+      "id": "enhancing-the-plugin",
+      "text": "Enhancing the Plugin"
+    },
+    {
+      "depth": 3,
+      "id": "development-of-supporting-tools",
+      "text": "Development of Supporting Tools"
+    },
+    {
+      "depth": 3,
+      "id": "and-supportting-devmode-as-well",
+      "text": "And Supportting DevMode as well"
+    },
+    {
+      "depth": 2,
+      "id": "impact-on-the-community",
+      "text": "Impact on the Community"
+    },
+    {
+      "depth": 2,
+      "id": "lessons-learned",
+      "text": "Lessons Learned"
+    }
+  ],
+  "project/form-helper-chrome": [
+    {
+      "depth": 2,
+      "id": "project-overview",
+      "text": "Project Overview"
+    },
+    {
+      "depth": 2,
+      "id": "situation",
+      "text": "Situation"
+    },
+    {
+      "depth": 2,
+      "id": "task",
+      "text": "Task"
+    },
+    {
+      "depth": 2,
+      "id": "action",
+      "text": "Action"
+    },
+    {
+      "depth": 3,
+      "id": "research-on-personalized-ai-feedback",
+      "text": "Research on Personalized AI Feedback"
+    },
+    {
+      "depth": 4,
+      "id": "form-error-message-analysis",
+      "text": "Form Error Message Analysis"
+    },
+    {
+      "depth": 4,
+      "id": "ai-as-a-potential-solution",
+      "text": "AI as a Potential Solution"
+    },
+    {
+      "depth": 3,
+      "id": "building-a-zero-cost-ai-solution",
+      "text": "Building a Zero-Cost AI Solution"
+    },
+    {
+      "depth": 4,
+      "id": "chromes-built-in-ai-discovery",
+      "text": "Chrome’s Built-in AI Discovery"
+    },
+    {
+      "depth": 4,
+      "id": "building-with-chromes-built-in-ai",
+      "text": "Building with Chrome’s Built-in AI"
+    },
+    {
+      "depth": 4,
+      "id": "streamlining-developer-experience",
+      "text": "Streamlining Developer Experience"
+    },
+    {
+      "depth": 2,
+      "id": "result",
+      "text": "Result"
+    },
+    {
+      "depth": 3,
+      "id": "published-as-open-source",
+      "text": "Published as Open Source"
+    },
+    {
+      "depth": 3,
+      "id": "chrome-built-in-ai-challenge",
+      "text": "Chrome Built-in AI Challenge"
+    },
+    {
+      "depth": 2,
+      "id": "conclusion",
+      "text": "Conclusion"
+    }
+  ],
+  "project/gdc": [
+    {
+      "depth": 3,
+      "id": "beginning",
+      "text": "Beginning"
+    },
+    {
+      "depth": 3,
+      "id": "brainstorm--define-problems",
+      "text": "Brainstorm & Define problems"
+    },
+    {
+      "depth": 3,
+      "id": "ideate--sketch",
+      "text": "Ideate & Sketch"
+    },
+    {
+      "depth": 3,
+      "id": "ui-design",
+      "text": "UI Design"
+    },
+    {
+      "depth": 3,
+      "id": "implementation-and-release",
+      "text": "Implementation and release"
+    }
+  ],
+  "project/how-far-can-a-product-designer-build-with-codex": [
+    {
+      "depth": 2,
+      "id": "context-a-small-shuttle-a-real-product-problem",
+      "text": "Context: A Small Shuttle, A Real Product Problem"
+    },
+    {
+      "depth": 2,
+      "id": "build-1-start-with-a-small-web-mvp",
+      "text": "Build 1: Start With A Small Web MVP"
+    },
+    {
+      "depth": 3,
+      "id": "small-web-mvp",
+      "text": "Small Web MVP"
+    },
+    {
+      "depth": 3,
+      "id": "plan-mode",
+      "text": "Plan Mode"
+    },
+    {
+      "depth": 3,
+      "id": "swagger-as-blueprint",
+      "text": "Swagger As Blueprint"
+    },
+    {
+      "depth": 2,
+      "id": "feedback-1-the-flow-worked-the-channel-did-not",
+      "text": "Feedback 1: The Flow Worked, The Channel Did Not"
+    },
+    {
+      "depth": 2,
+      "id": "build-2-translate-the-rider-experience-to-native",
+      "text": "Build 2: Translate The Rider Experience To Native"
+    },
+    {
+      "depth": 3,
+      "id": "real-device-validation",
+      "text": "Real Device Validation"
+    },
+    {
+      "depth": 2,
+      "id": "feedback-2-the-rider-app-could-not-create-every-signal",
+      "text": "Feedback 2: The Rider App Could Not Create Every Signal"
+    },
+    {
+      "depth": 2,
+      "id": "build-3-make-the-shuttle-the-source-of-truth",
+      "text": "Build 3: Make The Shuttle The Source Of Truth"
+    },
+    {
+      "depth": 2,
+      "id": "work-mode-keeping-the-build-loop-alive-from-a-hospital-room",
+      "text": "Work Mode: Keeping The Build Loop Alive From A Hospital Room"
+    },
+    {
+      "depth": 2,
+      "id": "builder-takeaway-owning-more-of-the-sdlc",
+      "text": "Builder Takeaway: Owning More Of The SDLC"
+    },
+    {
+      "depth": 2,
+      "id": "reflection-what-stayed-with-me",
+      "text": "Reflection: What Stayed With Me"
+    },
+    {
+      "depth": 2,
+      "id": "references",
+      "text": "References"
+    }
+  ],
+  "project/klever": [
+    {
+      "depth": 2,
+      "id": "introducing-klever",
+      "text": "Introducing Klever"
+    },
+    {
+      "depth": 2,
+      "id": "-the-ideation-journey",
+      "text": "💡 The Ideation Journey"
+    },
+    {
+      "depth": 3,
+      "id": "can-ai-enhance-design",
+      "text": "Can AI Enhance Design?"
+    },
+    {
+      "depth": 3,
+      "id": "meeting-appagent-and-the-eureka-moment",
+      "text": "Meeting AppAgent and the Eureka Moment"
+    },
+    {
+      "depth": 3,
+      "id": "designer-interviews",
+      "text": "Designer Interviews"
+    },
+    {
+      "depth": 3,
+      "id": "instant-usability-testing",
+      "text": "Instant Usability Testing"
+    },
+    {
+      "depth": 2,
+      "id": "️-the-development-journey",
+      "text": "🛠️ The Development Journey"
+    },
+    {
+      "depth": 3,
+      "id": "how-appagent-works",
+      "text": "How AppAgent Works?"
+    },
+    {
+      "depth": 3,
+      "id": "generating-ui-screenshots--annotations",
+      "text": "Generating UI Screenshots & Annotations"
+    },
+    {
+      "depth": 3,
+      "id": "implementing-ai-actions-in-figma",
+      "text": "Implementing AI Actions in Figma"
+    },
+    {
+      "depth": 3,
+      "id": "prototyped-appagents-integration-with-figma",
+      "text": "🎉  Prototyped: AppAgent’s Integration with Figma"
+    },
+    {
+      "depth": 3,
+      "id": "from-experiment-to-product-klever-was-born",
+      "text": "From experiment to product, Klever was born"
+    },
+    {
+      "depth": 2,
+      "id": "-interesting-use-cases",
+      "text": "🧠 Interesting Use Cases"
+    },
+    {
+      "depth": 3,
+      "id": "discovering-hidden-interactions",
+      "text": "Discovering Hidden Interactions"
+    },
+    {
+      "depth": 3,
+      "id": "identifying-ui-element-ambiguity",
+      "text": "Identifying UI Element Ambiguity"
+    },
+    {
+      "depth": 3,
+      "id": "predicting-hidden-features",
+      "text": "Predicting Hidden Features"
+    },
+    {
+      "depth": 2,
+      "id": "-impact",
+      "text": "📈 Impact"
+    },
+    {
+      "depth": 2,
+      "id": "-growing-with-community",
+      "text": "🌱 Growing with Community"
+    },
+    {
+      "depth": 3,
+      "id": "meetups-friends-of-figma-seoul--educators-event",
+      "text": "Meetups: Friends of Figma Seoul & Educators event"
+    },
+    {
+      "depth": 3,
+      "id": "conference-infcon-2024-presentation",
+      "text": "Conference: InfCon 2024 Presentation"
+    },
+    {
+      "depth": 3,
+      "id": "from-side-project-to-corporate-innovation",
+      "text": "From Side Project to Corporate Innovation"
+    },
+    {
+      "depth": 3,
+      "id": "challenges--community-growth",
+      "text": "Challenges & Community Growth"
+    },
+    {
+      "depth": 2,
+      "id": "lessons-learned",
+      "text": "Lessons learned"
+    }
+  ],
+  "project/ldsg": [
+    {
+      "depth": 2,
+      "id": "background",
+      "text": "Background"
+    },
+    {
+      "depth": 2,
+      "id": "concept-building",
+      "text": "Concept building"
+    },
+    {
+      "depth": 2,
+      "id": "work-processes",
+      "text": "Work Processes"
+    },
+    {
+      "depth": 3,
+      "id": "overview",
+      "text": "Overview"
+    },
+    {
+      "depth": 3,
+      "id": "design",
+      "text": "Design"
+    },
+    {
+      "depth": 3,
+      "id": "documents",
+      "text": "Documents"
+    },
+    {
+      "depth": 3,
+      "id": "development",
+      "text": "Development"
+    }
+  ],
+  "project/lgd-project": [
+    {
+      "depth": 4,
+      "id": "concept-background",
+      "text": "Concept Background"
+    },
+    {
+      "depth": 4,
+      "id": "research",
+      "text": "Research"
+    },
+    {
+      "depth": 4,
+      "id": "insights",
+      "text": "Insights"
+    },
+    {
+      "depth": 4,
+      "id": "ideation-and-sketch",
+      "text": "Ideation and Sketch"
+    },
+    {
+      "depth": 4,
+      "id": "design-and-prototype",
+      "text": "Design and Prototype"
+    },
+    {
+      "depth": 4,
+      "id": "build",
+      "text": "Build"
+    }
+  ],
+  "project/liff-project": [
+    {
+      "depth": 2,
+      "id": "research",
+      "text": "Research"
+    },
+    {
+      "depth": 2,
+      "id": "ideate",
+      "text": "Ideate"
+    },
+    {
+      "depth": 2,
+      "id": "design-and-iteration",
+      "text": "Design and Iteration"
+    },
+    {
+      "depth": 2,
+      "id": "build",
+      "text": "Build"
+    },
+    {
+      "depth": 2,
+      "id": "result",
+      "text": "Result"
+    }
+  ],
+  "project/lookbook": [
+    {
+      "depth": 3,
+      "id": "why-did-we-need-to-improve-our-management-tools",
+      "text": "Why, did we need to improve our management tools?"
+    },
+    {
+      "depth": 3,
+      "id": "why-opensource",
+      "text": "Why Opensource?"
+    },
+    {
+      "depth": 4,
+      "id": "you-cannot-make-software-by-yourself",
+      "text": "You cannot make software by yourself"
+    },
+    {
+      "depth": 4,
+      "id": "opensource-itself-was-not-the-answer-lets-indirectly-expand",
+      "text": "Opensource itself was not the answer. Let’s indirectly expand!"
+    },
+    {
+      "depth": 3,
+      "id": "why-is-it-the-expansion-library",
+      "text": "Why, is it the expansion library?"
+    },
+    {
+      "depth": 3,
+      "id": "case-line-game-developers",
+      "text": "Case: LINE GAME Developers"
+    },
+    {
+      "depth": 4,
+      "id": "material-theming",
+      "text": "Material Theming"
+    },
+    {
+      "depth": 4,
+      "id": "ready-to-use-components",
+      "text": "Ready-to-use components"
+    },
+    {
+      "depth": 4,
+      "id": "communication-with-dev",
+      "text": "Communication with dev"
+    },
+    {
+      "depth": 3,
+      "id": "curious-checkout-website",
+      "text": "Curious? checkout Website"
+    }
+  ],
+  "project/naver-now": [
+    {
+      "depth": 2,
+      "id": "problems",
+      "text": "Problems"
+    },
+    {
+      "depth": 2,
+      "id": "process",
+      "text": "Process"
+    },
+    {
+      "depth": 3,
+      "id": "discover-phase",
+      "text": "Discover phase"
+    },
+    {
+      "depth": 3,
+      "id": "define-phase",
+      "text": "Define phase"
+    },
+    {
+      "depth": 3,
+      "id": "develop-phase",
+      "text": "Develop phase"
+    },
+    {
+      "depth": 3,
+      "id": "deliver-phase",
+      "text": "Deliver phase"
+    },
+    {
+      "depth": 3,
+      "id": "design-system-thinking",
+      "text": "Design system thinking"
+    },
+    {
+      "depth": 2,
+      "id": "takeaway",
+      "text": "Takeaway"
+    }
+  ],
+  "project/onestore": [
+    {
+      "depth": 3,
+      "id": "what-i-did",
+      "text": "What I did"
+    },
+    {
+      "depth": 3,
+      "id": "the-achievements",
+      "text": "The achievements"
+    },
+    {
+      "depth": 3,
+      "id": "concept-images",
+      "text": "Concept images"
+    }
+  ],
+  "project/orderbook": [
+    {
+      "depth": 3,
+      "id": "brainstorm",
+      "text": "Brainstorm"
+    },
+    {
+      "depth": 3,
+      "id": "ideate--sketch",
+      "text": "Ideate & Sketch"
+    },
+    {
+      "depth": 3,
+      "id": "design--prototype",
+      "text": "Design & Prototype"
+    },
+    {
+      "depth": 3,
+      "id": "web-app-implementation",
+      "text": "Web app implementation"
+    }
+  ],
+  "project/talk-to-figma-mcp": [
+    {
+      "depth": 2,
+      "id": "one-line-summary",
+      "text": "One-line Summary"
+    },
+    {
+      "depth": 2,
+      "id": "1-start-i-saw-the-open-source-mcp-potential",
+      "text": "1) Start: I Saw the Open-Source MCP Potential"
+    },
+    {
+      "depth": 3,
+      "id": "core-areas-i-contributed",
+      "text": "Core Areas I Contributed"
+    },
+    {
+      "depth": 2,
+      "id": "2-turning-point-the-bottleneck-was-installation-not-interest",
+      "text": "2) Turning Point: The Bottleneck Was Installation, Not Interest"
+    },
+    {
+      "depth": 2,
+      "id": "3-solution-i-started-building-talktofigma-desktop",
+      "text": "3) Solution: I Started Building TalkToFigma Desktop"
+    },
+    {
+      "depth": 3,
+      "id": "what-we-prioritized-in-desktop",
+      "text": "What We Prioritized in Desktop"
+    },
+    {
+      "depth": 2,
+      "id": "4-outcome-faster-and-wider-adoption-than-expected",
+      "text": "4) Outcome: Faster and Wider Adoption Than Expected"
+    },
+    {
+      "depth": 2,
+      "id": "5-current-conclusion",
+      "text": "5) Current Conclusion"
+    },
+    {
+      "depth": 2,
+      "id": "references--links",
+      "text": "References & Links"
+    }
+  ],
+  "project/tensorflow-js": [
+    {
+      "depth": 2,
+      "id": "project-process",
+      "text": "Project Process"
+    },
+    {
+      "depth": 2,
+      "id": "brainstorm--define-problems",
+      "text": "Brainstorm & Define problems"
+    },
+    {
+      "depth": 2,
+      "id": "ideate--prototype",
+      "text": "Ideate & Prototype"
+    },
+    {
+      "depth": 3,
+      "id": "idea-computer-vision",
+      "text": "Idea? Computer Vision!"
+    },
+    {
+      "depth": 3,
+      "id": "prototyping",
+      "text": "Prototyping"
+    },
+    {
+      "depth": 2,
+      "id": "machine-learning",
+      "text": "Machine Learning"
+    },
+    {
+      "depth": 3,
+      "id": "raw-data-partnership",
+      "text": "Raw data? Partnership!"
+    },
+    {
+      "depth": 3,
+      "id": "data-labeling-sponsored",
+      "text": "Data Labeling? Sponsored!"
+    },
+    {
+      "depth": 3,
+      "id": "training-with-tensorflow",
+      "text": "Training with TensorFlow"
+    },
+    {
+      "depth": 2,
+      "id": "make-plugins",
+      "text": "Make plugins"
+    },
+    {
+      "depth": 4,
+      "id": "zeplin-extension",
+      "text": "Zeplin Extension"
+    },
+    {
+      "depth": 4,
+      "id": "figma-plugin",
+      "text": "Figma Plugin"
+    },
+    {
+      "depth": 2,
+      "id": "reactions",
+      "text": "Reactions"
+    },
+    {
+      "depth": 2,
+      "id": "from-local-beginnings-to-global-recognition",
+      "text": "From Local Beginnings to Global Recognition"
+    }
+  ],
+  "project/tstore": [
+    {
+      "depth": 3,
+      "id": "overview",
+      "text": "Overview"
+    },
+    {
+      "depth": 3,
+      "id": "analysis--ideation",
+      "text": "Analysis & Ideation"
+    },
+    {
+      "depth": 4,
+      "id": "analysis",
+      "text": "Analysis"
+    },
+    {
+      "depth": 4,
+      "id": "ideation",
+      "text": "Ideation"
+    },
+    {
+      "depth": 3,
+      "id": "concept--rules",
+      "text": "Concept & Rules"
+    },
+    {
+      "depth": 3,
+      "id": "output",
+      "text": "Output"
+    }
+  ],
+  "post/machine-learning-for-design-systems": [
+    {
+      "depth": 2,
+      "id": "preliminar-words",
+      "text": "Preliminar words"
+    },
+    {
+      "depth": 2,
+      "id": "background",
+      "text": "Background"
+    },
+    {
+      "depth": 2,
+      "id": "setting-up-a-working-python-environment",
+      "text": "Setting-up a working Python environment"
+    },
+    {
+      "depth": 3,
+      "id": "direnv",
+      "text": "direnv"
+    },
+    {
+      "depth": 3,
+      "id": "pyenv",
+      "text": "pyenv"
+    },
+    {
+      "depth": 2,
+      "id": "installation",
+      "text": "Installation"
+    },
+    {
+      "depth": 3,
+      "id": "tensorflow2-installation",
+      "text": "Tensorflow2 installation"
+    },
+    {
+      "depth": 3,
+      "id": "object-detection-api-installation",
+      "text": "Object Detection API installation"
+    },
+    {
+      "depth": 2,
+      "id": "training-ui-dataset",
+      "text": "Training UI dataset"
+    },
+    {
+      "depth": 3,
+      "id": "step-1-preparing-the-workspace",
+      "text": "STEP 1. Preparing the Workspace"
+    },
+    {
+      "depth": 3,
+      "id": "step-2-gathering-data",
+      "text": "STEP 2. Gathering data"
+    },
+    {
+      "depth": 3,
+      "id": "step-3-labeling-data",
+      "text": "STEP 3. Labeling data"
+    },
+    {
+      "depth": 3,
+      "id": "step-4-generate-the-tf-records",
+      "text": "STEP 4. Generate the TF RECORDS"
+    },
+    {
+      "depth": 3,
+      "id": "step-5-training-configuration",
+      "text": "STEP 5. Training configuration"
+    },
+    {
+      "depth": 3,
+      "id": "step6-do-training",
+      "text": "STEP6. Do Training!"
+    },
+    {
+      "depth": 4,
+      "id": "training-model-progress",
+      "text": "Training model progress"
+    },
+    {
+      "depth": 3,
+      "id": "step6-exporting-a-trained-model",
+      "text": "STEP6. Exporting a Trained Model"
+    },
+    {
+      "depth": 2,
+      "id": "lets-test",
+      "text": "Let’s Test!"
+    },
+    {
+      "depth": 2,
+      "id": "next-steps",
+      "text": "Next steps"
+    },
+    {
+      "depth": 2,
+      "id": "reference",
+      "text": "Reference"
+    }
+  ],
+  "post/mcp-magic-retrospective-en": [
+    {
+      "depth": 2,
+      "id": "q-what-problem-did-mcp-magic-start-with",
+      "text": "Q. What problem did MCP Magic start with?"
+    },
+    {
+      "depth": 2,
+      "id": "q-what-showed-that-people-were-using-it",
+      "text": "Q. What showed that people were using it?"
+    },
+    {
+      "depth": 3,
+      "id": "q-were-people-just-trying-it-or-using-it-deeply",
+      "text": "Q. Were people just trying it, or using it deeply?"
+    },
+    {
+      "depth": 2,
+      "id": "q-what-changed-as-the-audience-grew",
+      "text": "Q. What changed as the audience grew?"
+    },
+    {
+      "depth": 2,
+      "id": "q-what-happens-to-the-project-now",
+      "text": "Q. What happens to the project now?"
+    },
+    {
+      "depth": 2,
+      "id": "q-what-would-you-do-differently-next-time",
+      "text": "Q. What would you do differently next time?"
+    },
+    {
+      "depth": 2,
+      "id": "q-what-did-570000-calls-leave-behind",
+      "text": "Q. What did 570,000 calls leave behind?"
+    }
+  ],
+  "post/mcp-magic-retrospective": [
+    {
+      "depth": 2,
+      "id": "q-mcp-magic은-어떤-문제에서-시작했나요",
+      "text": "Q. MCP Magic은 어떤 문제에서 시작했나요?"
+    },
+    {
+      "depth": 2,
+      "id": "q-실제로-사용되었다는-신호가-있었나요",
+      "text": "Q. 실제로 사용되었다는 신호가 있었나요?"
+    },
+    {
+      "depth": 3,
+      "id": "q-한-번-써보고-떠난-걸까요-아니면-깊게-쓴-걸까요",
+      "text": "Q. 한 번 써보고 떠난 걸까요, 아니면 깊게 쓴 걸까요?"
+    },
+    {
+      "depth": 2,
+      "id": "q-사용자가-늘면서-무엇이-달라졌나요",
+      "text": "Q. 사용자가 늘면서 무엇이 달라졌나요?"
+    },
+    {
+      "depth": 2,
+      "id": "q-이-프로젝트는-앞으로-어떻게-되나요",
+      "text": "Q. 이 프로젝트는 앞으로 어떻게 되나요?"
+    },
+    {
+      "depth": 2,
+      "id": "q-다음에는-무엇을-다르게-할까요",
+      "text": "Q. 다음에는 무엇을 다르게 할까요?"
+    },
+    {
+      "depth": 2,
+      "id": "q-57만-번의-호출은-무엇을-남겼나요",
+      "text": "Q. 57만 번의 호출은 무엇을 남겼나요?"
+    }
+  ]
+}

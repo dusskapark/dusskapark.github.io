@@ -1,10 +1,12 @@
-name: Deploy Jekyll site to Pages
+name: Restore legacy Jekyll site to Pages
 
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
+    inputs:
+      legacy_ref:
+        description: Known-good Jekyll commit to restore
+        required: true
+        default: ed197c80654785b199336f15c841b65777512ace
 
 permissions:
   contents: read
@@ -22,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.legacy_ref }}
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1

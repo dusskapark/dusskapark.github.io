@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
 import type { ContentEntry } from "@/lib/content";
 import { CarouselFrame, PortraitMotion } from "./motion";
+import { LineShadowText } from "@/components/ui/line-shadow-text";
 
 export function Hero() {
   return (
@@ -25,7 +26,8 @@ export function Hero() {
               preload
             />
           </span>
-          builder<span className="hero-period">.</span>
+          <LineShadowText shadowColor="var(--ring)">builder</LineShadowText>
+          <span className="hero-period">.</span>
         </span>
       </h1>
       <div className="hero-bottom">

@@ -598,6 +598,118 @@ a:hover > .round-button {
   color: var(--muted-foreground);
 }
 
+/* About page — extended sections (facts, focus areas, links). */
+.about-facts {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.about-facts-grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+.about-facts-grid dt {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted-foreground);
+  margin-bottom: 12px;
+}
+.about-facts-grid dd {
+  margin: 0;
+  font-size: clamp(19px, 1.7vw, 24px);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.about-focus {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.about-focus-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.about-focus-grid li {
+  background: var(--background);
+  padding: 36px;
+}
+.about-focus-grid h3 {
+  margin: 0 0 14px;
+  font-size: clamp(20px, 2vw, 27px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.about-focus-grid p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.about-elsewhere {
+  padding-top: 48px;
+}
+.about-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.about-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+.about-link-card:hover {
+  border-color: var(--foreground);
+  transform: translateY(-3px);
+}
+.about-link-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-link-card-name {
+  font-size: clamp(22px, 2.1vw, 29px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.about-link-card-top svg {
+  transition: transform 0.2s;
+}
+.about-link-card:hover .about-link-card-top svg {
+  transform: translate(2px, -2px);
+}
+.about-link-card-detail {
+  color: var(--muted-foreground);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 420px;
+}
+.about-link-card-handle {
+  margin-top: auto;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted-foreground);
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1249,6 +1361,10 @@ a:hover > .round-button {
   .about-copy > .about-lead {
     font-size: 18px !important;
   }
+  .about-facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 28px;
+  }
   .post-card > a {
     grid-template-columns: 120px minmax(0, 1fr) 30px;
     gap: 20px;
@@ -1292,6 +1408,18 @@ a:hover > .round-button {
   .hero-portrait {
     width: 1.2em;
     height: 0.84em;
+  }
+  .about-facts-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .about-focus-grid,
+  .about-links-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-focus-grid li,
+  .about-link-card {
+    padding: 28px;
   }
   .hero-bottom {
     flex-direction: column;

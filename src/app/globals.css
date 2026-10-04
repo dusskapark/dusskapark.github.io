@@ -580,7 +580,8 @@ a:hover > .round-button {
   overflow: hidden;
 }
 .project-thumbnail {
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .project-card-link:hover .project-thumbnail {
@@ -625,12 +626,24 @@ a:hover > .round-button {
   letter-spacing: -0.035em;
   line-height: 1.2;
   overflow-wrap: anywhere;
+  /* Reserve two lines so single- and double-line titles align across cards. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  min-height: calc(1.2em * 2);
+  overflow: hidden;
 }
 .project-card p {
   margin: 0;
   font-size: 14px;
   color: var(--muted-foreground);
   line-height: 1.65;
+  /* Clamp descriptions to a fixed block so every card ends at the same height. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  min-height: calc(1.65em * 3);
+  overflow: hidden;
 }
 .project-card-placeholder {
   display: flex;

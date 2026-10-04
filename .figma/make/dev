@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Starts the Next.js dev server. Stays running for the whole session.
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+
+# Load PORT (and friends) so the server binds where Make expects it.
+set -a
+# shellcheck disable=SC1091
+source "$(dirname "$0")/env"
+set +a
+
+# "pnpm dev" also runs the predev hook (prepare:assets) before Next starts.
+exec pnpm dev --port "$PORT"

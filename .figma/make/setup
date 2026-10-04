@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Runs once on first open: ensure the correct package manager is available.
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+
+# This project pins pnpm via package.json "packageManager". Corepack ships with
+# Node and makes that exact pnpm version available without a global install.
+if command -v corepack >/dev/null 2>&1; then
+  corepack enable >/dev/null 2>&1 || true
+  corepack prepare pnpm@12.6.0 --activate >/dev/null 2>&1 || true
+fi
+
+if ! command -v pnpm >/dev/null 2>&1; then
+  echo "pnpm is not available. Install Node 22 (which bundles corepack) and retry." >&2
+  exit 1
+fi
+
+echo "setup: pnpm $(pnpm --version) ready."

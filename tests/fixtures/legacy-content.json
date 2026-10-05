@@ -1,0 +1,2084 @@
+{
+  "schemaVersion": 1,
+  "frozenAt": "2026-09-28",
+  "source": "Original Jekyll Markdown at HEAD ed197c8; matching rendered prose from fresh immutable Jekyll build",
+  "items": [
+    {
+      "kind": "project",
+      "slug": "tstore",
+      "route": "/project/tstore",
+      "sourceFile": "_projects/2013-10-01-tstore.md",
+      "sourceSha256": "5bea75cd141f4df9afd2b628228742ab7e7c151a2dc296540066d2b6372613dd",
+      "listed": true,
+      "lang": "ko",
+      "title": "T store Developer Center 3.0",
+      "description": "T store Developer Center는 App, VOD, E-book등 다양한 콘텐츠를 T store Mall에서 자유롭게 등록 및 판매할 수 있도록 거래를 중계하는 플랫폼이다. 상품을 판매하기 위해 필수적인 Developer Center는 2010년 2.0 고도화가 진행된 이후 별도의 개선작업을 진행하지 못하였다. 우리는 빠르게 변화하는 시장 환경을 분석하여, 현재 개발자센터의 문제점을 파악하고, 해결하기 위해 \"T store Develop Center 3.0\" 프로젝트를 수행하였다.",
+      "hero": "/images/projects/2013-tstore/img_developer_012.png",
+      "galleries": [],
+      "includeCounts": {},
+      "resources": [
+        "/images/projects/2013-tstore/img_developer_02.png",
+        "/images/projects/2013-tstore/img_developer_05.png",
+        "/images/projects/2013-tstore/devCenter2013-004.png",
+        "/images/projects/2013-tstore/devCenter2013-005.png",
+        "/images/projects/2013-tstore/devCenter2013-006.png",
+        "/images/projects/2013-tstore/img_developer_07.png",
+        "/images/projects/2013-tstore/img_developer_03.png"
+      ],
+      "links": [],
+      "storeIds": [],
+      "headings": [
+        "Overview",
+        "Analysis & Ideation",
+        "Concept & Rules",
+        "Output",
+        "Analysis",
+        "Ideation"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "T store Developer Center는 App, VOD, E-book등 다양한 콘텐츠를 T store Mall에서 자유롭게 등록 및 판매할 수 있도록 거래를 중계하는 플랫폼이다.",
+        "상품을 판매하기 위해 필수적인 Developer Center는 2010년 2.0 고도화가 진행된 이후 별도의 개선작업을 진행하지 못하였다.Rightbrain에서는 빠르게 변화하는 시장 환경을 분석하여, 현재 개발자센터의 문제점을 파악하고, 해결하기 위해 \"T store Develop Center 3.0\" 프로젝트를 수행하였다.",
+        "복잡함 메뉴 구조와 비슷한 성격의 메뉴 존재 다운로드, 연동규격, 기술지원등 공통된 성격을 가진 메뉴가 각기 분리되어 제공되기에 메뉴에 대한 접근성 및 사용성이 떨어짐. 이 외 현 개발자PoC 메뉴들은 개발자Cycle을 고려치 않은 나머지, 접근성과 사용성이 떨어진 메뉴 구조를 제공하고 있음.",
+        "사용이 어려운 기능에 대한 개선 필요 상품 등록 시 프로비저닝 정보 및 대상 단말 설정 시 Process가 복잡하며, 사용이 어려움.",
+        "좁은 정보 영역에 대한 불편함 정산 내역 제공 시 수치로만 제공되기에, 판매에 대한 변화량을 파악하기 어려우며, 수치를 제공하는 현재 화면 역시 개발자가 보기 어려우며, 복잡함.",
+        "기존 2.0의 문제점이었던 복잡함과 답답함을 해결하기 위해 Panel Type의 Grid 구조로 Content를 구성하였으며, 사용자 해상도에 반응하는 확장성을 고려한 레이아웃을 제공하였다.",
+        "개발자센터에서 제공하는 메뉴와 기능들에 대해 쉽고 빠르게 접근할 수 있으며 사용할 수 있도록 시각화한 Icon으로 제공하였으며, Icon은 일관성 있으며, 시각적 산만함을 최소화할 수 있도록 제작하였다.",
+        "T store와의 이질감이 들지 않도록 주요 Key Color에 대해선 일관성 있게 사용하였으며, Global 진출 시 해외 개발자들 에게도 쉽게 다가가기 위해 부드럽고, 따뜻한 Color를 사용하였다."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "onestore",
+      "route": "/project/onestore",
+      "sourceFile": "_projects/2015-03-02-onestore.md",
+      "sourceSha256": "78bae1b10705edb141d64e81f3137a896395007bbafdedaeb5bf6940e17ba234",
+      "listed": true,
+      "lang": "en",
+      "title": "App store Integration Project",
+      "description": "The CMS integration project of 3 major telecom operator as well as the leading web portal NAVER's app stores in Korea, called 'ONE store project'.",
+      "hero": "/images/projects/2015-onestore/2015-onestore-001.png",
+      "galleries": [
+        {
+          "columns": 3,
+          "images": [
+            "/images/projects/2015-onestore/2015-onestore-002.png",
+            "/images/projects/2015-onestore/2015-onestore-003.png",
+            "/images/projects/2015-onestore/2015-onestore-004.png",
+            "/images/projects/2015-onestore/2015-onestore-005.png",
+            "/images/projects/2015-onestore/2015-onestore-006.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 1
+      },
+      "resources": [
+        "/images/projects/2015-onestore/2015-onestore-002.png",
+        "/images/projects/2015-onestore/2015-onestore-003.png",
+        "/images/projects/2015-onestore/2015-onestore-004.png",
+        "/images/projects/2015-onestore/2015-onestore-005.png",
+        "/images/projects/2015-onestore/2015-onestore-006.png",
+        "/images/projects/2015-onestore/2015-onestore-007.png",
+        "https://www.slideshare.net/slideshow/embed_code/key/vAqpXi7r1Juuo6"
+      ],
+      "links": [
+        "https://www.slideshare.net/sktstore/introducing-one-store-for-developers",
+        "https://www.slideshare.net/sktstore"
+      ],
+      "storeIds": [],
+      "headings": [
+        "What I did",
+        "The achievements",
+        "Concept images"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "As a TF member, we spearheaded the incorporation of joint venture company (ONE Store corp.) with three major telecom operator (SK Telecom, Korea Telecom, LG U+) as well as the leading web portal NAVER, to consolidate and operate their app stores. After, we initiated and led the preliminary ONE Store project, the integration of the infra system among three major telecom operator app stores, based on SK planet ecosystem(T store), by devising a strategy to separate the developer ecosystem and customer base, establishing collaboration scheme.",
+        "During this project, I was in charge of CMS integrations like collecting and merging App data as well as communicating with stakeholders, creating new policies, and announcing to developers.",
+        "Because of this innovation, ONEstore platform was able to gain 10 million more active users. In addition, I improved the function to expose ONE store's Apps/Games to the search queries of Naver and increased the PV/UV A tremendously compared with the previous version."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "bobplanet",
+      "route": "/project/bobplanet",
+      "sourceFile": "_projects/2015-11-20-bobplanet.md",
+      "sourceSha256": "c75a7b5d850d0d9c0146f36cf8c7c1bebed73d0e53780ed9d6e224ba114e5e24",
+      "listed": true,
+      "lang": "en",
+      "title": "Beacon project",
+      "description": "Design, developed, and launched company's cafeteria application (SK planet, WHONEED). My friends and I thought it was inconvenient for us not to have the restaurant application for our company's cafeteria. So we made the Android app and web service. In addition, because we agreed to try out some fun ideas in this dining service, we tried out several services like Eddystone Beacon or Firebase.",
+      "hero": "/images/projects/2015-bobplanet/step4_1mb.png",
+      "galleries": [
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2015-bobplanet/main_320.png",
+            "/images/projects/2015-bobplanet/menu_320.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2015-bobplanet/raspberry.png",
+            "/images/projects/2015-bobplanet/beacon_320.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2015-bobplanet/score_320.png",
+            "/images/projects/2015-bobplanet/login_320.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 3
+      },
+      "resources": [
+        "/images/projects/2015-bobplanet/main_320.png",
+        "/images/projects/2015-bobplanet/menu_320.png",
+        "/images/projects/2015-bobplanet/raspberry.png",
+        "/images/projects/2015-bobplanet/beacon_320.png",
+        "/images/projects/2015-bobplanet/score_320.png",
+        "/images/projects/2015-bobplanet/login_320.png",
+        "/images/projects/2015-bobplanet/2015-11-19-nexus10.png",
+        "https://www.slideshare.net/slideshow/embed_code/key/i34MRy1UT32DnV"
+      ],
+      "links": [
+        "https://github.com/bobplanet/Bobplanet-scraper",
+        "https://github.com/bobplanet/Bobplanet",
+        "https://github.com/bobplanet/bobplanet.github.io",
+        "https://www.slideshare.net/dusskapark/ss-56227884",
+        "https://www.slideshare.net/dusskapark"
+      ],
+      "storeIds": [],
+      "headings": [
+        "왜? 밥플래닛을 만들었나?",
+        "앱을 만든 이유",
+        "주요기능",
+        "기능설명",
+        "세부 프로젝트 소개"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "SK플래닛 구성원이 매일 이용하는 사내식당! 하지만 식당 밥맛이 들쭉날쭉하다는 평가가 많고 주변에 다른 회삿밥과 비교를 당하는 경우가 많았습니다. 하지만 구성원이 귀로 듣는 불평에 비해서 식당 운영업체인 후니드가 직접 듣는 고객의 소리함(공책!)에는 별다른 이야기가 올라오지 않는다고 합니다. 그래서 구성원의 목소리를 제대로 전할 수 있는 앱을 만들어 보기로 했습니다.",
+        "생활코딩 밥플래닛팀에서는 깃허브에 아래와 같은 프로젝트를 열거, 구성원 누구나 참여를 하실 수 있도록 사내에 적극적으로 홍보했습니다.",
+        "10층 객잔사업을 운영하는 훈이두(勳利頭) 회관에 따르면, 날짜마다 차이는 있으나, 조식 80인, 중식 560인, 석식 250인, 합하여 하루에 800인 가량의 사우들이 객잔을 이용하고 있으나, 차림표에 대한 평가의견을 적극적으로 개진하는 사우들은 통상 40두를 넘지 못한다고 합니다. 요즘이 어떤 시대입니까? 김밥천국에서 김밥 한줄을 주문해도 고기가 있네없네, 김해쌀을 썼네 이천쌀을 썼네 아니 안남지방에서 배타고 온 쌀이네 시시콜콜 누리집에 떠들어대는 시대 아닙니까? 헌데 유독 사내 객잔에 대해서는 다들 꿀먹은 벙어리인양 침묵하고 있어, 객잔 음식에 대한 객관적인 평가를 축적하고 분석하려는 목적으로 이렇게 앱을 만들게 되었사오니, 널리 사용하시라."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "chatbot",
+      "route": "/project/chatbot",
+      "sourceFile": "_projects/2016-12-01-chatbot.md",
+      "sourceSha256": "edcecb696f2511548d4848dffc21bf61677ed7214dd9477f4d896440f3df065e",
+      "listed": true,
+      "lang": "en",
+      "title": "Chatbot Project",
+      "description": "An intelligence chat-bot powered by Google analytics, Dialogflow and LINE API.",
+      "hero": "/images/projects/2016-chatbot/placeit01-2546.jpg",
+      "galleries": [],
+      "includeCounts": {
+        "post-components/video.html": 1
+      },
+      "resources": [
+        "/images/projects/2016-chatbot/normal-4819.mp4",
+        "/images/projects/2016-chatbot/image-20200831005107814.png",
+        "/images/projects/2016-chatbot/image-20200831005014833.png",
+        "/images/projects/2016-chatbot/image-20200831012016128.png",
+        "https://www.slideshare.net/slideshow/embed_code/key/yh1FVzr7d0j3D6"
+      ],
+      "links": [
+        "https://www.slideshare.net/dusskapark/google-analytics-chatbot-rookiesan",
+        "https://www.slideshare.net/dusskapark"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Project background",
+        "Key features",
+        "Skills",
+        "Concept video"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "Rookie-san is an intelligent chatbot that automatically creates charts by extracting necessary data from Google Analytics according to the context of the chat.",
+        "Most people working in the Internet service industry have the same habit of checking statistics on a daily basis through tools like Google Analytics. And I thought this pattern was inconvenient. I believed that if we could connect the Google Analytics API with messengers like Kakaotalk or LINE, which Koreans and Koreans use every day, we would be able to free people from this annoying routine and started the project with the node js study team.",
+        "This video is edited with real screen capture of working chatbot application."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "gdc",
+      "route": "/project/gdc",
+      "sourceFile": "_projects/2017-10-02-gdc.md",
+      "sourceSha256": "f628f180d6987c220937f2800a3e7eb727bcd973c73e3f00f88bdb15c31d03ca",
+      "listed": true,
+      "lang": "en",
+      "title": "Redesign project",
+      "description": "As a Product Manager/Designer, I was in charge of the Redesign project for LINE GAME Developers site as known as 'GDC', which is a in-house web site for the partner developer, and provided in-game platforms such as leaderboard system, achievement system, and game stamina system.",
+      "hero": "/images/projects/2017-gdc/console2018-004.png",
+      "galleries": [
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2017-gdc/GDC2017-001.png",
+            "/images/projects/2017-gdc/GDC2017-004.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2017-gdc/GDC2017-007.png",
+            "/images/projects/2017-gdc/GDC2017-008.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 2
+      },
+      "resources": [
+        "/images/projects/2017-gdc/GDC2017-001.png",
+        "/images/projects/2017-gdc/GDC2017-004.png",
+        "/images/projects/2017-gdc/GDC2017-007.png",
+        "/images/projects/2017-gdc/GDC2017-008.png",
+        "/images/projects/Portfolio/Portfolio.003.png",
+        "/images/projects/Portfolio/Portfolio.004.png",
+        "/images/projects/2017-gdc/GDC2017-002.png",
+        "/images/projects/2017-gdc/GDC2017-003.png",
+        "https://www.youtube.com/embed/CP8hyeFnomg"
+      ],
+      "links": [
+        "https://gdc.game.line.me/"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Beginning",
+        "Brainstorm & Define problems",
+        "Ideate & Sketch",
+        "UI Design",
+        "Implementation and release"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "As a Product Manager/Designer, I was in charge of the Redesign project for GAME Developer Center (called 'GDC'), which is a in-house web site for the partner developer, and provided in-game platforms such as leaderboard system, achievement system, and game stamina system.",
+        "I Designed each game product's functional policies, API/Parameter sets, and web UI/UX structure by collaborating with each product managers with regards to UX strategy, process improvement. Especially, with technical writers, I adopted new workflows and opensource documentation tools to successfully provide the fist qualified guide document service in LINE.",
+        "In the GDC, we introduced our web service to game developers , which is providing setting management, developing guides, and testing tool to implement LINE features on their games. Although, we have been trying to give a hand to game developers, there are still some complains because of various legacies and complicated UI. Accordingly, we have decided to initiate project that would be to proceed website designing with a new UI for refining inconveniences.",
+        "We started with analyzing key problems of previous GDC usage, and then established goals of improvements. We have identified 3 drawbacks in total.",
+        "Complex communications such as system of developmental documents",
+        "The game developers needed a lot of keys such as SDK, guides and App ID to integrate their games with SDK or LINE's features. Those works are required active communication among the developers not only by their roles but also by contracts. In exiting GDC, we have communicated in various ways like providing guiding PDF books and assigning dozens of task sets through our internal issue tracker tool.",
+        "Insufficient convenience functions and UI design",
+        "Since the old GDC was a forum-centric communication tool, it lacked some critical features for game release such as uploading files for QA. And as we had continued to use the website thrown together through Bootstrap, the UX- with a poorly designed UI, lacking consistency- had also been a problem.",
+        "So, in the brainstorming stage, we identified this problem and thought of a way to improve the usability of the website for our target users- game developers.",
+        "Also for the sake of ideal user flow, we planned to make a simple user-centered design application through integrating critical functions that developers needed to minimize complex workloads. After brainstorming, we decided to add new functions like build distributing functions such as Wiki, Issue tracker, Play console etc.",
+        "We iterated our wireframe design by conducting informal usability testing with the mid-fidelity prototype. Our participants provided feedbacks on error-prevention methods, accessibility, and discoverability of the UI.",
+        "We divided dev guides into 'Ticket' guides that act as tips for your development and businesses, and 'wiki' guides explain development functions in more detail. So we drived users to read the Ticket guides to get a brief introduction, and made them to move on wiki to find out more.",
+        "As I was designing the UI wireframe, I realized that the most important function of this app lies on simply uploading developers game builds and receiving QA services. So we add new features for users to See all of their submit & review information at once.",
+        "Lastly, I redesigned all of its UI components to support the responsive web. The reason was we found from Google analytics data that almost 15% users visit this website through the wiki links they received on mobile such as LINE messenger or email.",
+        "After we all agreed its concept and functional spec, I started designing the UI and components via Sketch/Zeplin.",
+        "My teammate lead the implementation in vue.js and I helped with CSS code and animation guides. This video is edited with real screen capture of working web application."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "orderbook",
+      "route": "/project/orderbook",
+      "sourceFile": "_projects/2018-12-01-orderbook.md",
+      "sourceSha256": "e33deb29901dda3e7fb0d8921621ccb53c4aff09e43d32c6911281e889314362",
+      "listed": true,
+      "lang": "en",
+      "title": "Food ordering app",
+      "description": "Orderbook(모두의 주문) is a service that customers order directly from the table with a mobile QR code.",
+      "hero": "/images/projects/2018-orderbook/logostory2018-002.png",
+      "galleries": [
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2018-orderbook/benchmarking0.png",
+            "/images/projects/2018-orderbook/benchmarking3.png",
+            "/images/projects/2018-orderbook/benchmarking4.png",
+            "/images/projects/2018-orderbook/benchmarking7.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2018-orderbook/logo1-1.png",
+            "/images/projects/2018-orderbook/logo1-2.png",
+            "/images/projects/2018-orderbook/logo1-3.png",
+            "/images/projects/2018-orderbook/logo1-5.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2018-orderbook/logostory2018-007.png",
+            "/images/projects/2018-orderbook/logostory2018-008.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2018-orderbook/zeplin-2.png",
+            "/images/projects/2018-orderbook/zeplin-3.png",
+            "/images/projects/2018-orderbook/zeplin-1.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 4
+      },
+      "resources": [
+        "/images/projects/2018-orderbook/benchmarking0.png",
+        "/images/projects/2018-orderbook/benchmarking3.png",
+        "/images/projects/2018-orderbook/benchmarking4.png",
+        "/images/projects/2018-orderbook/benchmarking7.png",
+        "/images/projects/2018-orderbook/logo1-1.png",
+        "/images/projects/2018-orderbook/logo1-2.png",
+        "/images/projects/2018-orderbook/logo1-3.png",
+        "/images/projects/2018-orderbook/logo1-5.png",
+        "/images/projects/2018-orderbook/logostory2018-007.png",
+        "/images/projects/2018-orderbook/logostory2018-008.png",
+        "/images/projects/2018-orderbook/zeplin-2.png",
+        "/images/projects/2018-orderbook/zeplin-3.png",
+        "/images/projects/2018-orderbook/zeplin-1.png",
+        "/images/projects/2018-orderbook/logostory2018-001.png",
+        "/images/projects/Portfolio/Portfolio.003.png",
+        "/images/projects/2018-orderbook/logostory2018-004.png",
+        "/images/projects/2018-orderbook/logostory2018-006.png",
+        "/images/projects/2018-orderbook/swagger.png",
+        "/images/projects/2018-orderbook/develop-env.png"
+      ],
+      "links": [
+        "https://orderbook.logostory.io/#/?shopId=2",
+        "https://github.com/logostory",
+        "https://www.facebook.com/profile.php?id=100001894389207",
+        "https://www.facebook.com/youngkwang.cho.90",
+        "https://marvelapp.com/prototype/feib724/screen/50898994",
+        "https://drive.google.com/open?id=1CDudLoe4XduV3w6YqFFZDdFro8UYA877",
+        "http://zpl.io/aBqe1dO"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Brainstorm",
+        "Ideate & Sketch",
+        "Design & Prototype",
+        "Web app implementation"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "Have you ever been annoyed or tired of having to wait in a long line when ordering food at a restaurant? Orderbook(모두의 주문) is a service that customers order directly from the table with a mobile QR code.",
+        "As my first side project at LOGO Cording club, we decided to design a service that applies to us. Right after the meeting, we could not decide what food should we order for the team lunch and tired of waiting in a long line. Let's build a food ordering service that makes it easy for anyone to find a menu, choose food, and order directly. Main contributed in UI design and React component development. I also participated in ideation, wireframing, and flow chart.",
+        "At the start of the project, we surveyed similar apps and created a logo design that would be responsible for the consab and brand identity of the logostory app.",
+        "First, we installed 7 food delivery services such as Yelp to understand each screen and function, and figured out how the functions we were going to create were developed in the real world. (Thanks Rachel)",
+        "Next, Glory, a designer, creates a logo with the image of 'building up' the goal we are pursuing. Next, we prepared the actual design by creating a Material Theme based on this consap.",
+        "We iterated our wireframe design by conducting informal usability testing with the low-fidelity prototype. Our participants provided feedbacks on error-prevention methods, accessibility, and discoverability of the UI.",
+        "As I was designing the UI wireframe and components, I realized that the most important function of this app lies on the user flow from camera to checkout. Using Marvel, I tested out different scenarios and finally came up with some solutions. With some external and internal critique, we settled on a QR code based interaction.",
+        "My teammate lead the implementation in React.js and I helped with React such as QR Code creation rule, component styling based on Material-UI, Redux (shopping cart), and Swagger integration with the backend team."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "lookbook",
+      "route": "/project/lookbook",
+      "sourceFile": "_projects/2019-03-02-lookbook.md",
+      "sourceSha256": "339ecb86c1493e2b579b1da5fbd8fbee5ab2a7d9197c39107bb4a33f32717ae2",
+      "listed": true,
+      "lang": "en",
+      "title": "LOOKBOOK",
+      "description": "LOOKBOOK is the UX extension library for reusable, systematic design based on Google Material Design System backed by Open Source.",
+      "hero": "/images/projects/2019-lookbook/lookbook2019-001.png",
+      "galleries": [],
+      "includeCounts": {},
+      "resources": [
+        "/images/projects/2019-lookbook/Lookbook En.006.png",
+        "/images/projects/2019-lookbook/Lookbook En.008.png",
+        "/images/projects/2019-lookbook/Lookbook En.023.png",
+        "/images/projects/2019-lookbook/Lookbook En.024.png",
+        "/images/projects/2019-lookbook/Lookbook En.025.png",
+        "/images/projects/2019-lookbook/image-20200104185900199.png",
+        "/images/projects/2019-lookbook/image-20200104192724536.png",
+        "/images/projects/2019-lookbook/Screen Shot 2020-01-09 at 4.01.26 PM.png",
+        "/images/projects/2019-lgd/lgd2019-910.gif",
+        "/images/projects/2019-lookbook/h0LBNHC9yfk_5xtpws3yEQ.png",
+        "/images/projects/2019-lookbook/breadcrumb.gif"
+      ],
+      "links": [
+        "http://material.io/",
+        "https://zeroheight.com/1dd0d624e/p/27b58b/b/33dfe1",
+        "https://developers.game.line.me/",
+        "https://zeroheight.com/1dd0d624e/p/30d869-"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Why, did we need to improve our management tools?",
+        "Why Opensource?",
+        "Why, is it the expansion library?",
+        "Case: LINE GAME Developers",
+        "Curious? checkout Website",
+        "You cannot make software by yourself",
+        "Opensource itself was not the answer. Let's indirectly expand!",
+        "Material Theming",
+        "Ready-to-use components",
+        "Communication with dev"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "LOOKBOOK is the UX extension library for reusable, systematic design based on Google Material Design System backed by Open Source.",
+        "The post below explains why LINE's game platform team created LOOKBOOK, and how we used open source and contributed again.",
+        "LINE does have a large number of products. Some of these products are end-user products into which a large number of resources are spent, such as LINE or Family Apps. For other products, such as managing tools created on the web, the number of products that need to be created is high but it is difficult to spend a large number of resources.",
+        "Since these are services for internal administrators, mostly it is acceptable to not spend much time in developing, thus it is pushed back on the priority list. LINE also has various managerial admin pages, more than end-user services.",
+        "Therefore, it is very significant in the product design of these managerial products to utilize a small number of resources most efficiently to provide the same user experience.",
+        "LINE GAME platform team have been providing various social platforms such as game messages and social graph. It is providing much more back office management tools that what it looks like on the outside. Due to such situation, we've designed and developed more back office tools than any other teams in LINE. We also had many experiences to purchase libraries or request for outsourcing in order to work even more efficiently.",
+        "However, on the contrary, we're also the team that experienced the most problems due to this.",
+        "Moreover.. many admin products, that were developed by one developer alone without designer or PM's supports, did not escape from basic UI provided by some framework or themes that they relied on. Obviously products ranging from Vue and React to the old version Bootstrap, the environment of products were very inconsistent. We have even experienced a waste of resources to solve these issues, such as repetitively outsourcing or using a common library.",
+        "Therefore, the LOOKBOOK project has started to seek a solution by reusing components as a way to reduce this repetitive cost, concerns, and mistakes.",
+        "A well-known method of re-using components is to make the design system. Great design systems such as AirBnB's Design Language System(DLS) and IBM's Carbon facilitate product design and development productivity, much like purchasing parts from IKEA and assembling a piece of furniture. And LINE, of course, runs its own Design System called LDS but it is currently focused on key products only such as LINE app, as mentioned before.",
+        "Frankly, including the entirety of back office products and tools in the design system is inefficient as well as impractical. Because we cannot create all components and establish a design system on our own. Even we develop some excellent things, if our colleagues from other team relies on different frameworks, it leads to another same work-shift.",
+        "In actuality, many products have disappeared of lacked maintenance due to the absence or turnover of main developers, so as other many products produced by NAVER or LINE. That's why we needed a way for sustainable project.",
+        "In the research process, we found the solution to all these problems in the case of NAVER's chart library.",
+        "We had predecessors who went through the same kind of problems. They started off from the same situation. Our predecessors at NAVER created chart libraries used in operating tools for NAVER Café and Blog on their own, and even used commercial and opensource libraries, but they said the limitations for each were clear.",
+        "And billboard JS provided the clue for overcoming the limitations. Based on the D3.JS ecosystem, billboard JS maximized its management efficiency by indirectly contributing only to the functions that NAVER needs through Pull-Requests. Currently, NAVER Café and Blog are using this chart library to obtain statistics, and this chart library was ranked one of the most active opensource projects in Korea 2019.",
+        "LOOKBOO decided to approach in the same method as billboard JS.",
+        "We concluded that it would be possible to maximize the management efficiency and create a sustainable library, set the direction of the project, and decided to start on the basis of the Material Design, which is the most active and biggest open-source-based design system.",
+        "In Material Design, many components have already been provided, but it is more like to focus on mobile platform rather than web. So, you will often need more complicated web component (such as data table) or very basic component (such as tab) while you are using it. We have decided to expand such a way as below when we would find these components while we built the admin site with Material Design.",
+        "For example, in the case of the Date pickers component, it is a function that is used particularly often in the admin website. However, the calendar UI of the Date pickers that is basically provided is somewhat unsatisfactory in design, and it was difficult to use on a small mobile screen. In addition, it was also needed to allow the selection as a Range like 'from when to when'.",
+        "If we cannot find any appropriate Material-UI based Date picker component from Github, we will create a new Material-UI based component.",
+        "Creating UX guide, Sketch library and React component",
+        "Firstly we will define the UX design of the required component and create a design kit for Sketch based on Google's official Baseline.sketch. Then, we will create the React component to realize the completed design and create detailed specs such as props, state, and option. Finally, we will distribute these three(md, sketch, js file). (e.g. Pickers)",
+        "LINE GAME Developers(LGD) is a 'Firebase'like web service, which provides LINE's API and document to support game developer to enrich the game quality by using LINE messenger. LINE GAME Platform used LOOKBOOK while designing this product in the end-to-end process from the concept to product design. Down below explains the three main characteristics of how this project used LOOKBOOK.",
+        "LINE has a variety of Family services which has it's unique brand color, Typeface. Game platform also had to be usable with other brands, and LOOKBOOK was proceeded with Material Theming so it could product design collaboratively with designers using Material Theme Edior and LOOKBOOK.sketch.",
+        "We provided a way that if designer set the Color, Shape and iconography, and saved Theme in Baseline.sketch, then the Theme would be automatically updated in LOOKBOOK.sketch. All components of LOOKBOOK are always changed according to the brand theme like the video below.",
+        "After the completion of theme settings, you can freely use all components of LOOKBOOK from your project, by copy/paste LOOKBOOK self-made components and Material Design's all components as stickers.",
+        "Lastly, its React component also has been designed to meet the same quality of Sketch components. For example, in Theming, React components have same options as design file changes according to the Material-ui framework. This kind of design system helps to increase efficiency of each product team, and improve designer's workflow.",
+        "I am very excited about this project because I know that there is a lot of developers who are struggling at building ui and waiting for something like this to come true. It will take a lot of time for me alone to reach thousand components. So if you want to do something great and fun, please read our contribution section."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "lgd-project",
+      "route": "/project/lgd-project",
+      "sourceFile": "_projects/2019-07-24-lgd-project.md",
+      "sourceSha256": "72c2fc4f5b4fa2b0043eabefd72f419cfa095d4b0e5f0f3d2efd841ffe402d5e",
+      "listed": true,
+      "lang": "en",
+      "title": "LINE GAME Developers",
+      "description": "LINE GAME Developers is a 'Firebase-like' web application that provides LINE's APIs and documents for game developers to enrich games with LINE messager. As a Product designer, modernized user experiences of LINE GAME Developers by defining a UI framework that is effortless, refined, and beautiful for all screen sizes",
+      "hero": "/images/projects/2019-lgd/lgd2019-001.jpg",
+      "galleries": [
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2019-lgd/lgd2019-901.png",
+            "/images/projects/2019-lgd/lgd2019-902.png",
+            "/images/projects/2019-lgd/lgd2019-903.png",
+            "/images/projects/2019-lgd/lgd2019-904.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2019-lgd/lgd2019-905.png",
+            "/images/projects/2019-lgd/lgd2019-906.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2019-lgd/lgd2019-911.png",
+            "/images/projects/2019-lgd/lgd2019-909.png",
+            "/images/projects/2019-lgd/lgd2019-910.gif"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2019-lgd/lgd2019-001.jpg",
+            "/images/projects/2019-lgd/lgd2019-002.jpg",
+            "/images/projects/2019-lgd/lgd2019-003.jpg",
+            "/images/projects/2019-lgd/lgd2019-004.jpg"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 4
+      },
+      "resources": [
+        "/images/projects/2019-lgd/lgd2019-901.png",
+        "/images/projects/2019-lgd/lgd2019-902.png",
+        "/images/projects/2019-lgd/lgd2019-903.png",
+        "/images/projects/2019-lgd/lgd2019-904.png",
+        "/images/projects/2019-lgd/lgd2019-905.png",
+        "/images/projects/2019-lgd/lgd2019-906.png",
+        "/images/projects/2019-lgd/lgd2019-911.png",
+        "/images/projects/2019-lgd/lgd2019-909.png",
+        "/images/projects/2019-lgd/lgd2019-910.gif",
+        "/images/projects/2019-lgd/lgd2019-001.jpg",
+        "/images/projects/2019-lgd/lgd2019-002.jpg",
+        "/images/projects/2019-lgd/lgd2019-003.jpg",
+        "/images/projects/2019-lgd/lgd2019-004.jpg",
+        "/images/projects/Portfolio/Portfolio.002.png",
+        "/images/projects/2019-lgd/lgd2019-907.png",
+        "/images/projects/2019-lgd/lgd2019-908.png",
+        "https://www.youtube.com/embed/TTq8qN52S7w",
+        "https://www.youtube.com/embed/videoseries?list=PLLQlZaiiGlHP3ffGmyB8RzT48A2zQjSK9"
+      ],
+      "links": [
+        "https://developers.game.line.me/"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Concept Background",
+        "Research",
+        "Insights",
+        "Ideation and Sketch",
+        "Design and Prototype",
+        "Build"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "LINE GAME Developers is a 'Firebase-like' web application that provides LINE's APIs and documents for game developers to enrich games with LINE messager. As a Product designer, modernized user experiences of LINE GAME Developers by defining a UI framework that is effortless, refined, and beautiful for all screen sizes.",
+        "This project began from my passion with game and my passive observations on gamer's behaviors on mobile environment. People play games for various reasons, and their gaming experiences with social network are often unique, whether it is playing with new friends, joining clans, having a co-mission, achivements, or visiting a new place. After gathering members JinWoo (Tech PM), Moon (UX designer), and Li Huishu(Lead engineer), we planned to explore a fun way for game developers to use LINE to create more diverse social experiences.",
+        "Through this project, my team sought to explore how we can help developers capture and share their user's memorable moments more effectively through LINE. Specifically focusing on improving developer experiences which contains a lot of potential ingredients of a unique/memorable moment of their gamers, we executed human-centered design process throughout the 10-week period to create new developer tools that can enhance game developer's everyday experiences.",
+        "We conducted a multi-methodology research effort to better understand how our partners and developers define their impression of LINE plarform, their SDK integrating experience & current use of technology, and how our competitors have sought to explore these questions in their relative fields of study.",
+        "In conclusion, as complaints about the inconvenience of the SDK are delivered through the developer site, it appears that the developers are talking about the inconvenience of the website together.",
+        "Using those insights, we conducted a series of sketching sessions to brainstorm and come up with possible features and methods that could potentially improve the current ways of developer-site experience in the context of SDK-integrating. The ideas spun around at different stages within LINE GAME platform features we already have. While some focused on providing easy-to-use ways of SDK-integrating, some ideas revolved around setting a necessary moment such as reading guide docs and Q&A.",
+        "Based on policies and wireframe designs above, we selected and used the APIs we needed from the existing LINE GAME Platform's orchestration API list, and repeated tasks such as creating new essential APIs or replacing them with other APIs that were not present.",
+        "Here at LINE, we're using Material design for many of our projects. It already includes a lot of components, but sometimes you need a more complex composed component (e.g. a chip input or a time picker) or something very basic (e.g. dots for pagination).",
+        "So we made LOOKBOOK as a ccollection of our customized components and used it with Material theming.",
+        "We used Docz for interactive preview of UI components ans pages",
+        "We've deployed LINE GAME Developers website with powerful features to show off your work. Why not take a look and use on your mobile games?"
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "liff-project",
+      "route": "/project/liff-project",
+      "sourceFile": "_projects/2020-10-30-liff-project.md",
+      "sourceSha256": "a4c8281e55f10f95c0b15a09052e90c68027be7a6f75904cb6d12394f3b5a992",
+      "listed": true,
+      "lang": "en",
+      "title": "LINE Frontend Framework (LIFF)",
+      "description": "LINE's LIFF (LINE Front-end Framework) is a platform for running web apps and offers a browser, namely, LIFF Browser. LIFF apps, web apps implemented with LIFF, run on LIFF Browser. LIFF also provides the LIFF API for you to obtain data from LINE, such as LINE user ID, and enables you to send LINE messages on behalf of the user.",
+      "hero": "/images/projects/2020-liff/5_Native area elements.png",
+      "galleries": [
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2020-liff/10_LIFF modal type.png",
+            "/images/projects/2020-liff/LIFF view vs LIFF sheet_1600px.png",
+            "/images/projects/2020-liff/Modal mode in LIFF_LINE.png",
+            "/images/projects/2020-liff/Modal mode in LIFF_LINE_Family_service.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2020-liff/add mode.png",
+            "/images/projects/2020-liff/add&edit mode.png",
+            "/images/projects/2020-liff/search mode.png",
+            "/images/projects/2020-liff/single-step modal mode.png",
+            "/images/projects/2020-liff/multi-step modal mode.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2020-liff/001.png",
+            "/images/projects/2020-liff/002.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 3,
+        "post-components/video.html": 1
+      },
+      "resources": [
+        "/images/projects/2020-liff/10_LIFF modal type.png",
+        "/images/projects/2020-liff/LIFF view vs LIFF sheet_1600px.png",
+        "/images/projects/2020-liff/Modal mode in LIFF_LINE.png",
+        "/images/projects/2020-liff/Modal mode in LIFF_LINE_Family_service.png",
+        "/images/projects/2020-liff/add mode.png",
+        "/images/projects/2020-liff/add&edit mode.png",
+        "/images/projects/2020-liff/search mode.png",
+        "/images/projects/2020-liff/single-step modal mode.png",
+        "/images/projects/2020-liff/multi-step modal mode.png",
+        "/images/projects/2020-liff/001.png",
+        "/images/projects/2020-liff/002.png",
+        "https://www.youtube.com/embed/63nsHQSD3OQ",
+        "/images/projects/Portfolio/Portfolio.005.png",
+        "/images/projects/2020-liff/4_Native area.png",
+        "/images/projects/2020-liff/8-1.png"
+      ],
+      "links": [
+        "https://developers.line.biz/en/docs/liff/registering-liff-apps/#before-you-begin"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Research",
+        "Ideate",
+        "Design and Iteration",
+        "Build",
+        "Result"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "LINE's LIFF (LINE Front-end Framework, LIFF as below) is a platform for running web apps and offers a browser, namely, LIFF Browser. LIFF apps, web apps implemented with LIFF, run on LIFF Browser. LIFF also provides the LIFF API for developers to obtain data from LINE, such as LINE user ID, and enables developers to send LINE messages on behalf of the user. Learn more details here.",
+        "But there were lots of product owners and partners who have been wanted to specify the size and structure of the browser to fit for their services. So we started a project to add a new view type, which allow layout changes to provide suitable UX for their service.",
+        "So we looked at the UX of almost all of LINE family services and found the following pain points before designing the LIFF area.",
+        "LIFF app screens consist of a ❶ native area and ❷ web area. Elements in the native area are for web browser features such as back button and close button. Web area is for displaying service content. So, we had to consider not only the UX of the web app, but also the harmony of the features of the web browser.",
+        "For example, the header of in-app browser has native buttons by default in the FAB (Floating Action Button) section, located at the top right-hand side corner. So designers got stress not to alter nor block this section when they design the header.",
+        "If the designer allocate the close button in the right-hand side, the button and the content overlap when the user scrolls the page. SoEach designer separately found their own ideas such as getting around this by keeping the FAB container on or adding a container with white background in the web area.",
+        "Carelessly designed UI results in increased user bounce rate. Using modal sheet provides flexibility in UI design, which is why it is popular among many of product owners. One downside to this is that the modal pattern enables users to close the LIFF app anytime. An unexpected side effect of using the modal was found in requiring multiple tasks on a complex UI, resulting in users exiting the service. Such problems rise due to the conflict between user's expectation and the UX.",
+        "We tried to find a way to set user's expectations to meet what LIFF apps provide and to enable users to comprehend LINE's modal environment by using appropriate LIFF modal type.",
+        "Modals are the windows that LIFF Browser displays web contents in. We decided to classify this modal type into two modal types as shown below. Depending on the type, user expectation and UX we recommend vary.",
+        "After deciding on these UX principles, we started design process. Our Senior UX designers, Dane and June, drawed various UI/UX patterns and I took the responsibility to generate the design system assets from Sketch to Javascript and lead in having an in-depth conversation with TPM and engineers to overcome technical limitations.",
+        "Finally, we explored how to distribute the new design to make it the easiest way to reach all designers and FE developers. After several discussions, our engineering team selected a webComponents technology that could work in a variety of web platform environments, and as a member of the design system team, I upgraded our existing LINE Design System website(Gatsby) to effectively showcase web component-based UIs.",
+        "In addition, I led the collaboration with the Technical Writing team to rewrite, translate, and successfully distribute our complex UX documents to our website.",
+        "Finally, we distributed the LIFF Guidelines document, Sketch symbol library, and Web components(js) in-house through the LINE design system. The response was great. In the 3 weeks after distribution, customer inquiries through Slack increased by more than 40%, most of which were from product owners about how to apply a new view type to the product.",
+        "In addition, LIFF UI, part of this project, was even introduced to the public as one of LINE's major FE project achievements through LINE's annual developer event."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "ldsg",
+      "route": "/project/ldsg",
+      "sourceFile": "_projects/2020-11-30-ldsg.md",
+      "sourceSha256": "a8637c482e6766160aaa9f0e33570887b555c2b9e5433f4e0c91d463bb93c976",
+      "listed": true,
+      "lang": "en",
+      "title": "LINE Design System Global",
+      "description": "LINE Design System Global project started to make everyone's life easier. It gives designers the elements and guidance they need to work within an approved structure. It helps developers work with predictable, consistent components. And it helps businesses maintain or design products, faster - all with consistent user experiences.",
+      "hero": "/images/projects/2020-ldsg/mt-09AF1C98-4F0A-496C-857F-B244256366C5-19587.png",
+      "galleries": [
+        {
+          "columns": 3,
+          "images": [
+            "/images/projects/2020-ldsg/docs01.png",
+            "/images/projects/2020-ldsg/docs02.png",
+            "/images/projects/2020-ldsg/docs03.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2020-ldsg/docs04.png",
+            "/images/projects/2020-ldsg/docs05.png",
+            "/images/projects/2020-ldsg/docs06.png",
+            "/images/projects/2020-ldsg/docs07.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/video.html": 2,
+        "post-components/gallery.html": 2
+      },
+      "resources": [
+        "https://www.youtube.com/embed/L-LcSkyBsAA",
+        "/images/projects/2020-ldsg/docs01.png",
+        "/images/projects/2020-ldsg/docs02.png",
+        "/images/projects/2020-ldsg/docs03.png",
+        "/images/projects/2020-ldsg/docs04.png",
+        "/images/projects/2020-ldsg/docs05.png",
+        "/images/projects/2020-ldsg/docs06.png",
+        "/images/projects/2020-ldsg/docs07.png",
+        "https://www.youtube.com/embed/Wn-FqywrsqQ",
+        "/images/projects/2020-ldsg/background001.png",
+        "/images/projects/2020-ldsg/principle002.png",
+        "/images/projects/2020-ldsg/process03.png",
+        "/images/projects/2020-ldsg/process01.png"
+      ],
+      "links": [
+        "https://youtu.be/_VM7LOjjntA",
+        "https://www.youtube.com/watch?v=YBwgkr_Sbx0"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Background",
+        "Concept building",
+        "Work Processes",
+        "Overview",
+        "Design",
+        "Documents",
+        "Development"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "There are more than 200 Family Services in LINE, and they have their own UX/UI orientation. So there were lots of wasting of time, energy and cost due to repeated Planning / Designing / Developing work to make a similar styled components. The LINE Design System Global('LDSG') started from the question of 'Is there any way to share and recycle the components in a global scale?'.",
+        "Early 2020, I joined the project as an anchor who orchestrates the team to achieve design or technical performance. (hmm.. Xavi Hernandez?)",
+        "Although LINE has maintained an industry leading Design System (as known as 'LDS' or 'LDSM') and LDS has evolved a great deal since its launch years ago, it was clear that LDS's goals were not around providing a scalable and customizable way but concentrating the incorperated mobile messenger first.",
+        "So, Dane (Sr. UX designer) suggested and led the investigating & analyzing the needs of our target users, Family services first. And we tried to set goals & concepts to fit for this LDSG project together after those research.",
+        "Each of our Family Services provides unique value and benefits to our users and also plays a role in the platform and synergy with other services. Therefore it is important to understand the holistic role of Family Services as a collection of services and part of the entire LINE platform.",
+        "So we researched lots of Family services and defined the outline of the role of Family Services below:",
+        "Based on the researches, we dicided to spin off LDSG from LDS and set its initial goals around giving designers the elements and guidance they need to work within a more flexible structure and helping developers still work with predictable, consistent components. Consequently, LDSG aim to help businesses maintain or design products, faster - all with consistent user experiences in a global scale.",
+        "Next, we defined a workflow for creating a design system based on a great collaboration system with multiple designers at the cross location. In particular, I took the lead in cross functional work, such as creating PRD documents based on UI symbols and communicating with FE engineers.",
+        "Emin and Jonghee led design phase and made 3 libraries: icon, foundation, and components. those libraries collects the smallest units of design elements to which minimal design rules have been applied to consistently maintain the design style of the LINE family service.",
+        "In the documentation phase, I took the leading role as a product manager. I first discussed with the development team what technology stack to implement the design system. Together, we referenced numerous examples of design systems, and finally decided to use Web Components technology by referring to the case examples from Salesforce and Google (Because their problem-solving approach was most similar to ours.)",
+        "Next, I worked closely with designers and focused on creating PRDs to convert the UI symbols created in the design process above into web components. Since I worked with talented designers, I thought that the most important thing that I should do in this phase was not to be obsessed with visuals, but to delve into the functional specs. So, I tried to focus on clearly explaining the functional specifications to the engineers and... successfully did it. My documents brought me very rewarding feedback from my peer review :)",
+        "Moreover, I was also responsible for leading communication with the technical writing team and UX designers, writing and translating component usage guides and distributing them periodically to our design system website.",
+        "Our SW engineers, Alan and Uemura-san, worked very hard and made the state-of-the-art web components. For me, I enjoyed communicating with them and participating in review and QA.",
+        "In addition, this project got the attention of technology leadership and were featured as one of the major Frontend projects at the company's annual developer conference 'LINE Dev day 2020'."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "tensorflow-js",
+      "route": "/project/tensorflow-js",
+      "sourceFile": "_projects/2021-08-11-TensorFlow-JS.md",
+      "sourceSha256": "f9bd0554c1f3b8ef5cd2816ed8548d94122e122c9e9b034fa7974df922a0914a",
+      "listed": true,
+      "lang": "en",
+      "title": "AI-powered design system made with TFJS",
+      "description": "A project using TensorFlow to create an assistant, that helps designers by keep-watching numerous design elements instead of humans.",
+      "hero": "/images/projects/2021-made-with-tfjs/file-cover.png",
+      "galleries": [
+        {
+          "columns": 2,
+          "images": [
+            "https://img.youtube.com/vi/ckN1QIpjkAk/0.jpg",
+            "https://img.youtube.com/vi/blL0EQ6wNH8/0.jpg",
+            "/images/projects/2021-made-with-tfjs/2022-01-02 11.54.33.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 1
+      },
+      "resources": [
+        "https://img.youtube.com/vi/ckN1QIpjkAk/0.jpg",
+        "https://img.youtube.com/vi/blL0EQ6wNH8/0.jpg",
+        "/images/projects/2021-made-with-tfjs/2022-01-02 11.54.33.png",
+        "/images/projects/2021-made-with-tfjs/image-20220102221652435.png",
+        "/images/projects/2021-made-with-tfjs/001.gif",
+        "/images/projects/2021-made-with-tfjs/002.gif",
+        "/images/projects/2021-made-with-tfjs/003.gif",
+        "/images/projects/2021-made-with-tfjs/2022-01-02 10.57.13.png",
+        "/images/projects/2021-made-with-tfjs/image-20220102231523377.png",
+        "/images/projects/2021-made-with-tfjs/image-20220102231920102.png",
+        "/images/projects/2021-made-with-tfjs/004.gif",
+        "/images/projects/2021-made-with-tfjs/005.gif"
+      ],
+      "links": [
+        "https://judepark-6960.medium.com/machine-learning-for-design-systems-315cd34b676f",
+        "https://mobbin.design/",
+        "https://selectstar.ai/",
+        "https://open.selectstar.ai/data-set/mobbin",
+        "https://gist.github.com/dusskapark/7a6579da4d61c8156ff11d3644041b29#file-mobbin-tensorflow2-object-detection-ipynb",
+        "https://tv.naver.com/v/23652352",
+        "https://youtu.be/blL0EQ6wNH8?si=lA0P7ZkVqdmMUMb3",
+        "https://youtu.be/ckN1QIpjkAk?si=4iHiqvwpTF44mHkv",
+        "https://twitter.com/TensorFlow?ref_src=twsrc%5Etfw",
+        "https://t.co/mwiHhpZSkl",
+        "https://twitter.com/dusskapark?ref_src=twsrc%5Etfw",
+        "https://t.co/VsPrXXetI9",
+        "https://twitter.com/zeplin/status/1445137665322590223?ref_src=twsrc%5Etfw",
+        "https://twitter.com/hashtag/TensorFlowJS?src=hash&ref_src=twsrc%5Etfw",
+        "https://twitter.com/hashtag/Design?src=hash&ref_src=twsrc%5Etfw",
+        "https://twitter.com/hashtag/Line?src=hash&ref_src=twsrc%5Etfw",
+        "https://t.co/Vk1F5Crohi",
+        "https://twitter.com/hashtag/MadeWithTFJS?src=hash&ref_src=twsrc%5Etfw",
+        "https://twitter.com/hashtag/HCI?src=hash&ref_src=twsrc%5Etfw",
+        "https://twitter.com/hashtag/GUI?src=hash&ref_src=twsrc%5Etfw",
+        "https://twitter.com/hashtag/Figma?src=hash&ref_src=twsrc%5Etfw",
+        "https://t.co/9xIrU3mpP8",
+        "https://twitter.com/jason_mayes/status/1425850072793747458?ref_src=twsrc%5Etfw",
+        "https://twitter.com/sidahuj?ref_src=twsrc%5Etfw",
+        "https://twitter.com/jsngr?ref_src=twsrc%5Etfw",
+        "https://twitter.com/adispezio/status/1468087814889689090?ref_src=twsrc%5Etfw"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Project Process",
+        "Brainstorm & Define problems",
+        "Ideate & Prototype",
+        "Machine Learning",
+        "Make plugins",
+        "Reactions",
+        "From Local Beginnings to Global Recognition",
+        "Idea? Computer Vision!",
+        "Prototyping",
+        "Raw data? Partnership!",
+        "Data Labeling? Sponsored!",
+        "Training with TensorFlow",
+        "Zeplin Extension",
+        "Figma Plugin"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "The user problem of this project just stem from my design system experience. 2018 Inspired by the AirBnB's DLS and the Material 2.0 of Google, I started using the design library. Early 2020, I moved to the company's HQ to manage the LINE design system. During the pandemic, I should come back to Korea but started this open source project to help people like me who have a struggle with the design system.",
+        "The design system is a co-visual language for both designers and engineers alike, and it is extremely common when it comes to creating new user interfaces for large-scale products and services to ensure consistency and productivity. However, they still have major obstacles - one of which is the increasing complexity with the increasing number of components and patterns included in the one single library.",
+        "Because of those kinds of complexities, as you can see above, even if designers shape the same designs...",
+        "In fact, those artboards have been such a mess...",
+        "In the LINE design system, I worked super hard to prevent those kinda mistakes via guidance, cartoon manuals, and design QA. But human resources were always limited. So I started to think of something differently.",
+        "The basic idea of this project is to detect various UI elements in the browser using a custom trained object detection model via TensorFlow.js live in the plugin.",
+        "I started this idea because we already have been living with many services using machine learning such as face recognition, mask detection, and something like this.",
+        "If I can apply this computer vision technology into the design system world, I can make a computer learn the numerous design elements instead of human resources, and also autonomously recommends the design grammar to designers if it finds something that does not conform to the design system.",
+        "This will not only be convenient for the design system users but also it will be the freedom on people like me who should manage this system.",
+        "After pointing out this idea, I started making a prototype to see if my hypothesis was possible or not. I googled and downloaded 200 button images and made the button detector ML model by using TensorFlow.",
+        "Fortunately, it successfully worked! I got this working prototype that could detect the button UI elements from the screen in real-time. I was super excited when my hypothesis came true. And tried to move forward.",
+        "You can find my first prototype story in more detail at this Medium post.",
+        "Although my first prototype was very successful, there were many challenges for creating a useful design system plugin. A much larger dataset, and more optimized ML model, and I had to find the best way to make my designers feel this AI power seamlessly. From 2021, I have been solving those problems one by one.",
+        "For data, I met a Singapore-based startup called Mobbin. They had over 50,000 mobile screenshots for product designers. So contacted them, presented this project, and got over 10,000 high-quality UI screenshots data for free!",
+        "I got the large amount of data, but the data-preparation doesn't end there. I must data-label all of them in order to use in machine learning. This process is very important, but it took a lot of resources and time, so it was huge difficult for me to solve.",
+        "So I applied to a sponsorship program hosted by a Korean data labeling company, SelectStar, and luckily I was selected and eligible for free labeling support from there!",
+        "You can download some samples of this open dataset that I created with Mobbin, and SelectStar through this link. Moreover, if you are interested in the whole dataset, please contact me.",
+        "To be honest, none of this was easy for me because I just started to study TensorFlow at that time. No background, No tutoring. So I just had tried to study AI/ML by myself via Google code labs, blog posts, and Youtube channels. The result is not perfect, but by my standards, I have successfully made TensorFlow models with enough performance level. You can find more details from my Colab notebooks below:",
+        "And the last challenge was how to make it easy for designers to use this AI feature?",
+        "I thought it would be much more natural to check the spelling while designing it rather than separated services. So I decided to focus on the handoff moment by making a plugin with TensorFlow JS not TensorFlow.",
+        "I designed some frames on Figma and made a simple single-page web application using Figma Plugin API, Zeplin API, React, and TensorFlow JS. The best way to illustrate this is to see it in action together!",
+        "After I released Zeplin ML in August and shared my stories via my blog because I'd like to show off and not forget this journey. And... its reaction was awesome!",
+        "Machine learning meets design systems? 🤯 Learn how one of our users built a nifty app with the Zeplin API and @TensorFlow JS that helps designers and engineers utilize their design library. 👉 https://t.co/mwiHhpZSkl Thanks @dusskapark for sharing your project with the world! pic.twitter.com/VsPrXXetI9",
+        "Super cool use case for #TensorFlowJS by @dusskapark who led Global #Design at #Line to create a system that acts like a spell check for designers. Learn how he made it below. Excited to see how it evolves. Read / watch more: https://t.co/Vk1F5Crohi#MadeWithTFJS #HCI #GUI #Figma pic.twitter.com/9xIrU3mpP8",
+        "🤯So cool-tell me more! I looked at the code and have no idea how the model is working. Excited to see where ML design linting can take us. @sidahuj @jsngr 👀 For a moment I thought you built a ML spell-checker for Figma but I get it now :) I'm desperately seeking spellcheck.",
+        "My journey began with the honor of presenting at Deview 2021, a leading developer conference hosted by Naver in Korea. This initial exposure paved the way for further opportunities, allowing me to present at Google's TensorFlow Show & Tell and culminating in a significant presentation at Figma Config 2022. These experiences enabled me to share my project on an international stage, reaching audiences worldwide and highlighting the innovative use of TensorFlow JS in design systems.",
+        "Despite the virtual format of these presentations, they offered unparalleled opportunities to connect with a broader audience and showcase the transformative potential of AI in design."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "naver-now",
+      "route": "/project/naver-now",
+      "sourceFile": "_projects/2022-08-03-naver-now.md",
+      "sourceSha256": "16342c64140ee50d3998f2fdef97c343080575dc598e73e6852ab1eadbf56cf8",
+      "listed": false,
+      "lang": "en",
+      "title": "Improving NAVER NOW featured list via adding a full-width carousel",
+      "description": "As a part of the NOW App Project that integrates different services called NAVER TV, a video platform, and NAVER NOW, an original live service, I designed a Netflix-style Full-Width Slider component for featured items as well as its operation tools.",
+      "hero": "/images/projects/2022-naver-now/Portfolio.008.png",
+      "galleries": [
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2022-naver-now/Portfolio.009.png",
+            "/images/projects/2022-naver-now/Portfolio.010.png",
+            "/images/projects/2022-naver-now/Portfolio.019.png",
+            "/images/projects/2022-naver-now/Portfolio.020.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2022-naver-now/Portfolio.015.png",
+            "/images/projects/2022-naver-now/Portfolio.016.png",
+            "/images/projects/2022-naver-now/Portfolio.017.png",
+            "/images/projects/2022-naver-now/Portfolio.018.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2022-naver-now/Portfolio.021.png",
+            "/images/projects/2022-naver-now/Portfolio.022.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2022-naver-now/Portfolio.023.png",
+            "/images/projects/2022-naver-now/Portfolio.024.png",
+            "/images/projects/2022-naver-now/Portfolio.025.png",
+            "/images/projects/2022-naver-now/Portfolio.026.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2022-naver-now/Portfolio.028.png",
+            "/images/projects/2022-naver-now/Portfolio.029.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2022-naver-now/Portfolio.030.png",
+            "/images/projects/2022-naver-now/Portfolio.031.png",
+            "/images/projects/2022-naver-now/Portfolio.032.png",
+            "/images/projects/2022-naver-now/Portfolio.033.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 6
+      },
+      "resources": [
+        "/images/projects/2022-naver-now/Portfolio.009.png",
+        "/images/projects/2022-naver-now/Portfolio.010.png",
+        "/images/projects/2022-naver-now/Portfolio.019.png",
+        "/images/projects/2022-naver-now/Portfolio.020.png",
+        "/images/projects/2022-naver-now/Portfolio.015.png",
+        "/images/projects/2022-naver-now/Portfolio.016.png",
+        "/images/projects/2022-naver-now/Portfolio.017.png",
+        "/images/projects/2022-naver-now/Portfolio.018.png",
+        "/images/projects/2022-naver-now/Portfolio.021.png",
+        "/images/projects/2022-naver-now/Portfolio.022.png",
+        "/images/projects/2022-naver-now/Portfolio.023.png",
+        "/images/projects/2022-naver-now/Portfolio.024.png",
+        "/images/projects/2022-naver-now/Portfolio.025.png",
+        "/images/projects/2022-naver-now/Portfolio.026.png",
+        "/images/projects/2022-naver-now/Portfolio.028.png",
+        "/images/projects/2022-naver-now/Portfolio.029.png",
+        "/images/projects/2022-naver-now/Portfolio.030.png",
+        "/images/projects/2022-naver-now/Portfolio.031.png",
+        "/images/projects/2022-naver-now/Portfolio.032.png",
+        "/images/projects/2022-naver-now/Portfolio.033.png",
+        "/images/projects/2022-naver-now/Portfolio.012.png",
+        "/images/projects/2022-naver-now/Portfolio.034.png",
+        "/images/projects/2022-naver-now/Portfolio.013.png",
+        "/images/projects/2022-naver-now/Portfolio.014.png",
+        "/images/projects/2022-naver-now/Portfolio.027.png",
+        "/images/projects/2022-naver-now/ezgif.com-gif-maker.gif"
+      ],
+      "links": [],
+      "storeIds": [],
+      "headings": [
+        "Problems",
+        "Process",
+        "Takeaway",
+        "Discover phase",
+        "Define phase",
+        "Develop phase",
+        "Deliver phase",
+        "Design system thinking"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "NAVER TV is a YouTube-like video platform, which was released in 2012. NAVER NOW is a live streaming service that has been creating Tiktok-style original video content with famous K-pop artists such as BTS and BlackPink.",
+        "In 2021 NAVER decided to start a project to integrate these two services into NAVER NOW. As a product designer, I got an opportunity to join this integration journey and played a key role in various projects. Among these projects, I would like to highlight how I improved its featured list widget by adding a Netflix-style full-width carousel. I worked on this project in 2022 and successfully resolved user and business-related problems.",
+        "NAVER has displayed NOW's featured content list widgets throughout its various subproducts and its main page. This allows users to increase engagement with NAVER services and feel more inclined to have longer sessions. However, after the NTV-NOW integration, this NOW-featured widgets across NAVER products became inconsistent and outdated. This resulted in unhelpful UIs and broken journeys.",
+        "The root cause of this problem was the discord between two services: NAVER NOW and NAVER TV. These services look similar at first glance, but the details were completely different.",
+        "At the beginning of this integration project, we handed over the featured APIs used by the existing services, but we quickly decided to change our course of action due to many limitations. Forcing content that does not fit into the legacy widget did not meet the diverse needs of users as well as the business needs of content partners.",
+        "That's why we decided to create a new feature that fits the new integrated environment.",
+        "The featured list area, which promotes new shows and popular recommendations, is one of the most important UIs in NAVER NOW. At the same time, this is a very sensitive area that affected many NAVER products. When I get this kind of ambiguous, broad project, having a process helps me get clarity on how to break down the big design problem and also helps me prioritize these smaller tasks based on the impact that our team wants to drive.",
+        "The process that I used to solve this problem was the Double Diamond Process.",
+        "The first step was to go wide and explored the problem space a little bit more.",
+        "In the Discover phase, I tried to drill down into what the user and business problems are. I also thought about the current design such as what is working well, and what isn't working well.",
+        "Especially, we tried to understand qualitative and quantitative data. For qualitative data, unfortunately, we didn't have enough time for conducting any user research or a survey to understand key pain points that come up from users. Instead, my team decided to do a competitive analysis that can also be insightful.",
+        "The role that I had in this phase was leading a small group of product designers and extracting insights from quantitative data, I did my best to find any metric that helps me know how the current design is performing.",
+        "After we went wide and have a better understanding of the problem space, I narrowed down and decided what the team should actually fix. In this Define phase, we did synthesize our findings and insights from the competitive analysis and quantative data, and started deciding and prioritizing what our team is going to work on. Below we have presented the main findings.",
+        "Users prefer the carousel compare to scroll-down",
+        "According to the user data, we found that more people prefer the carousel component in comparison to the scroll down. This is demonstrated by the 30% drop after the 3rd ranked item in a scroll down area. We suggest a carousel component instead because users can see all of the recommendations at once when they open the app, instead of physically needing to put in work to scroll.",
+        "Another interesting user behavior was that a significant number of app users skip content discover, immediately enter the content detail page, and leave the app as soon as the content ends. After doing some more analysis on this user segment, I found that most of these users consume TV content such as sports broadcasts and news, and their viewing patterns suggest that they are very set on what they want to watch, so recommending NOW original content(K-POP) likely will not improve conversion rates for this group.",
+        "It seem that our users were super familiar with the 'hold & Preview UX'. Both new and returning users spend a lot of time previewing the content before they read the details, so according to this data, we can see that the preview is the most important factor in improving conversion rates or user engagment.",
+        "After we pointed out those findings, I did many sessions and workshops to collaborate with other product teams such as the product managers, operators, and SW engineers to figure out feature prioritization, product requirements, and more.",
+        "The Develop phase was where I went wide again in my explorations of design solutions. Before jumping straight into the design, I did brainstorm my ideas on my WIKI note based on server spec because I didn't want to spend too much time overthinking them and trying to perfect my initial ideations.",
+        "After thinking about many ideas, the solution I chose was to add a Netflix-style carousel component. I also decided to expand the Spec so that not only the original LIVE items, but also VOD clips or sports events could be posted with their item card on this component. Of course, all item cards are designed to be previewed for up to 15 seconds.",
+        "Next, I wrote a Wiki document that included my solutions, wireframes, and low-fidelity mockups. Finally, I continued to collaborate with teams like visual design, engineering, and service management for feedback and validation of my design solutions.",
+        "Moreover, I also designed the admin tools. Because the feature list is a very sensitive area, the service operations team hoped to thoroughly manage these item cards every single day. So I not only created a tool that managed the featured list schedule easier for the service operations team, but also the one-click-create function.",
+        "The final step was to go narrow and refine my solutions. In the deliver phase, My team and I tried to figure out what was going to be actually shipped. So this requires a lot of user testing. We did several rounds of usability testing to ensure that my design solution was going to have the impact that we initially wanted to have and that it was actually solving the real user and business problems. And based on that feedback, we made a bunch of iterations on Figma.",
+        "And I also shared my designs with the broader team, like the service operation team, NAVER app team, a lot of cross-functional partners to better understand how this design solution was going to impact the business and the other aspects of the business. In my case, I did spend the majority of my time in the last phase because I made a lot of iterations based on the feedback from my team and visual design sessions.",
+        "While sketching for design solutions, we studied NAVER's design system to find existing patterns and UI components to ensure consistency and clarity. Since there were no pre-established patterns, we worked on new ones.",
+        "We successfully finalized the development of this new carousel component and it will be shipped on Aug. 2022 (expected). There's certainly a lot that could be improved. I believe in learning and iterating by shipping often and early.",
+        "In conclusion, I learned a lot not only through this project but also throughout the entire NAVER NOW integrated project. Designing an integrated product comes with many constraints. For example, each service has different content strategies, business goals, and user needs. Moreover, it took time and effort to understand different stakeholders' requirements and reach alignment. It was a humbling experience to learn that sometimes things take long for good reasons."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "figma-autoname",
+      "route": "/project/figma-autoname",
+      "sourceFile": "_projects/2023-06-01-Figma-Autoname.md",
+      "sourceSha256": "5bca3568a4b74e0a3749c6b7fde3418ac6b1e0c7ee975295589d5ae7f0f61f31",
+      "listed": true,
+      "lang": "en",
+      "title": "Community-Driven AI Advancements: Transforming Figma Autoname for Design Systems",
+      "description": "Open source Contribution to the Figma Autoname plugin, integrating TensorFlow.js for advanced design system support and developer collaboration",
+      "hero": "/images/projects/2023-figma-autoname/cover.png",
+      "galleries": [
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2023-figma-autoname/markdown002.gif"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2023-figma-autoname/Portfolio.036.png"
+          ],
+          "caption": ""
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2023-figma-autoname/markdown004.gif"
+          ],
+          "caption": "Example of the DevMode feature."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2023-figma-autoname/Portfolio.038.png"
+          ],
+          "caption": "A Python notebook for training TensorFlow JS model via using Figma-dummy-gen dataset."
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 4,
+        "post-components/video.html": 2
+      },
+      "resources": [
+        "/images/projects/2023-figma-autoname/markdown002.gif",
+        "/images/projects/2023-figma-autoname/Portfolio.036.png",
+        "/images/projects/2023-figma-autoname/markdown004.gif",
+        "/images/projects/2023-figma-autoname/Portfolio.038.png",
+        "https://www.youtube.com/embed/x2Hn0qNXakA?si=MOB5ptl_9mW0R5c1",
+        "https://www.youtube.com/embed/2eZeka9gMgA?si=6GmV6B40PQ2zpC9x",
+        "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg"
+      ],
+      "links": [
+        "https://www.linkedin.com/posts/dusskapark_figma-ai-rename-your-layers-and-more-figma-activity-7211975137204559872-3Sab",
+        "https://www.figma.com/community/plugin/1160642826057169962/figma-autoname",
+        "https://twitter.com/TensorFlow?ref_src=twsrc%5Etfw",
+        "https://twitter.com/dusskapark?ref_src=twsrc%5Etfw",
+        "https://twitter.com/jason_mayes?ref_src=twsrc%5Etfw",
+        "https://twitter.com/carrycooldude?ref_src=twsrc%5Etfw",
+        "https://twitter.com/googledevs?ref_src=twsrc%5Etfw",
+        "https://t.co/Gc8sy7Q1jp",
+        "https://twitter.com/HugoDuprez/status/1681681562998304768?ref_src=twsrc%5Etfw",
+        "https://www.figma.com/community/plugin/1305913695776615924/figma-dummy-generator",
+        "https://github.com/FigmaAI/figma-dummy-gen/blob/main/classification.ipynb"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Origins and Motivation",
+        "Discovery and Initial Engagement",
+        "Technical Contributions",
+        "Impact on the Community",
+        "Lessons Learned",
+        "User Interviews and Insights",
+        "Enhancing the Plugin",
+        "Development of Supporting Tools",
+        "And Supportting DevMode as well",
+        "Before Figma AI's 'Rename layers' feature took center stage, an open-source initiative was breaking new ground. What inspired me to inject my AI prowess into this venture, and what impact could it have on the Figma design ecosystem?"
+      ],
+      "captions": [
+        "Example of the DevMode feature.",
+        "A Python notebook for training TensorFlow JS model via using Figma-dummy-gen dataset.",
+        "A presentation deck for explaining my contributions to the Figma Autoname plugin. (Oct 2023)",
+        "I whipped up this quirky Apple-style ad to hype up the new update."
+      ],
+      "paragraphs": [
+        "The idea to contribute to the Figma Autoname plugin stemmed from a personal challenge: efficiently managing design systems. The potential of using AI to automate layer naming in Figma was captivating, promising to transform the tedious task of organizing design files into a seamless experience. This fascination was further fueled by the innovative potential of TensorFlow.js, which opened doors to integrating machine learning into design workflows.",
+        "My journey began with insightful interviews and discussions with fellow designers and developers. These conversations revealed a common struggle: while the plugin offered a novel solution, it lacked the customization needed to align with diverse design systems. Designers yearned for a tool that could adapt to their unique workflows and terminology, rather than a one-size-fits-all approach.",
+        "Driven by this feedback, I seized the opportunity to enhance the open-source project. My mission was clear: to make the plugin more flexible and powerful, supporting custom computer vision models and integrating seamlessly into real-world design processes. This contribution aimed to bridge the gap between cutting-edge technology and practical application, ultimately making the design process more efficient and collaborative.",
+        "The journey took a pivotal turn when I discovered the Figma Autoname project on TensorFlow's official YouTube channel. This moment aligned perfectly with my ongoing exploration of integrating AI into design workflows. My previous experiments with TensorFlow.js in design tools had already laid a strong foundation, allowing me to quickly grasp the potential of this innovative application. Motivated by the desire to solve real-world design challenges, I delved deeper into the project, envisioning the possibilities of enhancing the plugin to better serve diverse design systems and workflows, which led to...",
+        "...a series of interviews with designers and engineers, we identified key limitations of the existing plugin. Users emphasized the need for more customization to fit specific design systems and better integration with real-world workflows. Design system managers also highlighted the lack of features for managing design systems and collaborating with developers.",
+        "\"Need a tool that aligns with our design systems, not just normal 'UI names'.\" - Designer",
+        "\"The plugin should integrate seamlessly into our existing workflows and support collaboration with developers.\" - Design System Manager",
+        "These insights highlighted the necessity for customization and integration, guiding the development of new features to address these needs.",
+        "To address these needs, I began by forking the project repository, which allowed for innovative development. I enhanced the plugin to support multiple computer vision models using Figma's Plugin API and clientStorage feature. This upgrade enabled users to switch between the default model and custom models from Teachable Machine or TensorFlow.js, offering greater flexibility and adaptability.",
+        "The impact of these enhancements was recognized by the community, as highlighted by Hugo Duprez, the original project owner and an award-winning French developer recognized at the TensorFlow Awards. He shared his appreciation on Twitter:",
+        "In collaboration with Hugo Duprez, the original project owner, I focused on integrating TensorFlow.js to enable the creation of custom models, enhancing the plugin's flexibility. I developed the \"Figma Dummy Gen\" plugin, which extracts UI image \"building blocks\" from design libraries. This tool allows design system managers to generate datasets tailored to their specific needs.",
+        "To further simplify the model training process, I created a Python Jupyter Notebook that guides users through the steps of training a custom vision model using TensorFlow.js. This notebook is designed to be beginner-friendly, providing clear instructions and explanations to help users understand the underlying principles of machine learning.",
+        "With the ability to apply custom models now in place, I also tried to utilize those result to enhance the DevMode experience. Nodes renamed using AutoName now display an additional link in Figma's DevMode. This link directs engineers to the relevant design system's API guide, ensuring they have quick access to necessary documentation. This feature is designed to streamline the developer workflow and foster better collaboration between designers and engineers.",
+        "This integration empowers users to import and use their own models, showcasing the impact of open-source innovation. Our collaborative efforts ensured that these enhancements were robust and met community needs.",
+        "The open-source contribution enabling model replacement in the Figma Autoname plugin has led to unexpected and innovative use cases. For instance, some users have developed models to distinguish between filled and outlined icon sets, showcasing the plugin's versatility and adaptability to specific design needs.",
+        "The capability to create custom models for design systems was also explored internally at Grab Singapore. This was not an official company project but rather an experimental side project conducted with a UX engineer. We extracted building blocks from our design system and trained a model specifically tailored to our design requirements. This model was then deployed in our internal Figma plugin store, allowing our designers to seamlessly integrate it into their workflows.",
+        "A Python notebook for training TensorFlow JS model via using Figma-dummy-gen dataset.",
+        "I shared it at our company's monthly design meeting, 'Design ThursDay'. This was a chance to show all Grab designers the changes and get their thoughts on how well the plugin solved the earlier problems. The presentation, accompanied by the video below, was well-received and applauded by my peers.",
+        "A presentation deck for explaining my contributions to the Figma Autoname plugin. (Oct 2023)",
+        "Even though there were some worries about how accurate and fast the computer vision model was, most people were excited about this design system-friendly feature. The feedback showed that adding custom model support and DevMode integration was a good move. This positive reaction encouraged us to keep improving the plugin.",
+        "Throughout this journey, we actively engaged in discussions and development, but unfortunately, our motivation waned when Figma announced that the Rename layers feature would become a native part of their platform. As a result, I've decided to pause my contributions to this open-source project for now (link).",
+        "While it's a bit disappointing, I'm not disheartened. Participating in the development of this plugin taught me a lot about collaboration within the open-source ecosystem. Creating both internal and community versions of the plugin allowed me to connect with designers and members of the broader design community, providing a platform to hear diverse perspectives and feedback. This experience has been invaluable and is perhaps the most significant asset I've gained from this project.",
+        "Through this process, I learned the importance of adaptability and resilience in the face of changing circumstances. I also realized the value of community engagement and the impact of open-source contributions on personal and professional growth. These lessons will undoubtedly guide me in future endeavors, whether in open-source projects or other collaborative efforts.",
+        "Thanks Hugo and all the users and contributors for the great journey. I hope to see you again in the future. 🚀",
+        "I whipped up this quirky Apple-style ad to hype up the new update."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "klever",
+      "route": "/project/klever",
+      "sourceFile": "_projects/2024-06-01-klever.md",
+      "sourceSha256": "fb0e44cc00a01a7c68b02946607450361f849598b2cc34eb6608f741fa20770f",
+      "listed": true,
+      "lang": "en",
+      "title": "Klever - A Community-Driven AI Usability Testing Figma Plugin",
+      "description": "Klever showcases my journey from concept to creation, developing an AI-powered Figma plugin for usability testing. Community engagement was pivotal in its evolution, with its potential recognized by corporate entities 🎉",
+      "hero": "/images/projects/2024-klever/hero.png",
+      "galleries": [
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2024-klever/BentoGrid.png"
+          ],
+          "caption": "Summary of Klever plugin features"
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2024-klever/5_demo_vid_0.png"
+          ],
+          "caption": "The original AppAgent operates: Observation → Thought → Action"
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2024-klever/5_demo_case study_1_0.png"
+          ],
+          "caption": "A sample screenshot vs A screenshot with UI object annotations"
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2024-klever/5_demo_case study_1_1.png",
+            "/images/projects/2024-klever/5_demo_case study_1_2.png"
+          ],
+          "caption": "AI Agent found a prototype noodle that the designer missed."
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2024-klever/5_demo_case study_2_1.png",
+            "/images/projects/2024-klever/5_demo_case study_2_2.png"
+          ],
+          "caption": "AI Agent discovered the confusing visual design of the UI components."
+        },
+        {
+          "columns": 2,
+          "images": [
+            "/images/projects/2024-klever/5_demo_case study_3_1.png",
+            "/images/projects/2024-klever/5_demo_case study_3_2.png"
+          ],
+          "caption": "AI Agent predicted the next UI and performed the action."
+        },
+        {
+          "columns": 3,
+          "images": [
+            "/images/projects/2024-klever/6_infcon_1.png",
+            "/images/projects/2024-klever/6_infcon_2.png",
+            "/images/projects/2024-klever/6_infcon_3.png"
+          ],
+          "caption": "InfCon24 recap: We never imagined the room would be packed for our 5 PM session on a Friday... Thank you so much folks!"
+        },
+        {
+          "columns": 3,
+          "images": [
+            "/images/projects/2024-klever/figma_config_1.jpeg",
+            "/images/projects/2024-klever/figma_config_2.jpeg",
+            "/images/projects/2024-klever/figma_config_3.jpeg"
+          ],
+          "caption": "My efforts to overcome Figma API limitations: From meeting with Figma AI team to discussing with Dylan Field, Figma CEO"
+        },
+        {
+          "columns": 1,
+          "images": [
+            "https://github.com/FigmaAI/AppAgent/blob/main/assets/KleverOnServer.gif?raw=true"
+          ],
+          "caption": "Prototype of the Figma plugin via integrating with Python Flask server approach (Code)"
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 9,
+        "post-components/quote.html": 6,
+        "store-badges.html": 1
+      },
+      "resources": [
+        "/images/projects/2024-klever/BentoGrid.png",
+        "/images/projects/2024-klever/6_logo_1_2.png",
+        "/images/projects/2024-klever/6_design_process_4.png",
+        "https://appagent-official.github.io/static/teaser.png",
+        "/images/projects/2024-klever/6_design_process_6.png",
+        "/images/projects/2024-klever/5_demo_vid_0.png",
+        "/images/projects/2024-klever/5_demo_case study_1_0.png",
+        "/images/projects/2024-klever/6_logo_1_5.png",
+        "/images/projects/2024-klever/5_demo_case study_1_1.png",
+        "/images/projects/2024-klever/5_demo_case study_1_2.png",
+        "/images/projects/2024-klever/5_demo_case study_2_1.png",
+        "/images/projects/2024-klever/5_demo_case study_2_2.png",
+        "/images/projects/2024-klever/5_demo_case study_3_1.png",
+        "/images/projects/2024-klever/5_demo_case study_3_2.png",
+        "/images/projects/2024-klever/hero2.png",
+        "/images/projects/2024-klever/6_infcon_1.png",
+        "/images/projects/2024-klever/6_infcon_2.png",
+        "/images/projects/2024-klever/6_infcon_3.png",
+        "/images/projects/2024-klever/figma_config_1.jpeg",
+        "/images/projects/2024-klever/figma_config_2.jpeg",
+        "/images/projects/2024-klever/figma_config_3.jpeg",
+        "https://github.com/FigmaAI/AppAgent/blob/main/assets/KleverOnServer.gif?raw=true",
+        "/images/projects/2024-klever/6_design_process_5.png",
+        "/images/projects/2024-klever/5_demo_vid_1.gif",
+        "/images/projects/2024-klever/6_logo_1_4.png",
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+        "https://www.youtube.com/embed/1HuCiL9el3I?si=JX9BM_xb_wfAkYUq",
+        "https://www.youtube.com/embed/pZSXt8Cc4Ak?si=Pyc6zeVGFWv2Gvne",
+        "https://www.youtube.com/embed/jZgybbhoeaQ?si=iETxISV7RwDMgCDP",
+        "https://www.youtube.com/embed/JVfpIy5LhJ8?si=KpLw_WP7LKsMrLwL"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/dy-lee/",
+        "https://www.linkedin.com/in/dusskapark/",
+        "https://www.selenium.dev/",
+        "https://friends.figma.com/events/details/figma-seoul-presents-product-design-education-in-ai-era-figma-meetup-in-korea/cohost-education",
+        "https://www.linkedin.com/in/jihere1001/",
+        "https://medium.com/u/d906e16642cf",
+        "https://www.linkedin.com/in/yeoneui-hong/",
+        "https://medium.com/u/785769823235",
+        "https://www.inflearn.com/conf/infcon-2024/",
+        "https://github.com/FigmaAI/AppAgent",
+        "https://github.com/FigmaAI/klever",
+        "https://www.figma.com/community/plugin/1383457529531594701/klever-instant-usability-testing",
+        "https://inf.run/H7rkU",
+        "https://appagent-official.github.io/",
+        "https://apps.apple.com/us/app/klever-instance-ut/id6754501208"
+      ],
+      "storeIds": [
+        "xp8brb9spkfrsw"
+      ],
+      "headings": [
+        "Introducing Klever",
+        "💡 The Ideation Journey",
+        "🛠️ The Development Journey",
+        "🧠 Interesting Use Cases",
+        "📈 Impact",
+        "🌱 Growing with Community",
+        "Lessons learned",
+        "Can AI Enhance Design?",
+        "Meeting AppAgent and the Eureka Moment",
+        "Designer Interviews",
+        "Instant Usability Testing",
+        "How AppAgent Works?",
+        "Generating UI Screenshots & Annotations",
+        "Implementing AI Actions in Figma",
+        "🎉 Prototyped: AppAgent's Integration with Figma",
+        "From experiment to product, Klever was born",
+        "Discovering Hidden Interactions",
+        "Identifying UI Element Ambiguity",
+        "Predicting Hidden Features",
+        "Meetups: Friends of Figma Seoul & Educators event",
+        "Conference: InfCon 2024 Presentation",
+        "From Side Project to Corporate Innovation",
+        "Challenges & Community Growth",
+        "Download Klever Desktop App"
+      ],
+      "captions": [
+        "Summary of Klever plugin features",
+        "The original AppAgent operates: Observation → Thought → Action",
+        "A sample screenshot vs A screenshot with UI object annotations",
+        "AI Agent found a prototype noodle that the designer missed.",
+        "AI Agent discovered the confusing visual design of the UI components.",
+        "AI Agent predicted the next UI and performed the action.",
+        "InfCon24 recap: We never imagined the room would be packed for our 5 PM session on a Friday... Thank you so much folks!",
+        "My efforts to overcome Figma API limitations: From meeting with Figma AI team to discussing with Dylan Field, Figma CEO",
+        "Prototype of the Figma plugin via integrating with Python Flask server approach (Code)"
+      ],
+      "paragraphs": [
+        "Klever is a Figma plugin that leverages AppAgent's cutting-edge AI technology to provide designers with a seamless and intuitive usability testing experience. With Klever, designers can instantly gain valuable insights and enhance their design process-all within the familiar environment of Figma. Below is a summary of the core features and benefits of Klever.",
+        "This project was born out of a desire to address the evolving challenges faced by designers in an AI-driven world. In the following sections, we'll explore the inspiration behind Klever, the journey of its development, and the impactful results it has achieved. Join us as we delve into the story of how Klever came to be and the innovative solutions it offers.",
+        "The Mirror of Your Mind (명심보감/明心寶鑑) is a book that encapsulates the wisdom of Eastern philosophy. It teaches that to live a truly human life, one must broaden their learning, maintain a sincere purpose, never lose curiosity, keep questioning, and solve problems step by step. These teachings resonate deeply with us, product designers, living in the 21st-century digital and AI age. After all, it's crucial to maintain a positive mindset even in moments of change.",
+        "It's another morning, and as sunlight spills through my window, I fire up my laptop. Slack is buzzing with AI news. Curiosity piqued, I click on a few. Watching these AI design tool demos, a chill runs down my spine - they're doing what I do. It makes me wonder - \"Is AI really going to replace us designers?\" I'm not entirely sure, but all I know isI want to keep doing my best, today and tomorrow.",
+        "In a cozy nook of a Starbucks in western Singapore, two Grab designers, DY LEE and Jude Park, kicked off what was just a humble AI side project. It wasn't about achieving something monumental; it was about confronting the genuine anxieties of diving into AI, maintaining a hopeful perspective, and exploring new avenues for growth in an AI-driven landscape.",
+        "As we move through 2024, AI is everywhere, and it's changing how we work in design. Every day, new AI tools and models are emerging, transforming the way we approach our work. We initially thought AI would take over the boring tasks, freeing us to focus on creativity. However, AI is now involved in everything from generating creative content to designing user interfaces, reshaping our processes obviously.",
+        "In light of these changes, we found ourselves asking:",
+        "How can we embrace the power of AI in our design process? Beyond just automating tasks, what role can AI play in supporting us as designer assistants?",
+        "We didn't find the perfect answer right away, but our exploration led us to a crucial realization: being a product designer is about more than just creating visual designs. It's about identifying challenges, devising solutions, and deeply understanding user needs and behaviors.",
+        "Instead of letting AI dictate our design decisions, we began to explore how we could harness its power to strengthen our insights and gain a deeper understanding of user behavior. This shift in perspective opened up new possibilities, leading us to discover Tencent's research on AppAgent - a finding that felt perfectly timed for our needs.",
+        "Tencent's research team introduced AppAgent, a multi-modal agent capable of interacting with apps naturally. Using LLM and Android Studio, AppAgent demonstrates how AI can explore apps and use gestures like a human.",
+        "As designers, we found ourselves captivated by AppAgent's remarkable ability to simulate user behavior. It was as if we were watching real users interact with an app, tapping and swiping their way through the interface. This AI-driven mimicry of human interaction not only sparked our curiosity but also opened our minds to new creative possibilities.",
+        "This led us to ponder an exciting question: What new horizons could we explore by integrating AppAgent with our Figma designs?",
+        "The idea of leveraging AI-generated user flows and behaviors in our UX research was compelling. It promised a more efficient way to address user challenges and conduct iterative testing, allowing us to refine our designs with greater precision.",
+        "To bring this vision to life, we knew we needed insights from our peers. We reached out to fellow designers, eager to gather their perspectives and explore how AppAgent could revolutionize our design process.",
+        "We wanted to understand how AI & AppAgent could naturally fit into our design process, so we spoke with 10 designers across 7 teams over two weeks. Our goal was to uncover the challenges they face and see where AppAgent might offer solutions.",
+        "From these interviews, we uncovered three key insights:",
+        "⏳ Research is Time-Consuming User research often requires significant time and resources.",
+        "🤷‍♂️ Lack of Alternatives Designers struggle to find varied and effective alternatives when testing new concepts.",
+        "🚀 Potential for Instant Testing AppAgent could greatly improve the speed and quality of usability testing.",
+        "AI is not a magic wand that solves every problem. The key is understanding how AI can add real value to the design process. Through conversations with designers, we discovered the potential for AppAgent to positively transform the way we design.",
+        "We decided to set out to create a seamless connection between design and testing with AppAgent. Typically, testing designs requires organizing user sessions and justifying the time and resources involved. Convincing engineers to test different versions can also be a hurdle. However, what designers really want to know is - \"Is this design delivering a great user experience?\"",
+        "By integrating AppAgent with Figma's prototype screens, we envisioned a tool that could answer those kinds of questions more easily.",
+        "How might we let AI act as real users to help designers get insights without recruiting and interviewing? What if AI could behave like a persona, exploring designs just as a human would? AI instant usability testing, that's our answer.",
+        "This isn't just about passing or failing a QA test. It's about using AI to mimic real user interactions, allowing it to navigate through designs and suggest optimal paths with minimal clicks, or to point out areas that need refinement. AppAgent performs heuristic evaluations on prototypes, delivering clear and actionable insights without requiring lengthy business justifications.",
+        "Integrating AppAgent with Figma's prototype feature presented several significant technical hurdles. As this started as a small side project by designers, expanding from an Android app to Figma required us to overcome multiple complex challenges.",
+        "Our initial challenge was to grasp the fundamental workings of AppAgent. The original AppAgent operates in a cycle of Observation, Thought, and Action, iterating multiple times.",
+        "The original AppAgent operates: Observation → Thought → Action",
+        "AppAgent provides a screenshot with UI annotations and a task to the GPT-4-vision model, which observes, thinks, and suggests the next action. This process repeats, simulating user interaction.",
+        "To adapt this for Figma prototypes, we faced two critical challenges:",
+        "Understanding these core operations was essential to integrating AppAgent with Figma, setting the stage for our development journey.",
+        "Creating screenshot images and annotations in Figma prototypes wasn't too difficult. We used Figma's REST API to fetch node data from Figma design, convert it to images, and generate screenshot images and annotations.",
+        "A sample screenshot vs A screenshot with UI object annotations",
+        "The solution was Selenium. As a tool for controlling web browsers and interacting with web page UI elements, we created a SeleniumController to control Figma prototypes at the web browser level.",
+        "By structuring the SeleniumController similarly to the AndroidController, we enabled control over Figma prototypes. We integrated this with the existing logic to run it as a new option, distinct from the Android-based approach.",
+        "After several trials and errors, we successfully developed a new option where AppAgent controls Figma prototypes, recognizes UI elements, and interacts with them, as demonstrated in the YouTube video below.",
+        "As we shared our prototype with the design community, we received enthusiastic responses about its potential. However, we also discovered a significant challenge: the Python development environment was a major barrier for many designers who wanted to try it out.",
+        "This feedback led us to make a BOLD decision. We decided to develop a Figma plugin version, transforming our experimental implementation of Tencent's paper into a more accessible product for all product designers.",
+        "This evolution needed a new identity, and that's how 'Klever' was born.",
+        "Klever is a Figma plugin that harnesses the power of AppAgent's AI technology while offering a seamless, designer-friendly experience. It empowers designers to conduct instant usability testing and gain valuable insights, all within Figma!",
+        "In developing the Klever plugin, we faced many technical challenges. The biggest challenge was how to implement AppAgent's core functionality in the limited environment of a Figma plugin. Some notable challenges include:",
+        "It wasn't easy for us, designers, to code it to overcome these challenges as well, but we developed the Klever plugin while tackling these difficulties with Copilot. And through this, we made it possible to use AppAgent's core functionality in Figma plugins as well.",
+        "As we applied AppAgent for Figma to several prototypes, we discovered some truly fascinating cases. These cases demonstrated that AppAgent could evolve beyond a simple lab model to become a design productivity tool capable of predicting actual user behavior and identifying potential design issues.",
+        "AI Agent found a prototype noodle that the designer missed.",
+        "In a travel app prototype, we asked the AI agent to check promotions and find the cheapest hotel in Bali. Contrary to our expectations, the AI agent tried to expand the article by clicking the center instead of pressing the 'Read more' button or the search button. This is a familiar UI pattern used in many apps, but it was mistakenly not connected in this prototype. The AI agent captured this important interaction that the designer had missed.",
+        "AI Agent discovered the confusing visual design of the UI components.",
+        "On the hotel details screen of the same prototype, we instructed the AI agent to find more information. We expected the AI to expand the article for 'Read more', but it repeatedly clicked the 'Detail' tab instead. This shows that the AI agent, like a person, confused tabs and buttons due to their similar visual designs. It highlights how the AI agent can spot visual design details that the designer might have overlooked.",
+        "AI Agent predicted the next UI and performed the action.",
+        "In a task to change the number of guests to 10, the AI agent clicked the '2 guests' area instead of pressing the '+' button. Despite being given only a single screen, the AI predicted that clicking this area would reveal additional options. This shows that the AI can understand and predict common UI patterns, not just process the given information.",
+        "These cases demonstrate that this AI-based usability testing agent can think and act like a real user, not just follow programmed rules. It provides insights that are as valuable as those from actual users. These moments were the most thrilling and fascinating for us as creators.",
+        "Despite being a paid plugin (due to API costs), Klever has achieved large numbers in the Figma Community beyond our expectations, demonstrating strong demand for AI-powered usability testing tools:",
+        "It still keeps growing every week! 👀 2,093 Views 👥 1,076 Users 🔖 248 Saves",
+        "These numbers significantly exceed our expectations for a paid plugin, validating our vision of making AI usability testing more accessible to designers. The growing user base and engagement metrics demonstrate that there's a real need in the design community for tools that can streamline the usability testing process while leveraging AI capabilities.",
+        "The successfully developed Klever opened up numerous opportunities to share our journey with the broader design community. We actively shared our project's journey and findings, believing that open collaboration leads to better solutions. From local meetups to major Tech conferences, each sharing session not only helped us gather valuable feedback but also inspired others to explore the possibilities of AI in design. This open approach led to various adaptations of our project, including an internal version at Grab. Here's our community engagement timeline:",
+        "At the Friends of Figma Seoul & Educators event, we presented our session \"Experimenting with user test automation with AI and Open Source\". The event, initially planned for 40 attendees, received an overwhelming 400+ registrations, highlighting the design community's intense interest in AI. During our presentation, the audience's enthusiastic response and spontaneous applause were truly encouraging, motivating us to develop this project further into a Figma plugin.",
+        "Want to learn more about our journey with AI and design? Check out the full session:",
+        "Shortly after releasing the Figma plugin, an unexpected opportunity came our way. Kim Ji-hong from Design Spectrum and Hong Yeon-ui from Inflearn, who had been following our project with interest, invited us to speak at InfCon 2024.",
+        "Most importantly, we extend our heartfelt thanks to the Korean designers who showed interest in our project and asked endless questions late into Friday evening. The support and energy we received from InfCon 2024 were truly uplifting.",
+        "InfCon24 recap: We never imagined the room would be packed for our 5 PM session on a Friday... Thank you so much folks!",
+        "Encouraged by the community's response, we took on our biggest challenge yet: convincing Grab's design leadership to adopt our experimental project. From Tech Day presentations to leadership meetings, we delivered more than 6 different presentations and demos. By August, we had participated in over 20 stakeholder meetings, each one bringing us closer to our goal. After months of persistence and countless iterations, our dedication paid off.",
+        "This evolution from a side project to a corporate-backed initiative validates our vision of AI-powered usability testing and provides a platform for more ambitious experiments:",
+        "While this corporate adoption was a significant milestone, we soon faced another challenge that would push us to think even bigger.",
+        "As our project grew, we encountered a significant technical hurdle. The Klever plugin was limited to performing usability tests on only one screen, as Figma's API constraints made it impossible to replace Selenium for controlling prototype flows.",
+        "My efforts to overcome Figma API limitations: From meeting with Figma AI team to discussing with Dylan Field, Figma CEO",
+        "We went to great lengths to address these API limitations, even meeting with Figma's AI team and eventually discussing our needs with Dylan Field, Figma's CEO. Despite these high-level conversations and our persistent requests for new APIs, the technical constraints remained.",
+        "Rather than letting this limitation stop us, we saw an opportunity to expand our impact. We decided to open-source our project, believing that by sharing our challenges openly, we could not only find potential solutions but also inspire others to build upon our work. This decision to embrace open collaboration has already led to unexpected innovations and improvements.",
+        "A Figma plugin that allows you to do a simple usability test in Figma",
+        "The community's response has been incredibly encouraging. Developers and designers from various backgrounds have started experimenting with our codebase, proposing creative solutions to overcome the current limitations. One particularly promising approach involves integrating the Figma plugin with a Python Flask server:",
+        "Prototype of the Figma plugin via integrating with Python Flask server approach (Code)",
+        "This project started as a small side project for designers to learn AI while having fun. There were many challenges in the experimental process, but we received interest and encouragement from various designers and communities and motivated by all of that, we persistently repeated our experiments and eventually achieved the result of making it into a product.",
+        "In the era of AI, new AI tools are pouring out every day. Some may feel pressured to learn new things, Or some may feel a vague fear that AI will replace our design jobs. But what this project has taught us is that AI is fascinating and fun. If we learn while playing and work while learning, just like children playing with interesting toys, and improve the small inconveniences in our product design ecosystem with AI, AI will no longer be a difficult or scary entity.",
+        "We hope that these fun experiences we felt are well conveyed to all of you reading this article. So, enjoy a fun design experience with AI! 🤗"
+      ],
+      "codeBlocks": [
+        "# AppAgent/scripts/figma_controller.py class SeleniumController: def __init__(self, url, password): self.url = url self.password = password self.driver = None def execute_selenium(self): options = Options() options.add_argument(\"user-data-dir=./User_Data\") options.add_argument(\"disable-blink-features=AutomationControlled\") options.add_argument(\"--start-maximized\") options.add_experimental_option(\"detach\", True) service = Service(ChromeDriverManager().install()) self.driver = webdriver.Chrome(service=service, options=options) self.driver.get(self.url) # ..."
+      ]
+    },
+    {
+      "kind": "project",
+      "slug": "form-helper-chrome",
+      "route": "/project/form-helper-chrome",
+      "sourceFile": "_projects/2024-11-05-form-helper-chrome.md",
+      "sourceSha256": "845221a6afaa7f4502fc0cbfc463179efb75791d94856395bdf1d8e19034da21",
+      "listed": true,
+      "lang": "en",
+      "title": "FORM HELPER powered by Chrome's built-in AI",
+      "description": "form-helper-chrome transforms form error handling with Chrome's Built-in AI, delivering instant, personalized solutions that enhance user experience and streamline data entry",
+      "hero": "/images/projects/2024-form-helper-chrome/hero.png",
+      "galleries": [
+        {
+          "columns": 1,
+          "images": [
+            "https://github.com/dusskapark/form-helper-chrome-playground/raw/master/demo.gif"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 1,
+        "post-components/quote.html": 4
+      },
+      "resources": [
+        "https://github.com/dusskapark/form-helper-chrome-playground/raw/master/demo.gif",
+        "/images/projects/2024-form-helper-chrome/1-Reference-1.png",
+        "/images/projects/2024-form-helper-chrome/task1-1.png",
+        "/images/projects/2024-form-helper-chrome/task2-2.png",
+        "https://img.youtube.com/vi/6LOtqprIeGQ/0.jpg",
+        "/images/projects/2024-form-helper-chrome/1-error-message-limitations.png",
+        "/images/projects/2024-form-helper-chrome/2-Tech-1.gif",
+        "https://www.youtube.com/embed/D7dA5KY5FEo?si=jNPCAH3xagijfo6f",
+        "https://www.youtube.com/embed/MeugkhYE848?si=vqZbIWw6XA--RAjR"
+      ],
+      "links": [
+        "https://googlechromeai.devpost.com/",
+        "http://goo.gle/chrome-ai-dev-preview-join",
+        "https://devpost.com/software/form-helper-chrome"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Project Overview",
+        "Situation",
+        "Task",
+        "Action",
+        "Result",
+        "Conclusion",
+        "Research on Personalized AI Feedback",
+        "Building a Zero-Cost AI Solution",
+        "Published as Open Source",
+        "Chrome Built-in AI Challenge",
+        "Form Error Message Analysis",
+        "AI as a Potential Solution",
+        "Chrome's Built-in AI Discovery",
+        "Building with Chrome's Built-in AI",
+        "Streamlining Developer Experience"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "Form Helper Chrome is an innovative project developed to enhance user experience in web form interactions. Created as part of the Google Chrome Built-in AI Challenge, this project aims to provide real-time, personalized solutions for form errors using Chrome's built-in AI capabilities. The core objective is to reduce user frustration and improve data entry efficiency by offering intuitive, contextual guidance.",
+        "Form errors have been a persistent challenge in web development for decades. Despite the availability of guidelines and frameworks like Google's Material Design and Ant Design, users continue to struggle with filling out forms correctly. This leads to increased frustration and support calls. As a product designer, I saw the need for a more intuitive solution that could provide real-time guidance, reducing errors and enhancing the overall user experience.",
+        "The primary task was to create a seamless user experience for form completion by leveraging AI technology. Key objectives included:",
+        "Personalized AI Feedback Develop an AI assistant that accurately understands the user's current context and provides tailored guidance for their specific form-filling situation.",
+        "Cost-Effective Solution Design a solution that eliminates both implementation costs (no server setup, easy integration) and operational costs (no API fees, minimal maintenance) while providing instant AI assistance.",
+        "With these objectives in mind, I aimed to create an intuitive, accessible solution that would transform frustrating form interactions into smooth experiences through AI-powered assistance. To achieve this, I began with thorough research and prototyping.",
+        "I conducted research to understand how AI could provide more personalized and effective form guidance. This investigation focused on the potential of AI to transform static error messages into dynamic, context-aware assistance.",
+        "Key Finding: Due to limited error text length and format (text-only), users often face difficulties understanding the issues. While separate documentation is provided as a solution, data shows that users rarely rely on these lengthy guides.",
+        "Based on the analysis, I identified that an AI-powered solution could address these limitations by:",
+        "This exploration led to a clear hypothesis: Instead of static text messages, if we could present just the right information in a more comprehensive format using AI, we could better solve these form completion challenges.",
+        "While watching Google I/O, I was particularly intrigued by Chrome's announcement of built-in AI capabilities. The presentation showcased how Gemini Nano would be integrated directly into the browser, enabling AI features without external dependencies.",
+        "This revelation sparked my interest - it seemed to perfectly address the challenges I was facing with form assistance implementation.",
+        "After joining the Chrome AI early preview program, I discovered the potential of the Prompt API. I designed a system that processes error messages, form data, and documentation to generate contextual assistance:",
+        "The successful integration of these elements through the Prompt API proved that intelligent, context-aware form assistance was not just possible, but highly effective.",
+        "To make the solution easily adoptable, I focused on creating flexible integration options:",
+        "The video above demonstrates how developers can quickly implement and customize the AI-powered form assistance while maintaining their application's design consistency, furthering our goal of a zero-cost solution.",
+        "This project evolved from a concept into two significant achievements - a practical open-source solution and an entry in Google's prestigious AI challenge.",
+        "The project was successfully published as an npm package, making it easily accessible to developers worldwide. The package provides a simple yet powerful way to implement AI-powered form assistance:",
+        "With confidence in the project's potential, I submitted it to the Chrome Built-in AI Challenge. Through this process, I collaborated with fellow developers who helped identify and fix several edge cases, making the solution more robust.",
+        "I submitted this project to the Google Chrome Built-in AI Challenge, a competition focused on creating innovative solutions with Chrome's AI capabilities. Learn More",
+        "Regardless of the hackathon results, these experiences and connections made the journey worthwhile and provided valuable insights for future AI-powered web development projects.",
+        "As a product designer, leading this project from concept to completion has been an incredibly rewarding experience. I successfully transformed a common UX challenge into a practical solution, leveraging cutting-edge AI technology while maintaining a designer's perspective on usability and integration.",
+        "The journey from identifying the problem to publishing an open-source solution and participating in Google's Chrome Built-in AI Challenge has validated my belief that designers can also be able to participate in technical innovation. This project demonstrates that with the right approach, we can create solutions that are both technically sophisticated and beautifully simple to use.",
+        "Moving forward, I'm excited to continue exploring the intersection of AI and design, finding new ways to enhance user experiences while keeping implementation simple and accessible for developers."
+      ],
+      "codeBlocks": [
+        "npm install form-helper-chrome"
+      ]
+    },
+    {
+      "kind": "project",
+      "slug": "talk-to-figma-mcp",
+      "route": "/project/talk-to-figma-mcp",
+      "sourceFile": "_projects/2025-07-14-talk-to-figma-mcp.md",
+      "sourceSha256": "c5c2bc3e8e940d51385861e3faec06686ea45077abb08eb90ef63145ee94fda7",
+      "listed": true,
+      "lang": "en",
+      "title": "TalkToFigma MCP & Desktop: Pioneer of AI-Powered Design Productivity",
+      "description": "I saw the potential of the CTTF open-source MCP and contributed core automation tools. After observing major installation friction during workshops, I started building TalkToFigma Desktop to make MCP truly usable for non-engineer designers.",
+      "hero": "/images/projects/2025-talk-to-figma-mcp/hero.png",
+      "galleries": [],
+      "includeCounts": {},
+      "resources": [
+        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+        "https://www.youtube.com/embed/DInyZLnEgmA?si=Ls2VFJxgwzmbzMeZ"
+      ],
+      "links": [
+        "https://github.com/grab/cursor-talk-to-figma-mcp",
+        "https://github.com/FigmaAI/TalkToFigmaDesktop",
+        "https://www.figma.com/community/file/1513760524697897204",
+        "https://www.figma.com/community/file/1513759391089024242"
+      ],
+      "storeIds": [],
+      "headings": [
+        "One-line Summary",
+        "1) Start: I Saw the Open-Source MCP Potential",
+        "2) Turning Point: The Bottleneck Was Installation, Not Interest",
+        "3) Solution: I Started Building TalkToFigma Desktop",
+        "4) Outcome: Faster and Wider Adoption Than Expected",
+        "5) Current Conclusion",
+        "References & Links",
+        "Core Areas I Contributed",
+        "What We Prioritized in Desktop"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "I saw real potential in cursor-talk-to-figma-mcp, contributed several core automation tools, and then built TalkToFigma Desktop after workshops made one thing clear: most designers were blocked not by value, but by installation complexity.",
+        "cursor-talk-to-figma-mcp, started by Sonny Lazuardi, connected Cursor Agentic AI with Figma to automate repetitive design work.",
+        "I believed this was more than a trend demo. It could become a practical productivity layer for real design teams. So I started contributing by converting workflows I already used in production into MCP tools.",
+        "The key was not button-based automation-it was natural-language, context-aware design automation.",
+        "So this was not a motivation problem. It was an onboarding problem. Without solving that, feature contributions alone would not scale real adoption.",
+        "I focused on removing that barrier and started building TalkToFigma Desktop. Later, I collaborated with Jin to improve quality and release it publicly.",
+        "The app performed beyond what I and my friends expected.",
+        "Detailed numeric metrics (installation success, retention, events/session, etc.) will be shared in a future update. Even so, early usage signals were already meaningful:",
+        "I'll continue building at the intersection of design and engineering-focused on tools that are not only powerful, but truly usable.",
+        "cursor-talk-to-figma-mcp: Multiple plugins into one AI system",
+        "TalkToFigma Desktop: Desktop app accessible to all designers",
+        "Workshop Playground (EN): Design Automation with Figma MCP",
+        "Workshop Materials (KR): MCP Design Automation Workshop Materials"
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "project",
+      "slug": "how-far-can-a-product-designer-build-with-codex",
+      "route": "/project/how-far-can-a-product-designer-build-with-codex",
+      "sourceFile": "_projects/2026-06-08-how-far-can-a-product-designer-build-with-codex.md",
+      "sourceSha256": "8cb869d049019a3c254d6a8a748ba0a54066d2a24cad57d49e393f05fde7e01b",
+      "listed": true,
+      "lang": "en",
+      "title": "Singapore Korean Church Shuttle Platform",
+      "description": "I built and shipped a rider-driver shuttle platform for a Korean church community in Singapore, using Codex not just for code generation but to move from problem framing to API contracts, native apps, driver-side arrival signals, store releases, and launch storytelling.",
+      "hero": "/images/projects/2026-rider-driver-codex/05-rider-driver-story-hero-v3.webp",
+      "galleries": [
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/08-pre-product-shuttle-context.png"
+          ],
+          "caption": "Before the product, route details and arrival signals were scattered across manual documents, map links, and KakaoTalk updates."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/01-liff-rider-flow.webp"
+          ],
+          "caption": "The first web MVP kept the Rider flow intentionally small: route lookup, stop detail, QR check-in, and basic operational updates."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/02-swagger-api-contract.png"
+          ],
+          "caption": "Swagger became the shared contract for routes, stops, users, check-ins, notifications, and the clients that would later consume them."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/03-ios-rider-app.png"
+          ],
+          "caption": "The iOS Rider app translated the validated web flow into SwiftUI, Google Maps SDK, push, deep links, and Liquid Glass-inspired native screens."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/04-android-rider-app.png"
+          ],
+          "caption": "The Android Rider app kept the same product flow while rebuilding it with Jetpack Compose, Material 3 Expressive, Google Maps Compose, Firebase, and FCM."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/21-codex-mobile-remote-setup-composite.png"
+          ],
+          "caption": "From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/22-voice-driven-codex-workflow-composite.png"
+          ],
+          "caption": "Voice input worked because Codex already had repository context: a spoken task could become a thread, a work plan, and concrete code changes."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/23-driver-test-loop-composite.png"
+          ],
+          "caption": "The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix."
+        },
+        {
+          "columns": 1,
+          "images": [
+            "/images/projects/2026-rider-driver-codex/16-driver-app-final.jpeg"
+          ],
+          "caption": "The screen got smaller, but the workflow did not: Driver app work, validation, and launch preparation continued through a mobile-controlled Codex loop."
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 9,
+        "post-components/video.html": 4,
+        "store-badges.html": 2
+      },
+      "resources": [
+        "/images/projects/2026-rider-driver-codex/08-pre-product-shuttle-context.png",
+        "/images/projects/2026-rider-driver-codex/01-liff-rider-flow.webp",
+        "/images/projects/2026-rider-driver-codex/02-swagger-api-contract.png",
+        "/images/projects/2026-rider-driver-codex/03-ios-rider-app.png",
+        "/images/projects/2026-rider-driver-codex/04-android-rider-app.png",
+        "https://www.youtube.com/embed/mBSo7rGlFjo",
+        "/images/projects/2026-rider-driver-codex/21-codex-mobile-remote-setup-composite.png",
+        "https://www.youtube.com/embed/tk9qrk5G4RQ",
+        "/images/projects/2026-rider-driver-codex/22-voice-driven-codex-workflow-composite.png",
+        "/images/projects/2026-rider-driver-codex/23-driver-test-loop-composite.png",
+        "https://www.youtube.com/embed/62qP1I400eM",
+        "https://www.youtube.com/embed/T9Ubj9hZ1_M",
+        "/images/projects/2026-rider-driver-codex/16-driver-app-final.jpeg"
+      ],
+      "links": [
+        "http://www.nasumchurch.sg/",
+        "https://dusskapark.medium.com/프로덕트-디자이너는-codex로-어디까지-만들-수-있을까-d725a9be4d3e",
+        "https://dusskapark.medium.com/codex-모바일-입코딩만으로-어디까지-만들-수-있을까-e6a068bb4218",
+        "https://gist.github.com/dusskapark/c56f110aa513bf0ade4bc326d5228c10",
+        "https://apps.apple.com/sg/app/nasum-shuttle-check-in/id6765994152",
+        "https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle",
+        "https://apps.apple.com/sg/app/nasum-shuttle-driver/id6773782572",
+        "https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle.driver&pli=1"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Context: A Small Shuttle, A Real Product Problem",
+        "Build 1: Start With A Small Web MVP",
+        "Feedback 1: The Flow Worked, The Channel Did Not",
+        "Build 2: Translate The Rider Experience To Native",
+        "Feedback 2: The Rider App Could Not Create Every Signal",
+        "Build 3: Make The Shuttle The Source Of Truth",
+        "Work Mode: Keeping The Build Loop Alive From A Hospital Room",
+        "Builder Takeaway: Owning More Of The SDLC",
+        "Reflection: What Stayed With Me",
+        "References",
+        "Small Web MVP",
+        "Plan Mode",
+        "Swagger As Blueprint",
+        "Real Device Validation",
+        "Live Rider app",
+        "Live Driver app"
+      ],
+      "captions": [
+        "Before the product, route details and arrival signals were scattered across manual documents, map links, and KakaoTalk updates.",
+        "The first web MVP kept the Rider flow intentionally small: route lookup, stop detail, QR check-in, and basic operational updates.",
+        "Swagger became the shared contract for routes, stops, users, check-ins, notifications, and the clients that would later consume them.",
+        "The iOS Rider app translated the validated web flow into SwiftUI, Google Maps SDK, push, deep links, and Liquid Glass-inspired native screens.",
+        "The Android Rider app kept the same product flow while rebuilding it with Jetpack Compose, Material 3 Expressive, Google Maps Compose, Firebase, and FCM.",
+        "A quick look at the Rider and Driver app experience I built for the shuttle platform.",
+        "From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository.",
+        "OpenAI's Codex mobile preview gives context for the mobile workflow I used during this phase.",
+        "Voice input worked because Codex already had repository context: a spoken task could become a thread, a work plan, and concrete code changes.",
+        "The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix.",
+        "An early Driver app test run showed how simulated movement could help verify background location, server sync, and Rider map updates.",
+        "The final Driver app flow made arrival tracking a dedicated driver-side responsibility instead of depending on rider check-ins.",
+        "The screen got smaller, but the workflow did not: Driver app work, validation, and launch preparation continued through a mobile-controlled Codex loop."
+      ],
+      "paragraphs": [
+        "I wanted this project to answer a practical question: when AI makes implementation more reachable, what should a product designer be responsible for next?",
+        "For me, the answer was not simply \"write more code.\" It was to own more of the path between a real problem, a system model, a working product, and a launch story. With Codex as my development partner, I built and shipped a rider-driver shuttle platform for a Korean church community in Singapore.",
+        "The useful part of the story is how a small service kept forcing product decisions: which channel riders would actually use, which signals operators could trust, where a web MVP stopped being enough, and why a Driver app became necessary when rider check-ins could not represent every shuttle arrival.",
+        "I have spent much of my career designing developer experience products. My users were often engineers, platform teams, ML practitioners, or people building tools for other technical teams. So code was never far away from my design work. I was not a full-time engineer, but I naturally wrote small prototypes, read APIs, touched front-end code, and learned what changes when a screen becomes a working product.",
+        "That background made this project feel less like a jump into engineering and more like a chance to turn years of designing for builders into building practice. I had already been using tools like Cursor and Claude Code actively in my own work, and Codex first entered my workflow as another capable coding agent.",
+        "Then the project kept pulling me further. What began as a small web service became a test of something more personal: how much of the SDLC could I own myself, beyond the design phase? Could I shape a real problem, connect the server and database, move from web to iOS and Android, debug real devices, prepare store releases, and tell the launch story at the end?",
+        "NaSum Church, also known as Korean Presbyterian Church in Singapore, is a Korean-speaking church community in Singapore. My family often used the free weekend shuttle service the church provides.",
+        "At first, it was simply something I was grateful for. Singapore is not a cheap city to move around in, so a free shuttle on a weekend morning felt generous and practical. But the more I used it, the more clearly I saw the small uncertainties around it.",
+        "Riders had to check PDFs, map links, and KakaoTalk messages to understand where to wait and whether the shuttle had already passed. If someone in the group chat posted, \"the bus just passed this stop,\" everyone benefited. If nobody posted, people waited with uncertainty.",
+        "Before the product, route details and arrival signals were scattered across manual documents, map links, and KakaoTalk updates.",
+        "That was where the project started. Not from a grand product idea, but from a useful service that still depended too much on scattered manual updates.",
+        "The first thing I wanted to reduce was uncertainty.",
+        "The product I decided to build was a small operating service where riders and operators could look at the same signals. Riders could check routes and stops, board with QR check-in, and receive updates. Operators could manage routes, stops, boarding records, and notifications in one place.",
+        "For me, the shuttle also became the right kind of side project: small enough to build alone, but real enough to be honest. It had actual users, operational constraints, cost limits, platform decisions, and enough complexity to test whether I could move beyond design handoff and act more like a product builder.",
+        "At the beginning, I was not trying to build a full native app suite.",
+        "I wanted to make a small web MVP first: something narrow enough to build quickly, but real enough to test whether route lookup, QR check-in, admin updates, and notifications could work as one service flow.",
+        "I also did not begin by asking Codex to \"build the whole thing.\"",
+        "The first discipline was to make the work small enough to verify. Before implementation, I used Codex to shape the plan: who the service was for, which flows mattered in the first version, which parts were intentionally out of scope, what data needed to exist, and what signal would prove that each step worked.",
+        "That planning mattered more than any single prompt. I wanted each task to have a clear input, output, and check:",
+        "The fastest way to run the first small SDLC cycle was to start on the web. I used Next.js for the web and API routes, Neon Postgres for the database, Prisma for the data layer, Vercel for deployment, and LINE LIFF as the first entry point.",
+        "LINE was not the obvious long-term choice for this user group. In Singapore, WhatsApp is more common. Among Korean users, KakaoTalk is much more familiar. But for the first version, LINE LIFF gave me a practical way to connect login, user context, web entry, QR check-in, links, and messaging without asking people to install a full app on day one.",
+        "That mattered because this was not a commercial project with a large operating budget. I wanted the service to stay almost free to run. LINE Messaging API, Vercel, Neon, and the rest of the early stack let me validate the idea without turning a church shuttle into a cost problem.",
+        "The first working loop was intentionally small. Riders could see routes and stops. QR check-in created a boarding record. Operators could manage the basic shuttle data. Notifications could connect the flow.",
+        "I treated each feature less like a big milestone and more like a closed verification loop. A route lookup was not done when the UI existed; it was done when the route data came from the API, appeared correctly on the screen, and failed in an understandable way. QR check-in was not done when the scanner opened; it was done when the boarding record reached the database and the result screen had the right context.",
+        "The first web MVP kept the Rider flow intentionally small: route lookup, stop detail, QR check-in, and basic operational updates.",
+        "The important artifact at this stage was not just the UI. It was the API contract.",
+        "Once routes, stops, users, check-ins, and notifications were expressed as API behavior, the product became easier to move across surfaces. The web app was no longer only an early interface. It became a working blueprint.",
+        "Swagger became the shared contract for routes, stops, users, check-ins, notifications, and the clients that would later consume them.",
+        "This is where Codex started to feel especially useful. I was not asking it to invent a product from a blank page. I could give it a plan, ask it to break down a small task, implement one route, connect one screen, run one check, and then move to the next piece. The work became less like one giant prompt and more like a steady product-building rhythm.",
+        "Ask for a small step. Run it. Inspect the signal. Reduce the failure. Ask again.",
+        "That rhythm was slower than a fantasy version of AI coding, but it was much more reliable.",
+        "The web version did what I needed it to do. It proved that the product flow made sense.",
+        "It also gave me something more useful than a static spec. The web app carried the information architecture, API behavior, state transitions, and edge cases. It became the first working version of the product system, not just a clickable idea.",
+        "But it also surfaced the problem I had expected.",
+        "When I showed it to people, the service felt useful, but the channel questions came up quickly: \"Is there a KakaoTalk version?\" \"Can this work through WhatsApp?\" \"Is there just an app I can open?\" A service trapped inside one messenger was not the most natural form.",
+        "The first delivery had validated the product flow, but it also confirmed the next problem: access and platform fit.",
+        "So I moved the Rider experience into native iOS and Android apps.",
+        "This was not just a cosmetic upgrade. The web MVP had already proved the core flow: login, route lookup, stop detail, QR check-in, admin updates, API responses, and basic error handling. That made it a practical blueprint for the apps, but not something I wanted to copy screen by screen.",
+        "This also mattered to me as a designer. I had wanted to test new native design languages more seriously, but it is hard to find a real playground for them. Apple's Liquid Glass direction and Android's Material 3 Expressive are easy to admire in demos; they are much harder to understand inside an actual product flow with maps, permissions, motion, errors, and repeat use.",
+        "The real work was platform translation. I wanted those design languages to become product language, not decoration. So the question became: how should the same shuttle model behave if it truly belonged on each platform?",
+        "So I went back to Plan Mode before building each client. I asked Codex to help break down platform decisions: when to request push permission, how deep links should recover from failure, how route and stop information should sit on top of the map, and which native components should carry lists, cards, bottom sheets, toasts, and empty states.",
+        "For iOS, I used SwiftUI, the Google Maps SDK, push notifications, and deep links. The experience leaned into a map-first structure, with floating sheets and glass-like surfaces layered over the route context so riders could move between route browsing, stop detail, and check-in without leaving the map.",
+        "The iOS Rider app translated the validated web flow into SwiftUI, Google Maps SDK, push, deep links, and Liquid Glass-inspired native screens.",
+        "For Android, I used Kotlin, Jetpack Compose, Material 3 Expressive, Google Maps Compose, Firebase, and FCM. The Android version kept the same functional model, but reorganized it around Android patterns: top app bars, search, bottom navigation, Compose surfaces, and a small test of Material's more expressive motion and interactions.",
+        "The Android Rider app kept the same product flow while rebuilding it with Jetpack Compose, Material 3 Expressive, Google Maps Compose, Firebase, and FCM.",
+        "This step taught me something I now trust more deeply: a working web product can be more useful than a static spec when building with Codex.",
+        "When I moved into iOS and Android, I was not asking Codex to guess what the product should be. I was asking it to translate a system that already worked.",
+        "The Rider apps also made the product easier to show and test. The service no longer felt like a web flow hidden inside a messenger. It felt like something riders could install, open, and return to when they needed shuttle information.",
+        "A quick look at the Rider and Driver app experience I built for the shuttle platform.",
+        "That was exactly why the next gap became easier to see.",
+        "Once route lookup and QR check-in worked as an app experience, I started looking at check-in data not only as a boarding record but also as a possible arrival signal. If someone scanned a QR code at a stop, the shuttle must have reached that stop. In theory, that event could help other riders understand where the bus was.",
+        "The idea was reasonable, but it was still too dependent on riders creating the event.",
+        "A church member who had helped with shuttle operations for a long time pointed out the missing case.",
+        "On some weekends, especially during holidays or school breaks, ridership changes a lot. Some stops may have no riders at all. A stop with no rider creates no QR check-in. No QR check-in means no event. And if the system receives no event, the Rider app cannot confidently say whether the shuttle passed that stop.",
+        "QR check-in was useful as a boarding signal. It was not enough as an arrival signal.",
+        "So the question shifted from How do we make riders check in? to How does the shuttle itself become the trusted signal source?",
+        "The answer was a separate Driver app. I did not want Rider apps to carry unnecessary background location responsibility, and I did not want the operation to depend on riders creating every event. The shuttle itself needed to publish the signal.",
+        "That changed the product from a Rider app into a Rider-Driver platform. The Driver app sends location and route status. The server updates the active run. The Rider app reflects that movement through maps, stop status, and notifications. QR check-in still records actual boarding, but it no longer has to pretend to be the only source of truth.",
+        "On the surface, this sounds like moving a bus marker on a map. In reality, it meant designing one connected platform experience across the Driver app, server, and Rider app. Location upload, route state, stop progression, Rider map updates, and notification timing all had to agree.",
+        "That would have been a complicated enough iteration from my usual desk. But this was also the moment when life made the work stranger.",
+        "From Korea, I used Codex mobile to control the project running on my Mac mini in Singapore and continue the Driver app work inside the real repository.",
+        "I was in Korea, spending long hours in a hospital room while helping care for my father. My development environment was still on a Mac mini in Singapore, about 4,700 km away. Normally, I would keep the Rider app, Driver app, server logs, simulators, and browser windows open side by side. In the hospital room, I mostly had my phone.",
+        "The situation was not planned as a mobile coding experiment. The problem simply arrived at an inconvenient time, and the product did not feel like it should wait.",
+        "So ChatGPT mobile became my control room. The phone was not the development machine. Codex worked in the remote Mac mini environment, inside the actual repository. I reviewed progress from my phone, spoke tasks into the mobile app, checked summaries and screenshots, and kept the product loop moving from the hospital room.",
+        "OpenAI's Codex mobile preview gives context for the mobile workflow I used during this phase.",
+        "What surprised me was that typing code was not the hard part. I barely needed to type. I could speak the task, and Codex could turn that spoken intent into a task list, file reads, code changes, logs, and verification steps because it already had the repository context. It felt less like explaining an idea to a stranger and more like handing work to a teammate who was already looking at the same repo.",
+        "Voice input worked because Codex already had repository context: a spoken task could become a thread, a work plan, and concrete code changes.",
+        "On desktop, I can build, inspect, compare, and respond quickly. On mobile, I could not comfortably keep multiple apps, simulator windows, logs, and screenshots in front of me. That forced the workflow to change. I had to ask Codex not only to implement, but also to read logs, summarize what failed, propose the next smallest fix, and verify the result before moving forward.",
+        "The mobile workflow worked when each task had visible success criteria, a summarized failure, and a clear next smallest fix.",
+        "This is where the Driver app and the mobile workflow started shaping each other.",
+        "The verification problem became a product problem. I could not wait for a real shuttle ride every time I needed to test the flow, so the Driver app needed a test-drive mode. Codex first suggested this as a way to repeatedly simulate a run, and the idea quickly became essential. The first version was unstable, but that instability was useful: it showed exactly where the location upload, Rider map reflection, and stop status logic needed to improve.",
+        "An early Driver app test run showed how simulated movement could help verify background location, server sync, and Rider map updates.",
+        "The final Driver app flow made arrival tracking a dedicated driver-side responsibility instead of depending on rider check-ins.",
+        "This is the part of the project I am most proud of. Not because the UI became more polished, but because the product became more honest. I found a structural gap and changed the architecture around it.",
+        "It was that a product builder can keep momentum in imperfect conditions if the work is broken down clearly enough and the validation loop is visible enough. Codex mobile did not replace the desk; it helped me keep the product loop alive when I could not sit at one.",
+        "This project was never about asking AI to build an app for me.",
+        "Codex helped across almost every stage: planning, API contracts, server routes, client implementation, debugging, logs, platform work, and release preparation.",
+        "The screen got smaller, but the workflow did not: Driver app work, validation, and launch preparation continued through a mobile-controlled Codex loop.",
+        "I still had to decide what problem mattered, what could wait, which platform choice was practical, whether the current hypothesis was wrong, and what signal would prove the next step. Codex made the scope reachable, but it did not remove the need to think like a product builder.",
+        "That was the difference between using Codex for code generation and using it to own more of the SDLC while keeping product judgment in my hands.",
+        "By the end, the project had grown into a real multi-surface system: server, database, web/admin, native Rider apps, native Driver apps, maps, QR check-in, location updates, notifications, analytics, crash reporting, store preparation, and a promotional video.",
+        "That is the part I want this project to show: I can design the experience, understand the system underneath it, and keep moving until the product is real enough to test, ship, and explain.",
+        "This project changed my sense of what a product designer can practice.",
+        "I still do not think every designer needs to become a traditional full-stack engineer. That is not the point. The point is that AI makes it more realistic for a technically curious designer to own more of the SDLC without pretending to be a full-time engineer: from problem framing to system modeling, implementation, release, and launch storytelling.",
+        "But owning more of the SDLC requires more than prompting.",
+        "It requires knowing how a product problem becomes a system model. It requires understanding API contracts, data flows, platform constraints, real-device behavior, store requirements, analytics signals, and crash logs well enough to ask better questions.",
+        "Codex expanded my reach, but it did not decide what mattered. It did not tell me that a messenger-based web app was useful for validation but not enough for long-term access. It did not feel the missing event at empty stops until the real operation revealed it. It did not care whether the launch story was understandable to riders.",
+        "What Codex changed was the distance between deciding and trying. That distance used to feel long enough that many ideas stopped at a screen, a prototype, or a handoff. In this project, it became short enough for me to keep moving: from a weekend shuttle problem, to a web flow, to native Rider apps, to a Driver app, to store preparation, to a promotional video.",
+        "This was a side project, but it felt like a shift in how I want to build.",
+        "Not just designing the ideal flow. Not just handing off screens. Not just asking AI to generate code.",
+        "Finding a real problem, making the first useful version, seeing where the model breaks, and moving quickly enough to make the product truer.",
+        "That is how far I wanted to see if I could go with Codex. Now I know I can go further than I expected."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "post",
+      "slug": "machine-learning-for-design-systems",
+      "route": "/blog/machine-learning-for-design-systems",
+      "sourceFile": "_posts/2020-09-24-Machine-Learning-for-Design-Systems.md",
+      "sourceSha256": "658358264811e6a06ff66518aebfae48c47330405807b749f727419c268794d7",
+      "listed": true,
+      "lang": "en",
+      "title": "Machine Learning for Design Systems",
+      "description": "Machine Learning for Design Systems-Training Tensorflow Object Detection API with design system symbols",
+      "hero": "/images/ml4ds/image-20200924121002344.png",
+      "galleries": [
+        {
+          "columns": 2,
+          "images": [
+            "/images/ml4ds/Screen Shot 2020-09-24 at 1.49.42 PM.png",
+            "/images/ml4ds/Screen Shot 2020-09-24 at 1.51.37 PM.png"
+          ],
+          "caption": ""
+        }
+      ],
+      "includeCounts": {
+        "post-components/gallery.html": 1
+      },
+      "resources": [
+        "/images/ml4ds/Screen Shot 2020-09-24 at 1.49.42 PM.png",
+        "/images/ml4ds/Screen Shot 2020-09-24 at 1.51.37 PM.png",
+        "/images/ml4ds/image-20200924120411503.png",
+        "/images/ml4ds/image-20200924121002344.png",
+        "/images/ml4ds/Screen Shot 2020-09-24 at 12.45.12 PM.png",
+        "/images/ml4ds/Screen Shot 2020-09-24 at 1.37.09 PM.png",
+        "https://github.com/abdelrahman-gaber/tf2-object-detection-api-tutorial/raw/master/data/samples/output/1.jpg",
+        "/images/ml4ds/Screen Shot 2020-09-24 at 2.03.51 PM.png",
+        "/images/ml4ds/Screen Shot 2020-09-23 at 6.45.53 PM.png",
+        "/images/ml4ds/Screen Shot 2020-09-23 at 9.51.58 PM.png",
+        "/images/ml4ds/ezgif.com-video-to-gif.gif"
+      ],
+      "links": [
+        "https://medium.com/@judepark_6960/machine-learning-for-design-systems-315cd34b676f",
+        "https://github.com/abdelrahman-gaber",
+        "https://linecorp.com/",
+        "https://github.com/abdelrahman-gaber/tf2-object-detection-api-tutorial",
+        "https://github.com/direnv/direnv/wiki/Python",
+        "https://grpc.io/docs/protoc-installation/#install-using-a-package-manager",
+        "https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md",
+        "https://github.com/abdelrahman-gaber/tf2-object-detection-api-tutorial#inference-with-pre-trained-models",
+        "https://tensorflow-object-detection-api-tutorial.readthedocs.io/",
+        "https://github.com/tzutalin/labelImg",
+        "https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/_downloads/da4babe668a8afb093cc7776d7e630f3/generate_tfrecord.py",
+        "https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/configuring_jobs.md",
+        "http://download.tensorflow.org/models/object_detection/tf2/20200711/efficientdet_d0_coco17_tpu-32.tar.gz",
+        "https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html#preparing-the-workspace",
+        "https://github.com/abdelrahman-gaber/tf2-object-detection-api-tutorial#training-object-detection-model-with-your-custom-dataset",
+        "https://www.visualdata.io/discovery",
+        "https://www.facebook.com/groups/540872086300813",
+        "https://www.facebook.com/groups/sketchappkorea",
+        "https://www.tensorflow.org/js?hl=ko",
+        "https://github.com/5taku/custom_object_detection",
+        "https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/index.html"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Preliminar words",
+        "Background",
+        "Setting-up a working Python environment",
+        "Installation",
+        "Training UI dataset",
+        "Let's Test!",
+        "Next steps",
+        "Reference",
+        "direnv",
+        "pyenv",
+        "Tensorflow2 installation",
+        "Object Detection API installation",
+        "STEP 1. Preparing the Workspace",
+        "STEP 2. Gathering data",
+        "STEP 3. Labeling data",
+        "STEP 4. Generate the TF RECORDS",
+        "STEP 5. Training configuration",
+        "STEP6. Do Training!",
+        "STEP6. Exporting a Trained Model",
+        "Training model progress"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "This blog post is a re-work of the amazing tutorial from Abdelrahman G. Abubakr on how to create your own object detector with Object Detection API from Tensorflow 2. I am following the same steps as the tutorial, but I did a little differently to fit my development environment and design system research. I want to thank the author for the original content and everyone who wrote it for reducing my trial errors.",
+        "Also I have to say that I have developed this experiment in my research time working at LINE corporation where I perform as a platform designer of Design system.",
+        "This idea started with my difficulty of creating a design system. The heart of the design system is to assemble design elements and create reusable libraries. But ironically, increasing resources in libraries (such as the Sketch symbol library), on the contrary, makes it increasingly difficult for designers to use in their design because the more complex the library, the more they have to learn, as well as the heavier the working environment.",
+        "As a design system manager, this was a serious challenge. So I thought, What if Sketch Assistant could automatically detect which UI components are being used on the artboard, and recommend designers to use library symbols through the Assistant? A simple flow is shown below:",
+        "After thinging the flow, I decided to start by creating a Custom dataset first.",
+        "Firstly, I set up the Python virtual environment and installed Tenserflow according to Tutorial of Abdelrahman G. Abubakr.",
+        "First, I used a virtual environment with direnv. It's also okay to use Anaconda or other virtual env tools, but I personally prefer to use direnv because it's comfortable to define the necessary settings for each directory via .envrc.",
+        "Next, add it to the configuration file corresponding to shell. direnv officially supports BASH, ZSH, FISH, TCSH, Elvish, Check out the guide here, and add settings for your shell.",
+        "After adding the settings, reboot the terminal and you can use direnv.",
+        "Next, choose a folder you want to work at and create a directory named Tensorflow.",
+        "When a .envrc file is created, direnv will detect it and print a warning message. The reason is to prevent unwanted shell script execution from happening. Therefore, if we want to add or change the .envrc file, we must explicitly allow it.",
+        "Execute the allow command to allow the use of the .envrc file in the current directory.",
+        "Next, we will download the Python version to use using pyenv. Since I manage the virtual environment in direnv, I will only use pyenv for version control of Python.",
+        "After installing Python, specify the environment in the .envrc, and restart the terminal to set up the virtual environment in that directory.",
+        "A more detailed installation guide can be found at direnv wiki.",
+        "Refer to the Tensorflow official site and install Tenserflow in my Python virtual environment in the following way. (As of September 2020)",
+        "For reference, when I run the installation verification code (tf.reduce) on my MacBook Pro, the following message is displayed. Fortunately, the forums say we can ignore this now. https://github.com/tensorflow/tensorflow/issues/8037",
+        "Now open a terminal, go to the TensorFlow directory and clone the Tensorflow model repository.",
+        "You should now have a single folder named models under your TensorFlow folder, which contains another 4 folders as such:",
+        "After that, cd into TensorFlow/models/research/ directory and run the following command: If OK comes out, the test is successful :)",
+        "If you want to see the test results in front of your eyes, use the test script from Tutorial by Abdelrahman G. Abubakr. Choose one of the pre-trained models provided in tf2 detection model zoo and put it in the test script, you can see the test result as follows:",
+        "Source: https://tensorflow-object-detection-api-tutorial.readthedocs.io",
+        "For our purpose we are going to use a bunch of images regarding with Button UI component. To do that as fast as possible we are going not only to extract button images from our symbol library but also to scrap google images with a python script to automate the process.",
+        "Scripts can be downloaded from: https://github.com/hardikvasa/google-images-download",
+        "and, for example, place the downloaded files in projects folder named as google-images-download. Then just navigate to the folder where the python script is and execute:",
+        "Next, move about 90% of images into /images/train directory and the other 10% into /images/test directory.",
+        "In order to label our data, we need some kind of labeling software. In this particular case we are going to use labelimg.",
+        "According to the rules of my design system, I created a label by classifying it into 4 categories: contained button, outlined button, icon button, and ghost button. It seems easy and repetitive task, but it's super time consuming. In my case, I used labelimg to label about 200 images, which took over an hour.",
+        "Now that we have generated our annotations and split our dataset into the desired training and testing subsets, it is time to convert our annotations into the so called TFRecord format.",
+        "Thankfully, many pioneers have already created scripts to convert xml to record format. All we need to do in this phase is just download their Python script, save it inside TensorFlow/scripts/preprocessing, and execute commends below:",
+        "For the purposes of this tutorial we will not be creating a training job from scratch, but rather we will reuse one of the pre-trained models provided by TensorFlow. If you would like to train an entirely new model, you can have a look at TensorFlow's tutorial.",
+        "Now, let's have a look at the changes that we shall need to apply to the pipeline.config file. Please refer to the two links below for more detailed settings.",
+        "If everything was setup correctly the training should begin shortly. Then in the terminal you will see the log as below. Not surprisingly, time varies widely depending on the computer's performance and the size of the pre-trained model. For my Macbook Pro 15 (2018-mid), it took about 2.5 hours to train 3000 steps. Please refer to it when you configure training.",
+        "the current loss gets logged to Tensorboard. We can open Tensorboard by opening a second command line, navigating to Tensorflow folder and typing:",
+        "Then a web page will be opened autometically at localhost:6006",
+        "Once your training job is complete, you need to extract the newly trained inference graph, which will be later used to perform the object detection. This can be done as follows:",
+        "The button that I use most frequently in the era of COVID-19 in here South Korea is the QR check-in function of NAVER/KAKAOTALK app. I video-recorded these screen-flow from my iPhone and tested whether our new machine learning model can find the button well. The test tool was used by copying the Abdelrahman G. Abubakr's test script that I used above",
+        "BOOOOM! Of course, it's not perfect, such as finding only 1 icon button... But Contained buttons like'OK' and'Cancel' are definitely finding! 🍺",
+        "The next step is to convert the newly created model to tensorflow js and make it available to Sketch assistant based on Node js. But this part requires another study, so I will take a break before proceeding.",
+        "In addition, I realized that the process of creating pre-trained model with custom dataset is a huge amount for individuals not to do alone. Instead, I decided to suggest design communities making a pre-trained model together via open source.",
+        "Looking at the examples in visualdata.io or [tf2 detection model zoo, there are many datasets that can be used in machine learning by numerous contributors, but unfortunately, there seems to be no dataset that detects UI objects yet.",
+        "Starting this blog post, If there is a chance, I will share my experiences with the communities in Korea and try to move on next together. If you are also interested in this project, thank you!! Please find me in the Facebook group below."
+      ],
+      "codeBlocks": [
+        "brew install direnv",
+        "## BASH -> Add below content to ~/.bashrc eval \"$(direnv hook bash)\" ## ZSH -> Add below content to ~/.zshrc eval \"$(direnv hook zsh)\" ## FISH -> Add the following to ~/.config/fish/config.fish eval (direnv hook fish) ## TCSH -> Add the following to ~/.cshrc eval `direnv hook tcsh` ## Elvish -> execute the command below $ direnv hook elvish > ~/.elvish/lib/direnv.elv ## Then add the following to ~/.elvish/rc.elv use direnv",
+        "$ mkdir TensorFlow $ cd TensorFlow",
+        "$ touch .envrc direnv: error .envrc is blocked. Run `direnv allow` to approve its content.",
+        "$ direnv allow direnv: loading .envrc",
+        "brew install pyenv ## install pyenv pyenv install --list ## search available python versions pyenv install 3.7.0",
+        "## Install the latest version of Tensorflow 2 pip install --upgrade tensorflow ## Installation validation python -c \"import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))\"",
+        "I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations: AVX2 FMA",
+        "cd TensorFlow git clone https://github.com/tensorflow/models",
+        "TensorFlow/ └─ models/ ├─ community/ ├─ official/ ├─ orbit/ ├─ research/ └── ...",
+        "# Install Compiler (version >= 3.0) brew install protobuf # Go to models folder cd models/research # compile protos: protoc object_detection/protos/*.proto --python_out=. # Install TensorFlow Object Detection API as a python package: cp object_detection/packages/tf2/setup.py . python -m pip install .",
+        "# From within TensorFlow/models/research/ python object_detection/builders/model_builder_tf2_test.py",
+        "TensorFlow/ ├─ models/ │ ├─ community/ │ ├─ official/ │ ├─ orbit/ │ ├─ research/ │ └─ ... └─ workspace/ └─ training_demo/",
+        "training_demo/ ├─ annotations/ ├─ exported-models/ ├─ images/ │ ├─ test/ │ └─ train/ ├─ models/ ├─ pre-trained-models/ └─ README.md",
+        "googleimagesdownload --keywords \"button ui design\" --f jpg --size medium --output_directory ./button",
+        "item { id: 1 name: 'contained button' } item { id: 2 name: 'outlined button' } item { id: 3 name: 'icon button' } item { id: 4 name: 'ghost button' }",
+        "## cd TensorFlow/scripts/preprocessing # Create train data: python generate_tfrecord.py -x [PATH_TO_IMAGES_FOLDER]/train -l [PATH_TO_ANNOTATIONS_FOLDER]/label_map.pbtxt -o [PATH_TO_ANNOTATIONS_FOLDER]/train.record # Create test data: python generate_tfrecord.py -x [PATH_TO_IMAGES_FOLDER]/test -l [PATH_TO_ANNOTATIONS_FOLDER]/label_map.pbtxt -o [PATH_TO_ANNOTATIONS_FOLDER]/test.record",
+        "training_demo/ ├─ ... ├─ pre-trained-models/ │ └─ ssd_mobilenet_v2_320x320_coco17_tpu-8/ │ ├─ checkpoint/ │ ├─ saved_model/ │ └─ pipeline.config └─ README.md",
+        "training_demo/ ├─ ... ├─ models/ │ └─ my_ssd_mobilenet_v2_320x320_coco17_tpu-8/ │ └─ pipeline.config └─ ...",
+        "python model_main_tf2.py --model_dir=models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8 --pipeline_config_path=models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8/pipeline.config",
+        "tensorboard --logdir=models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8",
+        "python .\\exporter_main_v2.py --input_type image_tensor --pipeline_config_path .\\models\\my_efficientdet_d1\\pipeline.config --trained_checkpoint_dir .\\models\\my_efficientdet_d1\\ --output_directory .\\exported-models\\my_model",
+        "training_demo/ ├─ ... ├─ exported-models/ │ └─ my_model/ │ ├─ checkpoint/ │ ├─ saved_model/ │ └─ pipeline.config └─ ..."
+      ]
+    },
+    {
+      "kind": "post",
+      "slug": "mcp-magic-retrospective-en",
+      "route": "/blog/mcp-magic-retrospective-en",
+      "sourceFile": "_posts/2026-07-12-mcp-magic-retrospective-en.md",
+      "sourceSha256": "f02cc86d9a04892b936286976fc95ad872e60f9700fc92e940400e5cf319de19",
+      "listed": true,
+      "lang": "en",
+      "title": "[Interview] MCP Magic and 570,000 Calls: Putting AI to Work in Figma",
+      "description": "MCP Magic helped people connect AI and Figma and reach a first real task. Friends of Figma Seoul operators look back on 31,360 users and 570,373 calls.",
+      "hero": "/images/projects/2026-mcp-magic-retrospective/mcp-magic-desktop-en.png",
+      "galleries": [],
+      "includeCounts": {},
+      "resources": [
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social-en.png",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-calls-by-purpose-social-en.png",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-session-depth-social-en.png"
+      ],
+      "links": [
+        "https://github.com/grab/cursor-talk-to-figma-mcp",
+        "https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/",
+        "https://www.figma.com/blog/the-figma-agent-is-here/",
+        "https://github.com/dusskapark/dusskapark.github.io/blob/master/research/mcp-magic-retrospective/APPENDIX.ko.md",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social-en.png",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-calls-by-purpose-social-en.png",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-session-depth-social-en.png"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Q. What problem did MCP Magic start with?",
+        "Q. What showed that people were using it?",
+        "Q. What changed as the audience grew?",
+        "Q. What happens to the project now?",
+        "Q. What would you do differently next time?",
+        "Q. What did 570,000 calls leave behind?",
+        "Q. Were people just trying it, or using it deeply?"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "For an AI agent to read a Figma file and change text, color, or layout, people normally have to connect an MCP server and client, then a Figma plugin. MCP Magic bundled that setup into a desktop app and shortened the path to the first moment an AI could move something in Figma.",
+        "The Friends of Figma Seoul editorial team asked JooHyung and Yiseo-both FoF Seoul operators and MCP Magic contributors-where the app began and what it left behind. This is their retrospective, combined with project data and the early desktop-app work by Jin.",
+        "GA4 recorded 31,360 total users and 570,373 MCP tool calls. That tells us MCP Magic reached real users. The bigger questions for JooHyung and Yiseo were how to keep the experience dependable as that audience grew-and where the tool should go next.",
+        "Watching AI read and edit a design in Figma was compelling from the start. But when the team handed the tools to other people, many stopped before they ever reached that moment. They had to set up a runtime and server, an MCP client, and a Figma plugin separately-and move back and forth between the terminal and the plugin whenever something went wrong.",
+        "MCP Magic did not start from scratch. Its starting point was Cursor Talk To Figma MCP, which the Grab Design team used internally before releasing it as open source. The core capability-reading and editing Figma through natural language-already worked.",
+        "JooHyung: \"The problem was not that the capability was missing. The path to a user's first success was just too complicated.\"",
+        "In July 2025, JooHyung and Jin released the Talk To Figma desktop app on GitHub. It gathered service startup, configuration, connection state, and logs into the menu-bar tray. That compact app is now Grab's official open-source project and the backbone of MCP Magic.",
+        "Yiseo: \"When I saw the prototype, I thought, 'This is it.' Before grand automation, we needed a click-and-it-works experience-one click, and the server comes up.\"",
+        "Yiseo joined the project through that prototype, helping refine the desktop UI, turn complex setup into language people could act on, and introduce the work through community channels. That October, the team expanded the foundation into the MCP Magic family of apps. They rewrote the architecture more than once as they listened to users, but the question stayed the same: how could more people get past the first connection and into real work?",
+        "MCP Magic did not make MCP itself more powerful. It made the path to an existing capability shorter and clearer. If people give up before getting started, even a powerful feature may as well not exist for them.",
+        "These 1,633 people were close to a professional user group already paying to work with AI and Figma. They were using tools such as Cursor or Claude Code alongside paid Figma plans, then bringing MCP Magic into that stack. In other words, this was more than installs or free trials: it was an early-adopter group pulling a new workflow into real work.",
+        "Yiseo: \"The part that made me happiest was realizing people were not just trying it because it was trendy. They were using it in real work.\"",
+        "JooHyung and Jin opened the possibility with the desktop app; MCP Magic helped more people carry it through into actual work. Call volume alone cannot show how deeply they worked, but it did show that people had reached the point where AI was changing their Figma files.",
+        "GA4 showed reach and call volume. The Aptabase export showed how deeply MCP was used within observed sessions. Some people may have been trying it out lightly, but what stood out in this data were sessions that lasted and returned to repeated work.",
+        "As the image shows, this was not only traffic that checked a connection and left. Some sessions continued for a long time, with the AI repeatedly working on Figma tasks. For some people, MCP Magic was not a tool to test briefly; it was a tool for long, repeated design work. This is where the \"real use\" Yiseo described becomes clearest.",
+        "Yiseo is a Figma creator who runs several community channels. As she did, more varied questions began arriving through Friends of Figma Seoul, KakaoTalk open chats, and other channels. As the audience grew, the questions changed too.",
+        "At first, people were simply intrigued. Over time, more asked about installation, cost, and practical use.",
+        "It is hard to point to a single cause, but the period when AI and MCP felt novel yet distant seemed to pass quickly. Within a year, many designers viewed them as tools they needed for work right away-and the urgency in those questions carried a sense of FOMO: learn it now, use it now.",
+        "Those questions converged on one larger question.",
+        "\"Could we make this something people could keep trusting across different users, operating systems, MCP clients, and network environments?\"",
+        "Every user's \"it doesn't work\" had a different cause. A connection could fail at the server or port, the plugin channel, MCP client settings, or operating-system security. GA4 recorded 1,539 active users encountering port-binding issues, 1,231 encountering duplicate server-start handlers, and 1,056 encountering request timeouts.",
+        "The causes differed, but they arrived to users as the same message.",
+        "High call-level success and session-level friction existed at the same time. GA4 showed a 94.1% success rate among calls with an explicit status, while a separate Aptabase release logbook-with a different period and instrumentation-recorded at least one failure event in 1,424 of 2,376 MCP sessions (59.9%). The two figures cannot be compared directly. But the fact that many observed MCP sessions contained at least one failure event shows why call-level success alone cannot explain the friction of doing the work.",
+        "Yiseo: \"As the audience grew, support and recovery became part of the product too.\"",
+        "The team learned that making the first connection easy was not enough. Next came diagnosis and recovery, reliable connections, and support that met users where they were. These were not ancillary operational chores; they were part of the product still left to build.",
+        "The team expanded language support and experimented with working through a local LLM, Google Gemma 4, without a separate IDE. But over time, the case for continuing large updates became weaker-not because there was no usage, but because the most natural home for the core experience they had made into a product began moving into the official platform.",
+        "Independent tools often discover new demand first where a platform's boundary is thin. Once that demand becomes clear enough, a platform that already has the files, permissions, design system, and deployment surface can bring the flow into its own product through a shorter path. This is natural and welcome for users. For a third party, though, the success of a feature and the sustainability of an independent product are entirely different problems.",
+        "This is not a story about Figma seeing MCP Magic and copying it. Nor can the data prove that official features caused user decline. What MCP Magic did prove was real demand, while the platform was structurally better positioned to meet that demand.",
+        "JooHyung: \"A successful feature does not automatically mean an independent product can be sustained for the long term.\"",
+        "The team found the problem early enough to turn it into a product and proved demand through tens of thousands of people and 570,000 calls. But they did not decide quickly enough what they would own for the long term: diagnosis and recovery, cross-platform connection, or deep workflows for a particular team.",
+        "MCP Magic will therefore remain closer to maintenance mode than shutdown. Necessary fixes will continue, but there is less reason than before to keep making major feature updates in its current form.",
+        "The operators' retrospective: \"Next time, we need to decide sooner what to build after solving the first problem.\"",
+        "In retrospect, the team took too long to decide what would come after making the first connection easy. Three notes from the project stand out.",
+        "First, they should have narrowed the next goal sooner. They never decided whether to remain an installation helper, become a connection diagnosis and recovery tool, or combine frequently repeated Figma work into a single workflow. After the first problem was solved, they needed a new product hypothesis.",
+        "Second, they should have made the boundary of support clear. It needed to be clearer which problems belonged to the app and which belonged to the Figma plugin, MCP client, operating system, or AI costs. Turning repeated \"it doesn't work\" reports into self-diagnosis and recovery flows mattered as much as developing features.",
+        "Third, they should have connected user data to the next hypothesis sooner. Only when they organized the data late did they see broad discovery, a few work sessions with concentrated calls, high call-level success, and sessions that also contained failure events-all at once. Had they separated the first connection, first success, repeat use, and behavior after a failure from the start, the priorities for updates might have been different.",
+        "What the project proved was demand, not a right to own that demand forever.",
+        "MCP Magic reduced the first step to the point where users could actually work with Figma through AI. Those calls record work: creating text, applying color, making frames, and refining layouts.",
+        "At the same time, the final 20% still meant diagnosis and recovery, operations and support, and the choice of where responsibility ended. Once the official platform began solving the same problem more naturally, the more important question was not what the team could build, but what it could own for the long term.",
+        "JooHyung and Yiseo: \"This is not a record of failure or an excuse for slowing updates. A successful feature and a product entering maintenance mode can exist at the same time.\"",
+        "The 570,000 calls are evidence that the work JooHyung and Jin started-and that Yiseo helped extend with MCP Magic-solved the right problem. They are also a reminder to choose a sustainable position earlier next time.",
+        "For denominators, methodology, data-quality limitations, and project history, see the separate Appendix Markdown (Korean)."
+      ],
+      "codeBlocks": []
+    },
+    {
+      "kind": "post",
+      "slug": "mcp-magic-retrospective",
+      "route": "/blog/mcp-magic-retrospective",
+      "sourceFile": "_posts/2026-07-12-mcp-magic-retrospective.md",
+      "sourceSha256": "de318d34ac7352810b3a2524a1d56b99c5100c17a76895fa9aa0705ad190f3eb",
+      "listed": true,
+      "lang": "ko",
+      "title": "[인터뷰] AI로 Figma를 움직인 MCP Magic, 57만 번의 호출 뒤 이야기",
+      "description": "Figma와 AI를 연결해 첫 작업까지 돕는 MCP Magic. 31,360명의 사용자와 570,373건의 호출 뒤, Friends of Figma Seoul 운영자들이 남긴 회고를 정리했습니다.",
+      "hero": "/images/projects/2026-mcp-magic-retrospective/mcp-magic-desktop.png",
+      "galleries": [],
+      "includeCounts": {},
+      "resources": [
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social.png",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-calls-by-purpose-social.png",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-session-depth-social.png"
+      ],
+      "links": [
+        "https://github.com/grab/cursor-talk-to-figma-mcp",
+        "https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/",
+        "https://www.figma.com/blog/the-figma-agent-is-here/",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-key-metrics-social.png",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-calls-by-purpose-social.png",
+        "/images/projects/2026-mcp-magic-retrospective/mcp-magic-session-depth-social.png"
+      ],
+      "storeIds": [],
+      "headings": [
+        "Q. MCP Magic은 어떤 문제에서 시작했나요?",
+        "Q. 실제로 사용되었다는 신호가 있었나요?",
+        "Q. 사용자가 늘면서 무엇이 달라졌나요?",
+        "Q. 이 프로젝트는 앞으로 어떻게 되나요?",
+        "Q. 다음에는 무엇을 다르게 할까요?",
+        "Q. 57만 번의 호출은 무엇을 남겼나요?",
+        "Q. 한 번 써보고 떠난 걸까요, 아니면 깊게 쓴 걸까요?"
+      ],
+      "captions": [],
+      "paragraphs": [
+        "Figma에서 AI 에이전트가 디자인 파일을 읽고 텍스트·색·레이아웃을 바꾸게 하려면, 보통 MCP 서버와 클라이언트, Figma 플러그인을 차례로 연결해야 합니다. MCP Magic은 이 준비 과정을 데스크톱 앱으로 묶어, AI가 Figma를 처음 움직이는 순간까지 가는 길을 줄인 도구입니다.",
+        "Friends of Figma Seoul 운영진은 MCP Magic에 기여한 박주형님과 이서님에게 이 앱이 어떤 문제에서 출발했고 무엇을 남겼는지 물었습니다. 이 글은 두 운영자의 답과 프로젝트 데이터에, 초기 Talk To Figma 데스크톱 앱을 만든 진영님의 작업을 함께 엮은 기록입니다.",
+        "GA4에는 31,360명의 누적 사용자와 570,373건의 MCP 도구 호출이 남았습니다. 이 수치는 MCP Magic이 실제 사용자에게 닿은 프로젝트였다는 뜻입니다. 다만 두 운영자가 더 오래 붙잡은 질문은 따로 있었습니다. 사용자가 늘어난 뒤에도 이 경험을 어떻게 안정적으로 이어 갈지, 그리고 이 도구가 앞으로 어디에 남게 될지였습니다.",
+        "Figma에서 AI가 디자인을 읽고 고치는 장면은 처음부터 매력적이었습니다. 하지만 다른 사람에게 도구를 건네보면, 많은 이가 그 장면에 닿기도 전에 멈췄습니다. 런타임과 서버, MCP 클라이언트와 Figma 플러그인을 각각 설정해야 했고, 문제가 생기면 터미널과 플러그인 사이를 오가야 했기 때문입니다.",
+        "MCP Magic은 빈 곳에서 시작한 프로젝트가 아닙니다. 출발점에는 Grab Design 팀에서 사용하다 오픈소스로 공개한 Cursor Talk To Figma MCP가 있었습니다. 자연어로 Figma를 읽고 수정하는 핵심 기능은 이미 작동하고 있었습니다.",
+        "박주형님: \"기능 자체가 부족한 게 문제는 아니었어요. 사용자가 처음 성공하기까지 거쳐야 하는 과정이 너무 복잡했습니다.\"",
+        "2025년 7월, 박주형님과 진영님은 서비스 실행·설정·연결 상태·로그를 트레이 메뉴에 모은 Talk To Figma 데스크톱 앱을 GitHub에 공개했습니다. 이 간단한 앱은 현재 Grab의 공식 오픈소스이자 MCP Magic의 백본이 됐습니다.",
+        "이서님: \"그 프로토타입을 봤을 때 '이거다' 싶었어요. 처음에는 거창한 자동화보다 '딸깍'하면 서버가 뜨는 경험이 필요하다고 봤고요.\"",
+        "이서님은 그 프로토타입을 계기로 프로젝트에 참여했습니다. 데스크톱 UI를 함께 다듬고, 복잡한 설정을 사용자 언어로 풀어내는 방식과 채널을 통한 홍보를 맡았습니다. 같은 해 10월, 팀은 이 기반을 MCP Magic이라는 패밀리 앱으로 확장해 출시했습니다. 사용자 의견을 들으며 여러 번 구조를 다시 썼지만, 붙들고 있던 질문은 바뀌지 않았습니다.",
+        "두 운영자가 붙들고 있던 질문: \"어떻게 해야 더 많은 사람이 첫 연결을 지나 실제 작업까지 도달할 수 있을까요?\"",
+        "앱이 MCP 자체를 더 강력하게 만든 것은 아닙니다. 이미 있던 기능에 도달하는 길을 짧고 분명하게 만든 쪽에 가깝습니다. 시작하기 전에 포기하게 된다면, 아무리 강력한 기능도 사용자에게는 없는 것과 다르지 않기 때문입니다.",
+        "이 1,633명은 AI와 Figma를 유료로 활용하는 프로 사용자층에 가까웠습니다. Cursor나 Claude Code 같은 AI 도구와 Figma 유료 플랜을 이미 업무에 쓰고 있었고, 그 위에서 MCP Magic까지 도입했습니다. 따라서 1,633명은 단순 설치나 무료 체험이 아니라, 새 워크플로를 실제 업무에 먼저 끌어들인 이른 초기 수용자층을 뜻합니다.",
+        "이서님: \"정말 기뻤던 건, 사람들이 유행이라 한 번 찍어보고 떠나는 게 아니라 실제 작업에 쓰고 있다는 걸 체감했을 때였어요.\"",
+        "박주형님과 진영님이 데스크톱 앱으로 연 가능성을, MCP Magic 팀은 더 많은 사람이 실제 작업까지 이어 갈 수 있도록 다듬었습니다. 호출 수만으로는 이들이 얼마나 깊게 사용했는지 알 수 없었지만, 적어도 AI가 Figma를 실제로 만지는 작업까지 도달했다는 흔적은 분명했습니다.",
+        "GA4가 도달 범위와 호출 규모를 보여줬다면, Aptabase export는 세션 안에서 MCP가 얼마나 깊게 쓰였는지를 보여줬습니다. 유행을 따라 가볍게 써보는 사용도 있었겠지만, 이 데이터에서 더 눈에 들어온 것은 오래 머물며 반복 작업을 이어 간 세션들이었습니다.",
+        "이미지의 수치가 보여주듯, 가볍게 연결을 확인하고 떠난 경우만 있었던 것은 아닙니다. 어떤 세션은 한 번 시작하면 꽤 오랫동안 이어졌고, AI에게 Figma 작업을 반복해서 맡겼습니다. MCP Magic은 일부 사용자에게 잠깐 시험해 보는 도구가 아니라, 길고 반복적인 디자인 작업 도구였습니다. 이서님이 체감한 '실제 사용'은 바로 이런 세션에서 가장 또렷하게 드러났습니다.",
+        "Figma 인플루언서로 활동하며 여러 채널을 운영하는 이서님에게, Friends of Figma Seoul을 포함한 카카오톡 오픈채팅방과 여러 채널에서 다양한 질문이 들어오기 시작했습니다. 사용자가 늘면서 질문의 결도 달라졌습니다.",
+        "처음에는 신기해하는 반응이 많았습니다. 시간이 지나면서 설치 방법, 비용, 실제 활용법을 묻는 질문이 늘었습니다.",
+        "정확한 이유를 단정할 수는 없습니다. 다만 AI나 MCP를 신기하지만 나와는 거리가 있는 일로 느끼던 시기는 빠르게 지나간 듯했습니다. 불과 1년 사이 많은 디자이너에게 이것은 업무에 바로 써야 할 도구가 됐고, 질문 사이에서는 급하게 배우고 써야 한다는 FOMO도 느껴졌습니다.",
+        "서로 다른 사용자와 운영체제, MCP 클라이언트, 네트워크 환경에서도 계속 믿고 쓸 수 있게 만들 수 있는가?",
+        "사용자가 말하는 \"안 된다\"의 원인은 모두 달랐습니다. 서버나 포트, 플러그인의 채널, MCP 클라이언트 설정, 운영체제 보안 중 어디에서든 연결이 막힐 수 있었습니다. GA4에는 포트 바인드 문제를 만난 활성 사용자 1,539명, 서버 시작 핸들러 중복 1,231명, 요청 시간 초과 1,056명이 기록됐습니다.",
+        "호출 단위의 높은 성공률과 세션 단위의 마찰은 동시에 존재했습니다. GA4에서는 상태가 명시된 호출의 94.1%가 성공했지만, 별도 기간과 계측 방식의 Aptabase release 로그북에서는 MCP 세션 2,376개 중 1,424개(59.9%)에 실패 이벤트가 한 번 이상 남았습니다. 두 수치를 직접 비교할 수는 없습니다. 다만 관측된 MCP 세션 다수에 적어도 한 번의 실패 이벤트가 함께 남았다는 사실은, 호출 단위 성공률만으로 작업 중 마찰을 설명할 수 없다는 점을 보여줍니다.",
+        "이 과정에서 팀은 시작을 쉽게 만드는 것만으로는 충분하지 않다는 점을 확인했습니다. 사용자 수준에 맞는 진단과 복구, 연결 안정성, 지원 운영까지 갖춰야 했습니다. 이는 부가적인 운영 업무가 아니라, 다음에 만들어야 할 제품의 일부였습니다.",
+        "MCP Magic을 운영하며 팀은 언어 지원을 넓히고, 별도의 IDE 없이 로컬 LLM(Google Gemma 4)으로 작업하는 방식도 시험했습니다. 하지만 시간이 갈수록 큰 업데이트를 이어 갈 이유는 약해졌습니다. 사용량이 없어서가 아니라, 제품으로 만든 핵심 경험이 공식 플랫폼 안으로 들어가기 시작했기 때문입니다.",
+        "독립 도구는 플랫폼의 경계가 얇은 곳에서 새 수요를 먼저 발견하곤 합니다. 수요가 충분히 분명해지면 파일, 권한, 디자인 시스템, 배포 기반을 이미 가진 플랫폼은 그 흐름을 더 짧은 경로로 자기 표면 안에 넣을 수 있습니다. 사용자에게는 자연스럽고 반가운 변화입니다. 반면 서드파티에는 기능의 성공과 독립 제품의 지속 가능성이 전혀 다른 문제라는 뜻이기도 합니다.",
+        "이것을 Figma가 MCP Magic을 보고 따라 했다는 이야기로 만들 수는 없습니다. 공식 기능이 사용자 감소를 일으켰다는 인과도 데이터로 증명하지 못합니다. 다만 MCP Magic이 증명한 것은 실제 수요였고, 플랫폼은 그 수요를 더 자연스럽게 풀 수 있는 구조적 위치에 있었습니다.",
+        "박주형님: \"기능이 성공했다고 해서 독립 제품을 오래 운영할 수 있는 건 아니었어요.\"",
+        "팀은 문제를 충분히 일찍 발견해 제품으로 만들었고, 수만 명과 57만 건의 호출로 수요를 증명했습니다. 하지만 그다음에 오래 책임질 진단·복구, 교차 플랫폼 연결, 특정 팀의 깊은 워크플로는 더 빨리 정하지 못했습니다. 단순히 늦어서 밀려난 게 아니라, 다음의 지속 가능한 자리를 늦게 정한 셈이었습니다.",
+        "그래서 MCP Magic은 종료보다 유지보수 모드에 가깝게 두기로 했습니다. 필요한 수정은 이어가되, 지금의 형태로 큰 기능 업데이트를 계속할 이유는 이전보다 작아졌습니다.",
+        "두 운영자의 회고: \"다음번에는 첫 문제를 푼 뒤에 무엇을 만들지 더 빨리 정해야 해요.\"",
+        "돌이켜보면, 시작을 쉽게 만든 뒤 다음에 무엇을 할지 정하는 데 너무 오래 걸렸습니다. 두 운영자가 이 프로젝트를 돌아보며 남긴 메모는 세 가지입니다.",
+        "첫째, 다음 목표를 더 빨리 좁혔어야 했습니다. 설치 도우미로 남을지, 연결 진단과 복구 도구로 갈지, 반복 사용이 많은 Figma 작업을 하나의 워크플로로 묶을지 정하지 못했습니다. 첫 번째 문제가 풀린 뒤에는 새로운 제품 가설이 필요했습니다.",
+        "둘째, 지원의 경계를 분명히 했어야 했습니다. 어디까지가 앱의 책임이고 어디부터가 Figma 플러그인, MCP 클라이언트, 운영체제, AI 비용의 문제인지 더 명확히 했어야 했습니다. 반복되는 \"안 된다\"를 자가 진단과 복구 흐름으로 바꾸는 일도 기능 개발만큼 중요했습니다.",
+        "셋째, 사용 데이터를 다음 가설에 더 일찍 연결했어야 했습니다. 뒤늦게 데이터를 정리하고 나서야 넓은 발견, 호출이 집중된 일부 작업 세션, 높은 호출 성공률과 실패 이벤트가 함께 남은 세션이 동시에 보였습니다. 출시 초기부터 시작, 첫 성공, 반복 사용, 실패 이후의 행동을 나눠 봤다면 업데이트 우선순위도 달라졌을 것입니다.",
+        "MCP Magic은 사용자가 AI로 Figma를 실제로 다루는 지점까지 가는 첫걸음을 줄였습니다. 그 기록에는 텍스트를 만들고, 색을 입히고, 프레임을 만들고, 레이아웃을 다듬은 작업이 남았습니다.",
+        "동시에 마지막 20%에는 진단과 복구, 운영과 지원, 그리고 어디까지 책임질지에 대한 선택이 남았습니다. 공식 플랫폼이 같은 문제를 더 자연스럽게 풀기 시작한 뒤에는 무엇을 만들 수 있느냐보다 무엇을 오래 책임질 수 있느냐가 더 중요한 질문이 됐습니다.",
+        "박주형님과 이서님: \"이건 실패의 기록도, 업데이트를 멈추는 변명도 아니에요. 성공한 기능과 유지보수 모드에 들어간 제품은 함께 존재할 수 있어요.\"",
+        "57만 건의 호출은 박주형님과 진영님이 시작하고 이서님이 함께 확장한 일이 옳은 문제를 풀었다는 증거입니다. 동시에 다음에는 지속 가능한 자리를 더 일찍 정해야 한다는 청구서이기도 합니다."
+      ],
+      "codeBlocks": []
+    }
+  ],
+  "sourceCommit": "ed197c8"
+}

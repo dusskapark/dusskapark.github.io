@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Runs once on first open: verify the package manager installed by mise.
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+
+export PATH="$(mise where npm:pnpm@12.6.0)/bin:$PATH"
+pnpm_version="$(pnpm --version)"
+echo "setup: pnpm ${pnpm_version} ready."

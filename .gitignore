@@ -6,3 +6,12 @@ _temp/
 .DS_Store
 bin/
 *_backup_*/
+node_modules/
+.next/
+.vercel/
+.env*.local
+public/images/
+public/research/
+*.tsbuildinfo
+test-results/
+playwright-report/

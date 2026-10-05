@@ -1,0 +1,112 @@
+{
+  "pointAndEdit": {
+    "priorityPaths": {
+      "prefer": [
+        "src/app/**/*.tsx",
+        "src/components/site/**/*.tsx",
+        "src/components/content-detail.tsx",
+        "src/components/content/**/*.tsx"
+      ],
+      "deprioritize": [
+        "src/components/ui/**/*.tsx",
+        "src/lib/**/*.ts",
+        "src/lib/**/*.tsx"
+      ],
+      "exclude": [
+        "**/*.figma.ts",
+        "**/*.figma.tsx",
+        "**/*.figma.js",
+        "**/*.figma.jsx",
+        "**/*.figma.template.*",
+        "_site/**",
+        ".next/**",
+        "public/**",
+        "content/**",
+        "tests/**",
+        "scripts/**",
+        "src/app/robots.ts",
+        "src/app/sitemap.ts",
+        "src/app/fonts/**"
+      ]
+    },
+    "libraryPaths": {
+      "local": [
+        "src/components/ui/**/*.tsx"
+      ],
+      "external": [
+        "node_modules/radix-ui/**",
+        "node_modules/lucide-react/**"
+      ]
+    },
+    "pathClassification": {
+      "classifier": "sonnet"
+    },
+    "exclusions": [
+      {
+        "glob": "**/*.figma.ts",
+        "reason": "Figma mapping files are not UI source anchors; they describe Figma-to-code mappings and must not be selected as point-and-edit targets."
+      },
+      {
+        "glob": "**/*.figma.tsx",
+        "reason": "Figma mapping files are not UI source anchors; they describe Figma-to-code mappings and must not be selected as point-and-edit targets."
+      },
+      {
+        "glob": "**/*.figma.js",
+        "reason": "Figma mapping files are not UI source anchors; they describe Figma-to-code mappings and must not be selected as point-and-edit targets."
+      },
+      {
+        "glob": "**/*.figma.jsx",
+        "reason": "Figma mapping files are not UI source anchors; they describe Figma-to-code mappings and must not be selected as point-and-edit targets."
+      },
+      {
+        "glob": "**/*.figma.template.*",
+        "reason": "Figma mapping template files are not UI source anchors."
+      },
+      {
+        "glob": "_site/**",
+        "reason": "Jekyll/static build output directory; not source files."
+      },
+      {
+        "glob": ".next/**",
+        "reason": "Next.js build cache and compilation output; not source files."
+      },
+      {
+        "glob": "public/**",
+        "reason": "Static assets (images, fonts, media); not UI source anchors."
+      },
+      {
+        "glob": "content/**",
+        "reason": "MDX content files are data/prose, not UI component source anchors."
+      },
+      {
+        "glob": "tests/**",
+        "reason": "Test files and fixtures are not UI source anchors."
+      },
+      {
+        "glob": "scripts/**",
+        "reason": "Build and migration scripts are not UI source anchors."
+      },
+      {
+        "glob": "src/app/robots.ts",
+        "reason": "Next.js metadata route file with no UI rendering; not a UI source anchor."
+      },
+      {
+        "glob": "src/app/sitemap.ts",
+        "reason": "Next.js sitemap route file with no UI rendering; not a UI source anchor."
+      },
+      {
+        "glob": "src/app/fonts/**",
+        "reason": "Font assets and character data files; not UI source anchors."
+      }
+    ],
+    "generated": {
+      "schemaVersion": 2,
+      "source": "setup-agent.point-and-edit-path-classifier",
+      "prompt": "same-turn-setup-subagent-v5",
+      "model": "claude-sonnet-4-6",
+      "createdAt": "2026-10-04T00:00:00.000Z",
+      "confidence": 0.92,
+      "explanation": "The repository is a well-structured Next.js 16 portfolio with a clear single app root under src/app/ and all UI components split between src/components/site/ (app-specific compositions), src/components/content/ (content-rendering components), src/components/content-detail.tsx (detail page layout), and a small local UI library at src/components/ui/ backed by radix-ui; the source tree is straightforward with no monorepo ambiguity."
+    }
+  }
+}

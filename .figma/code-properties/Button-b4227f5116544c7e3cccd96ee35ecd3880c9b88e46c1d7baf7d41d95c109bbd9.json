@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "componentName": "Button",
+    "filePath": "src/components/ui/button.tsx"
+  },
+  "codeProperties": {
+    "variant": {
+      "type": "string",
+      "name": "Variant",
+      "defaultValue": "default",
+      "options": [
+        "default",
+        "outline",
+        "secondary",
+        "ghost",
+        "link"
+      ],
+      "control": {
+        "type": "select",
+        "labels": {
+          "default": "Default",
+          "outline": "Outline",
+          "secondary": "Secondary",
+          "ghost": "Ghost",
+          "link": "Link"
+        }
+      }
+    },
+    "size": {
+      "type": "string",
+      "name": "Size",
+      "defaultValue": "default",
+      "options": [
+        "default",
+        "sm",
+        "lg",
+        "icon"
+      ],
+      "control": {
+        "type": "select",
+        "labels": {
+          "default": "Default",
+          "sm": "Small",
+          "lg": "Large",
+          "icon": "Icon"
+        }
+      }
+    },
+    "disabled": {
+      "type": "boolean",
+      "name": "Disabled",
+      "defaultValue": false
+    },
+    "asChild": {
+      "type": "boolean",
+      "name": "As Child",
+      "defaultValue": false
+    }
+  }
+}

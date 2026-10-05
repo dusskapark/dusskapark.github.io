@@ -1,0 +1,12 @@
+.git/**
+node_modules/**
+.next/**
+_site/**
+_temp/**
+.direnv/**
+.jekyll-cache/**
+docs/**
+test-results/**
+playwright-report/**
+public/images/**
+public/research/**

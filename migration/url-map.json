@@ -1,0 +1,322 @@
+[
+  {
+    "source": "/project/tstore",
+    "destination": "/project/tstore",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/tstore.html",
+    "destination": "/project/tstore",
+    "status": 308
+  },
+  {
+    "source": "/project/tstore/",
+    "destination": "/project/tstore",
+    "status": 308
+  },
+  {
+    "source": "/project/onestore",
+    "destination": "/project/onestore",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/onestore.html",
+    "destination": "/project/onestore",
+    "status": 308
+  },
+  {
+    "source": "/project/onestore/",
+    "destination": "/project/onestore",
+    "status": 308
+  },
+  {
+    "source": "/project/bobplanet",
+    "destination": "/project/bobplanet",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/bobplanet.html",
+    "destination": "/project/bobplanet",
+    "status": 308
+  },
+  {
+    "source": "/project/bobplanet/",
+    "destination": "/project/bobplanet",
+    "status": 308
+  },
+  {
+    "source": "/project/chatbot",
+    "destination": "/project/chatbot",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/chatbot.html",
+    "destination": "/project/chatbot",
+    "status": 308
+  },
+  {
+    "source": "/project/chatbot/",
+    "destination": "/project/chatbot",
+    "status": 308
+  },
+  {
+    "source": "/project/gdc",
+    "destination": "/project/gdc",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/gdc.html",
+    "destination": "/project/gdc",
+    "status": 308
+  },
+  {
+    "source": "/project/gdc/",
+    "destination": "/project/gdc",
+    "status": 308
+  },
+  {
+    "source": "/project/orderbook",
+    "destination": "/project/orderbook",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/orderbook.html",
+    "destination": "/project/orderbook",
+    "status": 308
+  },
+  {
+    "source": "/project/orderbook/",
+    "destination": "/project/orderbook",
+    "status": 308
+  },
+  {
+    "source": "/project/lookbook",
+    "destination": "/project/lookbook",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/lookbook.html",
+    "destination": "/project/lookbook",
+    "status": 308
+  },
+  {
+    "source": "/project/lookbook/",
+    "destination": "/project/lookbook",
+    "status": 308
+  },
+  {
+    "source": "/project/lgd-project",
+    "destination": "/project/lgd-project",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/lgd-project.html",
+    "destination": "/project/lgd-project",
+    "status": 308
+  },
+  {
+    "source": "/project/lgd-project/",
+    "destination": "/project/lgd-project",
+    "status": 308
+  },
+  {
+    "source": "/project/liff-project",
+    "destination": "/project/liff-project",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/liff-project.html",
+    "destination": "/project/liff-project",
+    "status": 308
+  },
+  {
+    "source": "/project/liff-project/",
+    "destination": "/project/liff-project",
+    "status": 308
+  },
+  {
+    "source": "/project/ldsg",
+    "destination": "/project/ldsg",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/ldsg.html",
+    "destination": "/project/ldsg",
+    "status": 308
+  },
+  {
+    "source": "/project/ldsg/",
+    "destination": "/project/ldsg",
+    "status": 308
+  },
+  {
+    "source": "/project/tensorflow-js",
+    "destination": "/project/tensorflow-js",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/tensorflow-js.html",
+    "destination": "/project/tensorflow-js",
+    "status": 308
+  },
+  {
+    "source": "/project/tensorflow-js/",
+    "destination": "/project/tensorflow-js",
+    "status": 308
+  },
+  {
+    "source": "/project/naver-now",
+    "destination": "/project/naver-now",
+    "status": 200,
+    "listed": false
+  },
+  {
+    "source": "/project/naver-now.html",
+    "destination": "/project/naver-now",
+    "status": 308
+  },
+  {
+    "source": "/project/naver-now/",
+    "destination": "/project/naver-now",
+    "status": 308
+  },
+  {
+    "source": "/project/figma-autoname",
+    "destination": "/project/figma-autoname",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/figma-autoname.html",
+    "destination": "/project/figma-autoname",
+    "status": 308
+  },
+  {
+    "source": "/project/figma-autoname/",
+    "destination": "/project/figma-autoname",
+    "status": 308
+  },
+  {
+    "source": "/project/klever",
+    "destination": "/project/klever",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/klever.html",
+    "destination": "/project/klever",
+    "status": 308
+  },
+  {
+    "source": "/project/klever/",
+    "destination": "/project/klever",
+    "status": 308
+  },
+  {
+    "source": "/project/form-helper-chrome",
+    "destination": "/project/form-helper-chrome",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/form-helper-chrome.html",
+    "destination": "/project/form-helper-chrome",
+    "status": 308
+  },
+  {
+    "source": "/project/form-helper-chrome/",
+    "destination": "/project/form-helper-chrome",
+    "status": 308
+  },
+  {
+    "source": "/project/talk-to-figma-mcp",
+    "destination": "/project/talk-to-figma-mcp",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/talk-to-figma-mcp.html",
+    "destination": "/project/talk-to-figma-mcp",
+    "status": 308
+  },
+  {
+    "source": "/project/talk-to-figma-mcp/",
+    "destination": "/project/talk-to-figma-mcp",
+    "status": 308
+  },
+  {
+    "source": "/project/how-far-can-a-product-designer-build-with-codex",
+    "destination": "/project/how-far-can-a-product-designer-build-with-codex",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/project/how-far-can-a-product-designer-build-with-codex.html",
+    "destination": "/project/how-far-can-a-product-designer-build-with-codex",
+    "status": 308
+  },
+  {
+    "source": "/project/how-far-can-a-product-designer-build-with-codex/",
+    "destination": "/project/how-far-can-a-product-designer-build-with-codex",
+    "status": 308
+  },
+  {
+    "source": "/blog/machine-learning-for-design-systems",
+    "destination": "/blog/machine-learning-for-design-systems",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/blog/machine-learning-for-design-systems.html",
+    "destination": "/blog/machine-learning-for-design-systems",
+    "status": 308
+  },
+  {
+    "source": "/blog/machine-learning-for-design-systems/",
+    "destination": "/blog/machine-learning-for-design-systems",
+    "status": 308
+  },
+  {
+    "source": "/blog/mcp-magic-retrospective-en",
+    "destination": "/blog/mcp-magic-retrospective-en",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/blog/mcp-magic-retrospective-en.html",
+    "destination": "/blog/mcp-magic-retrospective-en",
+    "status": 308
+  },
+  {
+    "source": "/blog/mcp-magic-retrospective-en/",
+    "destination": "/blog/mcp-magic-retrospective-en",
+    "status": 308
+  },
+  {
+    "source": "/blog/mcp-magic-retrospective",
+    "destination": "/blog/mcp-magic-retrospective",
+    "status": 200,
+    "listed": true
+  },
+  {
+    "source": "/blog/mcp-magic-retrospective.html",
+    "destination": "/blog/mcp-magic-retrospective",
+    "status": 308
+  },
+  {
+    "source": "/blog/mcp-magic-retrospective/",
+    "destination": "/blog/mcp-magic-retrospective",
+    "status": 308
+  }
+]

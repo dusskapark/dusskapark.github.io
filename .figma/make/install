@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Installs all project dependencies. Runs on every project open.
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+
+export PATH="$(mise where npm:pnpm@12.6.0)/bin:$PATH"
+pnpm install --frozen-lockfile
+echo "install: dependencies ready."

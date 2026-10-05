@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Starts the Next.js dev server. Stays running for the whole session.
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+
+export PATH="$(mise where npm:pnpm@12.6.0)/bin:$PATH"
+pnpm prepare:assets
+exec node node_modules/next/dist/bin/next dev --hostname 0.0.0.0 --port "$PORT"

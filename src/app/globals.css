@@ -598,6 +598,29 @@ a:hover > .round-button {
   color: var(--muted-foreground);
 }
 
+/* About page — hero with a drifting Magic UI particle backdrop. */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+}
+.about-hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.about-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+/* About intro without the (duplicated) portrait: single readable column. */
+.about-section-solo {
+  display: block;
+  padding-top: 24px;
+}
+.about-section-solo .about-copy > p:not(.section-kicker) {
+  max-width: 640px;
+}
+
 /* About page — extended sections (facts, focus areas, links). */
 .about-facts {
   padding-top: 24px;

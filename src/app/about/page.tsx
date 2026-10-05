@@ -1,5 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { AboutSection, ContactSection } from "@/components/site";
+import { LineShadowText } from "@/components/ui/line-shadow-text";
+import { Particles } from "@/components/ui/particles";
 import { getGithubProfile } from "@/lib/github";
 import { pageMetadata } from "@/lib/metadata";
 import { site, social } from "@/lib/site";
@@ -37,16 +39,28 @@ export default async function AboutPage() {
 
   return (
     <main id="main">
-      <header className="page-shell page-heading">
-        <p className="section-kicker">About</p>
-        <h1>
-          A designer.
-          <br />A builder.
-          <br />
-          Always curious.
-        </h1>
+      <header className="page-shell page-heading about-hero">
+        <Particles
+          className="about-hero-particles"
+          quantity={60}
+          ease={70}
+          size={0.6}
+          staticity={40}
+          color="#656f45"
+          refresh
+        />
+        <div className="about-hero-inner">
+          <p className="section-kicker">About</p>
+          <h1>
+            A designer.
+            <br />A{" "}
+            <LineShadowText shadowColor="var(--ring)">builder</LineShadowText>.
+            <br />
+            Always curious.
+          </h1>
+        </div>
       </header>
-      <AboutSection full />
+      <AboutSection full showPortrait={false} />
 
       <section
         className="page-shell about-facts"

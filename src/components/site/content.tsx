@@ -47,11 +47,19 @@ export function Hero() {
   );
 }
 
-export function AboutSection({ full = false }: { full?: boolean }) {
+export function AboutSection({
+  full = false,
+  showPortrait = true,
+}: {
+  full?: boolean;
+  showPortrait?: boolean;
+}) {
   return (
     <section
       id="about"
-      className={`about-section${full ? " about-section-full" : ""}`}
+      className={`about-section${full ? " about-section-full" : ""}${
+        showPortrait ? "" : " about-section-solo"
+      }`}
       aria-labelledby="about-heading"
     >
       <div className="about-copy">
@@ -83,21 +91,23 @@ export function AboutSection({ full = false }: { full?: boolean }) {
           ) : null}
         </div>
       </div>
-      <div className="about-portrait-wrap">
-        <PortraitMotion>
-          <Image
-            src="/images/profile.png"
-            alt="JooHyung Park"
-            width={720}
-            height={961}
-            sizes="(max-width: 767px) 90vw, 38vw"
-            className="about-portrait"
-          />
-        </PortraitMotion>
-        <span className="portrait-caption">
-          JooHyung Park <span>Designer &amp; product builder</span>
-        </span>
-      </div>
+      {showPortrait ? (
+        <div className="about-portrait-wrap">
+          <PortraitMotion>
+            <Image
+              src="/images/profile.png"
+              alt="JooHyung Park"
+              width={720}
+              height={961}
+              sizes="(max-width: 767px) 90vw, 38vw"
+              className="about-portrait"
+            />
+          </PortraitMotion>
+          <span className="portrait-caption">
+            JooHyung Park <span>Designer &amp; product builder</span>
+          </span>
+        </div>
+      ) : null}
     </section>
   );
 }

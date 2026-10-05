@@ -204,7 +204,6 @@ export function ProjectCard({
         <div className="project-card-body">
           <div className="project-card-meta">
             <span>{entry.subtitle || "Selected project"}</span>
-            <time dateTime={entry.date}>{entry.date.slice(0, 4)}</time>
           </div>
           <Heading>{entry.title}</Heading>
         </div>

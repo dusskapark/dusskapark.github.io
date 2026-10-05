@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { AboutSection, ContactSection } from "@/components/site";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
@@ -50,14 +51,26 @@ export default async function AboutPage() {
           refresh
         />
         <div className="about-hero-inner">
-          <p className="section-kicker">About</p>
-          <h1>
-            A designer.
-            <br />A{" "}
-            <LineShadowText shadowColor="var(--ring)">builder</LineShadowText>.
-            <br />
-            Always curious.
-          </h1>
+          <div className="about-hero-copy">
+            <p className="section-kicker">About</p>
+            <h1>
+              A designer.
+              <br />A{" "}
+              <LineShadowText shadowColor="var(--ring)">builder</LineShadowText>
+              .
+              <br />
+              Always curious.
+            </h1>
+          </div>
+          <div className="about-hero-portrait">
+            <Image
+              src="/images/profile.png"
+              alt="JooHyung Park"
+              fill
+              sizes="(max-width: 767px) 72vw, 360px"
+              priority
+            />
+          </div>
         </div>
       </header>
       <AboutSection full showPortrait={false} />

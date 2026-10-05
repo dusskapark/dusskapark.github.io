@@ -611,6 +611,57 @@ a:hover > .round-button {
 .about-hero-inner {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(40px, 7vw, 110px);
+  align-items: center;
+}
+.about-hero-inner h1 {
+  font-size: clamp(42px, 5.6vw, 88px);
+}
+/* Portrait, but given a distinct arch frame + olive tint so it reads as its own
+   visual — not a repeat of the home page's About portrait. */
+.about-hero-portrait {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 999px 999px 20px 20px;
+  overflow: hidden;
+  border: 1px solid var(--ring);
+  box-shadow: 0 34px 70px -34px rgba(101, 111, 69, 0.55);
+  animation: about-portrait-float 7s ease-in-out infinite;
+}
+.about-hero-portrait img {
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(0.25) contrast(1.03);
+}
+.about-hero-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(101, 111, 69, 0) 38%,
+    rgba(101, 111, 69, 0.32)
+  );
+  mix-blend-mode: multiply;
+}
+@keyframes about-portrait-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-hero-portrait {
+    animation: none;
+  }
 }
 /* About intro without the (duplicated) portrait: single readable column. */
 .about-section-solo {
@@ -1497,6 +1548,14 @@ a:hover > .round-button {
   .section-heading > p {
     margin: 0;
     font-size: 15px;
+  }
+  .about-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-hero-portrait {
+    max-width: 260px;
+    margin: 0 auto;
   }
   .about-section {
     margin-top: 18px;

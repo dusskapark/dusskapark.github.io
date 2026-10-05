@@ -573,15 +573,36 @@ a:hover > .round-button {
   color: var(--muted-foreground);
 }
 
-/* Intro — the anchor cell, inverted for emphasis */
+/* Intro — the anchor cell, inverted for emphasis. Holds the copy and the
+   "What I work on" beams side by side as one unit. */
 .bento-intro {
-  grid-column: span 2;
+  grid-column: span 3;
   grid-row: span 2;
-  justify-content: space-between;
-  gap: 18px;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 34px;
   padding: 38px;
   background: var(--foreground);
   color: var(--background);
+}
+.bento-intro-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  flex: 1.4;
+  min-width: 0;
+}
+.bento-intro-focus {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 260px;
+  padding-left: 34px;
+  border-left: 1px solid rgba(250, 249, 246, 0.14);
+}
+.bento-intro-focus .bento-label {
+  color: rgba(250, 249, 246, 0.55);
 }
 .bento-eyebrow {
   margin: 0;
@@ -614,11 +635,6 @@ a:hover > .round-button {
 }
 
 /* Focus areas */
-.bento-focus {
-  grid-column: span 1;
-  grid-row: span 2;
-  overflow: hidden;
-}
 .focus-beams {
   position: relative;
   flex: 1;
@@ -689,6 +705,23 @@ a:hover > .round-button {
 .focus-beams-nodes {
   position: relative;
   z-index: 1;
+}
+/* Dark variant — beams sitting on the inverted intro card */
+.focus-beams-dark .focus-beams-hub {
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+.focus-beams-dark .focus-beams-node {
+  background: rgba(250, 249, 246, 0.05);
+  border-color: rgba(250, 249, 246, 0.16);
+}
+.focus-beams-dark .focus-beams-text {
+  color: var(--background);
+}
+.focus-beams-dark .focus-beams-icon {
+  background: rgba(220, 231, 173, 0.16);
+  color: #cdd8a2;
 }
 
 /* Portrait */
@@ -790,12 +823,18 @@ a:hover > .round-button {
   .bento-intro {
     grid-column: span 2;
     grid-row: span 1;
+    flex-direction: column;
+    gap: 28px;
   }
-  .bento-focus,
+  .bento-intro-focus {
+    border-left: none;
+    border-top: 1px solid rgba(250, 249, 246, 0.14);
+    padding-left: 0;
+    padding-top: 26px;
+  }
   .bento-portrait {
+    grid-column: span 2;
     grid-row: span 1;
-  }
-  .bento-portrait {
     min-height: 240px;
   }
 }
@@ -804,7 +843,6 @@ a:hover > .round-button {
     grid-template-columns: 1fr;
   }
   .bento-intro,
-  .bento-focus,
   .bento-portrait,
   .bento-stat,
   .bento-links {

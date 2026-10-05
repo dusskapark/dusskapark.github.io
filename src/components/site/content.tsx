@@ -75,24 +75,25 @@ export function AboutSection() {
 
       <BentoGrid>
         <BentoCard className="bento-intro">
-          <p className="bento-eyebrow">Hey, I’m Joo 👋</p>
-          <p className="bento-lead">
-            I turn complex systems into usable tools — design systems, internal
-            platforms, and AI-powered workflows.
-          </p>
-          <p className="bento-sub">
-            I also lead Friends of Figma Seoul, exploring the edge between
-            design, code, and AI.
-          </p>
-          <Link className="pill-link pill-link-dark" href="/#contact">
-            Get in touch
-            <ArrowUpRight size={18} aria-hidden="true" />
-          </Link>
-        </BentoCard>
-
-        <BentoCard className="bento-focus">
-          <p className="bento-label">What I work on</p>
-          <FocusBeams />
+          <div className="bento-intro-copy">
+            <p className="bento-eyebrow">Hey Jude 👋</p>
+            <p className="bento-lead">
+              I turn complex systems into usable tools — design systems,
+              internal platforms, and AI-powered workflows.
+            </p>
+            <p className="bento-sub">
+              I also lead Friends of Figma Seoul, exploring the edge between
+              design, code, and AI.
+            </p>
+            <Link className="pill-link pill-link-dark" href="/#contact">
+              Get in touch
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="bento-intro-focus">
+            <p className="bento-label">What I work on</p>
+            <FocusBeams tone="dark" />
+          </div>
         </BentoCard>
 
         <div className="bento-card bento-portrait">

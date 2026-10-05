@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { BrainCircuit, Code2, Component, Server } from "lucide-react";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
+import { cn } from "@/lib/utils";
 
 const NODES = [
   { label: "AI / ML", Icon: BrainCircuit },
@@ -11,7 +12,8 @@ const NODES = [
   { label: "Infrastructure", Icon: Server },
 ];
 
-export function FocusBeams() {
+export function FocusBeams({ tone = "light" }: { tone?: "light" | "dark" }) {
+  const dark = tone === "dark";
   const containerRef = useRef<HTMLDivElement>(null);
   const hubRef = useRef<HTMLDivElement>(null);
   const nodeRefs = [
@@ -22,7 +24,10 @@ export function FocusBeams() {
   ];
 
   return (
-    <div className="focus-beams" ref={containerRef}>
+    <div
+      className={cn("focus-beams", dark && "focus-beams-dark")}
+      ref={containerRef}
+    >
       <div className="focus-beams-hub" ref={hubRef} aria-hidden="true">
         <span className="tiny-asterisk">✳</span>
       </div>
@@ -48,7 +53,10 @@ export function FocusBeams() {
           delay={index * 0.4}
           curvature={0}
           pathWidth={1.6}
-          pathOpacity={0.25}
+          pathOpacity={dark ? 0.4 : 0.25}
+          pathColor={dark ? "rgba(250, 249, 246, 0.22)" : undefined}
+          gradientStartColor={dark ? "#9aa868" : undefined}
+          gradientStopColor={dark ? "#dce7ad" : undefined}
         />
       ))}
     </div>

@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
 import type { ContentEntry } from "@/lib/content";
-import { getGithubProfile } from "@/lib/github";
 import { social } from "@/lib/site";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { Marquee } from "@/components/ui/marquee";
+import { FocusBeams } from "@/components/site/focus-beams";
 
 export function Hero() {
   return (
@@ -51,15 +51,7 @@ export function Hero() {
   );
 }
 
-const FOCUS_AREAS = [
-  "AI / ML products",
-  "Developer experience",
-  "Design systems",
-  "Tech infrastructure",
-];
-
-export async function AboutSection() {
-  const github = await getGithubProfile();
+export function AboutSection() {
   return (
     <section
       id="about"
@@ -100,11 +92,7 @@ export async function AboutSection() {
 
         <BentoCard className="bento-focus">
           <p className="bento-label">What I work on</p>
-          <ul className="bento-focus-list">
-            {FOCUS_AREAS.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <FocusBeams />
         </BentoCard>
 
         <div className="bento-card bento-portrait">
@@ -130,39 +118,28 @@ export async function AboutSection() {
           <p className="bento-stat-sub">Leading Friends of Figma Seoul</p>
         </BentoCard>
 
-        <a
-          className="bento-card bento-link"
-          href={github?.url ?? social.github}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span className="bento-link-top">
-            <span className="bento-label">GitHub</span>
-            <ArrowUpRight size={20} aria-hidden="true" />
-          </span>
-          <span className="bento-link-detail">
-            {github
-              ? `${github.repos} public repos · in the open since ${github.since}`
-              : "Open-source Figma & AI tooling"}
-          </span>
-          <span className="bento-link-handle">@dusskapark</span>
-        </a>
-
-        <a
-          className="bento-card bento-link"
-          href={social.linkedin}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span className="bento-link-top">
-            <span className="bento-label">LinkedIn</span>
-            <ArrowUpRight size={20} aria-hidden="true" />
-          </span>
-          <span className="bento-link-detail">
-            The full career story — roles, teams, and products.
-          </span>
-          <span className="bento-link-handle">in/dusskapark</span>
-        </a>
+        <div className="bento-card bento-links">
+          <a
+            className="bento-links-row"
+            href={social.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="bento-links-name">GitHub</span>
+            <span className="bento-links-handle">@dusskapark</span>
+            <ArrowUpRight size={18} aria-hidden="true" />
+          </a>
+          <a
+            className="bento-links-row"
+            href={social.linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="bento-links-name">LinkedIn</span>
+            <span className="bento-links-handle">in/dusskapark</span>
+            <ArrowUpRight size={18} aria-hidden="true" />
+          </a>
+        </div>
       </BentoGrid>
     </section>
   );

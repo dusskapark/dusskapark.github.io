@@ -617,23 +617,78 @@ a:hover > .round-button {
 .bento-focus {
   grid-column: span 1;
   grid-row: span 2;
+  overflow: hidden;
 }
-.bento-focus-list {
+.focus-beams {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 230px;
+}
+.focus-beams-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--foreground);
+  color: var(--background);
+  box-shadow: 0 10px 24px rgba(32, 33, 31, 0.18);
+}
+.focus-beams-hub .tiny-asterisk {
+  font-size: 20px;
+}
+.focus-beams-nodes {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
 }
-.bento-focus-list li {
-  padding: 15px 0;
-  font-size: 17px;
+.focus-beams-node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 13px 7px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+}
+.focus-beams-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ring) 14%, var(--card));
+  color: var(--ring);
+}
+.focus-beams-text {
+  font-size: 13px;
   letter-spacing: -0.02em;
-  border-top: 1px solid var(--border);
+  white-space: nowrap;
 }
-.bento-focus-list li:first-child {
-  border-top: none;
-  padding-top: 0;
+.beam-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.focus-beams-hub,
+.focus-beams-nodes {
+  position: relative;
+  z-index: 1;
 }
 
 /* Portrait */
@@ -681,46 +736,51 @@ a:hover > .round-button {
   line-height: 1.5;
 }
 
-/* Link cells (GitHub / LinkedIn) */
-.bento-link {
-  gap: 14px;
-  text-decoration: none;
-  color: inherit;
+/* Link cells (GitHub / LinkedIn) — one outline card, both rows lift together */
+.bento-links {
+  grid-column: span 2;
+  padding: 0;
+  gap: 0;
 }
-.bento-link:hover {
+.bento-links:hover {
   border-color: var(--foreground);
   transform: translateY(-3px);
   box-shadow: 0 18px 40px -28px rgba(32, 33, 31, 0.5);
 }
-.bento-link-top {
+.bento-links-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
+  flex: 1;
+  padding: 0 26px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
 }
-.bento-link-top .bento-label {
-  margin: 0;
+.bento-links-row + .bento-links-row {
+  border-top: 1px solid var(--border);
+}
+.bento-links-row:hover {
+  background: color-mix(in srgb, var(--foreground) 4%, transparent);
+}
+.bento-links-name {
   font-size: 18px;
-  text-transform: none;
   letter-spacing: -0.02em;
-  color: var(--foreground);
 }
-.bento-link-top svg {
-  transition: transform 0.2s;
+.bento-links-handle {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--muted-foreground);
 }
-.bento-link:hover .bento-link-top svg {
+.bento-links-row svg {
+  color: var(--muted-foreground);
+  transition:
+    transform 0.2s,
+    color 0.2s;
+}
+.bento-links-row:hover svg {
   transform: translate(2px, -2px);
-}
-.bento-link-detail {
-  font-size: 14px;
-  line-height: 1.55;
-  color: var(--muted-foreground);
-}
-.bento-link-handle {
-  margin-top: auto;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted-foreground);
+  color: var(--foreground);
 }
 
 @media (max-width: 1023px) {
@@ -747,9 +807,12 @@ a:hover > .round-button {
   .bento-focus,
   .bento-portrait,
   .bento-stat,
-  .bento-link {
+  .bento-links {
     grid-column: span 1;
     grid-row: auto;
+  }
+  .bento-links-row {
+    padding: 18px 24px;
   }
   .bento-portrait {
     min-height: 320px;

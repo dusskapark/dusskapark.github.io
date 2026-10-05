@@ -3,8 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
 import type { ContentEntry } from "@/lib/content";
-import { CarouselFrame, PortraitMotion } from "./motion";
+import { getGithubProfile } from "@/lib/github";
+import { social } from "@/lib/site";
+import { CarouselFrame } from "./motion";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
+import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 
 export function Hero() {
   return (
@@ -48,71 +51,119 @@ export function Hero() {
   );
 }
 
-export function AboutSection({
-  full = false,
-  showPortrait = true,
-}: {
-  full?: boolean;
-  showPortrait?: boolean;
-}) {
+const FOCUS_AREAS = [
+  "AI / ML products",
+  "Developer experience",
+  "Design systems",
+  "Tech infrastructure",
+];
+
+export async function AboutSection() {
+  const github = await getGithubProfile();
   return (
     <section
       id="about"
-      className={`about-section${full ? " about-section-full" : ""}${
-        showPortrait ? "" : " about-section-solo"
-      }`}
+      className="page-shell about-bento"
       aria-labelledby="about-heading"
     >
-      <div className="about-copy">
-        <p className="section-kicker">A little about me</p>
-        <h2 id="about-heading">
-          Complex systems.
-          <br />
-          <span className="muted-heading">Usable tools.</span>
-        </h2>
-        <p className="about-lead">
-          I turn complex systems into usable tools, from design systems and
-          internal platforms to AI-powered workflows.
-        </p>
+      <div className="section-heading">
+        <div>
+          <p className="section-kicker">A little about me</p>
+          <h2 id="about-heading">
+            Complex systems.
+            <br />
+            <span className="muted-heading">Usable tools.</span>
+          </h2>
+        </div>
         <p>
-          I also lead Friends of Figma Seoul, helping designers explore the edge
-          between design, code, and AI.
+          A snapshot of who I am, what I work on, and where to find me — the
+          short version.
         </p>
-        <p>I’d love to learn about your team and see how I can help.</p>
-        <div className="about-links">
+      </div>
+
+      <BentoGrid>
+        <BentoCard className="bento-intro">
+          <p className="bento-eyebrow">Hey, I’m Joo 👋</p>
+          <p className="bento-lead">
+            I turn complex systems into usable tools — design systems, internal
+            platforms, and AI-powered workflows.
+          </p>
+          <p className="bento-sub">
+            I also lead Friends of Figma Seoul, exploring the edge between
+            design, code, and AI.
+          </p>
           <Link className="pill-link pill-link-dark" href="/#contact">
             Get in touch
             <ArrowUpRight size={18} aria-hidden="true" />
           </Link>
-          {!full ? (
-            <Link
-              className="text-link"
-              href="/about"
-              transitionTypes={["nav-forward"]}
-            >
-              More about me
-              <ArrowUpRight size={18} aria-hidden="true" />
-            </Link>
-          ) : null}
+        </BentoCard>
+
+        <BentoCard className="bento-focus">
+          <p className="bento-label">What I work on</p>
+          <ul className="bento-focus-list">
+            {FOCUS_AREAS.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </BentoCard>
+
+        <div className="bento-card bento-portrait">
+          <Image
+            src="/images/profile.png"
+            alt="JooHyung Park"
+            fill
+            sizes="(max-width: 767px) 90vw, 25vw"
+            className="bento-portrait-image"
+          />
+          <span className="bento-portrait-caption">JooHyung Park</span>
         </div>
-      </div>
-      {showPortrait ? (
-        <div className="about-portrait-wrap">
-          <PortraitMotion>
-            <Image
-              src="/images/profile.png"
-              alt="JooHyung Park"
-              width={720}
-              height={961}
-              sizes="(max-width: 767px) 90vw, 38vw"
-              className="about-portrait"
-            />
-          </PortraitMotion>
-          <span className="portrait-caption">
-            JooHyung Park <span>Designer &amp; product builder</span>
+
+        <BentoCard className="bento-stat">
+          <p className="bento-label">Now</p>
+          <p className="bento-stat-value">Product designer at Grab</p>
+          <p className="bento-stat-sub">Based in Singapore</p>
+        </BentoCard>
+
+        <BentoCard className="bento-stat">
+          <p className="bento-label">Building since</p>
+          <p className="bento-stat-value">2012</p>
+          <p className="bento-stat-sub">Leading Friends of Figma Seoul</p>
+        </BentoCard>
+
+        <a
+          className="bento-card bento-link"
+          href={github?.url ?? social.github}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="bento-link-top">
+            <span className="bento-label">GitHub</span>
+            <ArrowUpRight size={20} aria-hidden="true" />
           </span>
-        </div>
-      ) : null}
+          <span className="bento-link-detail">
+            {github
+              ? `${github.repos} public repos · in the open since ${github.since}`
+              : "Open-source Figma & AI tooling"}
+          </span>
+          <span className="bento-link-handle">@dusskapark</span>
+        </a>
+
+        <a
+          className="bento-card bento-link"
+          href={social.linkedin}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="bento-link-top">
+            <span className="bento-label">LinkedIn</span>
+            <ArrowUpRight size={20} aria-hidden="true" />
+          </span>
+          <span className="bento-link-detail">
+            The full career story — roles, teams, and products.
+          </span>
+          <span className="bento-link-handle">in/dusskapark</span>
+        </a>
+      </BentoGrid>
     </section>
   );
 }
@@ -269,7 +320,7 @@ export function SiteFooter() {
         <nav aria-label="Footer navigation">
           <Link href="/projects">Projects</Link>
           <Link href="/blog">Writing</Link>
-          <Link href="/about">About</Link>
+          <Link href="/#about">About</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
         <a className="footer-back-top" href="#top">

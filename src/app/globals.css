@@ -530,258 +530,230 @@ a:hover > .round-button {
   background: #43463b;
 }
 
-.about-section {
-  max-width: var(--page-width);
-  margin: 38px auto 0;
-  padding: 92px var(--page-gutter);
-  display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: clamp(48px, 9vw, 145px);
-  align-items: center;
-}
-.about-section-full {
-  padding-top: 12px;
-}
-.about-copy h2 {
-  margin: 0 0 32px;
-  font-size: clamp(40px, 4.9vw, 70px);
-  font-weight: 450;
-  line-height: 1.04;
-  letter-spacing: -0.055em;
+/* =========================================================================
+   Home "About me" — bento grid (a compact profile mosaic)
+   ========================================================================= */
+.about-bento {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .muted-heading {
   color: #74796c;
 }
-.about-copy > p:not(.section-kicker) {
+.about-bento .section-heading p {
   color: var(--muted-foreground);
-  max-width: 520px;
-  margin: 0 0 20px;
-  font-size: 16px;
-  line-height: 1.75;
+  max-width: 320px;
 }
-.about-copy > .about-lead {
-  color: var(--foreground) !important;
-  font-size: 20px !important;
-  line-height: 1.6 !important;
+.bento-grid {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  gap: 16px;
 }
-.about-links {
+.bento-card {
+  position: relative;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 36px;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card);
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
-.about-portrait-wrap {
-  width: 100%;
-  max-width: 430px;
-  margin-left: auto;
-  padding-top: 18px;
-}
-.portrait-motion {
-  transform: translateY(var(--portrait-shift, 0px));
-}
-.about-portrait {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 720/961;
-  object-fit: contain;
-  border-radius: 5px;
-}
-.portrait-caption {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 36px;
-  font-size: 12px;
-}
-.portrait-caption > span {
+.bento-label {
+  margin: 0 0 14px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
   color: var(--muted-foreground);
 }
 
-/* About page — hero with a drifting Magic UI particle backdrop. */
-.about-hero {
-  position: relative;
-  overflow: hidden;
+/* Intro — the anchor cell, inverted for emphasis */
+.bento-intro {
+  grid-column: span 2;
+  grid-row: span 2;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 38px;
+  background: var(--foreground);
+  color: var(--background);
 }
-.about-hero-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.bento-eyebrow {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
 }
-.about-hero-inner {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(40px, 7vw, 110px);
-  align-items: center;
+.bento-lead {
+  margin: 0;
+  font-size: clamp(26px, 2.6vw, 38px);
+  font-weight: 450;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
 }
-.about-hero-inner h1 {
-  font-size: clamp(42px, 5.6vw, 88px);
+.bento-sub {
+  margin: 0;
+  max-width: 440px;
+  font-size: 15px;
+  line-height: 1.65;
+  opacity: 0.75;
 }
-/* Portrait, but given a distinct arch frame + olive tint so it reads as its own
-   visual — not a repeat of the home page's About portrait. */
-.about-hero-portrait {
-  position: relative;
-  width: 100%;
-  max-width: 360px;
-  margin-left: auto;
-  aspect-ratio: 3 / 4;
-  border-radius: 999px 999px 20px 20px;
-  overflow: hidden;
-  border: 1px solid var(--ring);
-  box-shadow: 0 34px 70px -34px rgba(101, 111, 69, 0.55);
-  animation: about-portrait-float 7s ease-in-out infinite;
+.bento-intro .pill-link {
+  align-self: flex-start;
+  background: var(--background);
+  color: var(--foreground);
+  border-color: var(--background);
 }
-.about-hero-portrait img {
+.bento-intro .pill-link:hover {
+  background: #e7e6df;
+}
+
+/* Focus areas */
+.bento-focus {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.bento-focus-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bento-focus-list li {
+  padding: 15px 0;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  border-top: 1px solid var(--border);
+}
+.bento-focus-list li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Portrait */
+.bento-portrait {
+  grid-column: span 1;
+  grid-row: span 2;
+  padding: 0;
+}
+.bento-portrait-image {
   object-fit: cover;
   object-position: center top;
-  filter: grayscale(0.25) contrast(1.03);
 }
-.about-hero-portrait::after {
+.bento-portrait::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(101, 111, 69, 0) 38%,
-    rgba(101, 111, 69, 0.32)
+    rgba(32, 33, 31, 0) 45%,
+    rgba(32, 33, 31, 0.55)
   );
-  mix-blend-mode: multiply;
 }
-@keyframes about-portrait-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .about-hero-portrait {
-    animation: none;
-  }
-}
-/* About intro without the (duplicated) portrait: single readable column. */
-.about-section-solo {
-  display: block;
-  padding-top: 24px;
-}
-.about-section-solo .about-copy > p:not(.section-kicker) {
-  max-width: 640px;
+.bento-portrait-caption {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  z-index: 1;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: -0.01em;
 }
 
-/* About page — extended sections (facts, focus areas, links). */
-.about-facts {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-.about-facts-grid {
+/* Stat cells */
+.bento-stat-value {
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px;
-  border-top: 1px solid var(--border);
-  padding-top: 40px;
-}
-.about-facts-grid dt {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--muted-foreground);
-  margin-bottom: 12px;
-}
-.about-facts-grid dd {
-  margin: 0;
-  font-size: clamp(19px, 1.7vw, 24px);
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-.about-focus {
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-.about-focus-grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-}
-.about-focus-grid li {
-  background: var(--background);
-  padding: 36px;
-}
-.about-focus-grid h3 {
-  margin: 0 0 14px;
-  font-size: clamp(20px, 2vw, 27px);
-  font-weight: 500;
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 450;
   letter-spacing: -0.03em;
+  line-height: 1.15;
 }
-.about-focus-grid p {
-  margin: 0;
+.bento-stat-sub {
+  margin: 10px 0 0;
+  font-size: 14px;
   color: var(--muted-foreground);
-  font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.5;
 }
-.about-elsewhere {
-  padding-top: 48px;
+
+/* Link cells (GitHub / LinkedIn) */
+.bento-link {
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
 }
-.about-links-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-.about-link-card {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 32px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: var(--card);
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
-}
-.about-link-card:hover {
+.bento-link:hover {
   border-color: var(--foreground);
   transform: translateY(-3px);
+  box-shadow: 0 18px 40px -28px rgba(32, 33, 31, 0.5);
 }
-.about-link-card-top {
+.bento-link-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.about-link-card-name {
-  font-size: clamp(22px, 2.1vw, 29px);
-  font-weight: 500;
-  letter-spacing: -0.03em;
+.bento-link-top .bento-label {
+  margin: 0;
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
 }
-.about-link-card-top svg {
+.bento-link-top svg {
   transition: transform 0.2s;
 }
-.about-link-card:hover .about-link-card-top svg {
+.bento-link:hover .bento-link-top svg {
   transform: translate(2px, -2px);
 }
-.about-link-card-detail {
+.bento-link-detail {
+  font-size: 14px;
+  line-height: 1.55;
   color: var(--muted-foreground);
-  font-size: 15px;
-  line-height: 1.6;
-  max-width: 420px;
 }
-.about-link-card-handle {
+.bento-link-handle {
   margin-top: auto;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--muted-foreground);
+}
+
+@media (max-width: 1023px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bento-intro {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .bento-focus,
+  .bento-portrait {
+    grid-row: span 1;
+  }
+  .bento-portrait {
+    min-height: 240px;
+  }
+}
+@media (max-width: 600px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-intro,
+  .bento-focus,
+  .bento-portrait,
+  .bento-stat,
+  .bento-link {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+  .bento-portrait {
+    min-height: 320px;
+  }
 }
 
 .project-grid {
@@ -1429,16 +1401,6 @@ a:hover > .round-button {
   .hero-title {
     font-size: clamp(76px, 12vw, 124px);
   }
-  .about-section {
-    gap: 48px;
-  }
-  .about-copy > .about-lead {
-    font-size: 18px !important;
-  }
-  .about-facts-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px 28px;
-  }
   .post-card > a {
     grid-template-columns: 120px minmax(0, 1fr) 30px;
     gap: 20px;
@@ -1482,18 +1444,6 @@ a:hover > .round-button {
   .hero-portrait {
     width: 1.2em;
     height: 0.84em;
-  }
-  .about-facts-grid {
-    grid-template-columns: 1fr;
-    gap: 26px;
-  }
-  .about-focus-grid,
-  .about-links-grid {
-    grid-template-columns: 1fr;
-  }
-  .about-focus-grid li,
-  .about-link-card {
-    padding: 28px;
   }
   .hero-bottom {
     flex-direction: column;
@@ -1548,42 +1498,6 @@ a:hover > .round-button {
   .section-heading > p {
     margin: 0;
     font-size: 15px;
-  }
-  .about-hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .about-hero-portrait {
-    max-width: 260px;
-    margin: 0 auto;
-  }
-  .about-section {
-    margin-top: 18px;
-    padding-top: 55px;
-    padding-bottom: 55px;
-    grid-template-columns: 1fr;
-    gap: 46px;
-  }
-  .about-copy h2 {
-    font-size: clamp(42px, 8.5vw, 58px);
-    margin-bottom: 25px;
-  }
-  .about-copy > p:not(.section-kicker) {
-    font-size: 15px;
-  }
-  .about-portrait-wrap {
-    max-width: 380px;
-    margin: 0 auto;
-    width: 85%;
-    padding-top: 0;
-  }
-  .portrait-caption {
-    margin-top: 24px;
-    font-size: 10px;
-  }
-  .about-links {
-    gap: 20px;
-    margin-top: 28px;
   }
   .pill-link {
     padding: 12px 19px;
@@ -1757,9 +1671,6 @@ a:hover > .round-button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-  .portrait-motion {
-    transform: none;
   }
   .reveal-content {
     animation: none;

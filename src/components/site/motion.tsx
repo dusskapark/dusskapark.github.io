@@ -2,63 +2,11 @@
 
 import {
   useCallback,
-  useEffect,
   useRef,
   useSyncExternalStore,
   type ReactNode,
 } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
-/** The server output is fully visible; motion is a progressive enhancement. */
-export function PortraitMotion({ children }: { children: ReactNode }) {
-  const element = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const media = window.matchMedia(
-      "(prefers-reduced-motion: no-preference) and (pointer: fine)",
-    );
-    const target = element.current;
-    if (!target || !media.matches) return;
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const { top, height } = target.getBoundingClientRect();
-      const progress = Math.max(
-        -1,
-        Math.min(
-          1,
-          (top + height / 2 - window.innerHeight / 2) / window.innerHeight,
-        ),
-      );
-      target.style.setProperty("--portrait-shift", `${progress * 20}px`);
-    };
-    const onScroll = () => {
-      if (!frame) frame = window.requestAnimationFrame(update);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const onPreference = () => {
-      if (!media.matches) {
-        window.removeEventListener("scroll", onScroll);
-        target.style.removeProperty("--portrait-shift");
-      } else {
-        window.addEventListener("scroll", onScroll, { passive: true });
-      }
-    };
-    media.addEventListener("change", onPreference);
-    update();
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      media.removeEventListener("change", onPreference);
-      window.cancelAnimationFrame(frame);
-    };
-  }, []);
-
-  return (
-    <div ref={element} className="portrait-motion">
-      {children}
-    </div>
-  );
-}
 
 const subscribeHydration = () => () => {};
 const clientHydrated = () => true;

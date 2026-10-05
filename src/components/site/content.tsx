@@ -198,15 +198,16 @@ export function ProjectCard({
             </span>
           )}
           <span className="project-card-arrow">
-            <ArrowUpRight size={25} aria-hidden="true" />
+            <ArrowUpRight size={22} aria-hidden="true" />
           </span>
         </div>
-        <div className="project-card-meta">
-          <span>{entry.subtitle || "Selected project"}</span>
-          <time dateTime={entry.date}>{entry.date.slice(0, 4)}</time>
+        <div className="project-card-body">
+          <div className="project-card-meta">
+            <span>{entry.subtitle || "Selected project"}</span>
+            <time dateTime={entry.date}>{entry.date.slice(0, 4)}</time>
+          </div>
+          <Heading>{entry.title}</Heading>
         </div>
-        <Heading>{entry.title}</Heading>
-        <p>{entry.description}</p>
       </Link>
     </article>
   );

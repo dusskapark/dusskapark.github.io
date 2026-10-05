@@ -866,15 +866,28 @@ a:hover > .round-button {
   min-width: 0;
 }
 .project-card-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.project-card-link:hover {
+  transform: translateY(-4px);
+  border-color: var(--foreground);
+  box-shadow: 0 22px 46px -30px rgba(32, 33, 31, 0.55);
 }
 .project-card-image {
   width: 100%;
   aspect-ratio: 16/10;
   background: #eeede8;
-  border: 1px solid #00000007;
   position: relative;
-  border-radius: 8px;
   overflow: hidden;
 }
 .project-thumbnail {
@@ -906,41 +919,35 @@ a:hover > .round-button {
   background: var(--foreground);
   color: var(--background);
 }
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 22px 24px;
+}
 .project-card-meta {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin: 22px 0 12px;
+  margin: 0;
   color: var(--muted-foreground);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 .project-card :is(h2, h3) {
-  margin: 0 0 12px;
-  font-size: clamp(22px, 2.1vw, 31px);
+  margin: 0;
+  font-size: clamp(19px, 1.7vw, 24px);
   font-weight: 500;
-  letter-spacing: -0.035em;
-  line-height: 1.2;
+  letter-spacing: -0.03em;
+  line-height: 1.22;
   overflow-wrap: anywhere;
   /* Reserve two lines so single- and double-line titles align across cards. */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  min-height: calc(1.2em * 2);
-  overflow: hidden;
-}
-.project-card p {
-  margin: 0;
-  font-size: 14px;
-  color: var(--muted-foreground);
-  line-height: 1.65;
-  /* Clamp descriptions to a fixed block so every card ends at the same height. */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  min-height: calc(1.65em * 3);
+  min-height: calc(1.22em * 2);
   overflow: hidden;
 }
 .project-card-placeholder {
@@ -1656,16 +1663,12 @@ a:hover > .round-button {
   }
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 42px;
+    gap: 24px;
   }
   .project-card :is(h2, h3) {
-    font-size: 24px;
-  }
-  .project-card p {
-    font-size: 14px;
+    font-size: 21px;
   }
   .project-card-meta {
-    margin-top: 17px;
     font-size: 10px;
   }
   .project-card-arrow {

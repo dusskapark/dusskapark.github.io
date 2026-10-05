@@ -898,11 +898,13 @@ a:hover > .round-button {
   view-transition-name: none !important;
 }
 
-/* The selected-projects showcase: full-bleed, edges faded into the page. */
+/* The selected-projects showcase: two offset rows, full-bleed, edges faded. */
 .projects-marquee {
-  --marquee-duration: 55s;
   margin: 0 calc(-1 * var(--page-gutter));
   padding: 6px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   -webkit-mask-image: linear-gradient(
     90deg,
     transparent,
@@ -917,6 +919,9 @@ a:hover > .round-button {
     #000 93%,
     transparent
   );
+}
+.projects-marquee-row {
+  --marquee-duration: 55s;
 }
 .projects-marquee .project-card {
   flex-shrink: 0;
@@ -1568,7 +1573,7 @@ a:hover > .round-button {
     bottom: 12px;
     right: 12px;
   }
-  .projects-marquee {
+  .projects-marquee-row {
     --marquee-gap: 18px;
   }
   .projects-marquee .project-card {

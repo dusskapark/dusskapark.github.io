@@ -235,12 +235,24 @@ export function ProjectCard({
 }
 
 export function ProjectsMarquee({ entries }: { entries: ContentEntry[] }) {
+  const mid = Math.ceil(entries.length / 2);
+  const rows = [entries.slice(0, mid), entries.slice(mid)];
   return (
-    <Marquee className="projects-marquee" pauseOnHover repeat={3}>
-      {entries.map((entry) => (
-        <ProjectCard key={entry.slug} entry={entry} />
+    <div className="projects-marquee">
+      {rows.map((row, index) => (
+        <Marquee
+          key={index}
+          className="projects-marquee-row"
+          pauseOnHover
+          reverse={index === 1}
+          repeat={3}
+        >
+          {row.map((entry) => (
+            <ProjectCard key={entry.slug} entry={entry} />
+          ))}
+        </Marquee>
       ))}
-    </Marquee>
+    </div>
   );
 }
 

@@ -1,3 +1,4 @@
+import { ViewTransition } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
@@ -84,7 +85,11 @@ export function AboutSection({
             <ArrowUpRight size={18} aria-hidden="true" />
           </Link>
           {!full ? (
-            <Link className="text-link" href="/about">
+            <Link
+              className="text-link"
+              href="/about"
+              transitionTypes={["nav-forward"]}
+            >
               More about me
               <ArrowUpRight size={18} aria-hidden="true" />
             </Link>
@@ -122,16 +127,26 @@ export function ProjectCard({
   const Heading = headingLevel === 2 ? "h2" : "h3";
   return (
     <article className="project-card reveal-content" lang={entry.lang}>
-      <Link href={`/project/${entry.slug}`} className="project-card-link">
+      <Link
+        href={`/project/${entry.slug}`}
+        className="project-card-link"
+        transitionTypes={["nav-forward"]}
+      >
         <div className="project-card-image">
           {entry.hero ? (
-            <Image
-              src={entry.hero}
-              alt=""
-              fill
-              sizes="(max-width: 767px) 90vw, (max-width: 1199px) 45vw, 40vw"
-              className="project-thumbnail"
-            />
+            <ViewTransition
+              name={`media-${entry.kind}-${entry.slug}`}
+              share="morph"
+              default="none"
+            >
+              <Image
+                src={entry.hero}
+                alt=""
+                fill
+                sizes="(max-width: 767px) 90vw, (max-width: 1199px) 45vw, 40vw"
+                className="project-thumbnail"
+              />
+            </ViewTransition>
           ) : (
             <span className="project-card-placeholder" aria-hidden="true">
               {entry.title}
@@ -178,7 +193,7 @@ export function PostCard({
   }).format(new Date(entry.date));
   return (
     <article className="post-card reveal-content" lang={entry.lang}>
-      <Link href={`/blog/${entry.slug}`}>
+      <Link href={`/blog/${entry.slug}`} transitionTypes={["nav-forward"]}>
         <div className="post-card-meta">
           <time dateTime={entry.date}>{date}</time>
           <span>{entry.lang === "ko" ? "한국어" : "English"}</span>
@@ -243,7 +258,10 @@ export function ContactSection() {
 
 export function SiteFooter() {
   return (
-    <footer className="site-footer">
+    <footer
+      className="site-footer"
+      style={{ viewTransitionName: "site-footer" }}
+    >
       <div className="footer-top">
         <Link href="/" className="site-wordmark" aria-label="Joo — home">
           joo.

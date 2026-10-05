@@ -1791,3 +1791,96 @@ a:hover > .round-button {
     text-decoration: underline;
   }
 }
+
+/* =========================================================================
+   View transitions — animated route navigation (React <ViewTransition>)
+   ========================================================================= */
+
+/* Keep the live page clickable while a transition's snapshot overlay is up. */
+::view-transition {
+  pointer-events: none;
+}
+
+/* Directional route slides. Forward = content exits left / enters from right;
+   back reverses it. Old content leaves fast, new content arrives gently. */
+::view-transition-old(.nav-forward) {
+  --slide-offset: -64px;
+  animation:
+    150ms ease-in both vt-fade reverse,
+    420ms ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-forward) {
+  --slide-offset: 64px;
+  animation:
+    220ms ease-out 150ms both vt-fade,
+    420ms ease-in-out both vt-slide;
+}
+::view-transition-old(.nav-back) {
+  --slide-offset: 64px;
+  animation:
+    150ms ease-in both vt-fade reverse,
+    420ms ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-back) {
+  --slide-offset: -64px;
+  animation:
+    220ms ease-out 150ms both vt-fade,
+    420ms ease-in-out both vt-slide;
+}
+@keyframes vt-slide {
+  from {
+    translate: var(--slide-offset);
+  }
+  to {
+    translate: 0;
+  }
+}
+@keyframes vt-fade {
+  from {
+    opacity: 0;
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Shared-element morph: project thumbnail grows into the detail hero image.
+   A mid-flight blur hides pixel interpolation during the size change. */
+::view-transition-group(.morph) {
+  animation-duration: 440ms;
+}
+::view-transition-image-pair(.morph) {
+  animation-name: vt-morph-blur;
+}
+@keyframes vt-morph-blur {
+  40% {
+    filter: blur(4px);
+  }
+}
+
+/* Anchor the header and footer so they stay fixed while content slides. */
+::view-transition-group(site-header),
+::view-transition-group(site-footer) {
+  animation: none;
+  z-index: 50;
+}
+::view-transition-old(site-header),
+::view-transition-old(site-footer) {
+  display: none;
+}
+::view-transition-new(site-header),
+::view-transition-new(site-footer) {
+  animation: none;
+}
+
+/* Honour reduced-motion: swap content with no positional movement. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}

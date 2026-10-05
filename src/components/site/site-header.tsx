@@ -19,8 +19,17 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="site-header" id="top">
-      <Link href="/" className="site-wordmark" aria-label="Joo — home">
+    <header
+      className="site-header"
+      id="top"
+      style={{ viewTransitionName: "site-header" }}
+    >
+      <Link
+        href="/"
+        className="site-wordmark"
+        aria-label="Joo — home"
+        transitionTypes={["nav-back"]}
+      >
         joo<span aria-hidden="true">.</span>
       </Link>
       <span className="header-caption">Design. Build. Make it useful.</span>
@@ -55,6 +64,11 @@ export function SiteHeader() {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   aria-current={pathname === link.href ? "page" : undefined}
+                  transitionTypes={
+                    link.href === "/" || link.href.startsWith("/#")
+                      ? ["nav-back"]
+                      : ["nav-forward"]
+                  }
                   style={{ "--link-index": index } as React.CSSProperties}
                 >
                   <span className="menu-link-number">0{index + 1}</span>

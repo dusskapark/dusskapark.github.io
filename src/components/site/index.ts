@@ -7,5 +7,5 @@ export {
   AboutSection,
   ProjectCard,
   PostCard,
-  ProjectsCarousel,
+  ProjectsMarquee,
 } from "./content";

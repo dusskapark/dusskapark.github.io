@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   Hero,
   AboutSection,
-  ProjectsCarousel,
+  ProjectsMarquee,
   PostCard,
   ContactSection,
   PageTransition,
@@ -46,7 +46,7 @@ export default function Home() {
               All projects <span aria-hidden>↗</span>
             </Link>
           </div>
-          <ProjectsCarousel entries={projects} />
+          <ProjectsMarquee entries={projects} />
         </section>
         <section
           className="page-shell home-writing"

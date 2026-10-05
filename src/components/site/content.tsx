@@ -5,9 +5,9 @@ import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
 import type { ContentEntry } from "@/lib/content";
 import { getGithubProfile } from "@/lib/github";
 import { social } from "@/lib/site";
-import { CarouselFrame } from "./motion";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
+import { Marquee } from "@/components/ui/marquee";
 
 export function Hero() {
   return (
@@ -171,33 +171,49 @@ export async function AboutSection() {
 export function ProjectCard({
   entry,
   headingLevel = 3,
+  decorative = false,
 }: {
   entry: ContentEntry;
   headingLevel?: 2 | 3;
+  /** A marquee clone: hidden from assistive tech, out of the tab order, and
+   * without the shared-element morph (that belongs to the one real card). */
+  decorative?: boolean;
 }) {
   const Heading = headingLevel === 2 ? "h2" : "h3";
+  const thumbnail = entry.hero ? (
+    <Image
+      src={entry.hero}
+      alt=""
+      fill
+      sizes="(max-width: 767px) 90vw, (max-width: 1199px) 45vw, 40vw"
+      className="project-thumbnail"
+    />
+  ) : null;
   return (
-    <article className="project-card reveal-content" lang={entry.lang}>
+    <article
+      className="project-card reveal-content"
+      lang={entry.lang}
+      aria-hidden={decorative || undefined}
+    >
       <Link
         href={`/project/${entry.slug}`}
         className="project-card-link"
         transitionTypes={["nav-forward"]}
+        tabIndex={decorative ? -1 : undefined}
       >
         <div className="project-card-image">
-          {entry.hero ? (
-            <ViewTransition
-              name={`media-${entry.kind}-${entry.slug}`}
-              share="morph"
-              default="none"
-            >
-              <Image
-                src={entry.hero}
-                alt=""
-                fill
-                sizes="(max-width: 767px) 90vw, (max-width: 1199px) 45vw, 40vw"
-                className="project-thumbnail"
-              />
-            </ViewTransition>
+          {thumbnail ? (
+            decorative ? (
+              thumbnail
+            ) : (
+              <ViewTransition
+                name={`media-${entry.kind}-${entry.slug}`}
+                share="morph"
+                default="none"
+              >
+                {thumbnail}
+              </ViewTransition>
+            )
           ) : (
             <span className="project-card-placeholder" aria-hidden="true">
               {entry.title}
@@ -218,13 +234,13 @@ export function ProjectCard({
   );
 }
 
-export function ProjectsCarousel({ entries }: { entries: ContentEntry[] }) {
+export function ProjectsMarquee({ entries }: { entries: ContentEntry[] }) {
   return (
-    <CarouselFrame>
+    <Marquee className="projects-marquee" pauseOnHover repeat={3}>
       {entries.map((entry) => (
         <ProjectCard key={entry.slug} entry={entry} />
       ))}
-    </CarouselFrame>
+    </Marquee>
   );
 }
 

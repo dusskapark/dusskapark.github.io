@@ -2,101 +2,124 @@
   "pointAndEdit": {
     "priorityPaths": {
       "prefer": [
-        "src/app/**/*.tsx",
-        "src/components/site/**/*.tsx",
+        "src/app/**",
+        "src/components/site/**",
         "src/components/content-detail.tsx",
-        "src/components/content/**/*.tsx"
+        "src/components/content/**",
+        "src/components/ui/**"
       ],
       "deprioritize": [
-        "src/components/ui/**/*.tsx",
-        "src/lib/**/*.ts",
-        "src/lib/**/*.tsx"
+        "src/lib/**"
       ],
       "exclude": [
+        "_site/**",
+        ".next/**",
+        "out/**",
+        "node_modules/**",
+        "public/**",
         "**/*.figma.ts",
         "**/*.figma.tsx",
         "**/*.figma.js",
         "**/*.figma.jsx",
         "**/*.figma.template.*",
-        "_site/**",
-        ".next/**",
-        "public/**",
-        "content/**",
-        "tests/**",
-        "scripts/**",
+        "**/*.test.*",
+        "**/*.spec.*",
+        "**/__tests__/**",
+        "**/__mocks__/**",
+        "e2e/**",
+        ".figma/**",
+        ".git/**",
         "src/app/robots.ts",
-        "src/app/sitemap.ts",
-        "src/app/fonts/**"
+        "src/app/sitemap.ts"
       ]
     },
     "libraryPaths": {
-      "local": [
-        "src/components/ui/**/*.tsx"
-      ],
-      "external": [
-        "node_modules/radix-ui/**",
-        "node_modules/lucide-react/**"
-      ]
+      "local": [],
+      "external": []
     },
     "pathClassification": {
       "classifier": "sonnet"
     },
     "exclusions": [
       {
-        "glob": "**/*.figma.ts",
-        "reason": "Figma mapping files are not UI source anchors; they describe Figma-to-code mappings and must not be selected as point-and-edit targets."
-      },
-      {
-        "glob": "**/*.figma.tsx",
-        "reason": "Figma mapping files are not UI source anchors; they describe Figma-to-code mappings and must not be selected as point-and-edit targets."
-      },
-      {
-        "glob": "**/*.figma.js",
-        "reason": "Figma mapping files are not UI source anchors; they describe Figma-to-code mappings and must not be selected as point-and-edit targets."
-      },
-      {
-        "glob": "**/*.figma.jsx",
-        "reason": "Figma mapping files are not UI source anchors; they describe Figma-to-code mappings and must not be selected as point-and-edit targets."
-      },
-      {
-        "glob": "**/*.figma.template.*",
-        "reason": "Figma mapping template files are not UI source anchors."
-      },
-      {
         "glob": "_site/**",
-        "reason": "Jekyll/static build output directory; not source files."
+        "reason": "Legacy Jekyll build output and static assets, not UI source."
       },
       {
         "glob": ".next/**",
-        "reason": "Next.js build cache and compilation output; not source files."
+        "reason": "Next.js build output."
+      },
+      {
+        "glob": "out/**",
+        "reason": "Static export build output."
+      },
+      {
+        "glob": "node_modules/**",
+        "reason": "Third-party dependencies are not source anchors."
       },
       {
         "glob": "public/**",
-        "reason": "Static assets (images, fonts, media); not UI source anchors."
+        "reason": "Static assets, not UI source."
       },
       {
-        "glob": "content/**",
-        "reason": "MDX content files are data/prose, not UI component source anchors."
+        "glob": "**/*.figma.ts",
+        "reason": "Figma mapping files are not source anchors."
       },
       {
-        "glob": "tests/**",
-        "reason": "Test files and fixtures are not UI source anchors."
+        "glob": "**/*.figma.tsx",
+        "reason": "Figma mapping files are not source anchors."
       },
       {
-        "glob": "scripts/**",
-        "reason": "Build and migration scripts are not UI source anchors."
+        "glob": "**/*.figma.js",
+        "reason": "Figma mapping files are not source anchors."
+      },
+      {
+        "glob": "**/*.figma.jsx",
+        "reason": "Figma mapping files are not source anchors."
+      },
+      {
+        "glob": "**/*.figma.template.*",
+        "reason": "Figma mapping templates are not source anchors."
+      },
+      {
+        "glob": "**/*.test.*",
+        "reason": "Tests do not render the active UI."
+      },
+      {
+        "glob": "**/*.spec.*",
+        "reason": "Tests do not render the active UI."
+      },
+      {
+        "glob": "**/__tests__/**",
+        "reason": "Tests do not render the active UI."
+      },
+      {
+        "glob": "**/__tests__/**",
+        "reason": "Tests do not render the active UI."
+      },
+      {
+        "glob": "**/__mocks__/**",
+        "reason": "Mocks do not render the active UI."
+      },
+      {
+        "glob": "e2e/**",
+        "reason": "End-to-end tests are not UI source anchors."
+      },
+      {
+        "glob": ".figma/**",
+        "reason": "Figma tooling configuration."
+      },
+      {
+        "glob": ".git/**",
+        "reason": "Version control internals."
       },
       {
         "glob": "src/app/robots.ts",
-        "reason": "Next.js metadata route file with no UI rendering; not a UI source anchor."
+        "reason": "Non-UI metadata route."
       },
       {
         "glob": "src/app/sitemap.ts",
-        "reason": "Next.js sitemap route file with no UI rendering; not a UI source anchor."
-      },
-      {
-        "glob": "src/app/fonts/**",
-        "reason": "Font assets and character data files; not UI source anchors."
+        "reason": "Non-UI metadata route."
       }
     ],
     "generated": {
@@ -104,9 +127,9 @@
       "source": "setup-agent.point-and-edit-path-classifier",
       "prompt": "same-turn-setup-subagent-v5",
       "model": "claude-sonnet-4-6",
-      "createdAt": "2026-10-04T00:00:00.000Z",
-      "confidence": 0.92,
-      "explanation": "The repository is a well-structured Next.js 16 portfolio with a clear single app root under src/app/ and all UI components split between src/components/site/ (app-specific compositions), src/components/content/ (content-rendering components), src/components/content-detail.tsx (detail page layout), and a small local UI library at src/components/ui/ backed by radix-ui; the source tree is straightforward with no monorepo ambiguity."
+      "createdAt": "2026-10-25T00:00:00Z",
+      "confidence": 0.75,
+      "explanation": "Structure is a clear Next.js app under src/ with app, components, and lib, but I did not open any files, so I found no evidence for a formal local design-system library and left library paths empty."
     }
   }
 }

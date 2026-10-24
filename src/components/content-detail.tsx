@@ -1,25 +1,47 @@
-import { ViewTransition } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { PageTransition } from "@/components/site";
-import type { ContentEntry } from "@/lib/content";
+import type { ContentEntry, ContentHeading } from "@/lib/content";
 import { getAllContent, getContentUrl, getTranslations } from "@/lib/content";
-import { ContentBody, getTableOfContents } from "@/lib/mdx";
+import { mdxComponents } from "@/lib/mdx";
+import { usePageMeta } from "@/lib/use-page-meta";
 import { site } from "@/lib/site";
 import { getMediaDimensions } from "@/lib/media";
 
-export async function ContentDetail({ entry }: { entry: ContentEntry }) {
-  const toc = getTableOfContents(entry);
+export function ContentDetail({ entry }: { entry: ContentEntry }) {
+  usePageMeta(entry.title, entry.description || entry.subtitle || entry.title);
+
+  const proseRef = useRef<HTMLDivElement>(null);
+  const [toc, setToc] = useState<ContentHeading[]>([]);
+
+  // Build the table of contents from the rendered body so anchors always match
+  // the ids rehype-slug assigned to the headings.
+  useEffect(() => {
+    const root = proseRef.current;
+    if (!root) return;
+    const headings = Array.from(
+      root.querySelectorAll<HTMLHeadingElement>("h2[id], h3[id]"),
+    ).map((node) => ({
+      depth: node.tagName === "H2" ? 2 : 3,
+      text: node.textContent || "",
+      id: node.id,
+    }));
+    setToc(headings);
+  }, [entry.slug]);
+
   const heroSize = getMediaDimensions(entry.hero);
   const entries = getAllContent(entry.kind);
   const position = entries.findIndex((item) => item.slug === entry.slug);
   const neighbors =
     position < 0
       ? []
-      : [entries[position - 1], entries[position + 1]].filter(Boolean);
+      : [entries[position - 1], entries[position + 1]].filter(
+          Boolean,
+        ) as ContentEntry[];
   const translated = getTranslations(entry).find(
     (item) => item.lang !== entry.lang,
   );
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": entry.kind === "post" ? "BlogPosting" : "Article",
@@ -33,6 +55,9 @@ export async function ContentDetail({ entry }: { entry: ContentEntry }) {
     ),
     mainEntityOfPage: `${site.url}${getContentUrl(entry)}`,
   };
+
+  const Body = entry.Body;
+
   return (
     <PageTransition>
       <main id="main" className="content-page">
@@ -40,8 +65,7 @@ export async function ContentDetail({ entry }: { entry: ContentEntry }) {
           <header className="page-shell detail-header">
             <Link
               className="text-link"
-              href={entry.kind === "project" ? "/projects" : "/blog"}
-              transitionTypes={["nav-back"]}
+              to={entry.kind === "project" ? "/projects" : "/blog"}
             >
               ← {entry.kind === "project" ? "All projects" : "All writing"}
             </Link>
@@ -75,7 +99,7 @@ export async function ContentDetail({ entry }: { entry: ContentEntry }) {
             {translated && (
               <Link
                 className="text-link"
-                href={getContentUrl(translated)}
+                to={getContentUrl(translated)}
                 hrefLang={translated.lang}
               >
                 {translated.lang === "en"
@@ -102,25 +126,15 @@ export async function ContentDetail({ entry }: { entry: ContentEntry }) {
           </header>
           {entry.hero && (
             <div className="page-shell detail-hero">
-              <ViewTransition
-                name={`media-${entry.kind}-${entry.slug}`}
-                share="morph"
-                default="none"
-              >
-                <Image
-                  src={entry.hero}
-                  width={heroSize?.width || 1600}
-                  height={heroSize?.height || 1000}
-                  alt={entry.title}
-                  sizes="(max-width: 768px) calc(100vw - 48px), 90vw"
-                  className="detail-featured-image"
-                  loading="eager"
-                  fetchPriority="high"
-                  unoptimized={
-                    /^https?:/.test(entry.hero) || /\.gif$/i.test(entry.hero)
-                  }
-                />
-              </ViewTransition>
+              <img
+                src={entry.hero}
+                width={heroSize?.width || 1600}
+                height={heroSize?.height || 1000}
+                alt={entry.title}
+                className="detail-featured-image"
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
           )}
           <div className="detail-body">
@@ -143,8 +157,8 @@ export async function ContentDetail({ entry }: { entry: ContentEntry }) {
                 </details>
               </nav>
             )}
-            <div className="prose content-prose">
-              <ContentBody entry={entry} />
+            <div className="prose content-prose content-body" ref={proseRef}>
+              <Body components={mdxComponents} />
             </div>
           </div>
         </article>
@@ -154,12 +168,7 @@ export async function ContentDetail({ entry }: { entry: ContentEntry }) {
             aria-label="Continue reading"
           >
             {neighbors.map((item) => (
-              <Link
-                className="text-link"
-                href={getContentUrl(item)}
-                key={item.slug}
-                transitionTypes={["nav-forward"]}
-              >
+              <Link className="text-link" to={getContentUrl(item)} key={item.slug}>
                 {item.title} <span aria-hidden>↗</span>
               </Link>
             ))}

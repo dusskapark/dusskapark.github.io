@@ -1,6 +1,4 @@
-import { ViewTransition } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
 import type { ContentEntry } from "@/lib/content";
 import { social } from "@/lib/site";
@@ -22,13 +20,7 @@ export function Hero() {
         <span>A product</span>
         <span className="hero-title-second">
           <span className="hero-portrait">
-            <Image
-              src="/images/profile.png"
-              alt=""
-              fill
-              sizes="(max-width: 700px) 105px, 180px"
-              preload
-            />
+            <img src="/images/profile.png" alt="" loading="eager" />
           </span>
           <LineShadowText shadowColor="var(--ring)">builder</LineShadowText>
           <span className="hero-period">.</span>
@@ -85,7 +77,7 @@ export function AboutSection() {
               I also lead Friends of Figma Seoul, exploring the edge between
               design, code, and AI.
             </p>
-            <Link className="pill-link pill-link-dark" href="/#contact">
+            <Link className="pill-link pill-link-dark" to="/#contact">
               Get in touch
               <ArrowUpRight size={18} aria-hidden="true" />
             </Link>
@@ -97,11 +89,9 @@ export function AboutSection() {
         </BentoCard>
 
         <div className="bento-card bento-portrait">
-          <Image
+          <img
             src="/images/profile.png"
             alt="JooHyung Park"
-            fill
-            sizes="(max-width: 767px) 90vw, 25vw"
             className="bento-portrait-image"
           />
           <span className="bento-portrait-caption">JooHyung Park</span>
@@ -153,20 +143,10 @@ export function ProjectCard({
 }: {
   entry: ContentEntry;
   headingLevel?: 2 | 3;
-  /** A marquee clone: hidden from assistive tech, out of the tab order, and
-   * without the shared-element morph (that belongs to the one real card). */
+  /** A marquee clone: hidden from assistive tech and out of the tab order. */
   decorative?: boolean;
 }) {
   const Heading = headingLevel === 2 ? "h2" : "h3";
-  const thumbnail = entry.hero ? (
-    <Image
-      src={entry.hero}
-      alt=""
-      fill
-      sizes="(max-width: 767px) 90vw, (max-width: 1199px) 45vw, 40vw"
-      className="project-thumbnail"
-    />
-  ) : null;
   return (
     <article
       className="project-card reveal-content"
@@ -174,24 +154,13 @@ export function ProjectCard({
       aria-hidden={decorative || undefined}
     >
       <Link
-        href={`/project/${entry.slug}`}
+        to={`/project/${entry.slug}`}
         className="project-card-link"
-        transitionTypes={["nav-forward"]}
         tabIndex={decorative ? -1 : undefined}
       >
         <div className="project-card-image">
-          {thumbnail ? (
-            decorative ? (
-              thumbnail
-            ) : (
-              <ViewTransition
-                name={`media-${entry.kind}-${entry.slug}`}
-                share="morph"
-                default="none"
-              >
-                {thumbnail}
-              </ViewTransition>
-            )
+          {entry.hero ? (
+            <img className="project-thumbnail" src={entry.hero} alt="" />
           ) : (
             <span className="project-card-placeholder" aria-hidden="true">
               {entry.title}
@@ -250,7 +219,7 @@ export function PostCard({
   }).format(new Date(entry.date));
   return (
     <article className="post-card reveal-content" lang={entry.lang}>
-      <Link href={`/blog/${entry.slug}`} transitionTypes={["nav-forward"]}>
+      <Link to={`/blog/${entry.slug}`}>
         <div className="post-card-meta">
           <time dateTime={entry.date}>{date}</time>
           <span>{entry.lang === "ko" ? "한국어" : "English"}</span>
@@ -315,19 +284,16 @@ export function ContactSection() {
 
 export function SiteFooter() {
   return (
-    <footer
-      className="site-footer"
-      style={{ viewTransitionName: "site-footer" }}
-    >
+    <footer className="site-footer">
       <div className="footer-top">
-        <Link href="/" className="site-wordmark" aria-label="Joo — home">
+        <Link to="/" className="site-wordmark" aria-label="Joo — home">
           joo.
         </Link>
         <nav aria-label="Footer navigation">
-          <Link href="/projects">Projects</Link>
-          <Link href="/blog">Writing</Link>
-          <Link href="/#about">About</Link>
-          <Link href="/#contact">Contact</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/blog">Writing</Link>
+          <Link to="/#about">About</Link>
+          <Link to="/#contact">Contact</Link>
         </nav>
         <a className="footer-back-top" href="#top">
           Back to top

@@ -1,8 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, X } from "lucide-react";
 import { Dialog } from "radix-ui";
 
@@ -16,20 +13,11 @@ const links = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
+  const { pathname } = useLocation();
 
   return (
-    <header
-      className="site-header"
-      id="top"
-      style={{ viewTransitionName: "site-header" }}
-    >
-      <Link
-        href="/"
-        className="site-wordmark"
-        aria-label="Joo — home"
-        transitionTypes={["nav-back"]}
-      >
+    <header className="site-header" id="top">
+      <Link to="/" className="site-wordmark" aria-label="Joo — home">
         joo<span aria-hidden="true">.</span>
       </Link>
       <span className="header-caption">Design. Build. Make it useful.</span>
@@ -61,14 +49,9 @@ export function SiteHeader() {
               {links.map((link, index) => (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setOpen(false)}
                   aria-current={pathname === link.href ? "page" : undefined}
-                  transitionTypes={
-                    link.href === "/" || link.href.startsWith("/#")
-                      ? ["nav-back"]
-                      : ["nav-forward"]
-                  }
                   style={{ "--link-index": index } as React.CSSProperties}
                 >
                   <span className="menu-link-number">0{index + 1}</span>
@@ -102,15 +85,6 @@ export function SiteHeader() {
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
-      <noscript>
-        <nav className="no-js-navigation" aria-label="Main navigation">
-          {links.map((link) => (
-            <Link key={link.href} href={link.href}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      </noscript>
     </header>
   );
 }

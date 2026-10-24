@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import {
   Hero,
   AboutSection,
@@ -8,16 +8,11 @@ import {
   PageTransition,
 } from "@/components/site";
 import { getAllContent } from "@/lib/content";
-import { pageMetadata } from "@/lib/metadata";
+import { usePageMeta } from "@/lib/use-page-meta";
 import { site } from "@/lib/site";
 
-export const metadata = pageMetadata(
-  "Hey, Joo — Product builder",
-  site.description,
-  "/",
-);
-
-export default function Home() {
+export default function HomePage() {
+  usePageMeta(undefined, site.description);
   const projects = getAllContent("project").slice(0, 6);
   const posts = getAllContent("post").slice(0, 3);
   return (
@@ -38,11 +33,7 @@ export default function Home() {
                 real products.
               </h2>
             </div>
-            <Link
-              className="text-link"
-              href="/projects"
-              transitionTypes={["nav-forward"]}
-            >
+            <Link className="text-link" to="/projects">
               All projects <span aria-hidden>↗</span>
             </Link>
           </div>
@@ -61,11 +52,7 @@ export default function Home() {
                 the work.
               </h2>
             </div>
-            <Link
-              className="text-link"
-              href="/blog"
-              transitionTypes={["nav-forward"]}
-            >
+            <Link className="text-link" to="/blog">
               All writing <span aria-hidden>↗</span>
             </Link>
           </div>

@@ -1,12 +1,12 @@
 import { ProjectCard, PageTransition } from "@/components/site";
 import { getAllContent } from "@/lib/content";
-import { pageMetadata } from "@/lib/metadata";
-export const metadata = pageMetadata(
-  "Projects",
-  "Selected work in AI, design systems, developer experience, and product building.",
-  "/projects",
-);
+import { usePageMeta } from "@/lib/use-page-meta";
+
 export default function ProjectsPage() {
+  usePageMeta(
+    "Projects",
+    "Selected work in AI, design systems, developer experience, and product building.",
+  );
   const projects = getAllContent("project");
   return (
     <PageTransition>

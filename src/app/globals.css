@@ -1,6 +1,53 @@
 @import "tailwindcss";
 
+/* Fonts — Bricolage loads from Google Fonts in index.html; Korean ships locally. */
+@font-face {
+  font-family: "Noto Sans KR Content";
+  src: url("/fonts/noto-sans-kr-content.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Route fade — re-runs per navigation (keyed wrapper in PageTransition). */
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.page-transition {
+  animation: page-fade 0.4s ease both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+}
+
+/* next/image "fill" replacement — cover the positioned container. */
+.hero-portrait,
+.bento-portrait,
+.project-card-image {
+  position: relative;
+}
+.hero-portrait img,
+.bento-portrait > img,
+.project-card-image > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 :root {
+  --font-bricolage: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+  --font-noto-sans-kr: "Noto Sans KR Content", "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
   --background: #faf9f6;
   --foreground: #20211f;
   --card: #fff;

@@ -1,30 +1,16 @@
-import { ViewTransition } from "react";
 import type { ReactNode } from "react";
+import { useLocation } from "react-router-dom";
 
 /**
- * Wraps a page's <main> in a React ViewTransition so route changes animate.
- *
- * Navigations tagged via <Link transitionTypes={["nav-forward" | "nav-back"]}>
- * slide directionally (content moves left going deeper, right coming back).
- * Untyped navigations — browser back/forward, in-page hash links — fall through
- * to `default: "none"` and swap instantly, which is the expected behaviour.
+ * Fades each route in on navigation. Keying the wrapper by pathname re-mounts it
+ * per page so the CSS animation re-runs. (Replaces the Next-only React
+ * ViewTransition, which depended on the App Router's navigation hooks.)
  */
 export function PageTransition({ children }: { children: ReactNode }) {
+  const { pathname } = useLocation();
   return (
-    <ViewTransition
-      enter={{
-        "nav-forward": "nav-forward",
-        "nav-back": "nav-back",
-        default: "none",
-      }}
-      exit={{
-        "nav-forward": "nav-forward",
-        "nav-back": "nav-back",
-        default: "none",
-      }}
-      default="none"
-    >
+    <div key={pathname} className="page-transition">
       {children}
-    </ViewTransition>
+    </div>
   );
 }

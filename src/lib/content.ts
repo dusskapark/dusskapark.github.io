@@ -1,10 +1,8 @@
-import fs from "node:fs";
-import path from "node:path";
-import matter from "gray-matter";
-import {
-  contentMetadataSchema,
-  type ContentEntry,
-  type ContentKind,
+import type {
+  ContentEntry,
+  ContentKind,
+  ContentMetadata,
+  MDXBody,
 } from "./content-schema";
 
 export type {
@@ -13,31 +11,26 @@ export type {
   ContentHeading,
 } from "./content-schema";
 
-/** Only repository-authored MDX is loaded. No request-controlled source is evaluated. */
+type MdxModule = { default: MDXBody; frontmatter: ContentMetadata };
+
+// All repository-authored MDX is compiled into the bundle at build time. There is
+// no server read and no request-controlled source — these are static modules.
+const modules = import.meta.glob<MdxModule>("../../content/**/*.mdx", {
+  eager: true,
+});
+
+const entries: ContentEntry[] = Object.values(modules).map((mod) => ({
+  ...mod.frontmatter,
+  listed: mod.frontmatter.listed !== false,
+  Body: mod.default,
+}));
+
 export function getAllContent(
   kind: ContentKind,
   includeUnlisted = false,
 ): ContentEntry[] {
-  const directory = path.join(
-    process.cwd(),
-    "content",
-    kind === "project" ? "projects" : "posts",
-  );
-  return fs
-    .readdirSync(directory)
-    .filter((filename) => filename.endsWith(".mdx"))
-    .map((filename): ContentEntry => {
-      const { data, content } = matter(
-        fs.readFileSync(path.join(directory, filename), "utf8"),
-      );
-      const metadata = contentMetadataSchema.parse(data);
-      if (metadata.kind !== kind || `${metadata.slug}.mdx` !== filename) {
-        throw new Error(
-          `Content kind/slug must match its directory and filename: ${filename}`,
-        );
-      }
-      return { ...metadata, body: content };
-    })
+  return entries
+    .filter((entry) => entry.kind === kind)
     .filter((entry) => includeUnlisted || entry.listed)
     .sort(
       (a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug),
@@ -48,7 +41,7 @@ export function getContent(
   kind: ContentKind,
   slug: string,
 ): ContentEntry | undefined {
-  return getAllContent(kind, true).find((entry) => entry.slug === slug);
+  return entries.find((entry) => entry.kind === kind && entry.slug === slug);
 }
 
 export function getContentUrl(

@@ -1,12 +1,12 @@
 import { PostCard, PageTransition } from "@/components/site";
 import { getAllContent } from "@/lib/content";
-import { pageMetadata } from "@/lib/metadata";
-export const metadata = pageMetadata(
-  "Writing",
-  "Notes on design, AI, and building products by Joo Hyung Park.",
-  "/blog",
-);
+import { usePageMeta } from "@/lib/use-page-meta";
+
 export default function BlogPage() {
+  usePageMeta(
+    "Writing",
+    "Notes on design, AI, and building products by Joo Hyung Park.",
+  );
   return (
     <PageTransition>
       <main id="main" className="page-shell">

@@ -176,4 +176,4 @@ The contact link is email-only. Update its `mailto:` destination and visible cop
 
 ## Korean font refresh
 
-The site self-hosts an 85KB variable Noto Sans KR font subset covering all migrated Hangul. When adding Korean text, run `pnpm fonts:update` and commit the updated font plus `src/app/fonts/characters.json`. This optional authoring command downloads the updated subset from Google Fonts; normal builds do not need that request. Characters outside the saved subset remain readable through system font fallback. The font license is preserved in `src/app/fonts/OFL.txt`.
+The site self-hosts a variable Noto Sans KR subset covering the project and post content, home narrative, and UI source text. After adding Korean text, run `node scripts/update-korean-font.mjs` and commit the updated font plus `src/app/fonts/characters.json`. This optional authoring command sends only a sorted list of unique Hangul characters to Google Fonts to download the subset; normal builds do not need that request. The font license is preserved in `src/app/fonts/OFL.txt`.

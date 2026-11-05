@@ -2,13 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { PageTransition } from "@/components/site";
 import type { ContentEntry, ContentHeading } from "@/lib/content";
-import { getAllContent, getContentUrl, getTranslations } from "@/lib/content";
+import { getContentUrl, getLocalizedContentList, getTranslations } from "@/lib/content";
 import { mdxComponents } from "@/lib/mdx";
 import { usePageMeta } from "@/lib/use-page-meta";
 import { site } from "@/lib/site";
 import { getMediaDimensions } from "@/lib/media";
+import { useSitePreferences } from "@/lib/site-preferences";
 
 export function ContentDetail({ entry }: { entry: ContentEntry }) {
+  const { language, setLanguage } = useSitePreferences();
+  const korean = language === "ko";
   usePageMeta(entry.title, entry.description || entry.subtitle || entry.title);
 
   const proseRef = useRef<HTMLDivElement>(null);
@@ -30,8 +33,10 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
   }, [entry.slug]);
 
   const heroSize = getMediaDimensions(entry.hero);
-  const entries = getAllContent(entry.kind);
-  const position = entries.findIndex((item) => item.slug === entry.slug);
+  const entries = getLocalizedContentList(entry.kind, language);
+  const position = entries.findIndex((item) =>
+    entry.translationKey ? item.translationKey === entry.translationKey : item.slug === entry.slug,
+  );
   const neighbors =
     position < 0
       ? []
@@ -66,12 +71,13 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
             <Link
               className="text-link"
               to={entry.kind === "project" ? "/projects" : "/blog"}
+              lang={language}
             >
-              ← {entry.kind === "project" ? "All projects" : "All writing"}
+              ← {entry.kind === "project" ? (korean ? "프로젝트 전체 보기" : "All projects") : (korean ? "글 전체 보기" : "All writing")}
             </Link>
             <p className="section-kicker">
-              <time dateTime={entry.date}>
-                {new Date(entry.date).toLocaleDateString("en-US", {
+              <time lang={language} dateTime={entry.date}>
+                {new Date(entry.date).toLocaleDateString(language, {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
@@ -101,6 +107,12 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
                 className="text-link"
                 to={getContentUrl(translated)}
                 hrefLang={translated.lang}
+                lang={translated.lang}
+                onClick={(event) => {
+                  if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
+                    setLanguage(translated.lang);
+                  }
+                }}
               >
                 {translated.lang === "en"
                   ? "Read in English ↗"
@@ -111,13 +123,13 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
               <dl className="detail-meta">
                 {entry.team && (
                   <div>
-                    <dt>Team</dt>
+                    <dt lang={language}>{korean ? "팀" : "Team"}</dt>
                     <dd>{entry.team}</dd>
                   </div>
                 )}
                 {entry.role && (
                   <div>
-                    <dt>Role</dt>
+                    <dt lang={language}>{korean ? "역할" : "Role"}</dt>
                     <dd>{entry.role}</dd>
                   </div>
                 )}
@@ -141,11 +153,11 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
             {toc.length > 1 && (
               <nav
                 className="toc"
-                aria-label={entry.lang === "ko" ? "목차" : "On this page"}
+                aria-label={korean ? "목차" : "On this page"}
               >
                 <details>
-                  <summary>
-                    {entry.lang === "ko" ? "목차" : "On this page"}
+                  <summary lang={language}>
+                    {korean ? "목차" : "On this page"}
                   </summary>
                   <ol>
                     {toc.map((item) => (
@@ -165,10 +177,10 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
         {neighbors.length > 0 && (
           <nav
             className="page-shell related-posts"
-            aria-label="Continue reading"
+            aria-label={korean ? "이어 읽기" : "Continue reading"}
           >
             {neighbors.map((item) => (
-              <Link className="text-link" to={getContentUrl(item)} key={item.slug}>
+              <Link className="text-link" to={getContentUrl(item)} key={item.slug} lang={item.lang}>
                 {item.title} <span aria-hidden>↗</span>
               </Link>
             ))}

@@ -3,7 +3,7 @@
 /* Fonts — Bricolage loads from Google Fonts in index.html; Korean ships locally. */
 @font-face {
   font-family: "Noto Sans KR Content";
-  src: url("/fonts/noto-sans-kr-content.woff2") format("woff2");
+  src: url("./fonts/noto-sans-kr-content.woff2") format("woff2");
   font-weight: 100 900;
   font-display: swap;
 }
@@ -45,6 +45,7 @@
 }
 
 :root {
+  color-scheme: light;
   --font-bricolage: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
   --font-noto-sans-kr: "Noto Sans KR Content", "Apple SD Gothic Neo",
     "Malgun Gothic", sans-serif;
@@ -63,9 +64,34 @@
   --border: #d9d9d2;
   --input: #d9d9d2;
   --ring: #656f45;
+  --terminal-command: #295a84;
+  --terminal-success: #247044;
+  --terminal-label: #7752a4;
   --radius: 0.625rem;
   --page-gutter: clamp(24px, 5.2vw, 84px);
   --page-width: 1440px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #181916;
+  --foreground: #f1f0e8;
+  --card: #23241f;
+  --card-foreground: #f1f0e8;
+  --primary: #ecece0;
+  --primary-foreground: #181916;
+  --secondary: #2b2d26;
+  --secondary-foreground: #f1f0e8;
+  --muted: #23251e;
+  --muted-foreground: #b7baab;
+  --accent: #31342a;
+  --accent-foreground: #f1f0e8;
+  --border: #43463a;
+  --input: #505345;
+  --ring: #c1d092;
+  --terminal-command: #99c7f0;
+  --terminal-success: #91d4a4;
+  --terminal-label: #cdb4f0;
 }
 
 @theme inline {
@@ -189,7 +215,7 @@ button:disabled {
   top: 0;
   z-index: 30;
   border-bottom: 1px solid transparent;
-  background: #faf9f6ed;
+  background: color-mix(in srgb, var(--background) 93%, transparent);
   backdrop-filter: blur(12px);
 }
 .site-wordmark {
@@ -201,7 +227,47 @@ button:disabled {
 .header-caption {
   font-size: 13px;
   color: var(--muted-foreground);
-  margin-left: 60px;
+  text-align: center;
+}
+.header-actions, .menu-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.language-toggle {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.language-toggle button, .theme-toggle {
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  border-radius: 6px;
+}
+.language-toggle button {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0 8px;
+  font-size: 12px;
+}
+.language-toggle button[aria-pressed="true"], .theme-toggle:hover {
+  background: var(--secondary);
+}
+.language-toggle button[aria-pressed="false"] { color: var(--muted-foreground); }
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+}
+.theme-toggle-mobile { display: none; }
+@media (max-width: 1023px) {
+  .header-caption { display: none; }
 }
 .menu-trigger {
   display: flex;
@@ -307,7 +373,7 @@ button:disabled {
   transform: none;
 }
 .menu-navigation a[aria-current="page"] {
-  color: #727968;
+  color: var(--muted-foreground);
 }
 .menu-bottom {
   border-top: 1px solid var(--border);
@@ -933,7 +999,7 @@ a:hover > .round-button {
 .project-card-image {
   width: 100%;
   aspect-ratio: 16/10;
-  background: #eeede8;
+  background: var(--muted);
   position: relative;
   overflow: hidden;
 }
@@ -1190,7 +1256,7 @@ a:hover > .round-button {
   font-size: 13px;
 }
 .site-footer {
-  background: #e9e9e1;
+  background: var(--accent);
   padding: 46px var(--page-gutter) 24px;
   overflow: hidden;
 }
@@ -1232,7 +1298,7 @@ a:hover > .round-button {
   justify-content: space-between;
   gap: 24px;
   font-size: 11px;
-  color: #56594c;
+  color: var(--muted-foreground);
   max-width: var(--page-width);
   margin: 0 auto;
 }
@@ -1437,7 +1503,7 @@ a:hover > .round-button {
   border-left: 2px solid #a4aa96;
   padding: 0.15em 0 0.15em 1.5em;
   margin: 2em 0;
-  color: #5f6357;
+  color: var(--muted-foreground);
   font-size: 1.06em;
 }
 .content-body :where(blockquote > :first-child) {
@@ -1455,7 +1521,7 @@ a:hover > .round-button {
 .content-body :where(code) {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.85em;
-  background: #eaece4;
+  background: var(--secondary);
   padding: 0.16em 0.35em;
   border-radius: 4px;
   overflow-wrap: anywhere;
@@ -1629,6 +1695,9 @@ a:hover > .round-button {
   .header-caption {
     display: none;
   }
+  .theme-toggle-desktop { display: none; }
+  .theme-toggle-mobile { display: grid; }
+  .language-toggle button { min-height: 40px; }
   .hero {
     padding-top: 60px;
     padding-bottom: 38px;

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
 import type { ContentEntry } from "@/lib/content";
 import { social } from "@/lib/site";
+import { useSitePreferences } from "@/lib/site-preferences";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { Marquee } from "@/components/ui/marquee";
@@ -146,6 +147,7 @@ export function ProjectCard({
   /** A marquee clone: hidden from assistive tech and out of the tab order. */
   decorative?: boolean;
 }) {
+  const { language } = useSitePreferences();
   const Heading = headingLevel === 2 ? "h2" : "h3";
   return (
     <article
@@ -172,7 +174,7 @@ export function ProjectCard({
         </div>
         <div className="project-card-body">
           <div className="project-card-meta">
-            <span>{entry.subtitle || "Selected project"}</span>
+            <span lang={entry.subtitle ? undefined : language}>{entry.subtitle || (language === "ko" ? "대표 프로젝트" : "Selected project")}</span>
           </div>
           <Heading>{entry.title}</Heading>
         </div>
@@ -210,8 +212,9 @@ export function PostCard({
   entry: ContentEntry;
   headingLevel?: 2 | 3;
 }) {
+  const { language } = useSitePreferences();
   const Heading = headingLevel === 2 ? "h2" : "h3";
-  const date = new Intl.DateTimeFormat("en", {
+  const date = new Intl.DateTimeFormat(language, {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -221,8 +224,8 @@ export function PostCard({
     <article className="post-card reveal-content" lang={entry.lang}>
       <Link to={`/blog/${entry.slug}`}>
         <div className="post-card-meta">
-          <time dateTime={entry.date}>{date}</time>
-          <span>{entry.lang === "ko" ? "한국어" : "English"}</span>
+          <time lang={language} dateTime={entry.date}>{date}</time>
+          <span lang={entry.lang}>{entry.lang === "ko" ? "한국어" : "English"}</span>
         </div>
         <div className="post-card-copy">
           <Heading>{entry.title}</Heading>
@@ -283,20 +286,22 @@ export function ContactSection() {
 }
 
 export function SiteFooter() {
+  const { language } = useSitePreferences();
+  const korean = language === "ko";
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <Link to="/" className="site-wordmark" aria-label="Joo — home">
+        <Link to="/" className="site-wordmark" aria-label={korean ? "Joo 홈" : "Joo — home"}>
           joo.
         </Link>
-        <nav aria-label="Footer navigation">
-          <Link to="/projects">Projects</Link>
-          <Link to="/blog">Writing</Link>
-          <Link to="/#about">About</Link>
-          <Link to="/#contact">Contact</Link>
+        <nav aria-label={korean ? "하단 메뉴" : "Footer navigation"}>
+          <Link to="/projects">{korean ? "프로젝트" : "Projects"}</Link>
+          <Link to="/blog">{korean ? "글" : "Writing"}</Link>
+          <Link to="/#about">{korean ? "소개" : "About"}</Link>
+          <Link to="/#contact">{korean ? "연락" : "Contact"}</Link>
         </nav>
         <a className="footer-back-top" href="#top">
-          Back to top
+          {korean ? "맨 위로" : "Back to top"}
           <ArrowUpRight size={17} aria-hidden="true" />
         </a>
       </div>
@@ -305,7 +310,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} JooHyung Park</p>
-        <p>Design &amp; code, with curiosity.</p>
+        <p>{korean ? "호기심으로 디자인하고 만듭니다." : "Design & code, with curiosity."}</p>
       </div>
     </footer>
   );

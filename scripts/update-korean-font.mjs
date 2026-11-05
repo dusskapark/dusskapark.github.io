@@ -13,6 +13,21 @@ for (const folder of ["projects", "posts"]) {
       );
   }
 }
+// The home story and UI copy are not part of the migrated MDX collection.
+async function collectSource(directory) {
+  for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+    const filename = path.join(directory, entry.name);
+    if (entry.isDirectory()) await collectSource(filename);
+    else if (/\.[jt]sx?$/.test(entry.name)) texts.push(await fs.readFile(filename, "utf8"));
+  }
+}
+await collectSource(path.join(root, "src"));
+texts.push(await fs.readFile(path.join(root, "content/medium-feed.json"), "utf8"));
+const story = await fs.readFile(path.join(root, "docs/home-narrative/home-story.ko.md"), "utf8");
+const storyStart = story.indexOf("## 2. 커버레터 초안");
+const storyEnd = story.indexOf("## 3. 글을 읽으며 탐색할 대표 장면", storyStart);
+if (storyStart < 0 || storyEnd < 0) throw new Error("Home narrative section not found");
+texts.push(story.slice(storyStart, storyEnd));
 texts.push("한국어 목차로 읽기");
 const characters = [
   ...new Set(

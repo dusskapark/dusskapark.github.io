@@ -7,13 +7,15 @@ import BlogPage from "@/pages/blog";
 import ProjectDetailPage from "@/pages/project-detail";
 import BlogDetailPage from "@/pages/blog-detail";
 import NotFoundPage from "@/pages/not-found";
+import { useSitePreferences } from "@/lib/site-preferences";
 
 export default function App() {
+  const { language } = useSitePreferences();
   return (
     <>
       <ScrollManager />
       <a className="skip-link" href="#main">
-        Skip to content
+        {language === "ko" ? "본문 바로가기" : "Skip to content"}
       </a>
       <SiteHeader />
       <Routes>

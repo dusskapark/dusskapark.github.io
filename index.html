@@ -1,8 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      try {
+        const language = localStorage.getItem("joo-language");
+        const theme = localStorage.getItem("joo-theme");
+        if (language === "en" || language === "ko") document.documentElement.lang = language;
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch {}
+    </script>
     <link rel="icon" href="/images/favicon.gif" />
     <title>Hey, Joo — Product builder</title>
     <meta

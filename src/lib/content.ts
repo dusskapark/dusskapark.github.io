@@ -56,3 +56,24 @@ export function getTranslations(entry: ContentEntry): ContentEntry[] {
     (candidate) => candidate.translationKey === entry.translationKey,
   );
 }
+
+export function getContentForLanguage(entry: ContentEntry, language: ContentEntry["lang"]) {
+  if (entry.lang === language) return entry;
+  return getTranslations(entry).find((candidate) => candidate.lang === language) ?? entry;
+}
+
+export function getContentPathForLanguage(pathname: string, language: ContentEntry["lang"]) {
+  const match = pathname.match(/^\/(project|blog)\/([^/]+)\/?$/);
+  if (!match) return pathname;
+  const entry = getContent(match[1] === "project" ? "project" : "post", match[2]);
+  return entry ? getContentUrl(getContentForLanguage(entry, language)) : pathname;
+}
+
+export function getLocalizedContentList(kind: ContentKind, language: ContentEntry["lang"]) {
+  const byStory = new Map<string, ContentEntry>();
+  for (const entry of getAllContent(kind)) {
+    const key = entry.translationKey ?? entry.slug;
+    if (!byStory.has(key) || entry.lang === language) byStory.set(key, entry);
+  }
+  return Array.from(byStory.values());
+}

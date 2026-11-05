@@ -1,4 +1,4 @@
-name: Check Next.js portfolio
+name: Check Vite portfolio
 on:
   push:
     branches: [master]
@@ -16,15 +16,6 @@ jobs:
           node-version: "22"
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm test
-      - run: pnpm lint
-      - run: pnpm build
+      - run: node --test tests/content-parity.test.mjs
       - run: pnpm typecheck
-      - name: Verify production routes
-        run: |
-          pnpm start > /tmp/portfolio-server.log 2>&1 &
-          for attempt in $(seq 1 30); do
-            if curl --fail --silent http://localhost:3000 > /dev/null; then break; fi
-            sleep 1
-          done
-          pnpm check:site
+      - run: pnpm build

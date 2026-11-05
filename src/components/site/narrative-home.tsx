@@ -101,11 +101,7 @@ const scenes: Record<string, Scene> = {
     eyebrow: "EXPERIMENT · 2023", title: "Figma Autoname",
     description: "AI를 활용해 디자인 작업과 개발자 가이드의 생산성을 높이는 도구.", descriptionEn: "AI tools that support design work and developer documentation.",
     href: "/project/figma-autoname",
-    clip: {
-      src: "/images/projects/2023-figma-autoname/preview-autoname-demo.mp4",
-      poster: "/images/projects/2023-figma-autoname/cover.png",
-      aspect: "1280 / 828",
-    },
+    video: "x2Hn0qNXakA",
   },
   infcon: { eyebrow: "TALK · INFCON 2024", title: "Klever / Self Explorer", description: "AI 기반 사용성 테스트 실험을 소개한 인프콘 공동 발표.", descriptionEn: "A joint INFCON talk about experiments in AI usability testing.", video: "JVfpIy5LhJ8", href: "/project/klever" },
   talk: {

@@ -6,6 +6,8 @@ _temp/**
 .direnv/**
 .jekyll-cache/**
 docs/**
+!docs/home-narrative/home-story.ko.md
+!docs/home-narrative/home-story.en.md
 test-results/**
 playwright-report/**
 public/images/**

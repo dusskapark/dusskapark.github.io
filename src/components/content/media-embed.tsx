@@ -46,6 +46,23 @@ function mediaDetails(src: string) {
   }
 }
 
+function withYouTubeClientIdentity(src: string) {
+  try {
+    const url = new URL(src);
+    if (!/(^|\.)youtube(?:-nocookie)?\.com$/.test(url.hostname)) return src;
+
+    const origin = window.location.origin;
+    if (!/^https?:\/\//.test(origin) || url.searchParams.has("origin")) return src;
+
+    // Preview shells can suppress Referer headers. YouTube accepts the page
+    // origin as the equivalent client identity required by error 153.
+    url.searchParams.set("origin", origin);
+    return url.toString();
+  } catch {
+    return src;
+  }
+}
+
 export function MediaEmbed({
   src,
   title,
@@ -57,6 +74,9 @@ export function MediaEmbed({
   const normalizedSrc = src.startsWith("//") ? `https:${src}` : src;
   const nativeVideo = /\.(mp4|webm|ogg|mov)(?:[?#]|$)/i.test(normalizedSrc);
   const details = mediaDetails(normalizedSrc);
+  const frameSrc = nativeVideo
+    ? normalizedSrc
+    : withYouTubeClientIdentity(normalizedSrc);
   const frameRef = useRef<HTMLIFrameElement>(null);
   const [state, setState] = useState<
     "waiting" | "loading" | "loaded" | "failed"
@@ -100,7 +120,7 @@ export function MediaEmbed({
         ) : (
           <iframe
             ref={frameRef}
-            src={normalizedSrc}
+            src={frameSrc}
             title={title || details.title}
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

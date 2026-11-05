@@ -142,6 +142,7 @@ const scenes: Record<string, Scene> = {
   },
   community: { eyebrow: "COMMUNITY · 2020—2026", title: "Friends of Figma Seoul", description: "함께 배우고 실험하는 커뮤니티. 21개 행사, 1,775건의 등록과 904건의 체크인.*", descriptionEn: "A community that learns and experiments together. 21 events, 1,775 registrations, and 904 check-ins.*", href: "https://friends.figma.com/seoul/", external: true,
     frames: [
+      { src: "/images/projects/friends-of-figma-seoul/joo-speaking.webp", alt: "Friends of Figma Seoul 행사에서 발표하는 박주형", altEn: "Joo Hyung Park speaking at a Friends of Figma Seoul event" },
       { src: "/images/projects/friends-of-figma-seoul/chapter-group.webp", alt: "Friends of Figma Seoul 팻말을 든 참가자들", altEn: "Attendees holding a Friends of Figma Seoul sign" },
       { src: "/images/projects/friends-of-figma-seoul/ai-usability-talk.webp", alt: "AI와 오픈소스를 활용한 사용성 테스트 발표", altEn: "Talk on usability testing with AI and open source" },
       { src: "/images/projects/friends-of-figma-seoul/ai-meetup-audience.webp", alt: "AI 디자인 교육 밋업의 발표와 참가자", altEn: "Presentation and attendees at the AI design education meetup" },

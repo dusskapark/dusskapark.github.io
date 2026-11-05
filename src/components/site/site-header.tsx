@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ArrowUpRight, Moon, Sun, X } from "lucide-react";
 import { Dialog } from "radix-ui";
+import { AnimatedThemeToggler } from "@/components/magicui/animated-theme-toggler";
 import { getContentPathForLanguage } from "@/lib/content";
 import { useSitePreferences, type Language } from "@/lib/site-preferences";
 
@@ -37,8 +38,11 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const { pathname, search } = useLocation();
   const navigate = useNavigate();
-  const { language, setLanguage } = useSitePreferences();
+  const { language, setLanguage, theme, setTheme } = useSitePreferences();
   const korean = language === "ko";
+  const desktopThemeLabel = korean
+    ? theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환"
+    : theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
 
   function selectLanguage(next: Language) {
     setLanguage(next);
@@ -64,7 +68,13 @@ export function SiteHeader() {
           <button type="button" lang="ko" aria-pressed={korean} onClick={() => selectLanguage("ko")}>한국어</button>
           <button type="button" lang="en" aria-label="English" aria-pressed={!korean} onClick={() => selectLanguage("en")}>EN</button>
         </div>
-        <ThemeToggle />
+        <AnimatedThemeToggler
+          className="theme-toggle theme-toggle-desktop"
+          isDark={theme === "dark"}
+          title={desktopThemeLabel}
+          aria-label={desktopThemeLabel}
+          onToggle={() => setTheme(theme === "dark" ? "light" : "dark")}
+        />
         <Dialog.Root open={open} onOpenChange={setOpen}>
           <Dialog.Trigger
             className="menu-trigger"

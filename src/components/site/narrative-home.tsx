@@ -21,6 +21,7 @@ type Scene = {
   titleEn?: string;
   href: string;
   video?: string;
+  videoEn?: string;
   clip?: { src: string; poster: string; aspect: string };
   external?: boolean;
   article?: { ko: string; en: string };
@@ -149,6 +150,17 @@ const scenes: Record<string, Scene> = {
       { src: "/images/projects/friends-of-figma-seoul/ai-meetup-materials.webp", alt: "AI 디자인 교육 밋업 인쇄물", altEn: "Printed materials at the AI design education meetup" },
     ],
   },
+  automationWorkshop: {
+    eyebrow: "COMMUNITY WORKSHOP · 2025",
+    title: "MCP 디자인 자동화 워크숍",
+    titleEn: "MCP Design Automation Workshop",
+    description: "참가자를 직접 모집하고 사내와 Friends of Figma Seoul에서 각각 진행한 디자인 자동화 실습입니다. 영상은 커뮤니티 워크숍 소개입니다.",
+    descriptionEn: "I recruited participants and led hands-on design automation sessions at work and with Friends of Figma Seoul. The video introduces the community workshop.",
+    href: "https://friends.figma.com/events/details/figma-seoul-presents-jageob-siganeul-dancughaejuneun-mcp-dijain-otomeisyeon-weokeusyob-1/",
+    external: true,
+    video: "hTBqVoSE0D4",
+    videoEn: "smE8OMN1Qjs",
+  },
 };
 
 // Shuffle the motion order per page load, then deal it across the image reels.
@@ -167,12 +179,21 @@ const routeScenes: Record<string, string> = {
   "/project/how-far-can-a-product-designer-build-with-codex": "shuttle",
 };
 
+const videoScenes: Record<string, string> = {
+  blL0EQ6wNH8: "google",
+  ckN1QIpjkAk: "config",
+  JVfpIy5LhJ8: "infcon",
+  hTBqVoSE0D4: "automationWorkshop",
+  smE8OMN1Qjs: "automationWorkshop",
+};
+
 function sceneForUrl(href: string): string | undefined {
   if (href === builderDayArticles.ko || href === builderDayArticles.en) return "builderDay";
   const url = new URL(href);
   if (url.hostname === "api.metadata.co.kr") return routeScenes[url.pathname];
-  if (url.hostname.includes("youtube.com")) {
-    return ({ blL0EQ6wNH8: "google", ckN1QIpjkAk: "config", JVfpIy5LhJ8: "infcon" } as Record<string, string>)[url.searchParams.get("v") || ""];
+  if (url.hostname === "youtu.be") return videoScenes[url.pathname.split("/")[1]];
+  if (url.hostname === "youtube.com" || url.hostname.endsWith(".youtube.com")) {
+    return videoScenes[url.searchParams.get("v") ?? ""];
   }
   if (url.hostname === "friends.figma.com") return "community";
 }
@@ -331,14 +352,18 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
   const korean = language === "ko";
   const scene = scenes[sceneKey];
   const title = korean ? scene.title : scene.titleEn ?? scene.title;
+  const video = korean ? scene.video : scene.videoEn ?? scene.video;
+  const externalLabel = sceneKey === "automationWorkshop"
+    ? (korean ? "행사 보기" : "View the event")
+    : (korean ? "커뮤니티 보기" : "Visit the community");
   const mediaType = sceneKey === "intro" ? "terminal"
     : sceneKey === "builderDay" ? "award"
-    : scene.video || scene.clip ? "video" : "images";
+    : video || scene.clip ? "video" : "images";
   return (
     <div className="narrative-scene" key={sceneKey}>
       <div className={`narrative-media narrative-media-${mediaType}`} style={scene.clip ? { aspectRatio: scene.clip.aspect } : undefined}>
-        {sceneKey === "intro" ? <IntroTerminal reducedMotion={reducedMotion} /> : scene.video ? (
-          <iframe title={korean ? `${title} 영상` : `${title} video`} src={`https://www.youtube.com/embed/${scene.video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+        {sceneKey === "intro" ? <IntroTerminal reducedMotion={reducedMotion} /> : video ? (
+          <iframe title={korean ? `${title} 영상` : `${title} video`} src={`https://www.youtube.com/embed/${video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
         ) : scene.clip ? (
           <video
             key={String(reducedMotion)}
@@ -370,7 +395,7 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
             </a>
           ) : scene.external ? (
             <a href={scene.href} target="_blank" rel="noreferrer">
-              {korean ? "커뮤니티 보기" : "Visit the community"} <ArrowUpRight size={16} aria-hidden="true" />
+              {externalLabel} <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           ) : (
             <Link to={getContentPathForLanguage(scene.href, language)}>

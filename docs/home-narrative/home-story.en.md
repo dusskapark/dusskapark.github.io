@@ -34,6 +34,6 @@ In 2026, I used AI coding tools to build and release apps for communities on iOS
 
 I share what I learn through writing, talks, and open source. I’ve been part of the organizing team at [Friends of Figma Seoul](https://friends.figma.com/seoul/) since around 2020. By October 2026, the chapter had held 21 online, in-person, and hybrid events. The event dashboards recorded 1,775 registrations and 904 check-ins in total.
 
-I co-organize meetups and hands-on workshops with fellow chapter leaders. We share what we’ve learned about AI usability testing and design automation with MCP so other designers can try these tools in their own work.
+I co-organize meetups with fellow chapter leaders and share experiments such as AI usability testing. For the [MCP design automation workshop](https://youtu.be/smE8OMN1Qjs), I recruited participants and led separate sessions at work and with Friends of Figma Seoul. Designers got hands-on practice automating repetitive tasks in Figma.
 
 I design environments that help developers do their best work, and I build products through personal projects and open source. Developer experience is the thread that connects the two, from design through development and operations.

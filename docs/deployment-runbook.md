@@ -23,13 +23,11 @@ content route, plus a sitemap and robots file. JavaScript mounts the interactive
 app over the prerendered content. Preview builds are marked noindex. Vercel `cleanUrls` redirects
 `.html` detail URLs.
 
-`api.metadata.co.kr` is verified on the Vercel project, but DNS currently points
-to GitHub Pages. Vercel's domain configuration reports a recommended CNAME target
-of `cname.vercel-dns.com`. Change the existing `api` CNAME at Cafe24 only after
-the Vite production release is verified; do not change the apex or nameservers.
-Afterward, check Vercel domain configuration, DNS, TLS, and both normal and old
-`.html` routes. Retain the manual Pages rollback workflow and the pinned Jekyll
-commit until cutover is complete.
+`api.metadata.co.kr` is verified on the Vercel project and its Cafe24 `api`
+CNAME points to `cname.vercel-dns.com`. The cutover was verified on 2026-11-06
+with HTTPS and normal and legacy `.html` routes. Do not change the apex or
+nameservers. The manual Pages workflow and pinned Jekyll commit remain available
+as a rollback reference.
 
 The Next.js instructions below are retained only as historical migration and
 DNS cutover notes; their commands and feature expectations are not current.

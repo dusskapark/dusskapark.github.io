@@ -41,8 +41,8 @@ the `dist` output directory. `vercel.json` rewrites application routes to
 - `content/projects/` and `content/posts/` contain the editable React JSX content.
 
 The legacy Jekyll sources are preserved in Git history, not in the current
-application. The manual GitHub Pages workflow remains temporarily available for
-rollback until the custom domain has been switched and verified.
+application. The manual GitHub Pages workflow remains available as a rollback
+reference after the custom-domain cutover.
 
 ## Credits
 

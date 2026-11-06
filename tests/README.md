@@ -1,7 +1,7 @@
 # Portfolio verification
 
 Run `pnpm check:content`, `pnpm test`, `pnpm typecheck`, `pnpm build`, and
-`node --test tests/static-pages.test.mjs`. The tests cover the legacy content
+`node --test tests/static-pages.test.mjs tests/content-regression.test.mjs`. The tests cover the legacy content
 inventory, reviewed media replacements, image variants, React content metadata, and static
 canonical/social tags and sitemap entries.
 

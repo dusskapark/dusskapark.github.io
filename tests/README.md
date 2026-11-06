@@ -1,13 +1,15 @@
 # Portfolio verification
 
-Run `pnpm test` for the migrated route, metadata, and gallery parity checks.
-With the site running, run `pnpm check:site -- http://localhost:3001` for the rendered HTTP audit.
-Add `--report tests/verification-report.json` to save its results.
+Run `pnpm check:content`, `pnpm test`, `pnpm typecheck`, `pnpm build`, and
+`node --test tests/static-pages.test.mjs`. The tests cover the legacy content
+inventory, reviewed media replacements, image variants, React content metadata, and static
+canonical/social tags and sitemap entries.
 
-The independent fixture is frozen from original Jekyll Markdown at commit `ed197c8` and a fresh Jekyll build of that commit. It covers all 17 projects and the three non-demo posts, including the hidden NAVER NOW URL. The 510 prose excerpts are included only when they also match the original source; fenced code comments are not treated as headings.
+The independent fixture was captured from the original Jekyll site at commit
+`ed197c8`. The current React content is the source of truth; the fixture is retained for
+checking the migration, not for undoing later editorial changes.
 
-The HTTP audit checks server-rendered content, every original gallery grouping/image/link/caption, code samples, metadata, aliases, internal fragments, public asset responses, and intentionally excluded routes. It also checks that smooth scrolling is declared to Next so the router can suspend it during navigation. External service availability is outside this local audit.
-
-Browser verification uses CUA in a separate tab. The interaction checklist is navigation and metadata changes, translation links, menu focus trap/Escape/focus restoration, back/forward scroll restoration, carousel arrows/touch/pause, image dialog arrows/focus trap/restoration, native video, and no-JavaScript/reduced-motion modes. HTTP parity does not by itself prove those interactions or full visual accessibility.
-
-With the dev server at `http://127.0.0.1:3000`, run the narrative regression using `playwright-cli open http://127.0.0.1:3000/ --mobile` followed by `playwright-cli run-code --filename=tests/narrative-mobile.browser.js` and `playwright-cli close`.
+For the mobile and desktop narrative regression, start the Vite dev server at
+`http://127.0.0.1:3000`, then run `playwright-cli open http://127.0.0.1:3000/ --mobile`,
+`playwright-cli run-code --filename=tests/narrative-mobile.browser.js`, and
+`playwright-cli close`.

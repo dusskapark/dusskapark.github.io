@@ -423,8 +423,8 @@ export function NarrativeHome() {
   const korean = language === "ko";
   const blocks = stories[language];
   const articleRef = useRef<HTMLElement>(null);
-  const [desktop, setDesktop] = useState(() => window.matchMedia(DESKTOP_QUERY).matches);
-  const [reducedMotion, setReducedMotion] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  const [desktop, setDesktop] = useState(() => typeof window !== "undefined" && window.matchMedia(DESKTOP_QUERY).matches);
+  const [reducedMotion, setReducedMotion] = useState(() => typeof window === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   const [activeScene, setActiveScene] = useState("intro");
   const [activeTrigger, setActiveTrigger] = useState<string | null>(null);
   const [mobileScenes, setMobileScenes] = useState<Record<string, { trigger: string; scene: string }>>({});

@@ -7,13 +7,13 @@ const root = process.cwd();
 const texts = [];
 for (const folder of ["projects", "posts"]) {
   for (const filename of await fs.readdir(path.join(root, "content", folder))) {
-    if (filename.endsWith(".mdx"))
+    if (filename.endsWith(".jsx"))
       texts.push(
         await fs.readFile(path.join(root, "content", folder, filename), "utf8"),
       );
   }
 }
-// The home story and UI copy are not part of the migrated MDX collection.
+// The home story and UI copy are not part of the project collection.
 async function collectSource(directory) {
   for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
     const filename = path.join(directory, entry.name);

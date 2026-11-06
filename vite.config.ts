@@ -1,14 +1,9 @@
 import { defineConfig } from "vite";
 import { fileURLToPath } from "node:url";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import react from "@vitejs/plugin-react";
-import mdx from "@mdx-js/rollup";
 import tailwindcss from "@tailwindcss/vite";
-import remarkGfm from "remark-gfm";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import rehypeSlug from "rehype-slug";
-import rehypePrettyCode from "rehype-pretty-code";
 import { fetchMediumFeed, mediumProfile } from "./scripts/medium-feed";
 import mediumSnapshot from "./content/medium-feed.json";
 
@@ -18,10 +13,22 @@ const englishStoryPath = fileURLToPath(new URL("./docs/home-narrative/home-story
 const storyModule = "virtual:home-narrative";
 const resolvedStoryModule = `\0${storyModule}`;
 
-// MDX is compiled to React components at build time, so project/blog bodies ship
-// as static modules in the bundle — no server or markdown runtime in the browser.
+// Project and blog bodies are authored as React modules.
 export default defineConfig({
   plugins: [
+    {
+      name: "portfolio-preview-clean-urls",
+      configurePreviewServer(server) {
+        server.middlewares.use((request, _response, next) => {
+          const url = new URL(request.url || "/", "http://localhost");
+          if ((request.method === "GET" || request.method === "HEAD") && /^\/(?:projects|blog|(?:project|blog)\/[a-z0-9-]+)$/.test(url.pathname)) {
+            const html = resolve(server.config.build.outDir, `.${url.pathname}.html`);
+            if (existsSync(html)) request.url = `${url.pathname}.html${url.search}`;
+          }
+          next();
+        });
+      },
+    },
     {
       name: "portfolio-medium-writing",
       resolveId(id) {
@@ -64,28 +71,7 @@ export default defineConfig({
         return [];
       },
     },
-    {
-      enforce: "pre",
-      ...mdx({
-        remarkPlugins: [
-          remarkGfm,
-          remarkFrontmatter,
-          [remarkMdxFrontmatter, { name: "frontmatter" }],
-        ],
-        rehypePlugins: [
-          rehypeSlug,
-          [
-            rehypePrettyCode,
-            {
-              theme: "github-dark-default",
-              keepBackground: false,
-              defaultLang: { block: "plaintext", inline: "plaintext" },
-            },
-          ],
-        ],
-      }),
-    },
-    react({ include: /\.(jsx|tsx|mdx)$/ }),
+    react({ include: /\.(jsx|tsx)$/ }),
     tailwindcss(),
   ],
   resolve: {

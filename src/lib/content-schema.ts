@@ -30,9 +30,7 @@ export interface ContentMetadata {
   headings?: ContentHeading[];
 }
 
-/** An MDX file compiles to a component that accepts a `components` override map. */
-export type MDXBody = ComponentType<{
-  components?: Record<string, ComponentType<Record<string, unknown>>>;
-}>;
+/** A self-contained React content component. */
+export type ContentBody = ComponentType;
 
-export type ContentEntry = ContentMetadata & { Body: MDXBody };
+export type ContentEntry = ContentMetadata & { Body: ContentBody };

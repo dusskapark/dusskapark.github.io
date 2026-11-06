@@ -2,7 +2,7 @@ import type {
   ContentEntry,
   ContentKind,
   ContentMetadata,
-  MDXBody,
+  ContentBody,
 } from "./content-schema";
 
 export type {
@@ -11,11 +11,11 @@ export type {
   ContentHeading,
 } from "./content-schema";
 
-type MdxModule = { default: MDXBody; frontmatter: ContentMetadata };
+type ContentModule = { default: ContentBody; frontmatter: ContentMetadata };
 
-// All repository-authored MDX is compiled into the bundle at build time. There is
+// All repository-authored JSX is compiled into the bundle at build time. There is
 // no server read and no request-controlled source — these are static modules.
-const modules = import.meta.glob<MdxModule>("../../content/**/*.mdx", {
+const modules = import.meta.glob<ContentModule>("../../content/**/*.jsx", {
   eager: true,
 });
 

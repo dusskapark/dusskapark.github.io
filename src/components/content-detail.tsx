@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { PageTransition } from "@/components/site";
 import type { ContentEntry, ContentHeading } from "@/lib/content";
 import { getContentUrl, getLocalizedContentList, getTranslations } from "@/lib/content";
-import { mdxComponents } from "@/lib/mdx";
 import { usePageMeta } from "@/lib/use-page-meta";
 import { site } from "@/lib/site";
 import { ContentImage } from "@/components/content/content-image";
@@ -12,13 +11,13 @@ import { useSitePreferences } from "@/lib/site-preferences";
 export function ContentDetail({ entry }: { entry: ContentEntry }) {
   const { language, setLanguage } = useSitePreferences();
   const korean = language === "ko";
-  usePageMeta(entry.title, entry.description || entry.subtitle || entry.title);
+  usePageMeta(entry.title, entry.description || entry.subtitle || entry.title, entry.hero);
 
   const proseRef = useRef<HTMLDivElement>(null);
   const [toc, setToc] = useState<ContentHeading[]>([]);
 
   // Build the table of contents from the rendered body so anchors always match
-  // the ids rehype-slug assigned to the headings.
+  // the ids assigned to the headings in the content.
   useEffect(() => {
     const root = proseRef.current;
     if (!root) return;
@@ -167,7 +166,7 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
               </nav>
             )}
             <div className="prose content-prose content-body" ref={proseRef}>
-              <Body components={mdxComponents} />
+              <Body />
             </div>
           </div>
         </article>

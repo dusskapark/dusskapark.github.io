@@ -1,17 +1,18 @@
 import fs from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { parseMetadata, httpUrl } from "./link-preview-metadata.mjs";
+import { jsxAttributes } from "./jsx-attributes.mjs";
 
 const cachePath = new URL("../content/link-previews.json", import.meta.url);
 const contentRoot = new URL("../content/", import.meta.url);
 const cache = JSON.parse(await fs.readFile(cachePath, "utf8").catch(() => "{}"));
 const urls = new Set();
 for (const entry of await fs.readdir(contentRoot, { recursive: true })) {
-  if (!entry.endsWith(".mdx")) continue;
+  if (!entry.endsWith(".jsx")) continue;
   const source = await fs.readFile(new URL(entry, contentRoot), "utf8");
-  for (const match of source.matchAll(/<LinkPreview\s+url="([^"]+)"/g)) {
-    const url = httpUrl(match[1]);
-    if (!url) throw new Error(`Invalid link preview URL: ${match[1]}`);
+  for (const attribute of jsxAttributes(source, entry).filter(({ tag, name }) => tag === "LinkPreview" && name === "url")) {
+    const url = httpUrl(attribute.value);
+    if (!url) throw new Error(`Invalid link preview URL: ${attribute.value}`);
     urls.add(url);
   }
 }

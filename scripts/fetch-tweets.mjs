@@ -4,15 +4,19 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { getTweet } from "react-tweet/api";
+import { jsxAttributes } from "./jsx-attributes.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "content", "tweets.json");
 const existing = JSON.parse(await fs.readFile(output, "utf8").catch(() => "{}"));
 const ids = new Set();
 for (const name of await fs.readdir(path.join(root, "content"), { recursive: true })) {
-  if (!name.endsWith(".mdx")) continue;
+  if (!name.endsWith(".jsx")) continue;
   const text = await fs.readFile(path.join(root, "content", name), "utf8");
-  for (const match of text.matchAll(/<TweetEmbed[^>]*?\/status\/(\d+)/g)) ids.add(match[1]);
+  for (const { value } of jsxAttributes(text, name).filter(({ tag, name: attribute }) => tag === "TweetEmbed" && attribute === "url")) {
+    const id = value.match(/\/status\/(\d+)/)?.[1];
+    if (id) ids.add(id);
+  }
 }
 
 const tweets = {};

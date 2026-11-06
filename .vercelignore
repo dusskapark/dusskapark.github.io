@@ -1,5 +1,7 @@
 .git/**
 node_modules/**
+dist/**
+.playwright-cli/**
 .next/**
 _site/**
 _temp/**

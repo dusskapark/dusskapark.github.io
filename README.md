@@ -1,7 +1,7 @@
 # Hey, Joo — portfolio
 
 Joo Hyung Park’s portfolio, built with Vite, React Router, React, Tailwind CSS,
-shadcn/Radix UI, and local MDX. Production origin: <https://api.metadata.co.kr>.
+shadcn/Radix UI, and local React content components. Production origin: <https://api.metadata.co.kr>.
 
 ## Development
 
@@ -19,12 +19,15 @@ The asset preparation step copies original `images/` into ignored `public/images
 
 ```sh
 pnpm typecheck
+pnpm check:content
+pnpm test
 pnpm build
+node --test tests/static-pages.test.mjs
 pnpm preview
 ```
 
-`pnpm build` prepares assets and compiles the React application and local MDX into
-`dist/`. `pnpm preview` serves that production build locally.
+`pnpm build` prepares assets, compiles the React application, and generates
+static route HTML and metadata in `dist/`. `pnpm preview` serves that build locally.
 
 Vercel uses the Vite preset, `pnpm install --frozen-lockfile`, `pnpm build`, and
 the `dist` output directory. `vercel.json` rewrites application routes to
@@ -35,11 +38,11 @@ the `dist` output directory. `vercel.json` rewrites application routes to
 - [Writing and media guide](docs/content-authoring.md)
 - [Preview, production, and rollback runbook](docs/deployment-runbook.md)
 - `migration/` contains the content, gallery, media, and URL inventories.
-- `content/projects/` and `content/posts/` are the editable MDX content.
+- `content/projects/` and `content/posts/` contain the editable React JSX content.
 
-Legacy Jekyll files remain as migration evidence. They are not the Vite public
-directory. The old GitHub Pages workflow is manual-only and defaults to the last
-known Jekyll commit for rollback. Production DNS changes are a separate cutover.
+The legacy Jekyll sources are preserved in Git history, not in the current
+application. The manual GitHub Pages workflow remains temporarily available for
+rollback until the custom domain has been switched and verified.
 
 ## Credits
 

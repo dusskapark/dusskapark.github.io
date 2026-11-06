@@ -1,6 +1,6 @@
 # Deployment runbook
 
-## Current Vite deployment (2026-11-05)
+## Current Vite deployment
 
 The application now uses Vite and React Router. The deployment settings in
 `vercel.json` are authoritative:
@@ -12,15 +12,27 @@ The application now uses Vite and React Router. The deployment settings in
 - Output: `dist`
 - SPA fallback: `/(.*)` → `/index.html` for direct links and refreshes
 
-Validate with `pnpm typecheck` and `pnpm build`; inspect the production build
+Validate with `pnpm check:content`, `pnpm test`, `pnpm typecheck`, `pnpm build`,
+and `node --test tests/static-pages.test.mjs`; inspect the production build
 locally with `pnpm preview`. Verify `/`, `/projects`, `/blog`, and representative
 `/project/<slug>` and `/blog/<slug>` direct links after deployment. Also verify
 that `/assets/` and `/images/` continue to serve files.
 
-The Next.js instructions below are retained as historical migration and DNS
-cutover notes. Their Next.js commands, server metadata, robots, sitemap, and
-redirect expectations do not describe the current Vite app. Do not use them as
-current release checks. Changing the Vercel framework does not change DNS.
+The build generates static React HTML and canonical and social metadata for each
+content route, plus a sitemap and robots file. JavaScript mounts the interactive
+app over the prerendered content. Preview builds are marked noindex. Vercel `cleanUrls` redirects
+`.html` detail URLs.
+
+`api.metadata.co.kr` is verified on the Vercel project, but DNS currently points
+to GitHub Pages. Vercel's domain configuration reports a recommended CNAME target
+of `cname.vercel-dns.com`. Change the existing `api` CNAME at Cafe24 only after
+the Vite production release is verified; do not change the apex or nameservers.
+Afterward, check Vercel domain configuration, DNS, TLS, and both normal and old
+`.html` routes. Retain the manual Pages rollback workflow and the pinned Jekyll
+commit until cutover is complete.
+
+The Next.js instructions below are retained only as historical migration and
+DNS cutover notes; their commands and feature expectations are not current.
 
 ## Historical Next.js migration runbook
 

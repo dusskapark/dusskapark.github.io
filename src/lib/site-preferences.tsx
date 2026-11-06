@@ -14,10 +14,10 @@ const Preferences = createContext<SitePreferences | null>(null);
 
 export function SitePreferencesProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() =>
-    document.documentElement.lang === "en" ? "en" : "ko",
+    typeof document !== "undefined" && document.documentElement.lang === "en" ? "en" : "ko",
   );
   const [theme, setTheme] = useState<Theme>(() =>
-    document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+    typeof document !== "undefined" && document.documentElement.dataset.theme === "dark" ? "dark" : "light",
   );
 
   useLayoutEffect(() => {

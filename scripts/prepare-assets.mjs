@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
+import { jsxAttributes } from "./jsx-attributes.mjs";
 
 const root = process.cwd();
 const publicRoot = path.join(root, "public");
@@ -45,9 +45,11 @@ function scan(source, from) {
 for (const folder of ["projects", "posts"]) {
   for (const file of fs
     .readdirSync(path.join(root, "content", folder))
-    .filter((name) => name.endsWith(".mdx"))) {
+    .filter((name) => name.endsWith(".jsx"))) {
     const filename = path.join(root, "content", folder, file);
-    scan(matter(fs.readFileSync(filename, "utf8")).content, filename);
+    for (const attribute of jsxAttributes(fs.readFileSync(filename, "utf8"), filename)) {
+      if (attribute.name === "href" || attribute.name === "src") resolveReference(attribute.value, filename);
+    }
   }
 }
 while (queue.length) {

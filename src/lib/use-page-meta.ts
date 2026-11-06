@@ -1,25 +1,41 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { site } from "./site";
 
-function setMeta(name: string, content: string) {
-  let tag = document.head.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
+function setMeta(attribute: "name" | "property", name: string, content: string) {
+  let tag = document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${name}"]`);
   if (!tag) {
     tag = document.createElement("meta");
-    tag.setAttribute("name", name);
+    tag.setAttribute(attribute, name);
     document.head.appendChild(tag);
   }
   tag.setAttribute("content", content);
 }
 
-/**
- * Sets the document title and description for a route. Replaces Next.js metadata
- * exports — in a client SPA the title updates on navigation.
- */
-export function usePageMeta(title?: string, description?: string) {
+export function usePageMeta(title?: string, description?: string, image = "/images/social.jpeg") {
+  const { pathname } = useLocation();
   useEffect(() => {
-    document.title = title
+    const pageTitle = title
       ? `${title} | ${site.name}`
       : `${site.name} — Product builder`;
-    if (description) setMeta("description", description);
-  }, [title, description]);
+    const pageDescription = description || site.description;
+    const canonical = new URL(pathname, site.url).href;
+    const imageUrl = new URL(image, site.url).href;
+    document.title = pageTitle;
+    setMeta("name", "description", pageDescription);
+    setMeta("property", "og:title", pageTitle);
+    setMeta("property", "og:description", pageDescription);
+    setMeta("property", "og:url", canonical);
+    setMeta("property", "og:image", imageUrl);
+    setMeta("name", "twitter:title", pageTitle);
+    setMeta("name", "twitter:description", pageDescription);
+    setMeta("name", "twitter:image", imageUrl);
+    let link = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    link.href = canonical;
+  }, [title, description, image, pathname]);
 }

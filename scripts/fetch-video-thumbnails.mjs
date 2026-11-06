@@ -9,7 +9,7 @@ const root = process.cwd();
 const outputDir = path.join(root, "images", "video-thumbnails");
 const sources = [
   ...(await fs.readdir(path.join(root, "content"), { recursive: true }))
-    .filter((name) => name.endsWith(".mdx"))
+    .filter((name) => name.endsWith(".jsx"))
     .map((name) => path.join(root, "content", name)),
   path.join(root, "src", "components", "site", "narrative-home.tsx"),
 ];

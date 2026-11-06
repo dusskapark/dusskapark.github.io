@@ -11,7 +11,7 @@ const snapshots = tweets as unknown as Record<string, Tweet>;
 
 /**
  * Renders a tweet from the committed build-time snapshot. If no snapshot
- * exists, the authored blockquote from the MDX is shown instead.
+ * exists, the original archived quotation is also available in a disclosure.
  */
 export function TweetEmbed({
   url,
@@ -26,9 +26,12 @@ export function TweetEmbed({
   return (
     <div className="content-tweet">
       {tweet ? (
-        <div className="content-tweet-widget">
-          <EmbeddedTweet tweet={tweet} />
-        </div>
+        <>
+          <div className="content-tweet-widget">
+            <EmbeddedTweet tweet={tweet} />
+          </div>
+          {children && <details className="content-tweet-archive"><summary>Original archived text</summary><div className="content-tweet-quotation">{children}</div></details>}
+        </>
       ) : (
         <>
           <div className="content-tweet-quotation">{children}</div>

@@ -1,0 +1,10 @@
+{
+  "description": "유튜브 동영상 미리보기에서 발생하는 오류 153의 원인을 파악하고 해결 방법을 안내합니다.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

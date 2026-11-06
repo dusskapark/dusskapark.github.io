@@ -315,9 +315,32 @@ The most useful habit was turning vague failure into a <strong>smaller sentence<
 
 By the end, the project had grown into a real <strong>multi-surface system</strong>: `server`, `database`, `web/admin`, native Rider apps, native Driver apps, `maps`, `QR check-in`, location updates, notifications, analytics, crash reporting, store preparation, and a promotional video.
 
-<StoreBadges urls={["https://apps.apple.com/sg/app/nasum-shuttle-check-in/id6765994152","https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle"]} appName={"NaSum Shuttle Check-In"} title={"Live Rider app"} description={"NaSum Shuttle Check-In is available on iOS and Android for route lookup, QR check-in, and stop updates."} fullWidth={false} />
-
-<StoreBadges urls={["https://apps.apple.com/sg/app/nasum-shuttle-driver/id6773782572","https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle.driver&pli=1"]} appName={"NaSum Shuttle Driver"} title={"Live Driver app"} description={"NaSum Shuttle Driver is available on iOS and Android for authorized shuttle drivers and operators."} fullWidth={false} />
+<AppDownloads apps={[
+  {
+    id: "nasum-rider",
+    imageTheme: "dark",
+    images: [
+      { src: "/images/projects/2026-rider-driver-codex/app-store/rider-1.jpg", alt: "NaSum rider app — App Store home screen" },
+      { src: "/images/projects/2026-rider-driver-codex/app-store/rider-2.jpg", alt: "NaSum rider app — App Store route screen" },
+    ],
+    title: "Rider app",
+    appName: "NaSum Shuttle Check-In",
+    description: "Look up routes, check in with QR, and get stop updates.",
+    urls: ["https://apps.apple.com/sg/app/nasum-shuttle-check-in/id6765994152", "https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle"],
+  },
+  {
+    id: "nasum-driver",
+    imageTheme: "light",
+    images: [
+      { src: "/images/projects/2026-rider-driver-codex/app-store/driver-1.jpg", alt: "NaSum driver app — App Store home screen" },
+      { src: "/images/projects/2026-rider-driver-codex/app-store/driver-2.jpg", alt: "NaSum driver app — App Store route screen" },
+    ],
+    title: "Driver app",
+    appName: "NaSum Shuttle Driver",
+    description: "Manage shuttle operations as an authorized driver or operator.",
+    urls: ["https://apps.apple.com/sg/app/nasum-shuttle-driver/id6773782572", "https://play.google.com/store/apps/details?id=sg.nasumchurch.shuttle.driver&pli=1"],
+  },
+]} />
 
 That is the part I want this project to show: I can design the experience, understand the system underneath it, and keep moving until the product is real enough to test, ship, and explain.
 

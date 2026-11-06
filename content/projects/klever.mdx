@@ -205,14 +205,7 @@ Instead of letting AI dictate our design decisions, we began to explore how we c
 
 ### Meeting AppAgent and the Eureka Moment
 
-<div className="github-card">
-    <ContentImage src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon" />
-    <div className="content">
-        <p>AppAgent: Multimodal Agents as Smartphone Users</p>
-        <a href="https://github.com/FigmaAI/klever">appagent-official.github.io</a>
-    </div>
-
-</div>
+<LinkPreview url="https://appagent-official.github.io/" />
 
 
 Tencent’s research team introduced AppAgent, a multi-modal agent capable of interacting with apps naturally. Using LLM and Android Studio, AppAgent demonstrates how AI can explore apps and use gestures like a human.
@@ -250,17 +243,19 @@ We wanted to understand how AI & AppAgent could naturally fit into our design pr
 
 From these interviews, we uncovered three key insights:
 
-<div style={{"backgroundColor":"#f5f5f5","padding":"20px","borderRadius":"8px","margin":"20px 0"}}>
-
-⏳ <span style={{"fontSize":"16px","backgroundColor":"#333","color":"#fff","padding":"2px 4px"}}>Research is Time-Consuming</span> 
-User research often requires significant time and resources.
-
-🤷‍♂️ <span style={{"fontSize":"16px","backgroundColor":"#333","color":"#fff","padding":"2px 4px"}}>Lack of Alternatives</span>
-Designers struggle to find varied and effective alternatives when testing new concepts.
-
-🚀 <span style={{"fontSize":"16px","backgroundColor":"#333","color":"#fff","padding":"2px 4px"}}>Potential for Instant Testing</span>
-AppAgent could greatly improve the speed and quality of usability testing.
-
+<div className="content-research-insights">
+  <div className="content-research-insight">
+    <span aria-hidden="true">⏳</span>
+    <div><h4>Research is Time-Consuming</h4><p>User research often requires significant time and resources.</p></div>
+  </div>
+  <div className="content-research-insight">
+    <span aria-hidden="true">🤷‍♂️</span>
+    <div><h4>Lack of Alternatives</h4><p>Designers struggle to find varied and effective alternatives when testing new concepts.</p></div>
+  </div>
+  <div className="content-research-insight">
+    <span aria-hidden="true">🚀</span>
+    <div><h4>Potential for Instant Testing</h4><p>AppAgent could greatly improve the speed and quality of usability testing.</p></div>
+  </div>
 </div>
 
 AI is not a magic wand that solves every problem. The key is understanding how AI can add real value to the design process. Through conversations with designers, we discovered the potential for AppAgent to positively transform the way we design.
@@ -702,27 +697,13 @@ We went to great lengths to address these API limitations, even meeting with Fig
 
 Rather than letting this limitation stop us, we saw an opportunity to expand our impact. We decided to open-source our project, believing that by sharing our challenges openly, we could not only find potential solutions but also inspire others to build upon our work. This decision to embrace open collaboration has already led to unexpected innovations and improvements.
 
-<div className="github-card">
-    <ContentImage src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon" />
-    <div className="content">
-        <p>A Figma plugin that allows you to do a simple usability test in Figma</p>
-        <a href="https://github.com/FigmaAI/klever">github.com/FigmaAI/klever</a>
-    </div>
+<LinkPreview url="https://github.com/FigmaAI/klever" />
 
-</div>
-
-<div className="github-card">
-    <ContentImage src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon" />
-    <div className="content">
-        <p>AppAgent: Multimodal Agents as Smartphone Users</p>
-        <a href="https://appagent-official.github.io">appagent-official.github.io</a>
-    </div>
-
-</div>
+<LinkPreview url="https://appagent-official.github.io/" />
 
 The community's response has been incredibly encouraging. Developers and designers from various backgrounds have started experimenting with our codebase, proposing creative solutions to overcome the current limitations. One particularly promising approach involves integrating the Figma plugin with a Python Flask server:
 
-<Gallery images={[{"src":"https://github.com/FigmaAI/AppAgent/blob/main/assets/KleverOnServer.gif?raw=true","alt":"Klever — A Community-Driven AI Usability Testing Figma Plugin — Prototype of the Figma plugin via integrating with Python Flask server approach ([Code](https://github.com/FigmaAI/AppAgent)) 1"}]} columns={1} caption={<>{"Prototype of the Figma plugin via integrating with Python Flask server approach ("}<a href="https://github.com/FigmaAI/AppAgent">{"Code"}</a>{")"}</>} fullWidth={false} />
+<p className="content-media-unavailable">The prototype animation is no longer available at its original location. <a href="https://github.com/FigmaAI/AppAgent">View the source repository</a>.</p>
 
 
 
@@ -737,7 +718,18 @@ The community's response has been incredibly encouraging. Developers and designe
 
 
 
-<StoreBadges urls={["https://apps.apple.com/us/app/klever-instance-ut/id6754501208","xp8brb9spkfrsw"]} appName={"Klever Instance UT"} title={"Download Klever Desktop App"} description={"Klever Desktop is now available on the stores below. Download and start your AI-powered usability testing journey today!"} fullWidth={false} />
+<AppDownloads apps={[
+  {
+    id: "klever-desktop",
+    title: "Download Klever Desktop App",
+    appName: "Klever Instance UT",
+    description: "Run AI-powered usability tests on macOS and Windows.",
+    imageTheme: "light",
+    imageLayout: "landscape",
+    images: [{ src: "/images/projects/2024-klever/app-store/desktop.jpg", alt: "Klever Desktop — App Store promotional screenshot" }],
+    urls: ["https://apps.apple.com/us/app/klever-instance-ut/id6754501208", "xp8brb9spkfrsw"],
+  },
+]} />
 
 
 

@@ -1,5 +1,4 @@
 import type { ComponentPropsWithoutRef } from "react";
-import mediaManifest from "../../migration/media-manifest.json";
 import { ContentImage as OptimizedContentImage } from "@/components/content/content-image";
 import {
   Gallery,
@@ -13,32 +12,25 @@ import {
   Timeline,
   TimelineItem,
   Figure,
+  ButtonLink,
 } from "@/components/content";
 
-type MediaItem = { src: string; width?: number; height?: number };
-const imageMetadata = new Map(
-  (mediaManifest as MediaItem[]).map((image) => [decodeURI(image.src), image]),
-);
-
-/** Resolves known intrinsic dimensions so images reserve space and avoid layout shift. */
+/** Markdown images and <ContentImage> share the responsive, size-reserving renderer. */
 function ContentImage({
   src,
   alt,
   width,
   height,
   className,
-  style,
 }: ComponentPropsWithoutRef<"img">) {
   if (typeof src !== "string") return null;
-  const metadata = imageMetadata.get(decodeURI(src));
   return (
     <OptimizedContentImage
       src={src}
       alt={alt || ""}
-      width={metadata?.width ?? (width ? Number(width) : undefined)}
-      height={metadata?.height ?? (height ? Number(height) : undefined)}
+      width={width ? Number(width) : undefined}
+      height={height ? Number(height) : undefined}
       className={className}
-      style={style}
     />
   );
 }
@@ -74,6 +66,7 @@ export const mdxComponents = {
   Timeline,
   TimelineItem,
   Figure,
+  ButtonLink,
   ContentImage,
   img: ContentImage,
   a: ContentLink,

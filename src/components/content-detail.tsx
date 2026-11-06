@@ -6,7 +6,7 @@ import { getContentUrl, getLocalizedContentList, getTranslations } from "@/lib/c
 import { mdxComponents } from "@/lib/mdx";
 import { usePageMeta } from "@/lib/use-page-meta";
 import { site } from "@/lib/site";
-import { getMediaDimensions } from "@/lib/media";
+import { ContentImage } from "@/components/content/content-image";
 import { useSitePreferences } from "@/lib/site-preferences";
 
 export function ContentDetail({ entry }: { entry: ContentEntry }) {
@@ -32,7 +32,6 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
     setToc(headings);
   }, [entry.slug]);
 
-  const heroSize = getMediaDimensions(entry.hero);
   const entries = getLocalizedContentList(entry.kind, language);
   const position = entries.findIndex((item) =>
     entry.translationKey ? item.translationKey === entry.translationKey : item.slug === entry.slug,
@@ -138,14 +137,12 @@ export function ContentDetail({ entry }: { entry: ContentEntry }) {
           </header>
           {entry.hero && (
             <div className="page-shell detail-hero">
-              <img
+              <ContentImage
                 src={entry.hero}
-                width={heroSize?.width || 1600}
-                height={heroSize?.height || 1000}
                 alt={entry.title}
                 className="detail-featured-image"
                 loading="eager"
-                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, 1280px"
               />
             </div>
           )}

@@ -1,0 +1,929 @@
+{
+  "1425850072793747458": {
+    "__typename": "Tweet",
+    "favorite_count": 14,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "created_at": "2021-08-12T16:02:03.000Z",
+    "display_text_range": [
+      0,
+      280
+    ],
+    "entities": {
+      "hashtags": [
+        {
+          "indices": [
+            24,
+            37
+          ],
+          "text": "TensorFlowJS"
+        },
+        {
+          "indices": [
+            68,
+            75
+          ],
+          "text": "Design"
+        },
+        {
+          "indices": [
+            79,
+            84
+          ],
+          "text": "Line"
+        },
+        {
+          "indices": [
+            250,
+            263
+          ],
+          "text": "MadeWithTFJS"
+        },
+        {
+          "indices": [
+            264,
+            268
+          ],
+          "text": "HCI"
+        },
+        {
+          "indices": [
+            269,
+            273
+          ],
+          "text": "GUI"
+        },
+        {
+          "indices": [
+            274,
+            280
+          ],
+          "text": "Figma"
+        }
+      ],
+      "media": [
+        {
+          "display_url": "pic.x.com/9xIrU3mpP8",
+          "expanded_url": "https://x.com/jason_mayes/status/1425850072793747458/photo/1",
+          "indices": [
+            281,
+            304
+          ],
+          "url": "https://t.co/9xIrU3mpP8"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "buff.ly/3CFowxZ",
+          "expanded_url": "https://buff.ly/3CFowxZ",
+          "indices": [
+            226,
+            249
+          ],
+          "url": "https://t.co/Vk1F5Crohi"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "34283866",
+          "indices": [
+            41,
+            52
+          ],
+          "name": "Jude_Park",
+          "screen_name": "dusskapark"
+        }
+      ]
+    },
+    "id_str": "1425850072793747458",
+    "text": "Super cool use case for #TensorFlowJS by @dusskapark who led Global #Design at #Line to create a system that acts like a spell check for designers. Learn how he made it below. Excited to see how it evolves. Read / watch more: https://t.co/Vk1F5Crohi\n#MadeWithTFJS #HCI #GUI #Figma https://t.co/9xIrU3mpP8",
+    "user": {
+      "id_str": "108920155",
+      "name": "Jason Mayes",
+      "screen_name": "jason_mayes",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1991544032653373444/wKl6mCrc_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1425850072793747458"
+      ],
+      "editable_until_msecs": "1628785923024",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/9xIrU3mpP8",
+        "expanded_url": "https://x.com/jason_mayes/status/1425850072793747458/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          281,
+          304
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/E8mjFXfXIAc0mMv.jpg",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 784,
+              "w": 1400,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "h": 787,
+              "w": 787,
+              "x": 341,
+              "y": 0
+            },
+            {
+              "h": 787,
+              "w": 690,
+              "x": 389,
+              "y": 0
+            },
+            {
+              "h": 787,
+              "w": 394,
+              "x": 537,
+              "y": 0
+            },
+            {
+              "h": 787,
+              "w": 1400,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 787,
+          "width": 1400
+        },
+        "sizes": {
+          "large": {
+            "h": 787,
+            "resize": "fit",
+            "w": 1400
+          },
+          "medium": {
+            "h": 675,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 382,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/9xIrU3mpP8"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 784,
+            "w": 1400,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "h": 787,
+            "w": 787,
+            "x": 341,
+            "y": 0
+          },
+          {
+            "h": 787,
+            "w": 690,
+            "x": 389,
+            "y": 0
+          },
+          {
+            "h": 787,
+            "w": 394,
+            "x": 537,
+            "y": 0
+          },
+          {
+            "h": 787,
+            "w": 1400,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/jason_mayes/status/1425850072793747458/photo/1",
+        "url": "https://pbs.twimg.com/media/E8mjFXfXIAc0mMv.jpg",
+        "width": 1400,
+        "height": 787
+      }
+    ],
+    "conversation_count": 0,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "1445137665322590223": {
+    "__typename": "Tweet",
+    "favorite_count": 19,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "created_at": "2021-10-04T21:24:03.000Z",
+    "display_text_range": [
+      0,
+      278
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/VsPrXXetI9",
+          "expanded_url": "https://x.com/zeplin/status/1445137665322590223/photo/1",
+          "indices": [
+            277,
+            300
+          ],
+          "url": "https://t.co/VsPrXXetI9"
+        }
+      ],
+      "urls": [
+        {
+          "display_url": "buff.ly/3CFowxZ",
+          "expanded_url": "https://buff.ly/3CFowxZ",
+          "indices": [
+            192,
+            215
+          ],
+          "url": "https://t.co/mwiHhpZSkl"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "254107028",
+          "indices": [
+            110,
+            121
+          ],
+          "name": "TensorFlow",
+          "screen_name": "TensorFlow"
+        },
+        {
+          "id_str": "34283866",
+          "indices": [
+            224,
+            235
+          ],
+          "name": "Jude_Park",
+          "screen_name": "dusskapark"
+        }
+      ]
+    },
+    "id_str": "1445137665322590223",
+    "text": "Machine learning meets design systems? 🤯 Learn how one of our users built a nifty app with the Zeplin API and @TensorFlow JS that helps designers and engineers utilize their design library. 👉 https://t.co/mwiHhpZSkl\n\nThanks @dusskapark for sharing your project with the world! https://t.co/VsPrXXetI9",
+    "user": {
+      "id_str": "2239775923",
+      "name": "Zeplin",
+      "screen_name": "zeplin",
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1857150576171397120/JN3xUrnq_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1445137665322590223"
+      ],
+      "editable_until_msecs": "1633384443429",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/VsPrXXetI9",
+        "expanded_url": "https://x.com/zeplin/status/1445137665322590223/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          277,
+          300
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/FA4pC9WXEAcr_Mk.png",
+        "original_info": {
+          "focus_rects": [
+            {
+              "h": 400,
+              "w": 714,
+              "x": 450,
+              "y": 0
+            },
+            {
+              "h": 400,
+              "w": 400,
+              "x": 607,
+              "y": 0
+            },
+            {
+              "h": 400,
+              "w": 351,
+              "x": 632,
+              "y": 0
+            },
+            {
+              "h": 400,
+              "w": 200,
+              "x": 707,
+              "y": 0
+            },
+            {
+              "h": 400,
+              "w": 1200,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "height": 400,
+          "width": 1200
+        },
+        "sizes": {
+          "large": {
+            "h": 400,
+            "resize": "fit",
+            "w": 1200
+          },
+          "medium": {
+            "h": 400,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 227,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/VsPrXXetI9"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "h": 400,
+            "w": 714,
+            "x": 450,
+            "y": 0
+          },
+          {
+            "h": 400,
+            "w": 400,
+            "x": 607,
+            "y": 0
+          },
+          {
+            "h": 400,
+            "w": 351,
+            "x": 632,
+            "y": 0
+          },
+          {
+            "h": 400,
+            "w": 200,
+            "x": 707,
+            "y": 0
+          },
+          {
+            "h": 400,
+            "w": 1200,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "expandedUrl": "https://x.com/zeplin/status/1445137665322590223/photo/1",
+        "url": "https://pbs.twimg.com/media/FA4pC9WXEAcr_Mk.png",
+        "width": 1200,
+        "height": 400
+      }
+    ],
+    "conversation_count": 0,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "1468087814889689090": {
+    "__typename": "Tweet",
+    "favorite_count": 2,
+    "in_reply_to_screen_name": "dusskapark",
+    "in_reply_to_status_id_str": "1468070543727656960",
+    "in_reply_to_user_id_str": "34283866",
+    "lang": "en",
+    "created_at": "2021-12-07T05:19:45.000Z",
+    "display_text_range": [
+      36,
+      313
+    ],
+    "entities": {
+      "user_mentions": [
+        {
+          "id_str": "34283866",
+          "indices": [
+            0,
+            11
+          ],
+          "name": "Jude_Park",
+          "screen_name": "dusskapark"
+        },
+        {
+          "id_str": "108920155",
+          "indices": [
+            12,
+            24
+          ],
+          "name": "Jason Mayes",
+          "screen_name": "jason_mayes"
+        },
+        {
+          "id_str": "956702859399135232",
+          "indices": [
+            25,
+            35
+          ],
+          "name": "ものЛЕさん .✧*☽",
+          "screen_name": "monolesan"
+        },
+        {
+          "id_str": "978514423739400192",
+          "indices": [
+            175,
+            183
+          ],
+          "name": "siddharth ahuja",
+          "screen_name": "sidahuj"
+        },
+        {
+          "id_str": "35623579",
+          "indices": [
+            184,
+            190
+          ],
+          "name": "Jordan Singer",
+          "screen_name": "jsngr"
+        }
+      ]
+    },
+    "id_str": "1468087814889689090",
+    "text": "@dusskapark @jason_mayes @monolesan 🤯So cool—tell me more! I looked at the code and have no idea how the model is working. Excited to see where ML design linting can take us. @sidahuj @jsngr 👀\n\nFor a moment I thought you built a ML spell-checker for Figma but I get it now :) I'm desperately seeking spellcheck.",
+    "user": {
+      "id_str": "20658535",
+      "name": "Anthony DiSpezio",
+      "screen_name": "adispezio",
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1784764262310944768/Ay5CVf0q_normal.jpg",
+      "highlighted_label": {
+        "badge": {
+          "url": "https://pbs.twimg.com/profile_images/2068849889753333760/YE3KJq___bigger.jpg"
+        },
+        "description": "Figma",
+        "url": {
+          "url": "https://twitter.com/figma",
+          "url_type": "DeepLink"
+        },
+        "user_label_display_type": "Badge",
+        "user_label_type": "BusinessLabel"
+      }
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1468087814889689090"
+      ],
+      "editable_until_msecs": "1638856185479",
+      "edits_remaining": "5",
+      "is_edit_eligible": true
+    },
+    "conversation_count": 1,
+    "news_action_type": "conversation",
+    "parent": {
+      "favorite_count": 1,
+      "in_reply_to_screen_name": "jason_mayes",
+      "in_reply_to_status_id_str": "1436503683894677507",
+      "in_reply_to_user_id_str": "108920155",
+      "lang": "en",
+      "possibly_sensitive": false,
+      "reply_count": 1,
+      "retweet_count": 0,
+      "created_at": "2021-12-07T04:11:07.000Z",
+      "display_text_range": [
+        35,
+        308
+      ],
+      "entities": {
+        "hashtags": [
+          {
+            "indices": [
+              93,
+              106
+            ],
+            "text": "madeWithTFJS"
+          },
+          {
+            "indices": [
+              109,
+              115
+            ],
+            "text": "figma"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.x.com/YjsP3HwEGS",
+            "expanded_url": "https://x.com/dusskapark/status/1468070543727656960/photo/1",
+            "indices": [
+              308,
+              331
+            ],
+            "url": "https://t.co/YjsP3HwEGS"
+          }
+        ],
+        "user_mentions": [
+          {
+            "id_str": "108920155",
+            "indices": [
+              0,
+              12
+            ],
+            "name": "Jason Mayes",
+            "screen_name": "jason_mayes"
+          },
+          {
+            "id_str": "956702859399135232",
+            "indices": [
+              13,
+              23
+            ],
+            "name": "ものЛЕさん .✧*☽",
+            "screen_name": "monolesan"
+          },
+          {
+            "id_str": "20658535",
+            "indices": [
+              24,
+              34
+            ],
+            "name": "Anthony DiSpezio",
+            "screen_name": "adispezio"
+          },
+          {
+            "id_str": "20658535",
+            "indices": [
+              39,
+              49
+            ],
+            "name": "Anthony DiSpezio",
+            "screen_name": "adispezio"
+          },
+          {
+            "id_str": "108920155",
+            "indices": [
+              279,
+              291
+            ],
+            "name": "Jason Mayes",
+            "screen_name": "jason_mayes"
+          }
+        ]
+      },
+      "id_str": "1468070543727656960",
+      "text": "@jason_mayes @monolesan @adispezio Hi, @adispezio I'm currently making an interesting plugin #madeWithTFJS + #figma and I think you'll be interested in🤔 It automatically recommends the learned rules to designers if it finds something that does not conform to guidelines. Thanks, @jason_mayes for tagging me! https://t.co/YjsP3HwEGS",
+      "user": {
+        "id_str": "34283866",
+        "name": "Jude_Park",
+        "screen_name": "dusskapark",
+        "is_blue_verified": false,
+        "profile_image_shape": "Circle",
+        "verified": false,
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1285720369131737088/EzgJuDWm_normal.jpg"
+      },
+      "edit_control": {
+        "edit_tweet_ids": [
+          "1468070543727656960"
+        ],
+        "editable_until_msecs": "1638852067713",
+        "edits_remaining": "5",
+        "is_edit_eligible": true
+      },
+      "mediaDetails": [
+        {
+          "display_url": "pic.x.com/YjsP3HwEGS",
+          "expanded_url": "https://x.com/dusskapark/status/1468070543727656960/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "indices": [
+            308,
+            331
+          ],
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/FF-goTIaIAQdwru.jpg",
+          "original_info": {
+            "focus_rects": [],
+            "height": 450,
+            "width": 800
+          },
+          "sizes": {
+            "large": {
+              "h": 450,
+              "resize": "fit",
+              "w": 800
+            },
+            "medium": {
+              "h": 450,
+              "resize": "fit",
+              "w": 800
+            },
+            "small": {
+              "h": 383,
+              "resize": "fit",
+              "w": 680
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "animated_gif",
+          "url": "https://t.co/YjsP3HwEGS",
+          "video_info": {
+            "aspect_ratio": [
+              16,
+              9
+            ],
+            "variants": [
+              {
+                "bitrate": 0,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/tweet_video/FF-goTIaIAQdwru.mp4"
+              }
+            ]
+          }
+        }
+      ],
+      "photos": [],
+      "video": {
+        "aspectRatio": [
+          16,
+          9
+        ],
+        "contentType": "gif",
+        "durationMs": 0,
+        "mediaAvailability": {
+          "status": "available"
+        },
+        "poster": "https://pbs.twimg.com/tweet_video_thumb/FF-goTIaIAQdwru.jpg",
+        "variants": [
+          {
+            "type": "video/mp4",
+            "src": "https://video.twimg.com/tweet_video/FF-goTIaIAQdwru.mp4"
+          }
+        ],
+        "videoId": {
+          "type": "tweet",
+          "id": "1468070543727656960"
+        },
+        "viewCount": 0
+      },
+      "isEdited": false,
+      "isStaleEdit": false
+    },
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "1681681562998304768": {
+    "__typename": "Tweet",
+    "favorite_count": 8,
+    "lang": "en",
+    "possibly_sensitive": false,
+    "created_at": "2023-07-19T15:05:03.000Z",
+    "display_text_range": [
+      0,
+      266
+    ],
+    "entities": {
+      "media": [
+        {
+          "display_url": "pic.x.com/Gc8sy7Q1jp",
+          "expanded_url": "https://x.com/HugoDuprez/status/1681681562998304768/video/1",
+          "indices": [
+            264,
+            287
+          ],
+          "url": "https://t.co/Gc8sy7Q1jp"
+        }
+      ],
+      "user_mentions": [
+        {
+          "id_str": "254107028",
+          "indices": [
+            18,
+            29
+          ],
+          "name": "TensorFlow",
+          "screen_name": "TensorFlow"
+        },
+        {
+          "id_str": "34283866",
+          "indices": [
+            79,
+            90
+          ],
+          "name": "Jude_Park",
+          "screen_name": "dusskapark"
+        },
+        {
+          "id_str": "108920155",
+          "indices": [
+            224,
+            236
+          ],
+          "name": "Jason Mayes",
+          "screen_name": "jason_mayes"
+        },
+        {
+          "id_str": "3186020293",
+          "indices": [
+            237,
+            251
+          ],
+          "name": "Kartikey Rawat",
+          "screen_name": "carrycooldude"
+        },
+        {
+          "id_str": "50090898",
+          "indices": [
+            252,
+            263
+          ],
+          "name": "Google for Developers",
+          "screen_name": "googledevs"
+        }
+      ]
+    },
+    "id_str": "1681681562998304768",
+    "text": "🚨 Import your own @TensorFlow JS model into the Figma Autoname plugin⚡️ Thanks @dusskapark for the implementation!\n\n👉 Rename your layers with a model trained on your design components\n👉 Run locally, no server calls, 0 cost\n\n@jason_mayes @carrycooldude @googledevs https://t.co/Gc8sy7Q1jp",
+    "user": {
+      "id_str": "1220049748197040136",
+      "name": "Hugo Duprez",
+      "screen_name": "HugoDuprez",
+      "is_blue_verified": true,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1440169416805679106/F2OzhkZK_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1681681562998304768"
+      ],
+      "editable_until_msecs": "1689782703000",
+      "edits_remaining": "5",
+      "is_edit_eligible": false
+    },
+    "mediaDetails": [
+      {
+        "additional_media_info": {},
+        "display_url": "pic.x.com/Gc8sy7Q1jp",
+        "expanded_url": "https://x.com/HugoDuprez/status/1681681562998304768/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          264,
+          287
+        ],
+        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1681679651255590912/pu/img/Ika3qtWwWvjvmRS1.jpg",
+        "original_info": {
+          "focus_rects": [],
+          "height": 1080,
+          "width": 1640
+        },
+        "sizes": {
+          "large": {
+            "h": 1080,
+            "resize": "fit",
+            "w": 1640
+          },
+          "medium": {
+            "h": 790,
+            "resize": "fit",
+            "w": 1200
+          },
+          "small": {
+            "h": 448,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "video",
+        "url": "https://t.co/Gc8sy7Q1jp",
+        "video_info": {
+          "aspect_ratio": [
+            41,
+            27
+          ],
+          "duration_millis": 20233,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/ext_tw_video/1681679651255590912/pu/pl/MQtIjNJz9w6uVYqs.m3u8?tag=12"
+            },
+            {
+              "bitrate": 256000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1681679651255590912/pu/vid/410x270/vfnnAAtzBAInrHEm.mp4?tag=12"
+            },
+            {
+              "bitrate": 832000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1681679651255590912/pu/vid/546x360/hXINNHswAiBD4UQP.mp4?tag=12"
+            },
+            {
+              "bitrate": 2176000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/ext_tw_video/1681679651255590912/pu/vid/1092x720/GGUdzacIFIdV5iT_.mp4?tag=12"
+            }
+          ]
+        }
+      }
+    ],
+    "photos": [],
+    "video": {
+      "aspectRatio": [
+        41,
+        27
+      ],
+      "contentType": "media_entity",
+      "durationMs": 20233,
+      "mediaAvailability": {
+        "status": "available"
+      },
+      "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1681679651255590912/pu/img/Ika3qtWwWvjvmRS1.jpg",
+      "variants": [
+        {
+          "type": "application/x-mpegURL",
+          "src": "https://video.twimg.com/ext_tw_video/1681679651255590912/pu/pl/MQtIjNJz9w6uVYqs.m3u8?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1681679651255590912/pu/vid/410x270/vfnnAAtzBAInrHEm.mp4?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1681679651255590912/pu/vid/546x360/hXINNHswAiBD4UQP.mp4?tag=12"
+        },
+        {
+          "type": "video/mp4",
+          "src": "https://video.twimg.com/ext_tw_video/1681679651255590912/pu/vid/1092x720/GGUdzacIFIdV5iT_.mp4?tag=12"
+        }
+      ],
+      "videoId": {
+        "type": "tweet",
+        "id": "1681681562998304768"
+      },
+      "viewCount": 0
+    },
+    "conversation_count": 4,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false
+  }
+}

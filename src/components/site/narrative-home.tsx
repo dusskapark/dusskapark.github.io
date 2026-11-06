@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, Play } from "lucide-react";
 import { AnimatedSpan, Terminal, TypingAnimation } from "@/components/magicui/terminal";
 import { getContentPathForLanguage } from "@/lib/content";
 import { useSitePreferences } from "@/lib/site-preferences";
+import { withYouTubeClientIdentity } from "@/components/content/media-embed";
 import koreanStory, { englishStory } from "virtual:home-narrative";
 import "./narrative-home.css";
 
@@ -359,7 +360,7 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
     <div className="narrative-scene" key={sceneKey}>
       <div className={`narrative-media narrative-media-${mediaType}`} style={scene.clip ? { aspectRatio: scene.clip.aspect } : undefined}>
         {sceneKey === "intro" ? <IntroTerminal reducedMotion={reducedMotion} /> : video ? (
-          <iframe title={korean ? `${title} 영상` : `${title} video`} src={`https://www.youtube.com/embed/${video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          <iframe title={korean ? `${title} 영상` : `${title} video`} src={withYouTubeClientIdentity(`https://www.youtube.com/embed/${video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0`)} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
         ) : scene.clip ? (
           <video
             key={String(reducedMotion)}

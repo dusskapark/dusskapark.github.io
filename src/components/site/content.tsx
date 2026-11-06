@@ -7,6 +7,7 @@ import { LineShadowText } from "@/components/ui/line-shadow-text";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { Marquee } from "@/components/ui/marquee";
 import { FocusBeams } from "@/components/site/focus-beams";
+import { ContentImage } from "@/components/content/content-image";
 
 export function Hero() {
   return (
@@ -162,7 +163,12 @@ export function ProjectCard({
       >
         <div className="project-card-image">
           {entry.hero ? (
-            <img className="project-thumbnail" src={entry.hero} alt="" />
+            <ContentImage
+              className="project-thumbnail"
+              src={entry.hero}
+              alt=""
+              sizes="(max-width: 768px) 100vw, 560px"
+            />
           ) : (
             <span className="project-card-placeholder" aria-hidden="true">
               {entry.title}

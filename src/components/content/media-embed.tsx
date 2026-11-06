@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getImageVariants } from "@/components/content/content-image";
+import { HeroVideoDialog } from "@/components/magicui/hero-video-dialog";
 
 export type MediaEmbedProps = {
   src: string;
@@ -46,11 +48,31 @@ function mediaDetails(src: string) {
   }
 }
 
-function withYouTubeClientIdentity(src: string) {
+/** Returns the 11-character video ID for single-video YouTube URLs. */
+export function youtubeVideoId(src: string) {
+  try {
+    const url = new URL(src.startsWith("//") ? `https:${src}` : src);
+    const host = url.hostname.replace(/^www\./, "");
+    let id: string | null | undefined;
+    if (host === "youtu.be") id = url.pathname.slice(1);
+    else if (/^(m\.)?youtube(-nocookie)?\.com$/.test(host))
+      id = url.pathname.startsWith("/embed/")
+        ? url.pathname.split("/")[2]
+        : url.searchParams.get("v");
+    return id && /^[A-Za-z0-9_-]{11}$/.test(id) && id !== "videoseries"
+      ? id
+      : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+export function withYouTubeClientIdentity(src: string) {
   try {
     const url = new URL(src);
     if (!/(^|\.)youtube(?:-nocookie)?\.com$/.test(url.hostname)) return src;
 
+    if (typeof window === "undefined") return src;
     const origin = window.location.origin;
     if (!/^https?:\/\//.test(origin) || url.searchParams.has("origin")) return src;
 
@@ -77,6 +99,9 @@ export function MediaEmbed({
   const frameSrc = nativeVideo
     ? normalizedSrc
     : withYouTubeClientIdentity(normalizedSrc);
+  const videoId = nativeVideo ? undefined : youtubeVideoId(normalizedSrc);
+  const thumbnail = videoId && `/images/video-thumbnails/${videoId}.jpg`;
+  const facade = Boolean(thumbnail && getImageVariants(thumbnail));
   const frameRef = useRef<HTMLIFrameElement>(null);
   const [state, setState] = useState<
     "waiting" | "loading" | "loaded" | "failed"
@@ -106,7 +131,15 @@ export function MediaEmbed({
   return (
     <figure className={cn("content-embed", fullWidth && "content-wide")}>
       <div className="content-embed-frame" style={{ aspectRatio }}>
-        {nativeVideo ? (
+        {facade && videoId && thumbnail ? (
+          <HeroVideoDialog
+            title={title || details.title}
+            thumbnailSrc={thumbnail}
+            videoSrc={withYouTubeClientIdentity(
+              `https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0`,
+            )}
+          />
+        ) : nativeVideo ? (
           <video
             controls
             preload="metadata"

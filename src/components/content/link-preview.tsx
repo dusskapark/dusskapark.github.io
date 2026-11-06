@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { ArrowUpRight, Link2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { ContentImage } from "./content-image";
 import metadata from "../../../content/link-previews.json";
 
 type PreviewMetadata = {
@@ -28,17 +29,22 @@ export function LinkPreview({ url }: { url: string }) {
       <Card className="content-link-preview-card">
         <div className="content-link-preview-image">
           <Link2 aria-hidden="true" size={32} />
-          {preview?.image && (
-            <img src={preview.localImage || preview.image} alt={preview.imageAlt || ""} loading="lazy" decoding="async"
+          {preview?.localImage ? (
+            <ContentImage src={preview.localImage} alt={preview.imageAlt || ""} sizes="(max-width: 768px) 100vw, 320px" />
+          ) : preview?.image ? (
+            <img src={preview.image} alt={preview.imageAlt || ""} loading="lazy" decoding="async"
               onError={(event) => { event.currentTarget.hidden = true; }} />
-          )}
+          ) : null}
         </div>
         <CardContent>
           <div className="content-link-preview-site">
             <span>{preview?.siteName || parsed.hostname}</span>
             <ArrowUpRight aria-hidden="true" size={16} />
           </div>
-          <h3>{title}</h3>
+          <span className="content-link-preview-title">
+            {title}
+            <span className="content-sr-only"> (opens in a new tab)</span>
+          </span>
           {preview?.description && <p>{preview.description}</p>}
           <span className="content-link-preview-url">{parsed.hostname}{parsed.pathname.replace(/\/$/, "")}</span>
         </CardContent>

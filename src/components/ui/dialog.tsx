@@ -25,9 +25,11 @@ function DialogContent({
   className,
   children,
   showCloseButton = true,
+  closeLabel = "Close",
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Content> & {
   showCloseButton?: boolean;
+  closeLabel?: string;
 }) {
   return (
     <DialogPrimitive.Portal>
@@ -44,7 +46,7 @@ function DialogContent({
         {showCloseButton && (
           <DialogPrimitive.Close
             className="content-dialog-close"
-            aria-label="Close image viewer"
+            aria-label={closeLabel}
           >
             <XIcon aria-hidden="true" size={22} />
           </DialogPrimitive.Close>

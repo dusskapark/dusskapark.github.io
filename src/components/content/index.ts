@@ -10,3 +10,4 @@ export { TweetEmbed } from "./tweet-embed";
 export { Timeline, TimelineItem } from "./timeline";
 export { Figure } from "./figure";
 export { LinkPreview, LinkPreviewGrid } from "./link-preview";
+export { ButtonLink } from "./button-link";

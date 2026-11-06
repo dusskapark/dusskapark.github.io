@@ -78,7 +78,7 @@
 LOOKBOOK is the UX extension library for reusable, systematic design based on Google Material Design System backed by Open Source. 
 
 
-<a href="https://zeroheight.com/1dd0d624e/p/30d869-" target="_blank" className="button--fill" rel="noopener noreferrer">Get LOOKBOOK</a>
+<ButtonLink href="https://zeroheight.com/1dd0d624e/p/30d869-">Open the LOOKBOOK documentation</ButtonLink>
 
 
 In this project I did the following tasks:
@@ -102,7 +102,7 @@ Since these are services for internal administrators, mostly it is acceptable to
 Therefore, it is very significant in the product design of these managerial products to utilize a small number of resources most efficiently to provide the same user experience.
 
 
-![Lookbook En.006](</images/projects/2019-lookbook/Lookbook%20En.006.png>)
+![LOOKBOOK — Why, did we need to improve our management tools?](</images/projects/2019-lookbook/Lookbook%20En.006.png>)
 
 
 
@@ -115,7 +115,7 @@ However, on the contrary, we're also the team that experienced the most problems
 - Eventually, this led users learning cost and human errors.
  
 
-![Lookbook En.008](</images/projects/2019-lookbook/Lookbook%20En.008.png>)
+![LOOKBOOK — Why, did we need to improve our management tools?](</images/projects/2019-lookbook/Lookbook%20En.008.png>)
 
 Moreover.. many admin products, that were developed by one developer alone without designer or PM's supports, did not escape from basic UI provided by some framework or themes that they relied on. Obviously products ranging from Vue and React to the old version Bootstrap, the environment of products were very inconsistent. We have even experienced a waste of resources to solve these issues, such as repetitively outsourcing or using a common library. 
 
@@ -141,7 +141,7 @@ In the research process, we found the solution to all these problems in the case
 We had predecessors who went through the same kind of problems. They started off from the same situation. Our predecessors at NAVER created chart libraries used in operating tools for NAVER Café and Blog on their own, and even used commercial and opensource libraries, but they said the limitations for each were clear.
 
 
-![Lookbook En.023](</images/projects/2019-lookbook/Lookbook%20En.023.png>)
+![LOOKBOOK — Opensource itself was not the answer. Let's indirectly expand!](</images/projects/2019-lookbook/Lookbook%20En.023.png>)
 
 
 And billboard JS provided the clue for overcoming the limitations. Based on the D3.JS ecosystem, billboard JS maximized its management efficiency by indirectly contributing only to the functions that NAVER needs through Pull-Requests. Currently, NAVER Café and Blog are using this chart library to obtain statistics, and this chart library was ranked one of the most active opensource projects in Korea 2019.
@@ -159,7 +159,7 @@ We concluded that it would be possible to maximize the management efficiency and
 
 | billboard JS                                               | LOOKBOOK                                                   |
 | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| ![Lookbook En.024](</images/projects/2019-lookbook/Lookbook%20En.024.png>) | ![Lookbook En.025](</images/projects/2019-lookbook/Lookbook%20En.025.png>) |
+| ![LOOKBOOK — Opensource itself was not the answer. Let's indirectly expand!](</images/projects/2019-lookbook/Lookbook%20En.024.png>) | ![LOOKBOOK — Opensource itself was not the answer. Let's indirectly expand!](</images/projects/2019-lookbook/Lookbook%20En.025.png>) |
 
 
 
@@ -168,7 +168,7 @@ We concluded that it would be possible to maximize the management efficiency and
 In [Material Design](http://material.io/), many components have already been provided, but it is more like to focus on mobile platform rather than web. So, you will often need more complicated web component (such as data table) or very basic component (such as tab) while you are using it. We have decided to expand such a way as below when we would find these components while we built the admin site with Material Design.
 
 
-<strong>Check the needed component</strong>
+#### Check the needed component
 
 For example, in the case of the Date pickers component, it is a function that is used particularly often in the admin website. However, the calendar UI of the Date pickers that is basically provided is somewhat unsatisfactory in design, and it was difficult to use on a small mobile screen. In addition, it was also needed to allow the selection as a Range like 'from when to when'.
 
@@ -180,12 +180,12 @@ If we cannot find any appropriate Material-UI based Date picker component from G
 
 
 
-<strong>Creating UX guide, Sketch library and React component</strong>
+#### Creating UX guide, Sketch library and React component
 
 Firstly we will define the UX design of the required component and create a design kit for Sketch based on Google's official Baseline.sketch. Then, we will create the React component to realize the completed design and create detailed specs such as props, state, and option. Finally, we will distribute these three(md, sketch, js file).
  (e.g. [Pickers](https://zeroheight.com/1dd0d624e/p/27b58b/b/33dfe1))
 
-![image-20200104192724536](</images/projects/2019-lookbook/image-20200104192724536.png>)
+![LOOKBOOK — Creating UX guide, Sketch library and React component](</images/projects/2019-lookbook/image-20200104192724536.png>)
 
 
 
@@ -208,7 +208,7 @@ Game platform also had to be usable with other brands, and LOOKBOOK was proceede
 
 We provided a way that if designer set the Color, Shape and iconography, and saved Theme in `Baseline.sketch`, then the Theme would be automatically updated in `LOOKBOOK.sketch`. All components of LOOKBOOK are always changed according to the brand theme like the video below.
 
-![img](</images/projects/2019-lgd/lgd2019-910.gif>)
+![LOOKBOOK — Material Theming](</images/projects/2019-lgd/lgd2019-910.gif>)
 
 
 
@@ -216,7 +216,7 @@ We provided a way that if designer set the Color, Shape and iconography, and sav
 
 After the completion of theme settings, you can freely use all components of LOOKBOOK from your project, by copy/paste LOOKBOOK self-made components and Material Design's all components as stickers.
 
-![img](</images/projects/2019-lookbook/h0LBNHC9yfk_5xtpws3yEQ.png>)
+![LOOKBOOK — Ready-to-use components](</images/projects/2019-lookbook/h0LBNHC9yfk_5xtpws3yEQ.png>)
 
 
 

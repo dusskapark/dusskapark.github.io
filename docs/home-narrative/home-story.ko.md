@@ -34,7 +34,9 @@ LINE에서는 [게임 개발자 플랫폼](https://api.metadata.co.kr/project/gd
 
 코로나19 시기에는 네이버로 이동해서 [NAVER NOW와 NAVER TV](https://api.metadata.co.kr/project/naver-now)의 통합 프로젝트에 참여했으며, 콘텐츠 크리에이터의 경험을 통합하는 제품을 설계하고 성공적으로 배포를 이끌었습니다.
 
-2023년에는 싱가포르 Grab에 개발자 경험을 책임지는 회사의 첫 프로덕트 디자이너로 합류했습니다. 지금도 Grab의 Tech Infra 조직에서 개발자 경험을 맡아, 개발자가 사용하는 제품을 설계하고 직접 만드는 프로덕트 빌더로 일하고 있습니다.
+2023년에는 싱가포르 Grab에 개발자 경험을 책임지는 회사의 첫 프로덕트 디자이너로 합류했습니다. Tech Infra 조직에서 60개가 넘는 내부 플랫폼을 하나의 일관된 사용자 경험으로 연결하는 [Grab Console](confidential:grab-console)을 맡아, 사용자 리서치부터 설계와 릴리즈까지 엔드투엔드 디자인을 책임졌습니다. 콘솔의 성공적인 온보딩을 이끌며 조직에 유의미한 임팩트를 만들었습니다.
+
+2026년에는 데이터 사이언티스트들이 사용하던 외부 데이터 분석·머신러닝 플랫폼의 노트북과 파이프라인 환경을 [내부 데이터 플랫폼](confidential:grab-data)으로 구축하는 프로젝트로 역할을 넓혔습니다. Databricks와 같은 플랫폼이 제공하는 데이터 작업 환경을 내부화하는 일입니다. 리드 디자이너이자 프로덕트 빌더로 참여해 Python 노트북부터 IDE 플러그인, CLI, MCP, 파이프라인 관리까지 AI 에이전트와 함께 작업하는 엔드투엔드 사용자 흐름을 설계하고, 제품 코드에도 다수의 커밋으로 기여했습니다.
 
 #### 개인 프로젝트와 오픈소스
 
@@ -71,7 +73,7 @@ AI가 본격적으로 제품 생산성에 영향을 주기 시작한 다음부�
 | C02 | 본업 | LINE / 사례 기록 2017 | 게임 개발자 플랫폼 | 게임 개발자의 가이드·빌드 제출·검수 작업 | GDC 화면. `/project/gdc` |
 | C03 | 본업 | 2019–2020 | LOOKBOOK·LINE Design System Global | LOOKBOOK을 거쳐 디자인 시스템 팀과 글로벌 생산성으로 확장 | 두 표식은 같은 디자인 시스템 장에 속한다. 컴포넌트·명세·사용 문서. `/project/ldsg`, 보조 `/project/lookbook` |
 | C03N | 본업 | NAVER / 사례 기록 2022 | NAVER NOW와 NAVER TV | 개발자 도구에서 콘텐츠 크리에이터와 운영자의 경험으로 시야가 확장된 시기 | `/images/projects/2022-naver-now/Portfolio.008.png`, `/project/naver-now`. 아래 공개·범위 메모 참조 |
-| C04 | 본업 | 2023년 Grab 합류 / 현재 | Grab의 개발자 경험 | Tech Infra 조직에서 첫 개발자 경험 프로덕트 디자이너로 합류해 현재까지 담당하는 역할 | 구체적인 대표 업무·판단·성과 자료를 사용자 설명 후 선정 |
+| C04 | 본업 | 2023년 Grab 합류 / 2026년 | Grab Console·데이터 플랫폼 | 60개가 넘는 내부 플랫폼의 통합 경험을 리서치부터 릴리즈까지 설계하고, 노트북·파이프라인 환경 내재화와 AI 에이전트 워크플로를 리드 | 공개 가능한 대표 자료와 상세 진입은 추후 선정 |
 | E01 | 개인 프로젝트 | 2021–2022 | Figma ML | 머신러닝을 적용한 도구와 DEVIEW·TensorFlow·Config 발표 성과 | UI 인식·검사 데모와 발표 기록. `/project/tensorflow-js` |
 | E01G | 발표 | Figma ML / Google | Google TensorFlow Show & Tell | Figma ML 실험과 구현을 소개한 Google 발표 | [발표 영상](https://www.youtube.com/watch?v=blL0EQ6wNH8). 이 표식을 선택하면 오른쪽에 해당 YouTube 영상 표시 |
 | E01F | 발표 | Figma ML / Figma Config 2022 | Figma Config 2022 | 디자인 시스템과 TensorFlow를 활용한 도구를 소개한 Config 발표 | [발표 영상](https://www.youtube.com/watch?v=ckN1QIpjkAk). 이 표식을 선택하면 오른쪽에 해당 YouTube 영상 표시 |
@@ -100,7 +102,7 @@ AI가 본격적으로 제품 생산성에 영향을 주기 시작한 다음부�
 
 | 내용 | 근거 | 활동과 성과의 구분 |
 | --- | --- | --- |
-| 본업의 순서와 현재 Grab 역할 | 사용자 업데이트 원고, [과거 자기소개 검토](intro-source-notes.ko.md) | 2023년 Grab 합류, 첫 개발자 경험 프로덕트 디자이너, Tech Infra 소속은 사용자 원고에 근거. 대표 업무별 지표와 상세 자료는 아직 정하지 않음 |
+| 본업의 순서와 현재 Grab 역할 | 사용자 업데이트 원고, [과거 자기소개 검토](intro-source-notes.ko.md), 사용자 설명 | 2023년 합류와 Grab Console 디자인 책임, 2026년 데이터 플랫폼 내재화 및 AI 에이전트 워크플로 설계. Databricks는 플랫폼 유형의 예시이며 실제 사용 제품으로 단정하지 않음 |
 | ONE store의 책임 확장 | 사용자 답변, [ONE store](../../content/projects/onestore.mdx), [T store](../../content/projects/tstore.mdx) | 회사 프로젝트. 데이터 통합·정책 협의·개발자 안내를 본인 업무로 기술하고, 전체 통합의 단독 총괄이나 플랫폼 전체 성장 수치를 개인 성과로 쓰지 않음 |
 | 게임 개발자 경험 | [GDC](../../content/projects/gdc.mdx) | 회사 프로젝트의 가이드·빌드 제출·검수 설계 |
 | LOOKBOOK·LDSG | 사용자 답변, [LOOKBOOK](../../content/projects/lookbook.mdx), [LDSG](../../content/projects/ldsg.mdx) | 회사 프로젝트를 한 장에서 다룸. 개별 도구에서 글로벌 디자인 시스템으로 역할이 확장된 경력 |
@@ -116,6 +118,6 @@ AI가 본격적으로 제품 생산성에 영향을 주기 시작한 다음부�
 
 사용자가 업데이트한 원고의 NAVER NOW·TV, Figma Autoname, Klever를 각각 기존 상세에 연결했다. Form Helper 등 언급하지 않은 프로젝트는 추가하지 않고, LIFF도 독립적인 대표 장면으로 만들지 않았다. 원고의 문장 내용과 기존 상세 문서·목록 설정은 수정하지 않았다.
 
-Grab에서 담당한 대표 업무 한 가지의 문제·본인의 판단·결과가 추가되면 C04와 해당 문단을 구체화한다. TalkToFigma의 오픈소스 기여는 이 내용의 대체 근거로 사용하지 않는다.
+Grab Console과 데이터 플랫폼은 사용자 설명을 바탕으로 본문에 반영했다. 공개 가능한 시각 자료와 추가 성과 수치는 확인 후 연결한다. TalkToFigma의 오픈소스 기여는 이 내용의 대체 근거로 사용하지 않는다.
 
 프로젝트 및 커뮤니티 리더십의 구체적인 행동, 최종 게시 언어와 문장 길이, 키 비주얼은 다음 편집에서 다룬다. 이번 작업은 문서와 장면 매핑이며 사이트 구현은 시작하지 않았다.

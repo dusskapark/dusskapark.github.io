@@ -13,3 +13,14 @@ For the mobile and desktop narrative regression, start the Vite dev server at
 `http://127.0.0.1:3000`, then run `playwright-cli open http://127.0.0.1:3000/ --mobile`,
 `playwright-cli run-code --filename=tests/narrative-mobile.browser.js`, and
 `playwright-cli close`.
+
+For scroll-driven text, run `pnpm build` and `pnpm preview`, open the preview
+with `playwright-cli`, then run `playwright-cli run-code --filename=tests/narrative-reading.browser.js`.
+This checks desktop and mobile scrolling in both directions, reduced motion,
+forced colors, and the JavaScript-disabled fallback. Close the browser afterward.
+
+Run `playwright-cli run-code --filename=tests/narrative-confidential.browser.js`
+against the running site to check the confidential Grab scenes and NAVER hero,
+including icon loading, accessible lock labels, and mobile layout.
+Run `tests/narrative-beam.browser.js` the same way to check animated connections,
+responsive positioning, and the reduced-motion fallback.

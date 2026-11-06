@@ -36,3 +36,13 @@ Copyright (c) 2023 shadcn
 
 The MIT permission and warranty terms reproduced above also apply to the
 shadcn/ui-derived component source, with this copyright notice retained.
+
+## Simple Icons
+
+The Grab, Figma, React and Claude Code icons are from https://simpleicons.org/ (CC0 1.0). Brand trademarks
+remain the property of their respective owners.
+
+## Lobe Icons
+
+The Codex icon is from https://github.com/lobehub/lobe-icons, MIT License,
+copyright (c) 2023 LobeHub. The MIT permission and warranty terms above apply.

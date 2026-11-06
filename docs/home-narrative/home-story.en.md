@@ -12,7 +12,9 @@ Building developer and operations tools, I kept seeing teams design and implemen
 
 During the pandemic I joined NAVER and worked on integrating [NAVER NOW and NAVER TV](https://api.metadata.co.kr/project/naver-now). I designed a more unified experience for content creators and helped bring it to launch.
 
-In 2023, I joined Grab in Singapore as its first product designer focused on developer experience. Today I work in Tech Infra, designing and building products for developers.
+In 2023, I joined Grab in Singapore as its first product designer focused on developer experience. In Tech Infra, I owned the end-to-end design of [Grab Console](confidential:grab-console), from user research through release, bringing more than 60 internal platforms into one consistent experience. I led the console's successful onboarding, creating meaningful impact across the organization.
+
+In 2026, I expanded my work to an [internal data platform](confidential:grab-data), bringing data scientists’ notebook and pipeline environments in-house. The aim was to build internal capabilities like those offered by external data analytics and machine learning platforms such as Databricks. As lead designer and product builder, I designed end-to-end AI-agentic workflows across Python notebooks, IDE plugins, CLI and MCP tools, and pipeline management, and contributed many code commits to the product.
 
 #### Personal projects and open source
 

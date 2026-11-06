@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, Play } from "lucide-react";
+import { ArrowRight, ArrowUpRight, LockKeyhole } from "lucide-react";
 import { AnimatedSpan, Terminal, TypingAnimation } from "@/components/magicui/terminal";
+import { DiaTextReveal } from "@/components/magicui/dia-text-reveal";
 import { getContentPathForLanguage } from "@/lib/content";
 import { useSitePreferences } from "@/lib/site-preferences";
 import { withYouTubeClientIdentity } from "@/components/content/media-embed";
+import { ConfidentialMedia } from "./confidential-media";
 import koreanStory, { englishStory } from "virtual:home-narrative";
 import "./narrative-home.css";
 
@@ -20,13 +22,16 @@ type Scene = {
   description: string;
   descriptionEn: string;
   titleEn?: string;
-  href: string;
+  href?: string;
   video?: string;
   videoEn?: string;
   clip?: { src: string; poster: string; aspect: string };
   external?: boolean;
   article?: { ko: string; en: string };
   frames?: SceneFrame[];
+  confidential?: boolean;
+  company?: "grab";
+  hero?: { src: string; alt: string; altEn?: string };
 };
 
 const builderDayArticles = {
@@ -80,11 +85,18 @@ const scenes: Record<string, Scene> = {
     eyebrow: "CAREER · NAVER", title: "NAVER NOW & TV",
     description: "콘텐츠 크리에이터와 운영자를 위한 도구와 경험.", descriptionEn: "Tools and experiences for content creators and operations teams.",
     href: "/project/naver-now",
-    clip: {
-      src: "/images/projects/2022-naver-now/preview-carousel-demo.mp4",
-      poster: "/images/projects/2022-naver-now/Portfolio.008.png",
-      aspect: "556 / 360",
-    },
+    confidential: true,
+    hero: { src: "/images/projects/2022-naver-now/Portfolio.008.png", alt: "NAVER NOW 프로젝트 대표 이미지", altEn: "NAVER NOW project cover image" },
+  },
+  grabConsole: {
+    eyebrow: "CAREER · GRAB", title: "Grab Console", confidential: true, company: "grab",
+    description: "60개가 넘는 내부 플랫폼을 연결한 통합 개발자 경험.",
+    descriptionEn: "A unified developer experience connecting more than 60 internal platforms.",
+  },
+  grabData: {
+    eyebrow: "CAREER · GRAB", title: "내부 데이터 플랫폼", titleEn: "Internal Data Platform", confidential: true, company: "grab",
+    description: "노트북과 파이프라인을 잇는 AI 에이전트 기반 데이터 작업 환경.",
+    descriptionEn: "An AI-agentic data workspace spanning notebooks and pipelines.",
   },
   figmaml: {
     eyebrow: "EXPERIMENT · 2021", title: "Figma ML",
@@ -189,6 +201,8 @@ const videoScenes: Record<string, string> = {
 
 function sceneForUrl(href: string): string | undefined {
   if (href === builderDayArticles.ko || href === builderDayArticles.en) return "builderDay";
+  if (href === "confidential:grab-console") return "grabConsole";
+  if (href === "confidential:grab-data") return "grabData";
   const url = new URL(href);
   if (url.hostname === "api.metadata.co.kr") return routeScenes[url.pathname];
   if (url.hostname === "youtu.be") return videoScenes[url.pathname.split("/")[1]];
@@ -366,13 +380,13 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
   const externalLabel = sceneKey === "automationWorkshop"
     ? (korean ? "행사 보기" : "View the event")
     : (korean ? "커뮤니티 보기" : "Visit the community");
-  const mediaType = sceneKey === "intro" ? "terminal"
+  const mediaType = scene.confidential ? "confidential" : sceneKey === "intro" ? "terminal"
     : sceneKey === "builderDay" ? "award"
     : video || scene.clip ? "video" : "images";
   return (
     <div className="narrative-scene" key={sceneKey}>
       <div ref={mediaRef} className={`narrative-media narrative-media-${mediaType}`} style={scene.clip ? { aspectRatio: scene.clip.aspect } : undefined}>
-        {sceneKey === "intro" ? <IntroTerminal reducedMotion={reducedMotion} /> : video ? (
+        {scene.confidential ? <ConfidentialMedia language={language} company={scene.company} reducedMotion={reducedMotion} active={nearViewport} hero={scene.hero && { src: scene.hero.src, alt: korean ? scene.hero.alt : scene.hero.altEn ?? scene.hero.alt }} /> : sceneKey === "intro" ? <IntroTerminal reducedMotion={reducedMotion} /> : video ? (
           nearViewport && <iframe title={korean ? `${title} 영상` : `${title} video`} src={withYouTubeClientIdentity(`https://www.youtube.com/embed/${video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0`)} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
         ) : scene.clip ? (
           nearViewport && <video
@@ -407,11 +421,11 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
             <a href={scene.href} target="_blank" rel="noreferrer">
               {externalLabel} <ArrowUpRight size={16} aria-hidden="true" />
             </a>
-          ) : (
+          ) : scene.href ? (
             <Link to={getContentPathForLanguage(scene.href, language)}>
-              {sceneKey === "intro" ? (korean ? "프로젝트 전체 보기" : "View all projects") : (korean ? "자세히 보기" : "Read more")} <ArrowUpRight size={16} aria-hidden="true" />
+              {scene.confidential ? (korean ? "공개된 사례 보기" : "View the public case study") : sceneKey === "intro" ? (korean ? "프로젝트 전체 보기" : "View all projects") : (korean ? "자세히 보기" : "Read more")} <ArrowUpRight size={16} aria-hidden="true" />
             </Link>
-          )}
+          ) : <span className="narrative-confidential-note">{korean ? "비공개 프로젝트" : "Confidential project"}</span>}
         </div>
       </div>
     </div>
@@ -449,6 +463,7 @@ export function NarrativeHome() {
 
   useEffect(() => {
     let frame = 0;
+    let disposed = false;
     const update = () => {
       frame = 0;
       const article = articleRef.current;
@@ -457,7 +472,11 @@ export function NarrativeHome() {
       if (!reducedMotion) {
         const changes: Array<() => void> = [];
         article.querySelectorAll<HTMLElement>(".narrative-paragraph").forEach((paragraph) => {
-          const rect = paragraph.getBoundingClientRect();
+          // Inline project cards can be taller than their paragraph; only the
+          // text itself should determine the reading boundary.
+          const text = paragraph.querySelector<HTMLElement>(":scope > p");
+          if (!text) return;
+          const rect = text.getBoundingClientRect();
           const state = rect.bottom < threshold ? "read" : rect.top > threshold ? "unread" : "reading";
           if (paragraph.dataset.readState !== state) changes.push(() => { paragraph.dataset.readState = state; });
           if (state !== "reading") return;
@@ -465,24 +484,33 @@ export function NarrativeHome() {
             const wordRect = word.getBoundingClientRect();
             const horizontalPosition = Math.max(0, (wordRect.left - rect.left) / Math.max(rect.width, 1));
             const progress = Math.max(0, Math.min(1, ((threshold - wordRect.top) / Math.max(wordRect.height, 1)) * 1.65 - horizontalPosition * 0.65));
-            changes.push(() => word.style.setProperty("--read", `${Math.round(progress * 100)}%`));
+            changes.push(() => {
+              word.style.setProperty("--read", `${Math.round(progress * 100)}%`);
+              word.style.setProperty("--reveal-opacity", String(progress));
+            });
           });
         });
         changes.forEach((change) => change());
+        article.dataset.readingReveal = "active";
+      } else {
+        delete article.dataset.readingReveal;
       }
       if (!desktop) {
         let candidate: HTMLElement | null = null;
-        article.querySelectorAll<HTMLElement>("button[data-scene][data-trigger]").forEach((element) => {
+        article.querySelectorAll<HTMLElement>(".narrative-trigger[data-scene][data-trigger]").forEach((element) => {
           const rect = element.getBoundingClientRect();
           if (rect.top <= threshold && rect.bottom >= 0) candidate = element;
         });
         const element = candidate as HTMLElement | null;
         const trigger = element?.dataset.trigger;
         const scene = element?.dataset.scene;
+        setActiveTrigger(trigger ?? null);
         if (trigger && scene && trigger !== lastMobileTrigger.current) {
           lastMobileTrigger.current = trigger;
-          const block = trigger.split("-link-")[0];
-          setMobileScenes((previous) => ({ ...previous, [block]: { trigger, scene } }));
+          if (!scenes[scene].article) {
+            const block = trigger.split("-link-")[0];
+            setMobileScenes((previous) => ({ ...previous, [block]: { trigger, scene } }));
+          }
         }
         return;
       }
@@ -494,6 +522,14 @@ export function NarrativeHome() {
           trigger = element.dataset.trigger || null;
         }
       });
+      const focused = document.activeElement;
+      if (focused instanceof HTMLElement && focused.matches(".narrative-trigger[data-scene][data-trigger]") && article.contains(focused)) {
+        const rect = focused.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight) {
+          scene = focused.dataset.scene || scene;
+          trigger = focused.dataset.trigger || null;
+        }
+      }
       setActiveScene(scene);
       setActiveTrigger(trigger);
     };
@@ -501,11 +537,21 @@ export function NarrativeHome() {
     update();
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
-    return () => { window.removeEventListener("scroll", schedule); window.removeEventListener("resize", schedule); cancelAnimationFrame(frame); };
+    const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(schedule);
+    if (articleRef.current) observer?.observe(articleRef.current);
+    document.fonts?.ready.then(() => { if (!disposed) schedule(); });
+    return () => {
+      disposed = true;
+      observer?.disconnect();
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      cancelAnimationFrame(frame);
+      if (articleRef.current) delete articleRef.current.dataset.readingReveal;
+    };
   }, [desktop, reducedMotion, language]);
 
   function renderText(text: string, prefix: string): ReactNode[] {
-    return text.split(/(\s+)/).map((piece, index) => /\s+/.test(piece) ? piece : <span className="narrative-word" key={`${prefix}-w${index}`}>{piece}</span>);
+    return text.split(/(\s+)/).map((piece, index) => !piece || /\s+/.test(piece) ? piece : <span className="narrative-word" key={`${prefix}-w${index}`}><span className="narrative-word-muted" aria-hidden="true">{piece}</span><span className="narrative-word-reveal">{piece}</span></span>);
   }
 
   function renderParagraph(text: string, blockIndex: number) {
@@ -539,26 +585,37 @@ export function NarrativeHome() {
               }
             }}
           >
-            {match[1]} <ArrowUpRight size={13} aria-hidden="true" />
+            <DiaTextReveal text={match[1]} active={activeTrigger === key} reducedMotion={reducedMotion} />
           </a>,
         );
       } else if (scene) {
-        const selected = desktop ? activeTrigger === key : mobileScene?.trigger === key;
-        parts.push(<button key={key} type="button" className={`narrative-trigger ${selected ? "is-active" : ""}`} data-scene={scene} data-trigger={key} aria-pressed={desktop ? selected : undefined} aria-expanded={!desktop ? selected : undefined} aria-controls={!desktop && selected ? `scene-${blockIndex}` : undefined} onClick={() => {
-          if (desktop) {
-            setActiveScene(scene);
+        const selected = activeTrigger === key;
+        const common = {
+          className: `narrative-trigger ${scenes[scene].confidential ? "narrative-trigger-confidential" : ""} ${selected ? "is-active" : ""}`,
+          "data-scene": scene,
+          "data-trigger": key,
+          "aria-label": scenes[scene].confidential ? `${match[1]} — ${korean ? "비공개 프로젝트" : "confidential project"}` : undefined,
+          onFocus: () => { if (desktop) { setActiveScene(scene); setActiveTrigger(key); } },
+        };
+        const label = <><DiaTextReveal text={match[1]} active={selected} reducedMotion={reducedMotion} />{scenes[scene].confidential && <LockKeyhole className="narrative-trigger-lock" size={13} aria-hidden="true" />}</>;
+        if (scenes[scene].confidential && !scenes[scene].href) {
+          parts.push(<button key={key} type="button" {...common} onClick={() => {
             setActiveTrigger(key);
-          } else {
-            lastMobileTrigger.current = key;
-            setMobileScenes((previous) => {
-              const next = { ...previous };
-              if (previous[String(blockIndex)]?.trigger === key) delete next[String(blockIndex)];
-              else next[String(blockIndex)] = { trigger: key, scene };
-              return next;
-            });
-            if (!selected) requestAnimationFrame(() => document.getElementById(`scene-${blockIndex}`)?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "center" }));
-          }
-        }} onFocus={() => { if (desktop) { setActiveScene(scene); setActiveTrigger(key); } }}>{match[1]} {scenes[scene].video ? <Play size={11} fill="currentColor" aria-hidden="true" /> : <ArrowUpRight size={13} aria-hidden="true" />}</button>);
+            if (desktop) setActiveScene(scene);
+            else {
+              lastMobileTrigger.current = key;
+              setMobileScenes((previous) => ({ ...previous, [String(blockIndex)]: { trigger: key, scene } }));
+              requestAnimationFrame(() => document.getElementById(`scene-${blockIndex}`)?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "nearest" }));
+            }
+          }}>{label}</button>);
+        } else {
+          const url = new URL(match[2]);
+          const internal = url.hostname === "api.metadata.co.kr";
+          const href = internal ? getContentPathForLanguage(`${url.pathname}${url.search}${url.hash}`, language) : match[2];
+          parts.push(internal
+            ? <Link key={key} to={href} {...common}>{label}</Link>
+            : <a key={key} href={href} target="_blank" rel="noreferrer" {...common}>{label}</a>);
+        }
       } else {
         parts.push(<a key={key} href={match[2]}>{match[1]}</a>);
       }

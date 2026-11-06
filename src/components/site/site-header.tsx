@@ -10,7 +10,6 @@ const links = [
   { href: "/", en: "Home", ko: "홈" },
   { href: "/projects", en: "Projects", ko: "프로젝트" },
   { href: "/blog", en: "Writing", ko: "글" },
-  { href: "/#about", en: "About", ko: "소개" },
   { href: "/#contact", en: "Contact", ko: "연락" },
 ];
 
@@ -55,8 +54,8 @@ export function SiteHeader() {
 
   return (
     <header className="site-header" id="top">
-      <Link to="/" className="site-wordmark" aria-label={korean ? "Joo 홈" : "Joo — home"}>
-        joo<span aria-hidden="true">.</span>
+      <Link to="/" className="site-wordmark" aria-label={korean ? "Hey Jude 홈" : "Hey Jude — home"}>
+        Hey Jude
       </Link>
       <span className="header-caption">
         {korean

@@ -224,6 +224,7 @@ button:disabled {
   line-height: 1;
   letter-spacing: -0.085em;
 }
+.site-header .site-wordmark { white-space: nowrap; }
 .header-caption {
   font-size: 13px;
   color: var(--muted-foreground);
@@ -1688,10 +1689,12 @@ a:hover > .round-button {
   }
   .site-header {
     height: 76px;
+    gap: 8px;
   }
   .site-wordmark {
     font-size: 35px;
   }
+  .site-header .site-wordmark { font-size: clamp(22px, 6vw, 35px); }
   .header-caption {
     display: none;
   }

@@ -21,6 +21,7 @@ type AnimatedThemeTogglerProps = Omit<
 type ViewTransitionDocument = Document & {
   startViewTransition?: (update: () => void) => {
     ready: Promise<void>;
+    finished: Promise<void>;
   };
 };
 
@@ -71,7 +72,7 @@ export function AnimatedThemeToggler({
       });
       await transition.ready;
 
-      const animation = document.documentElement.animate(
+      document.documentElement.animate(
         {
           clipPath: [
             `circle(0px at ${x}px ${y}px)`,
@@ -85,7 +86,9 @@ export function AnimatedThemeToggler({
           pseudoElement: "::view-transition-new(root)",
         } as PseudoElementAnimationOptions,
       );
-      await animation.finished;
+      // Keep the overrides until the transition is torn down; removing them
+      // when the reveal ends lets the browser's default cross-fade replay.
+      await transition.finished;
     } finally {
       transitionStyles.remove();
     }

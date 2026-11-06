@@ -2,3 +2,7 @@ allowBuilds:
   esbuild: true
   unrs-resolver: true
   sharp: true
+
+overrides:
+  # Override the plugin's vulnerable toml v3 until its upstream dependency is updated.
+  remark-mdx-frontmatter>toml: ^5.0.1

@@ -5,7 +5,11 @@ _site/**
 _temp/**
 .direnv/**
 .jekyll-cache/**
-docs/**
+docs/*
+!docs/home-narrative/
+docs/home-narrative/*
+!docs/home-narrative/home-story.ko.md
+!docs/home-narrative/home-story.en.md
 test-results/**
 playwright-report/**
 public/images/**

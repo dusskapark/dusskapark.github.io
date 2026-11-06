@@ -1,5 +1,29 @@
 # Deployment runbook
 
+## Current Vite deployment (2026-11-05)
+
+The application now uses Vite and React Router. The deployment settings in
+`vercel.json` are authoritative:
+
+- Framework: `vite`
+- Node.js: `22.x`, matching `package.json`
+- Install: `pnpm install --frozen-lockfile`
+- Build: `pnpm build`
+- Output: `dist`
+- SPA fallback: `/(.*)` → `/index.html` for direct links and refreshes
+
+Validate with `pnpm typecheck` and `pnpm build`; inspect the production build
+locally with `pnpm preview`. Verify `/`, `/projects`, `/blog`, and representative
+`/project/<slug>` and `/blog/<slug>` direct links after deployment. Also verify
+that `/assets/` and `/images/` continue to serve files.
+
+The Next.js instructions below are retained as historical migration and DNS
+cutover notes. Their Next.js commands, server metadata, robots, sitemap, and
+redirect expectations do not describe the current Vite app. Do not use them as
+current release checks. Changing the Vercel framework does not change DNS.
+
+## Historical Next.js migration runbook
+
 This app is a single Next.js 16 / React 19 site deployed through Vercel. The production portfolio currently remains on GitHub Pages/Jekyll at `https://api.metadata.co.kr`. Vercel deployments are available for review. The custom-domain DNS cutover has not happened; its DNS provider is Cafe24.
 
 ## Build requirements

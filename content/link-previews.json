@@ -1,0 +1,61 @@
+{
+  "https://appagent-official.github.io/": {
+    "url": "https://appagent-official.github.io/",
+    "title": "AppAgent: Multimodal Agents as Smartphone Users",
+    "description": "AppAgent: Multimodal Agents as Smartphone Users",
+    "imageAlt": "",
+    "siteName": "appagent-official.github.io",
+    "fetchedAt": "2026-11-05T17:58:39.006Z"
+  },
+  "https://github.com/FigmaAI/TalkToFigmaDesktop": {
+    "url": "https://github.com/grab/TalkToFigmaDesktop",
+    "title": "GitHub - grab/TalkToFigmaDesktop: A powerful desktop application bridging Figma and AI tools via Model Context Protocol Seamless integration between Figma designs and AI assistants",
+    "description": "A powerful desktop application bridging Figma and AI tools via Model Context Protocol Seamless integration between Figma designs and AI assistants - grab/TalkToFigmaDesktop",
+    "image": "https://opengraph.githubassets.com/f3853d9eb946f0db4fa695feb7335a9e3c057d234f2e1583a51c94aa4dad3bc5/grab/TalkToFigmaDesktop",
+    "imageAlt": "A powerful desktop application bridging Figma and AI tools via Model Context Protocol Seamless integration between Figma designs and AI assistants - grab/TalkToFigmaDesktop",
+    "siteName": "GitHub",
+    "fetchedAt": "2026-11-05T17:58:39.680Z",
+    "imageAttemptAt": "2026-11-05T18:02:21.370Z",
+    "localImage": "/images/link-previews/313cb6392c959cdd.png"
+  },
+  "https://github.com/FigmaAI/klever": {
+    "url": "https://github.com/FigmaAI/klever",
+    "title": "GitHub - FigmaAI/klever: A Figma plugin that allows you to do a simple usability test in Figma using AppAgent",
+    "description": "A Figma plugin that allows you to do a simple usability test in Figma using AppAgent - FigmaAI/klever",
+    "image": "https://opengraph.githubassets.com/7d276790a1f676a863294becf37fd1e9f01120cbe231ce9c8f10d8637b3a5723/FigmaAI/klever",
+    "imageAlt": "A Figma plugin that allows you to do a simple usability test in Figma using AppAgent - FigmaAI/klever",
+    "siteName": "GitHub",
+    "fetchedAt": "2026-11-05T18:00:01.214Z",
+    "imageAttemptAt": "2026-11-05T18:02:21.441Z",
+    "localImage": "/images/link-previews/44b5a39bdd5e81d8.png"
+  },
+  "https://github.com/grab/cursor-talk-to-figma-mcp": {
+    "url": "https://github.com/grab/cursor-talk-to-figma-mcp",
+    "title": "GitHub - grab/cursor-talk-to-figma-mcp: TalkToFigma: MCP integration between AI Agent (Cursor, Claude Code, Codex) and Figma, allowing Agentic AI to communicate with Figma for reading designs and modifying them programmatically.",
+    "description": "TalkToFigma: MCP integration between AI Agent (Cursor, Claude Code, Codex) and Figma, allowing Agentic AI to communicate with Figma for reading designs and modifying them programmatically. - grab/c...",
+    "image": "https://opengraph.githubassets.com/0b1e1d32234a514def8fafe39eaac7d59ed83941a003adc4b165d616cd335d91/grab/cursor-talk-to-figma-mcp",
+    "imageAlt": "TalkToFigma: MCP integration between AI Agent (Cursor, Claude Code, Codex) and Figma, allowing Agentic AI to communicate with Figma for reading designs and modifying them programmatically. - grab/c...",
+    "siteName": "GitHub",
+    "fetchedAt": "2026-11-05T17:58:39.491Z",
+    "imageAttemptAt": "2026-11-05T18:02:22.324Z",
+    "localImage": "/images/link-previews/c76ad1133d511dc0.png"
+  },
+  "https://www.figma.com/community/file/1513759391089024242": {
+    "url": "https://www.figma.com/community/file/1513759391089024242/mcp",
+    "title": "작업 시간을 단축해주는  MCP 디자인 오토메이션! | Figma",
+    "description": "cursor-talk-to-figma-mcp와 함께 사용할 수 있는 50개 이상의 MCP 프롬프트로 Figma 워크플로우를 자동화하는 인터랙티브 플레이그라운드입니다.\n\n배울 수 있는 것:\n이미지나 URL 등으로 디자인 자동 채우기디자인 스펙과 어노테이션 자동으로 만들기피그마 프로토타입 연결선을 FigJam 커넥터로 바꾸기 등\n적합한 대상: 생산성을 높이고 싶은 UI/UX 디자이너\n필요 조건: Figma 데스크톱 + MCP 연동된 Cursor IDE\n\n주당 3-5시간의 수동 디자인 작업을 절약하세요. 프롬프트를 체험하고 프로젝트...",
+    "image": "https://s3-alpha.figma.com/hub/file/2277425783325605785/939e1eed-e1f1-4415-9587-51ce132abb83-cover.png",
+    "siteName": "Figma",
+    "fetchedAt": "2026-11-05T17:58:38.454Z",
+    "source": "Browser document OG meta tags"
+  },
+  "https://www.figma.com/community/file/1513760524697897204": {
+    "url": "https://www.figma.com/community/file/1513760524697897204/design-automation-with-figma-mcp",
+    "title": "Design Automation with Figma MCP | Figma",
+    "description": "Interactive playground with MCP prompts to automate your Figma workflow. Works with cursor-talk-to-figma-mcp to eliminate repetitive design tasks.\n\nWhat you'll learn:\nAuto-populate designs with realistic content & imagesGenerate design specs and annotations instantlyConvert the prototype noodles ...",
+    "image": "https://s3-alpha.figma.com/hub/file/2238484578106772089/4aaabeef-ed46-4c70-9cb3-c4ae302e7869-cover.png",
+    "siteName": "Figma",
+    "fetchedAt": "2026-11-05T17:58:38.450Z",
+    "source": "Browser document OG meta tags"
+  }
+}

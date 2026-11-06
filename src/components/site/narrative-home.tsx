@@ -350,6 +350,15 @@ function SceneImages({ scene, frames, reducedMotion }: {
 
 function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotion: boolean }) {
   const { language } = useSitePreferences();
+  const mediaRef = useRef<HTMLDivElement>(null);
+  const [nearViewport, setNearViewport] = useState(false);
+  useEffect(() => {
+    const media = mediaRef.current;
+    if (!media) return;
+    const observer = new IntersectionObserver(([entry]) => setNearViewport(entry.isIntersecting), { rootMargin: "200px" });
+    observer.observe(media);
+    return () => observer.disconnect();
+  }, [sceneKey]);
   const korean = language === "ko";
   const scene = scenes[sceneKey];
   const title = korean ? scene.title : scene.titleEn ?? scene.title;
@@ -362,11 +371,11 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
     : video || scene.clip ? "video" : "images";
   return (
     <div className="narrative-scene" key={sceneKey}>
-      <div className={`narrative-media narrative-media-${mediaType}`} style={scene.clip ? { aspectRatio: scene.clip.aspect } : undefined}>
+      <div ref={mediaRef} className={`narrative-media narrative-media-${mediaType}`} style={scene.clip ? { aspectRatio: scene.clip.aspect } : undefined}>
         {sceneKey === "intro" ? <IntroTerminal reducedMotion={reducedMotion} /> : video ? (
-          <iframe title={korean ? `${title} 영상` : `${title} video`} src={withYouTubeClientIdentity(`https://www.youtube.com/embed/${video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0`)} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          nearViewport && <iframe title={korean ? `${title} 영상` : `${title} video`} src={withYouTubeClientIdentity(`https://www.youtube.com/embed/${video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0`)} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
         ) : scene.clip ? (
-          <video
+          nearViewport && <video
             key={String(reducedMotion)}
             src={scene.clip.src}
             poster={scene.clip.poster}
@@ -418,6 +427,15 @@ export function NarrativeHome() {
   const [reducedMotion, setReducedMotion] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   const [activeScene, setActiveScene] = useState("intro");
   const [activeTrigger, setActiveTrigger] = useState<string | null>(null);
+  const [mobileScenes, setMobileScenes] = useState<Record<string, { trigger: string; scene: string }>>({});
+  const lastMobileTrigger = useRef<string | null>(null);
+
+  useEffect(() => {
+    lastMobileTrigger.current = null;
+    setMobileScenes({});
+  }, [language]);
+
+  useEffect(() => { lastMobileTrigger.current = null; }, [desktop]);
 
   useEffect(() => {
     const size = window.matchMedia(DESKTOP_QUERY);
@@ -430,7 +448,6 @@ export function NarrativeHome() {
   }, []);
 
   useEffect(() => {
-    if (!desktop && reducedMotion) return;
     let frame = 0;
     const update = () => {
       frame = 0;
@@ -453,7 +470,22 @@ export function NarrativeHome() {
         });
         changes.forEach((change) => change());
       }
-      if (!desktop) return;
+      if (!desktop) {
+        let candidate: HTMLElement | null = null;
+        article.querySelectorAll<HTMLElement>("button[data-scene][data-trigger]").forEach((element) => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= threshold && rect.bottom >= 0) candidate = element;
+        });
+        const element = candidate as HTMLElement | null;
+        const trigger = element?.dataset.trigger;
+        const scene = element?.dataset.scene;
+        if (trigger && scene && trigger !== lastMobileTrigger.current) {
+          lastMobileTrigger.current = trigger;
+          const block = trigger.split("-link-")[0];
+          setMobileScenes((previous) => ({ ...previous, [block]: { trigger, scene } }));
+        }
+        return;
+      }
       let scene = "intro";
       let trigger: string | null = null;
       article.querySelectorAll<HTMLElement>("[data-scene]").forEach((element) => {
@@ -472,18 +504,6 @@ export function NarrativeHome() {
     return () => { window.removeEventListener("scroll", schedule); window.removeEventListener("resize", schedule); cancelAnimationFrame(frame); };
   }, [desktop, reducedMotion, language]);
 
-  useEffect(() => {
-    if (desktop || !activeTrigger) return;
-    const block = activeTrigger.split("-link-")[0];
-    const frame = requestAnimationFrame(() => {
-      document.getElementById(`scene-${block}`)?.scrollIntoView({
-        behavior: reducedMotion ? "auto" : "smooth",
-        block: "center",
-      });
-    });
-    return () => cancelAnimationFrame(frame);
-  }, [activeTrigger, desktop, reducedMotion]);
-
   function renderText(text: string, prefix: string): ReactNode[] {
     return text.split(/(\s+)/).map((piece, index) => /\s+/.test(piece) ? piece : <span className="narrative-word" key={`${prefix}-w${index}`}>{piece}</span>);
   }
@@ -494,7 +514,7 @@ export function NarrativeHome() {
     let last = 0;
     let linkIndex = 0;
     let match: RegExpExecArray | null;
-    let selectedInBlock = false;
+    const mobileScene = mobileScenes[String(blockIndex)];
     let articleScene: string | undefined;
     while ((match = links.exec(text))) {
       parts.push(...renderText(text.slice(last, match.index), `${blockIndex}-${last}`));
@@ -523,8 +543,22 @@ export function NarrativeHome() {
           </a>,
         );
       } else if (scene) {
-        if (activeTrigger === key) selectedInBlock = true;
-        parts.push(<button key={key} type="button" className={`narrative-trigger ${activeTrigger === key ? "is-active" : ""}`} data-scene={scene} data-trigger={key} aria-pressed={desktop ? activeTrigger === key : undefined} aria-expanded={!desktop ? activeTrigger === key : undefined} aria-controls={!desktop && activeTrigger === key ? `scene-${blockIndex}` : undefined} onClick={() => { setActiveScene(scene); setActiveTrigger(activeTrigger === key && !desktop ? null : key); }} onFocus={() => { if (desktop) { setActiveScene(scene); setActiveTrigger(key); } }}>{match[1]} {scenes[scene].video ? <Play size={11} fill="currentColor" aria-hidden="true" /> : <ArrowUpRight size={13} aria-hidden="true" />}</button>);
+        const selected = desktop ? activeTrigger === key : mobileScene?.trigger === key;
+        parts.push(<button key={key} type="button" className={`narrative-trigger ${selected ? "is-active" : ""}`} data-scene={scene} data-trigger={key} aria-pressed={desktop ? selected : undefined} aria-expanded={!desktop ? selected : undefined} aria-controls={!desktop && selected ? `scene-${blockIndex}` : undefined} onClick={() => {
+          if (desktop) {
+            setActiveScene(scene);
+            setActiveTrigger(key);
+          } else {
+            lastMobileTrigger.current = key;
+            setMobileScenes((previous) => {
+              const next = { ...previous };
+              if (previous[String(blockIndex)]?.trigger === key) delete next[String(blockIndex)];
+              else next[String(blockIndex)] = { trigger: key, scene };
+              return next;
+            });
+            if (!selected) requestAnimationFrame(() => document.getElementById(`scene-${blockIndex}`)?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "center" }));
+          }
+        }} onFocus={() => { if (desktop) { setActiveScene(scene); setActiveTrigger(key); } }}>{match[1]} {scenes[scene].video ? <Play size={11} fill="currentColor" aria-hidden="true" /> : <ArrowUpRight size={13} aria-hidden="true" />}</button>);
       } else {
         parts.push(<a key={key} href={match[2]}>{match[1]}</a>);
       }
@@ -537,8 +571,8 @@ export function NarrativeHome() {
     return (
       <div className="narrative-paragraph" data-scene={resetScene ? "intro" : undefined} key={blockIndex}>
         <p>{parts}</p>
-        {!desktop && selectedInBlock && (
-          <div className="narrative-inline-scene" id={`scene-${blockIndex}`}><SceneCard sceneKey={activeScene} reducedMotion={reducedMotion} /></div>
+        {!desktop && mobileScene && (
+          <div className="narrative-inline-scene" id={`scene-${blockIndex}`}><SceneCard sceneKey={mobileScene.scene} reducedMotion={reducedMotion} /></div>
         )}
         {!desktop && articleScene && (
           <div className="narrative-inline-scene"><SceneCard sceneKey={articleScene} reducedMotion={reducedMotion} /></div>

@@ -168,6 +168,9 @@ const imageMotions = new Map(
     .map((scene, index) => [scene, motionOrder[index % motionOrder.length]]),
 );
 
+// Two columns only when the story column and the stage both have room.
+const DESKTOP_QUERY = "(min-width: 1280px)";
+
 const routeScenes: Record<string, string> = {
   "/project/tstore": "tstore", "/project/onestore": "onestore", "/project/gdc": "gdc",
   "/project/lookbook": "lookbook", "/project/ldsg": "ldsg", "/project/naver-now": "naver",
@@ -257,12 +260,13 @@ function IntroTerminal({ reducedMotion }: { reducedMotion: boolean }) {
     <div className="jude-command">&gt; jude whoami</div>
     <div className="jude-identity"><span>✓ Joo Hyung Park <span>· Product Designer &amp; Builder</span></span></div>
     <div className="jude-command jude-next-command">&gt; jude {terminalStory.command}</div>
-    {terminalStory.lines.map(([label, text]) => <div className="jude-output" key={label}><span className="jude-output-label">{label}</span> <span>{text}</span></div>)}
+    {terminalStory.lines.map(([label, text]) => <div className="jude-output" key={label}><span><span className="jude-output-label">{label}</span> <span>{text}</span></span></div>)}
     <div className="jude-finish">✓ Building for the people who build.</div>
   </>;
   return (
     <div className="jude-terminal-shell" role="img" aria-label={description}>
       <div aria-hidden="true" className="jude-terminal-visual">
+        {!reducedMotion && <Terminal className="jude-terminal jude-terminal-sizer" sequence={false}>{staticRows}</Terminal>}
         {reducedMotion ? <Terminal className="jude-terminal" sequence={false}>{staticRows}</Terminal> : (
           <Terminal className="jude-terminal">
             <TypingAnimation className="jude-command" duration={38}>{"> jude whoami"}</TypingAnimation>
@@ -409,15 +413,14 @@ export function NarrativeHome() {
   const { language } = useSitePreferences();
   const korean = language === "ko";
   const blocks = stories[language];
-  const introParagraph = blocks.findIndex((block) => block.type === "paragraph");
   const articleRef = useRef<HTMLElement>(null);
-  const [desktop, setDesktop] = useState(() => window.matchMedia("(min-width: 960px)").matches);
+  const [desktop, setDesktop] = useState(() => window.matchMedia(DESKTOP_QUERY).matches);
   const [reducedMotion, setReducedMotion] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   const [activeScene, setActiveScene] = useState("intro");
   const [activeTrigger, setActiveTrigger] = useState<string | null>(null);
 
   useEffect(() => {
-    const size = window.matchMedia("(min-width: 960px)");
+    const size = window.matchMedia(DESKTOP_QUERY);
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const updateSize = () => setDesktop(size.matches);
     const updateMotion = () => setReducedMotion(motion.matches);
@@ -427,7 +430,7 @@ export function NarrativeHome() {
   }, []);
 
   useEffect(() => {
-    if (!desktop) return;
+    if (!desktop && reducedMotion) return;
     let frame = 0;
     const update = () => {
       frame = 0;
@@ -450,6 +453,7 @@ export function NarrativeHome() {
         });
         changes.forEach((change) => change());
       }
+      if (!desktop) return;
       let scene = "intro";
       let trigger: string | null = null;
       article.querySelectorAll<HTMLElement>("[data-scene]").forEach((element) => {
@@ -467,6 +471,18 @@ export function NarrativeHome() {
     window.addEventListener("resize", schedule);
     return () => { window.removeEventListener("scroll", schedule); window.removeEventListener("resize", schedule); cancelAnimationFrame(frame); };
   }, [desktop, reducedMotion, language]);
+
+  useEffect(() => {
+    if (desktop || !activeTrigger) return;
+    const block = activeTrigger.split("-link-")[0];
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(`scene-${block}`)?.scrollIntoView({
+        behavior: reducedMotion ? "auto" : "smooth",
+        block: "center",
+      });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [activeTrigger, desktop, reducedMotion]);
 
   function renderText(text: string, prefix: string): ReactNode[] {
     return text.split(/(\s+)/).map((piece, index) => /\s+/.test(piece) ? piece : <span className="narrative-word" key={`${prefix}-w${index}`}>{piece}</span>);
@@ -521,9 +537,6 @@ export function NarrativeHome() {
     return (
       <div className="narrative-paragraph" data-scene={resetScene ? "intro" : undefined} key={blockIndex}>
         <p>{parts}</p>
-        {!desktop && blockIndex === introParagraph && (
-          <div className="narrative-inline-scene narrative-mobile-intro"><SceneCard sceneKey="intro" reducedMotion={reducedMotion} /></div>
-        )}
         {!desktop && selectedInBlock && (
           <div className="narrative-inline-scene" id={`scene-${blockIndex}`}><SceneCard sceneKey={activeScene} reducedMotion={reducedMotion} /></div>
         )}
@@ -538,6 +551,11 @@ export function NarrativeHome() {
     <main className="narrative-home" id="main">
       <div className="narrative-layout">
         <article className="narrative-story" ref={articleRef} lang={language} id="about">
+          {!desktop && (
+            <div className="narrative-mobile-intro">
+              <div className="narrative-media narrative-media-terminal"><IntroTerminal reducedMotion={reducedMotion} /></div>
+            </div>
+          )}
           <div className="narrative-intro-label"><span>JOO HYUNG PARK</span><span>PRODUCT DESIGNER & BUILDER</span></div>
           {blocks.map((block, index) => block.type === "title" ? <h1 key={index}>{block.text}</h1> : block.type === "section" ? <h2 className="narrative-section-title" key={index}><span>0{blocks.filter((item, i) => i <= index && item.type === "section").length}</span>{block.text}</h2> : renderParagraph(block.text, index))}
           <p className="narrative-footnote">{korean ? "* 커뮤니티 수치는 2026년 10월까지의 행사별 합계입니다." : "* Community figures are totals across events through October 2026."}</p>

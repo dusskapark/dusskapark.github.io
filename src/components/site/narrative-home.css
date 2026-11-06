@@ -96,6 +96,10 @@
 .narrative-media video { display: block; object-fit: cover; }
 .narrative-media-terminal { padding: clamp(18px, 3.5vw, 52px); background: var(--accent); }
 .jude-terminal-shell, .jude-terminal-visual { width: 100%; height: 100%; min-width: 0; }
+/* An invisible static copy sizes the box to the finished output. */
+.jude-terminal-visual { display: grid; }
+.jude-terminal-visual > * { grid-area: 1 / 1; }
+.jude-terminal-sizer { visibility: hidden; }
 .narrative-media .jude-terminal { display: flex; flex-direction: column; width: 100%; height: 100%; max-width: none; max-height: none; border-radius: 8px; background: var(--background); border-color: var(--border); box-shadow: 0 16px 45px -30px #272b2070; overflow: hidden; }
 .jude-terminal > div:first-child { border-color: var(--border); }
 .jude-terminal pre { flex: 1; min-height: 0; margin: 0; padding: clamp(18px, 2.4vw, 32px); overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font: 500 clamp(12px, 1.05vw, 14px)/1.55 ui-monospace, SFMono-Regular, Menlo, "Noto Sans KR Content", monospace; }
@@ -123,21 +127,41 @@
 .narrative-contact > a { display: inline-flex; gap: 30px; align-items: center; padding: 0 0 10px; border-bottom: 1px solid currentColor; color: var(--foreground); font-weight: 500; }
 .narrative-contact > div { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 65px; color: var(--muted-foreground); font-size: 13px; }
 .narrative-contact > div a { display: inline-flex; align-items: center; gap: 6px; }
-@media (max-width: 959px) {
+@media (max-width: 1279px) {
   .narrative-layout { display: block; padding: 0 24px; }
-  .narrative-story { max-width: 700px; margin: 0 auto; padding: 62px 0 80px; }
+  .narrative-story { max-width: 620px; margin: 0 auto; padding: 32px 0 80px; }
   .narrative-story h1 { font-size: clamp(31px, 7.5vw, 45px); margin-bottom: 38px; }
   .narrative-section-title { margin-top: 70px; }
   .narrative-paragraph > p { font-size: 16px; line-height: 2; }
-  .narrative-word { background: none; color: var(--foreground); -webkit-text-fill-color: currentColor; }
   .narrative-inline-scene { padding: 23px 0 7px; }
   .narrative-media { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
   .narrative-media:has(.narrative-image-gallery) { aspect-ratio: 4 / 3; }
   .narrative-media-terminal { aspect-ratio: auto; height: auto; padding: 14px; }
   .jude-terminal-shell, .jude-terminal-visual { height: auto; }
-  .narrative-media .jude-terminal { min-height: 360px; }
+
   .jude-terminal pre { font-size: clamp(11px, 3vw, 12px); padding: 18px; }
-  .narrative-mobile-intro { padding-top: 32px; }
+  .narrative-mobile-intro { margin: 0 0 44px; }
+  /* Narrow screens: the strip reveal leaves slivers too thin to read, so cross-fade instead. */
+  .narrative-image-stage[data-motion="photo"] .narrative-image-track { display: block; gap: 0; }
+  .narrative-image-stage[data-motion="photo"] .narrative-image-frame {
+    position: absolute;
+    inset: 6%;
+    height: auto;
+    flex: none;
+    overflow: visible;
+    opacity: 0;
+    transition: opacity 600ms ease;
+  }
+  .narrative-image-stage[data-motion="photo"] [data-position="front"] { flex: none; opacity: 1; }
+  .narrative-image-stage[data-motion="photo"] .narrative-image-frame img {
+    position: static;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    transform: none;
+    border-radius: 4px;
+  }
   .narrative-scene-info { gap: 12px; flex-wrap: wrap; padding-top: 16px; }
   .narrative-scene-info h2 { font-size: 24px; }
   .narrative-scene-links { flex-direction: row; align-items: center; gap: 18px; }

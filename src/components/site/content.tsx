@@ -303,7 +303,6 @@ export function SiteFooter() {
         <nav aria-label={korean ? "하단 메뉴" : "Footer navigation"}>
           <Link to="/projects">{korean ? "프로젝트" : "Projects"}</Link>
           <Link to="/blog">{korean ? "글" : "Writing"}</Link>
-          <Link to="/#about">{korean ? "소개" : "About"}</Link>
           <Link to="/#contact">{korean ? "연락" : "Contact"}</Link>
         </nav>
         <a className="footer-back-top" href="#top">

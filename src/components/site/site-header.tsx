@@ -64,7 +64,7 @@ export function SiteHeader() {
       </span>
       <div className="header-actions">
         <div className="language-toggle" role="group" aria-label={korean ? "언어" : "Language"}>
-          <button type="button" lang="ko" aria-pressed={korean} onClick={() => selectLanguage("ko")}>한국어</button>
+          <button type="button" lang="ko" aria-label="한국어" aria-pressed={korean} onClick={() => selectLanguage("ko")}>KO</button>
           <button type="button" lang="en" aria-label="English" aria-pressed={!korean} onClick={() => selectLanguage("en")}>EN</button>
         </div>
         <AnimatedThemeToggler

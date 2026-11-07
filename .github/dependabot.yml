@@ -4,6 +4,14 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    groups:
+      react:
+        patterns:
+          - react
+          - react-dom
+    ignore:
+      - dependency-name: "@types/node"
+        versions: [">=23.0.0"]
 
   - package-ecosystem: github-actions
     directory: /

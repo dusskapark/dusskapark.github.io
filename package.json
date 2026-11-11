@@ -9,9 +9,10 @@
   },
   "scripts": {
     "prepare:assets": "node scripts/prepare-assets.mjs",
-    "predev": "pnpm prepare:links && pnpm prepare:assets",
+    "prepare:font": "node scripts/update-korean-font.mjs --if-changed",
+    "predev": "pnpm prepare:links && pnpm prepare:font && pnpm prepare:assets",
     "dev": "vite",
-    "prebuild": "pnpm prepare:links && pnpm prepare:assets",
+    "prebuild": "pnpm prepare:links && pnpm prepare:font && pnpm prepare:assets",
     "build": "vite build && node scripts/generate-static-pages.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",

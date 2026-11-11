@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, LockKeyhole } from "lucide-react";
 import { AnimatedSpan, Terminal, TypingAnimation } from "@/components/magicui/terminal";
 import { DiaTextReveal } from "@/components/magicui/dia-text-reveal";
+import { Highlighter } from "@/components/magicui/highlighter";
 import { getContentPathForLanguage } from "@/lib/content";
 import { useSitePreferences } from "@/lib/site-preferences";
 import { withYouTubeClientIdentity } from "@/components/content/media-embed";
@@ -25,6 +26,7 @@ type Scene = {
   href?: string;
   video?: string;
   videoEn?: string;
+  videoStart?: number;
   clip?: { src: string; poster: string; aspect: string };
   external?: boolean;
   article?: { ko: string; en: string };
@@ -159,6 +161,14 @@ const scenes: Record<string, Scene> = {
       { src: "/images/projects/friends-of-figma-seoul/ai-meetup-materials.webp", alt: "AI 디자인 교육 밋업 인쇄물", altEn: "Printed materials at the AI design education meetup" },
     ],
   },
+  fofTalk: {
+    eyebrow: "TALK · FRIENDS OF FIGMA", title: "Friends of Figma World Tour #12 Strategy",
+    titleEn: "Friends of Figma World Tour #12 Strategy",
+    description: "누구나 코드로 제품을 만드는 시대, 캔버스는 무엇을 위해 존재할까? 가장 최근에 발표한 영상입니다.",
+    descriptionEn: "In an era when anyone can build products with code, what is the canvas for? My most recent talk.",
+    href: "https://youtu.be/rCyZVwUJDOc?t=1840", external: true,
+    video: "rCyZVwUJDOc", videoStart: 1840,
+  },
   automationWorkshop: {
     eyebrow: "COMMUNITY WORKSHOP · 2025",
     title: "MCP 디자인 자동화 워크숍",
@@ -196,6 +206,7 @@ const videoScenes: Record<string, string> = {
   ckN1QIpjkAk: "config",
   JVfpIy5LhJ8: "infcon",
   hTBqVoSE0D4: "automationWorkshop",
+  rCyZVwUJDOc: "fofTalk",
   smE8OMN1Qjs: "automationWorkshop",
 };
 
@@ -379,6 +390,7 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
   const video = korean ? scene.video : scene.videoEn ?? scene.video;
   const externalLabel = sceneKey === "automationWorkshop"
     ? (korean ? "행사 보기" : "View the event")
+    : sceneKey === "fofTalk" ? (korean ? "YouTube에서 보기" : "Watch on YouTube")
     : (korean ? "커뮤니티 보기" : "Visit the community");
   const mediaType = scene.confidential ? "confidential" : sceneKey === "intro" ? "terminal"
     : sceneKey === "builderDay" ? "award"
@@ -387,7 +399,7 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
     <div className="narrative-scene" key={sceneKey}>
       <div ref={mediaRef} className={`narrative-media narrative-media-${mediaType}`} style={scene.clip ? { aspectRatio: scene.clip.aspect } : undefined}>
         {scene.confidential ? <ConfidentialMedia language={language} company={scene.company} reducedMotion={reducedMotion} active={nearViewport} hero={scene.hero && { src: scene.hero.src, alt: korean ? scene.hero.alt : scene.hero.altEn ?? scene.hero.alt }} /> : sceneKey === "intro" ? <IntroTerminal reducedMotion={reducedMotion} /> : video ? (
-          nearViewport && <iframe title={korean ? `${title} 영상` : `${title} video`} src={withYouTubeClientIdentity(`https://www.youtube.com/embed/${video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0`)} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          nearViewport && <iframe title={korean ? `${title} 영상` : `${title} video`} src={withYouTubeClientIdentity(`https://www.youtube.com/embed/${video}?${reducedMotion ? "" : "autoplay=1&mute=1&"}playsinline=1&rel=0${scene.videoStart ? `&start=${scene.videoStart}` : ""}`)} referrerPolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
         ) : scene.clip ? (
           nearViewport && <video
             key={String(reducedMotion)}
@@ -433,7 +445,7 @@ function SceneCard({ sceneKey, reducedMotion }: { sceneKey: string; reducedMotio
 }
 
 export function NarrativeHome() {
-  const { language } = useSitePreferences();
+  const { language, theme } = useSitePreferences();
   const korean = language === "ko";
   const blocks = stories[language];
   const articleRef = useRef<HTMLElement>(null);
@@ -441,6 +453,8 @@ export function NarrativeHome() {
   const [reducedMotion, setReducedMotion] = useState(() => typeof window === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   const [activeScene, setActiveScene] = useState("intro");
   const [activeTrigger, setActiveTrigger] = useState<string | null>(null);
+  // Key messages whose text reveal has finished; their highlight is drawn only then.
+  const [doneKeys, setDoneKeys] = useState<ReadonlySet<string>>(() => new Set());
   const [mobileScenes, setMobileScenes] = useState<Record<string, { trigger: string; scene: string }>>({});
   const lastMobileTrigger = useRef<string | null>(null);
 
@@ -491,6 +505,15 @@ export function NarrativeHome() {
           });
         });
         changes.forEach((change) => change());
+        const finished = new Set<string>();
+        article.querySelectorAll<HTMLElement>("[data-key-id]").forEach((phrase) => {
+          const state = phrase.closest<HTMLElement>(".narrative-paragraph")?.dataset.readState;
+          const words = phrase.querySelectorAll<HTMLElement>(".narrative-word");
+          const last = words[words.length - 1];
+          const revealed = state === "read" || (state === "reading" && last && Number(last.style.getPropertyValue("--reveal-opacity")) >= 0.999);
+          if (revealed && phrase.dataset.keyId) finished.add(phrase.dataset.keyId);
+        });
+        setDoneKeys((previous) => previous.size === finished.size && [...finished].every((id) => previous.has(id)) ? previous : finished);
         article.dataset.readingReveal = "active";
       } else {
         delete article.dataset.readingReveal;
@@ -550,7 +573,14 @@ export function NarrativeHome() {
     };
   }, [desktop, reducedMotion, language]);
 
+  // **key message** marks the sentences a skimming reader should catch.
   function renderText(text: string, prefix: string): ReactNode[] {
+    return text.split(/(\*\*[^*]+\*\*)/).flatMap<ReactNode>((part, index) => part.startsWith("**")
+      ? [<span key={`${prefix}-k${index}`} data-key-id={`${prefix}-k${index}`}><Highlighter action="underline" color={theme === "dark" ? "#e3c94e" : "#c9a227"} strokeWidth={2} iterations={1} padding={2} animationDuration={500} active={reducedMotion || doneKeys.has(`${prefix}-k${index}`)}>{renderWords(part.slice(2, -2), `${prefix}-k${index}`)}</Highlighter></span>]
+      : renderWords(part, `${prefix}-t${index}`));
+  }
+
+  function renderWords(text: string, prefix: string): ReactNode[] {
     return text.split(/(\s+)/).map((piece, index) => !piece || /\s+/.test(piece) ? piece : <span className="narrative-word" key={`${prefix}-w${index}`}><span className="narrative-word-muted" aria-hidden="true">{piece}</span><span className="narrative-word-reveal">{piece}</span></span>);
   }
 

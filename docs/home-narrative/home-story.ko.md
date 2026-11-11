@@ -22,45 +22,51 @@ LOOKBOOK은 LDSG와 같은 장에서 경력의 확장을 설명하는 배경으�
 
 ### 개발자 경험을 설계하고, 제품으로 만듭니다
 
-저는 Grab에서 개발자 경험을 설계하는 프로덕트 디자이너 박주형입니다. 커리어 내내 개발자가 제품을 만들고 운영하는 환경을 다뤄 왔습니다. 업무에서 쌓은 경험을 바탕으로 직접 필요한 도구를 만들고, 새로운 기술을 실험하는 일도 함께해 왔습니다.
+현재 Grab에서 개발자 경험을 설계하는 프로덕트 디자이너 박주형입니다. 개발자나 창작자들이 새로운 기술로 누군가의 삶을 더 낫게 하는 **좋은 제품을 만들 수 있도록 돕고 있습니다**. 그런 사람들과 서로 배우고 도우며 함께 성장하는 커뮤니티를 만드는 일도 꾸준히 해 오고 있습니다.
+
+#### 최근 작업
+
+Tech Infra 조직에서 60개가 넘는 내부 플랫폼을 하나의 경험으로 연결하는 포털 [Grab Console](confidential:grab-console)을 지금도 담당하고 있습니다. 사용자 리서치부터 설계, 릴리즈까지 맡았고, **콘솔의 온보딩을 성공적으로 이끌어 조직에 유의미한 임팩트를 만들었습니다**.
+
+최근에는 [내부 데이터 플랫폼](confidential:grab-data)도 리드 디자이너로 맡고 있습니다. 데이터 사이언티스트들이 Databricks 같은 외부 플랫폼에서 하던 노트북과 파이프라인 작업을 회사 안으로 가져오는 프로젝트로, 노트북부터 CLI, MCP까지 AI 에이전트와 함께 쓰는 경험을 설계하고 있습니다. 디자인에 그치지 않고 직접 만들기도 해서, 디자인 조직에서 AI 토큰을 가장 많이 쓰는 사람 중 한 명이고 **커밋과 머지 리퀘스트로 프로덕션에 가장 활발하게 기여한 디자이너 중 한 명**입니다.
+
+개인 프로젝트에서는 오픈소스와 AI를 디자인 생산성에 접목하는 일을 꾸준히 해 왔고, 요즘은 Codex와 Claude Code 같은 AI 도구로 여러 프로젝트를 만들고 있습니다. 이렇게 만든 것들은 [Friends of Figma Seoul](https://youtu.be/rCyZVwUJDOc?t=1840) **운영진으로 5년 넘게** 활동하며 포스팅과 발표로 꾸준히 나누고 있습니다.
 
 #### 개발자 경험을 만들어 온 커리어
 
-2012년 [T store 개발자센터](https://api.metadata.co.kr/project/tstore)에서 개발자의 콘텐츠 등록·판매 절차를 다루며 일을 시작했습니다. 이후 참여한 [ONE store 통합 프로젝트](https://api.metadata.co.kr/project/onestore)에서는 여러 SKT, NAVER 등 여러 국내 Android 앱 마켓의 개발자 데이터를 통합하고, 달라지는 운영 정책을 협의하며 개발자에게 안내하는 일을 맡으며, 개발자 경험을 설계하는 커리어를 본격적으로 시작했습니다.
+2012년 [T store 개발자센터](https://api.metadata.co.kr/project/tstore)에서 개발자의 콘텐츠 등록·판매 절차를 다루며 일을 시작했습니다. 이어 참여한 [ONE store 통합 프로젝트](https://api.metadata.co.kr/project/onestore)에서는 SKT, NAVER 등 국내 Android 앱 마켓의 개발자 데이터를 통합하고, 달라지는 운영 정책을 협의해 개발자에게 안내하는 일을 맡았습니다. 이때부터 **개발자 경험을 설계하는 일이 제 커리어의 중심이 됐습니다**.
 
-LINE에서는 [게임 개발자 플랫폼](https://api.metadata.co.kr/project/gdc)을 담당했습니다. SDK와 가이드를 찾고, 게임 빌드를 제출해 검수받는 개발자의 작업 과정을 설계했습니다. 여러 문서와 도구를 오가며 진행하던 일을 플랫폼 안에서 수행하고, 자신의 작업이 어느 단계에 있는지 확인할 수 있도록 기능과 안내를 정리했습니다.
+LINE에서는 [게임 개발자 플랫폼](https://api.metadata.co.kr/project/gdc)을 담당했습니다. SDK와 가이드를 찾고, 게임 빌드를 제출해 검수받는 개발자의 작업 과정을 설계했습니다. 여러 문서와 도구를 오가던 일을 플랫폼 안에서 끝내고, 내 작업이 어느 단계인지 바로 확인할 수 있게 기능과 안내를 정리했습니다.
 
-개발·운영 도구를 계속 만들면서 비슷한 기능을 매번 새로 설계하고 구현하는 문제도 보였습니다. [LOOKBOOK](https://api.metadata.co.kr/project/lookbook)에서 공통 컴포넌트와 사용 규칙을 만들기 시작했고, 2019년에는 디자인 시스템 팀에 합류해서 [LINE Design System Global](https://api.metadata.co.kr/project/ldsg)을 담당하며 디자인 생산성 향상까지 시야를 넓혔습니다. 여러 지역의 디자이너와 엔지니어가 사용할 컴포넌트의 동작을 명세하고, 구현 방식을 논의하며 사용 문서를 배포하는 협업을 이끌었습니다. 개별 개발 도구에서 글로벌 디자인 시스템과 조직의 생산성을 다루는 일로 업무의 범위가 커졌습니다.
+개발·운영 도구를 계속 만들다 보니 비슷한 기능을 매번 새로 설계하고 구현하는 문제가 보였습니다. [LOOKBOOK](https://api.metadata.co.kr/project/lookbook)에서 공통 컴포넌트와 사용 규칙을 만들기 시작했고, 2019년에는 디자인 시스템 팀에 합류해 [LINE Design System Global](https://api.metadata.co.kr/project/ldsg)을 맡았습니다. 여러 지역의 디자이너와 엔지니어가 쓸 컴포넌트의 동작을 명세하고, 구현 방식을 논의하고, 사용 문서를 배포하는 협업을 이끌었습니다. 개별 도구에서 출발해 글로벌 디자인 시스템과 조직의 생산성을 다루는 일로 범위가 넓어졌습니다.
 
-코로나19 시기에는 네이버로 이동해서 [NAVER NOW와 NAVER TV](https://api.metadata.co.kr/project/naver-now)의 통합 프로젝트에 참여했으며, 콘텐츠 크리에이터의 경험을 통합하는 제품을 설계하고 성공적으로 배포를 이끌었습니다.
+코로나19 시기에는 네이버로 옮겨 [NAVER NOW와 NAVER TV](https://api.metadata.co.kr/project/naver-now) 통합 프로젝트에 참여했습니다. 콘텐츠 크리에이터의 경험을 하나로 합치는 제품을 설계하고, 출시까지 이끌었습니다.
 
-2023년에는 싱가포르 Grab에 개발자 경험을 책임지는 회사의 첫 프로덕트 디자이너로 합류했습니다. Tech Infra 조직에서 60개가 넘는 내부 플랫폼을 하나의 일관된 사용자 경험으로 연결하는 [Grab Console](confidential:grab-console)을 맡아, 사용자 리서치부터 설계와 릴리즈까지 엔드투엔드 디자인을 책임졌습니다. 콘솔의 성공적인 온보딩을 이끌며 조직에 유의미한 임팩트를 만들었습니다.
-
-2026년에는 데이터 사이언티스트들이 사용하던 외부 데이터 분석·머신러닝 플랫폼의 노트북과 파이프라인 환경을 [내부 데이터 플랫폼](confidential:grab-data)으로 구축하는 프로젝트로 역할을 넓혔습니다. Databricks와 같은 플랫폼이 제공하는 데이터 작업 환경을 내부화하는 일입니다. 리드 디자이너이자 프로덕트 빌더로 참여해 Python 노트북부터 IDE 플러그인, CLI, MCP, 파이프라인 관리까지 AI 에이전트와 함께 작업하는 엔드투엔드 사용자 흐름을 설계하고, 제품 코드에도 다수의 커밋으로 기여했습니다.
+2023년에는 싱가포르 Grab에 개발자 경험을 책임지는 회사의 **첫 프로덕트 디자이너로 합류했습니다**. 지금도 Tech Infra 조직에서 그 일을 하고 있습니다.
 
 #### 개인 프로젝트와 오픈소스
 
-본업에서 마주친 문제는 개인적인 탐구의 출발점이 되기도 했습니다. 디자인 시스템의 규칙을 제대로 쓰고 있는지 사람이 일일이 확인하는 부담을 머신러닝과 컴퓨터 비젼으로 다뤄본 것이, 2021년에 시작한 개인 프로젝트 [Figma ML](https://api.metadata.co.kr/project/tensorflow-js)입니다. UI 요소를 인식하는 모델을 학습시키고, 디자인 시스템의 오류를 검사하는 도구를 Figma와 Zeplin에서 사용할 수 있도록 만들었습니다.
+본업에서 마주친 문제가 개인 프로젝트의 출발점이 되기도 했습니다. 디자인 시스템 규칙을 제대로 지키고 있는지 사람이 일일이 확인해야 하는 부담을 머신러닝과 컴퓨터 비전으로 풀어 보려고, 2021년에 [Figma ML](https://api.metadata.co.kr/project/tensorflow-js)을 시작했습니다. UI 요소를 인식하는 모델을 학습시키고, 디자인 시스템 오류를 찾아내는 도구를 Figma와 Zeplin에서 쓸 수 있게 만들었습니다.
 
-이 작업을 DEVIEW 2021에서 소개한 데 이어, [Google TensorFlow Show & Tell](https://www.youtube.com/watch?v=blL0EQ6wNH8)과 [Figma Config 2022](https://www.youtube.com/watch?v=ckN1QIpjkAk)에서도 발표했습니다. 실제로 겪은 관리 문제를 풀기 위해 시작한 실험을 글로벌 개발자·디자이너에게 소개할 수 있었습니다. 학습 데이터를 준비하고 모델을 제품에 적용하는 경험까지 쌓으며, 생산성 문제를 다룰 수 있는 방법도 넓어졌습니다.
+이 작업은 DEVIEW 2021에서 처음 소개했고, [Google TensorFlow Show & Tell](https://www.youtube.com/watch?v=blL0EQ6wNH8)과 [Figma Config 2022](https://www.youtube.com/watch?v=ckN1QIpjkAk)에서도 발표했습니다. 현업의 문제에서 시작한 실험을 전 세계 개발자와 디자이너에게 소개할 수 있었고, 학습 데이터를 준비해 모델을 제품에 적용하는 과정까지 직접 경험했습니다.
 
-이후에도 컴퓨터 비전 (CV)와 컴퓨터 유즈 에이전트(CUA) 와 같은 기술들에 계속해서 관심을 가지고 보고 있으며 2023년에는 [Figma Autoname](https://api.metadata.co.kr/project/figma-autoname), 2024년에는 [Klever (Self Explorer)](https://api.metadata.co.kr/project/klever)와 같이 AI/ML을 이용해서 사용자의 디자인 및 제품 개발 생산성을 향상시키는 다양한 응용 제품들을 꾸준히 만들며 실험해보고 있습니다.
+이후에도 컴퓨터 비전(CV)과 컴퓨터 유즈 에이전트(CUA) 같은 기술을 계속 지켜보며, AI/ML로 디자인과 제품 개발 생산성을 높이는 도구를 꾸준히 만들어 왔습니다. 2023년에는 [Figma Autoname](https://api.metadata.co.kr/project/figma-autoname), 2024년에는 [Klever (Self Explorer)](https://api.metadata.co.kr/project/klever)를 만들었습니다.
 
-Klever에서 진행한 AI 기반 사용성 테스트 실험은 이동연님과 함께 인프런이 주최한 [인프콘 2024](https://www.youtube.com/watch?v=JVfpIy5LhJ8)에서도 발표했습니다.
+Klever에서 한 AI 사용성 테스트 실험은 이동연 님과 함께 [인프콘 2024](https://www.youtube.com/watch?v=JVfpIy5LhJ8)에서 발표했습니다.
 
-AI가 본격적으로 제품 생산성에 영향을 주기 시작한 다음부터는 오픈소스로 도구를 직접 만들고 개선하는 일을 더 적극적으로 이어갔습니다. 2025년에는 Grab이 오픈소스로 공개한 [TalkToFigma](https://api.metadata.co.kr/project/talk-to-figma-mcp)에 핵심 자동화 기능을 기여했습니다.
+AI가 제품을 만드는 방식을 바꾸기 시작하면서, 오픈소스로 도구를 만들고 고치는 일에 더 힘을 쏟았습니다. 2025년에는 Grab이 오픈소스로 공개한 [TalkToFigma](https://api.metadata.co.kr/project/talk-to-figma-mcp)에 핵심 자동화 기능을 기여했습니다.
 
-워크숍에서 설치와 설정 단계에 막히는 사용자를 보며 동료들과 [TalkToFigma Desktop](https://api.metadata.co.kr/project/talk-to-figma-mcp)을 만들었고, 실행과 설정, 연결 상태를 한곳에서 다룰 수 있게 했습니다. 사용자가 자동화 기능을 실제로 써볼 수 있도록 준비 과정을 제품으로 만든 작업입니다. 이 데스크톱 앱 오픈소스를 바탕으로 Friends of Figma Seoul 팀에서 제품으로 발전시킨 [MCP Magic](https://api.metadata.co.kr/blog/mcp-magic-retrospective)에는 2026년 6월까지 57만여 건의 MCP 도구 호출을 기록하는 의미있는 성과를 얻었습니다.
+워크숍에서 설치와 설정 단계에 막히는 사용자를 보고, 동료들과 [TalkToFigma Desktop](https://api.metadata.co.kr/project/talk-to-figma-mcp)을 만들었습니다. 실행, 설정, 연결 상태를 한곳에서 다룰 수 있어서 누구나 자동화 기능을 바로 써 볼 수 있습니다. 이 오픈소스 데스크톱 앱을 Friends of Figma Seoul 팀이 제품으로 발전시킨 [MCP Magic](https://api.metadata.co.kr/blog/mcp-magic-retrospective)은 2026년 6월까지 **57만여 건의 MCP 도구 호출을 기록했습니다**.
 
-2026년에는 AI 코딩 도구들을 활용한 새로운 워크플로우를 통해서 iOS, Android 등 여러 플랫폼에 커뮤니티를 위한 앱들을 만들어서 출시했습니다. 그중 [나섬 셔틀 플랫폼](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex)에서는 Codex와 함께 서비스 구조와 API를 설계하고, 승객과 운전자를 위한 iOS·Android 앱과 서버를 직접 만들었습니다. 이 프로젝트로 [OpenAI Builder Day Seoul에서 1등](https://www.linkedin.com/pulse/codex-remote%EB%A1%9C-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%97%90%EC%84%9C-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%B1%EC%9D%84-%EC%B6%9C%EC%8B%9C%ED%95%9C-%EB%B0%A9%EB%B2%95-seowoo-han-7dfxc/)을 차지했습니다.
+2026년에는 AI 코딩 도구로 커뮤니티를 위한 iOS·Android 앱을 만들어 출시했습니다. 그중 [나섬 셔틀 플랫폼](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex)은 Codex와 함께 서비스 구조와 API를 설계하고, 승객용·운전자용 앱과 서버를 직접 만든 서비스입니다. 이 작업은 [OpenAI Builder Day Seoul 1등](https://www.linkedin.com/pulse/codex-remote%EB%A1%9C-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%97%90%EC%84%9C-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%B1%EC%9D%84-%EC%B6%9C%EC%8B%9C%ED%95%9C-%EB%B0%A9%EB%B2%95-seowoo-han-7dfxc/)으로 이어졌습니다.
 
 #### 커뮤니티 리더십
 
-배우고 만든 경험은 글과 발표, 오픈소스로 공유해 왔습니다. 2020년 무렵부터 운영진으로 활동하고 있는 [Friends of Figma Seoul](https://friends.figma.com/seoul/)에서는 2026년 10월까지 온라인·오프라인·하이브리드 행사 21회가 열렸습니다. 행사별 대시보드에는 총 1,775건의 등록과 904건의 체크인이 기록돼 있습니다.
+배우고 만든 경험은 글과 발표, 오픈소스로 공유해 왔습니다. 2020년 무렵부터 운영진으로 활동하고 있는 [Friends of Figma Seoul](https://friends.figma.com/seoul/)에서는 2026년 10월까지 온라인·오프라인·하이브리드 **행사 21회가 열렸습니다**. 행사별 대시보드에는 총 1,775건의 등록과 904건의 체크인이 기록돼 있습니다.
 
 동료 리더들과 밋업을 기획하며 AI 사용성 테스트 같은 실험을 공유합니다. [MCP 디자인 자동화 워크숍](https://youtu.be/hTBqVoSE0D4)은 참가자를 직접 모집해 사내와 Friends of Figma Seoul에서 각각 진행했습니다. 디자이너들이 Figma의 반복 작업을 자동화하는 방법을 직접 실습할 수 있도록 도왔습니다.
 
-본업에서는 개발자가 더 잘 만들 수 있는 환경을 설계하고, 개인 프로젝트와 오픈소스에서는 직접 제품을 만들며 설계의 범위를 넓혀 왔습니다. 개발자 경험이라는 전문성을 바탕으로, 제품의 개발과 운영까지 책임지는 프로덕트 빌더로 일하고 있습니다.
+본업에서는 개발자가 더 잘 만들 수 있는 환경을 설계하고, 개인 프로젝트와 오픈소스에서는 직접 제품을 만들며 설계의 범위를 넓혀 왔습니다. 그 사이를 잇는 것이 개발자 경험이고, 지금은 개발과 운영까지 책임지는 **프로덕트 빌더로 일하고 있습니다**.
 
 ## 3. 글을 읽으며 탐색할 대표 장면
 

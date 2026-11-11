@@ -141,15 +141,15 @@ const scenes: Record<string, Scene> = {
   },
   builderDay: {
     eyebrow: "AWARD · 2026",
-    title: "OpenAI Build Week Seoul",
+    title: "OpenAI Build Week 서울 이벤트",
     description: "나섬 셔틀 플랫폼으로 1등을 차지했습니다.",
     descriptionEn: "The NaSum Shuttle Platform took first place.",
     href: "/project/how-far-can-a-product-designer-build-with-codex",
     article: builderDayArticles,
     frames: [{
       src: "/images/projects/2026-rider-driver-codex/24_openai_builder_day_2026.jpeg",
-      alt: "OpenAI Build Week Seoul 행사 화면에 박주형과 1등 발표 슬라이드가 나란히 보입니다.",
-      altEn: "The OpenAI Build Week Seoul screen shows Joo Hyung Park alongside the first-place announcement.",
+      alt: "OpenAI Build Week 서울 이벤트 화면에 박주형과 1등 발표 슬라이드가 나란히 보입니다.",
+      altEn: "The OpenAI Build Week event in Seoul screen shows Joo Hyung Park alongside the first-place announcement.",
     }],
   },
   community: { eyebrow: "COMMUNITY · 2022—2026", title: "Friends of Figma Seoul", description: "함께 배우고 실험하는 커뮤니티. 21개 행사, 1,775건의 등록과 904건의 체크인.*", descriptionEn: "A community that learns and experiments together. 21 events, 1,775 registrations, and 904 check-ins.*", href: "https://friends.figma.com/seoul/", external: true,

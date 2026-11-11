@@ -36,7 +36,7 @@ As AI started to change how teams build products, I spent more time contributing
 
 At workshops, I saw people get stuck on installation and configuration. My colleagues and I built [TalkToFigma Desktop](https://api.metadata.co.kr/project/talk-to-figma-mcp) to put startup, settings, and connection status in one place. The Friends of Figma Seoul team built on that open-source app to create [MCP Magic](https://api.metadata.co.kr/blog/mcp-magic-retrospective), which recorded **more than 570,000 MCP tool calls** by June 2026.
 
-In 2026, I used AI coding tools to build and release apps for communities on iOS and Android. The [NaSum shuttle platform](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex) is the largest: I designed the service and API with Codex and built the passenger and driver apps and the server myself. It went on to win [first place at OpenAI Build Week Seoul](https://www.linkedin.com/pulse/shipping-mobile-app-from-phone-codex-remote-seowoo-han-kd9rc/).
+In 2026, I used AI coding tools to build and release apps for communities on iOS and Android. The [NaSum shuttle platform](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex) is the largest: I designed the service and API with Codex and built the passenger and driver apps and the server myself. It went on to win [first place at the OpenAI Build Week event in Seoul](https://www.linkedin.com/pulse/shipping-mobile-app-from-phone-codex-remote-seowoo-han-kd9rc/).
 
 #### Community leadership
 

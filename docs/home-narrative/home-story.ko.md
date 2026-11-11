@@ -58,7 +58,7 @@ AI가 제품을 만드는 방식을 바꾸기 시작하면서, 오픈소스로 �
 
 워크숍에서 설치와 설정 단계에 막히는 사용자를 보고, 동료들과 [TalkToFigma Desktop](https://api.metadata.co.kr/project/talk-to-figma-mcp)을 만들었습니다. 실행, 설정, 연결 상태를 한곳에서 다룰 수 있어서 누구나 자동화 기능을 바로 써 볼 수 있습니다. 이 오픈소스 데스크톱 앱을 Friends of Figma Seoul 팀이 제품으로 발전시킨 [MCP Magic](https://api.metadata.co.kr/blog/mcp-magic-retrospective)은 2026년 6월까지 **57만여 건의 MCP 도구 호출을 기록했습니다**.
 
-2026년에는 AI 코딩 도구로 커뮤니티를 위한 iOS·Android 앱을 만들어 출시했습니다. 그중 [나섬 셔틀 플랫폼](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex)은 Codex와 함께 서비스 구조와 API를 설계하고, 승객용·운전자용 앱과 서버를 직접 만든 서비스입니다. 이 작업은 [OpenAI Build Week Seoul 1등](https://www.linkedin.com/pulse/codex-remote%EB%A1%9C-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%97%90%EC%84%9C-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%B1%EC%9D%84-%EC%B6%9C%EC%8B%9C%ED%95%9C-%EB%B0%A9%EB%B2%95-seowoo-han-7dfxc/)으로 이어졌습니다.
+2026년에는 AI 코딩 도구로 커뮤니티를 위한 iOS·Android 앱을 만들어 출시했습니다. 그중 [나섬 셔틀 플랫폼](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex)은 Codex와 함께 서비스 구조와 API를 설계하고, 승객용·운전자용 앱과 서버를 직접 만든 서비스입니다. 이 작업은 [OpenAI Build Week 서울 이벤트 1등](https://www.linkedin.com/pulse/codex-remote%EB%A1%9C-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%97%90%EC%84%9C-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%B1%EC%9D%84-%EC%B6%9C%EC%8B%9C%ED%95%9C-%EB%B0%A9%EB%B2%95-seowoo-han-7dfxc/)으로 이어졌습니다.
 
 #### 커뮤니티 리더십
 

@@ -30,7 +30,7 @@ Tech Infra 조직에서 60개가 넘는 내부 플랫폼을 하나의 경험으�
 
 최근에는 [내부 데이터 플랫폼](confidential:grab-data)도 리드 디자이너로 맡고 있습니다. 데이터 사이언티스트들이 Databricks 같은 외부 플랫폼에서 하던 노트북과 파이프라인 작업을 회사 안으로 가져오는 프로젝트로, 노트북부터 CLI, MCP까지 AI 에이전트와 함께 쓰는 경험을 설계하고 있습니다. 디자인에 그치지 않고 직접 만들기도 해서, 디자인 조직에서 AI 토큰을 가장 많이 쓰는 사람 중 한 명이고 **커밋과 머지 리퀘스트로 프로덕션에 가장 활발하게 기여한 디자이너 중 한 명**입니다.
 
-개인 프로젝트에서는 오픈소스와 AI를 디자인 생산성에 접목하는 일을 꾸준히 해 왔고, 요즘은 Codex와 Claude Code 같은 AI 도구로 여러 프로젝트를 만들고 있습니다. 이렇게 만든 것들은 [Friends of Figma Seoul](https://youtu.be/rCyZVwUJDOc?t=1840) **운영진으로 5년 넘게** 활동하며 포스팅과 발표로 꾸준히 나누고 있습니다.
+개인 프로젝트에서는 오픈소스와 AI를 디자인 생산성에 접목하는 일을 꾸준히 해 왔고, 요즘은 Codex와 Claude Code 같은 AI 도구로 여러 프로젝트를 만들고 있습니다. 이렇게 만든 것들은 [Friends of Figma Seoul](https://youtu.be/rCyZVwUJDOc?t=1840) **운영진으로 4년 넘게** 활동하며 포스팅과 발표로 꾸준히 나누고 있습니다.
 
 #### 개발자 경험을 만들어 온 커리어
 
@@ -58,11 +58,11 @@ AI가 제품을 만드는 방식을 바꾸기 시작하면서, 오픈소스로 �
 
 워크숍에서 설치와 설정 단계에 막히는 사용자를 보고, 동료들과 [TalkToFigma Desktop](https://api.metadata.co.kr/project/talk-to-figma-mcp)을 만들었습니다. 실행, 설정, 연결 상태를 한곳에서 다룰 수 있어서 누구나 자동화 기능을 바로 써 볼 수 있습니다. 이 오픈소스 데스크톱 앱을 Friends of Figma Seoul 팀이 제품으로 발전시킨 [MCP Magic](https://api.metadata.co.kr/blog/mcp-magic-retrospective)은 2026년 6월까지 **57만여 건의 MCP 도구 호출을 기록했습니다**.
 
-2026년에는 AI 코딩 도구로 커뮤니티를 위한 iOS·Android 앱을 만들어 출시했습니다. 그중 [나섬 셔틀 플랫폼](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex)은 Codex와 함께 서비스 구조와 API를 설계하고, 승객용·운전자용 앱과 서버를 직접 만든 서비스입니다. 이 작업은 [OpenAI Builder Day Seoul 1등](https://www.linkedin.com/pulse/codex-remote%EB%A1%9C-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%97%90%EC%84%9C-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%B1%EC%9D%84-%EC%B6%9C%EC%8B%9C%ED%95%9C-%EB%B0%A9%EB%B2%95-seowoo-han-7dfxc/)으로 이어졌습니다.
+2026년에는 AI 코딩 도구로 커뮤니티를 위한 iOS·Android 앱을 만들어 출시했습니다. 그중 [나섬 셔틀 플랫폼](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex)은 Codex와 함께 서비스 구조와 API를 설계하고, 승객용·운전자용 앱과 서버를 직접 만든 서비스입니다. 이 작업은 [OpenAI Build Week Seoul 1등](https://www.linkedin.com/pulse/codex-remote%EB%A1%9C-%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%97%90%EC%84%9C-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%B1%EC%9D%84-%EC%B6%9C%EC%8B%9C%ED%95%9C-%EB%B0%A9%EB%B2%95-seowoo-han-7dfxc/)으로 이어졌습니다.
 
 #### 커뮤니티 리더십
 
-배우고 만든 경험은 글과 발표, 오픈소스로 공유해 왔습니다. 2020년 무렵부터 운영진으로 활동하고 있는 [Friends of Figma Seoul](https://friends.figma.com/seoul/)에서는 2026년 10월까지 온라인·오프라인·하이브리드 **행사 21회가 열렸습니다**. 행사별 대시보드에는 총 1,775건의 등록과 904건의 체크인이 기록돼 있습니다.
+배우고 만든 경험은 글과 발표, 오픈소스로 공유해 왔습니다. 2022년부터 운영진으로 활동하고 있는 [Friends of Figma Seoul](https://friends.figma.com/seoul/)에서는 2026년 10월까지 온라인·오프라인·하이브리드 **행사 21회가 열렸습니다**. 행사별 대시보드에는 총 1,775건의 등록과 904건의 체크인이 기록돼 있습니다.
 
 동료 리더들과 밋업을 기획하며 AI 사용성 테스트 같은 실험을 공유합니다. [MCP 디자인 자동화 워크숍](https://youtu.be/hTBqVoSE0D4)은 참가자를 직접 모집해 사내와 Friends of Figma Seoul에서 각각 진행했습니다. 디자이너들이 Figma의 반복 작업을 자동화하는 방법을 직접 실습할 수 있도록 도왔습니다.
 
@@ -87,7 +87,7 @@ AI가 제품을 만드는 방식을 바꾸기 시작하면서, 오픈소스로 �
 | E01B | 개인·공동 프로젝트 / 발표 | 2024 | Klever (Self Explorer)·인프콘 2024 | AI가 Figma 프로토타입을 탐색해 사용성 문제를 찾는 실험과 공동 발표 | 두 표식 모두 [인프콘 발표 영상](https://www.youtube.com/watch?v=JVfpIy5LhJ8)을 오른쪽에 표시. 프로젝트 상세는 `/project/klever` |
 | E02 | 회사에서 공개한 오픈소스에 대한 기여·공동 제품화 | 2025 / 후속 기록 2026.06까지 | TalkToFigma·MCP Magic | 원본 기여, Desktop 제작, 후속 프로젝트의 실제 사용 | 자동화·설정·연결 데모와 사용 기록. `/project/talk-to-figma-mcp`, 보조 `/blog/mcp-magic-retrospective` |
 | E03 | 독립 서비스 | 2026 | 나섬 셔틀 플랫폼 | 문제 정의부터 서버·API·앱·배포와 운영 피드백까지 책임지는 빌딩 | 승객·Driver 앱과 배포 근거. `/project/how-far-can-a-product-designer-build-with-codex` |
-| L01 | 커뮤니티 | 2020–2026.10.29 기록 기준 | Friends of Figma Seoul | 커뮤니티의 완료 행사 21회, 행사별 등록 합계 1,775건과 체크인 합계 904건. 동료 리더들과 프로그램을 공동 기획 | 공식 커뮤니티 소개, 밋업·MCP 실습 자료와 기록 기준이 명시된 수치. [집계 근거](leadership-evidence.ko.md) |
+| L01 | 커뮤니티 | 2022–2026.10.29 기록 기준 | Friends of Figma Seoul | 커뮤니티의 완료 행사 21회, 행사별 등록 합계 1,775건과 체크인 합계 904건. 동료 리더들과 프로그램을 공동 기획 | 공식 커뮤니티 소개, 밋업·MCP 실습 자료와 기록 기준이 명시된 수치. [집계 근거](leadership-evidence.ko.md) |
 | H99 | 마무리 | 현재 | 마지막 문단 | 본업의 전문성과 개인·오픈소스에서 넓혀 온 제작 역량 | 기본 키 비주얼로 복귀, 기존 연락 수단 |
 
 ### 발표 영상 연결

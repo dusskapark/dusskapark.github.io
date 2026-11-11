@@ -141,18 +141,18 @@ const scenes: Record<string, Scene> = {
   },
   builderDay: {
     eyebrow: "AWARD · 2026",
-    title: "OpenAI Builder Day Seoul",
+    title: "OpenAI Build Week Seoul",
     description: "나섬 셔틀 플랫폼으로 1등을 차지했습니다.",
     descriptionEn: "The NaSum Shuttle Platform took first place.",
     href: "/project/how-far-can-a-product-designer-build-with-codex",
     article: builderDayArticles,
     frames: [{
       src: "/images/projects/2026-rider-driver-codex/24_openai_builder_day_2026.jpeg",
-      alt: "OpenAI Builder Day Seoul 행사 화면에 박주형과 1등 발표 슬라이드가 나란히 보입니다.",
-      altEn: "The OpenAI Builder Day Seoul screen shows Joo Hyung Park alongside the first-place announcement.",
+      alt: "OpenAI Build Week Seoul 행사 화면에 박주형과 1등 발표 슬라이드가 나란히 보입니다.",
+      altEn: "The OpenAI Build Week Seoul screen shows Joo Hyung Park alongside the first-place announcement.",
     }],
   },
-  community: { eyebrow: "COMMUNITY · 2020—2026", title: "Friends of Figma Seoul", description: "함께 배우고 실험하는 커뮤니티. 21개 행사, 1,775건의 등록과 904건의 체크인.*", descriptionEn: "A community that learns and experiments together. 21 events, 1,775 registrations, and 904 check-ins.*", href: "https://friends.figma.com/seoul/", external: true,
+  community: { eyebrow: "COMMUNITY · 2022—2026", title: "Friends of Figma Seoul", description: "함께 배우고 실험하는 커뮤니티. 21개 행사, 1,775건의 등록과 904건의 체크인.*", descriptionEn: "A community that learns and experiments together. 21 events, 1,775 registrations, and 904 check-ins.*", href: "https://friends.figma.com/seoul/", external: true,
     frames: [
       { src: "/images/projects/friends-of-figma-seoul/joo-speaking.webp", alt: "Friends of Figma Seoul 행사에서 발표하는 박주형", altEn: "Joo Hyung Park speaking at a Friends of Figma Seoul event" },
       { src: "/images/projects/friends-of-figma-seoul/chapter-group.webp", alt: "Friends of Figma Seoul 팻말을 든 참가자들", altEn: "Attendees holding a Friends of Figma Seoul sign" },
@@ -248,7 +248,7 @@ const terminalStories = [
     ["2026", "나섬 셔틀 · End-to-end product"],
   ] },
   { command: "community", lines: [
-    ["2020 →", "Friends of Figma Seoul · Co-organizer"],
+    ["2022 →", "Friends of Figma Seoul · Co-organizer"],
     ["21", "Events through October 2026"],
     ["1,775", "Registrations · Event totals"],
     ["904", "Check-ins · Event totals"],

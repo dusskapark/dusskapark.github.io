@@ -46,7 +46,9 @@
 
 :root {
   color-scheme: light;
-  --font-bricolage: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+  /* No generic fallbacks here: system-ui covers Hangul on most systems, so it would shadow
+     the self-hosted Noto Sans KR that comes next in the font stacks. */
+  --font-bricolage: "Bricolage Grotesque";
   --font-noto-sans-kr: "Noto Sans KR Content", "Apple SD Gothic Neo",
     "Malgun Gothic", sans-serif;
   --background: #faf9f6;

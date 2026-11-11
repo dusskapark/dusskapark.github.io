@@ -8,7 +8,7 @@ In Tech Infra, I still own [Grab Console](confidential:grab-console), the portal
 
 More recently, I’ve been leading design on the [internal data platform](confidential:grab-data). It brings the notebook and pipeline work data scientists do on external platforms like Databricks in-house, and I’m designing how people use it with AI agents, from notebooks to the CLI and MCP. I don’t stop at design: I’m one of the heaviest AI token users in the design org, and **one of the designers who has contributed most actively to production through commits and merge requests**.
 
-In my personal projects, I’ve steadily applied open source and AI to design productivity, and lately I’ve been building a range of projects with AI tools like Codex and Claude Code. I share what I build through posts and talks, and I’ve been a [Friends of Figma Seoul](https://youtu.be/rCyZVwUJDOc?t=1840) **organizer for more than five years**.
+In my personal projects, I’ve steadily applied open source and AI to design productivity, and lately I’ve been building a range of projects with AI tools like Codex and Claude Code. I share what I build through posts and talks, and I’ve been a [Friends of Figma Seoul](https://youtu.be/rCyZVwUJDOc?t=1840) **organizer for more than four years**.
 
 #### A career in developer experience
 
@@ -36,11 +36,11 @@ As AI started to change how teams build products, I spent more time contributing
 
 At workshops, I saw people get stuck on installation and configuration. My colleagues and I built [TalkToFigma Desktop](https://api.metadata.co.kr/project/talk-to-figma-mcp) to put startup, settings, and connection status in one place. The Friends of Figma Seoul team built on that open-source app to create [MCP Magic](https://api.metadata.co.kr/blog/mcp-magic-retrospective), which recorded **more than 570,000 MCP tool calls** by June 2026.
 
-In 2026, I used AI coding tools to build and release apps for communities on iOS and Android. The [NaSum shuttle platform](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex) is the largest: I designed the service and API with Codex and built the passenger and driver apps and the server myself. It went on to win [first place at OpenAI Builder Day Seoul](https://www.linkedin.com/pulse/shipping-mobile-app-from-phone-codex-remote-seowoo-han-kd9rc/).
+In 2026, I used AI coding tools to build and release apps for communities on iOS and Android. The [NaSum shuttle platform](https://api.metadata.co.kr/project/how-far-can-a-product-designer-build-with-codex) is the largest: I designed the service and API with Codex and built the passenger and driver apps and the server myself. It went on to win [first place at OpenAI Build Week Seoul](https://www.linkedin.com/pulse/shipping-mobile-app-from-phone-codex-remote-seowoo-han-kd9rc/).
 
 #### Community leadership
 
-I share what I learn through writing, talks, and open source. I’ve been part of the organizing team at [Friends of Figma Seoul](https://friends.figma.com/seoul/) since around 2020. By October 2026, the chapter had held **21 online, in-person, and hybrid events**. The event dashboards recorded 1,775 registrations and 904 check-ins in total.
+I share what I learn through writing, talks, and open source. I’ve been part of the organizing team at [Friends of Figma Seoul](https://friends.figma.com/seoul/) since 2022. By October 2026, the chapter had held **21 online, in-person, and hybrid events**. The event dashboards recorded 1,775 registrations and 904 check-ins in total.
 
 I co-organize meetups with fellow chapter leaders and share experiments such as AI usability testing. For the [MCP design automation workshop](https://youtu.be/smE8OMN1Qjs), I recruited participants and led separate sessions at work and with Friends of Figma Seoul. Designers got hands-on practice automating repetitive tasks in Figma.
 

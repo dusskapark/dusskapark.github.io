@@ -9,7 +9,7 @@
 .narrative-paragraph { margin: 0 0 29px; }
 .narrative-paragraph > p { margin: 0; font-size: clamp(16px, 1.18vw, 18px); line-height: 1.9; letter-spacing: -.025em; font-weight: 500; text-wrap: pretty; }
 /* Magic UI Text Reveal: a faint word beneath a scroll-driven foreground layer. */
-.narrative-word { position: relative; display: inline-block; max-width: 100%; overflow-wrap: anywhere; color: var(--foreground); }
+.narrative-word { position: relative; display: inline-block; white-space: nowrap; color: var(--foreground); }
 .narrative-word-muted { display: none; position: absolute; inset: 0; pointer-events: none; user-select: none; -webkit-user-select: none; opacity: .25; }
 .narrative-story[data-reading-reveal="active"] .narrative-word-muted { display: inline; }
 .narrative-story[data-reading-reveal="active"] .narrative-word-reveal { opacity: var(--reveal-opacity, 0); }
